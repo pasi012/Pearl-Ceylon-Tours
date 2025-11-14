@@ -1,0 +1,116 @@
+/* ===== Main White Navbar ===== */
+.main-navbar {
+  position: fixed;
+  top: 34px;
+  width: 100%;
+  z-index: 999;
+  background: transparent;
+  transition: all 0.4s ease;
+}
+
+.navbar-shrink {
+  top: 0;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== Centered White Box Navbar ===== */
+.navbar-container {
+  width: 65%;
+  margin: 0 auto;
+  background: #fff;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0 0 8px 8px;
+  transition: all 0.4s ease;
+  padding: 18px 40px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+/* ===== When Scrolled → Full Width ===== */
+.navbar-full {
+  width: 100%;
+  border-radius: 0;
+  margin: 0;
+}
+
+/* ===== Logo Box Shape ===== */
+.logo-box {
+  background: #007acc;
+  clip-path: polygon(0 0, 90% 0, 100% 50%, 90% 100%, 0 100%);
+  padding: 10px 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logo {
+  height: 60px;
+  transition: height 0.4s ease;
+}
+
+.navbar-shrink .logo {
+  height: 60px;
+}
+
+/* ===== Menu ===== */
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.navbar-menu li a {
+  color: #111;
+  font-weight: 600;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.navbar-menu li a:hover {
+  color: #007acc;
+}
+
+/* ===== Phone Section ===== */
+.navbar-right {
+  display: flex;
+  align-items: center;
+}
+
+.phone-box {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px dashed #007acc;
+  padding: 8px 14px;
+  border-radius: 8px;
+  transition: all 0.4s ease;
+}
+
+/* When scrolled */
+.navbar-shrink .phone-box {
+  margin-right: 70px;
+}
+
+.phone-label {
+  display: block;
+  font-size: 12px;
+  font-weight: 700;
+  color: #111;
+}
+
+.phone-number {
+  color: #007acc;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.phone-icon {
+  color: #007acc;
+}

@@ -1,0 +1,155 @@
+/* Base Styles */
+.about-page {
+  padding: 0 20px; /* reduced padding for smaller screens */
+  font-family: "Segoe UI", Tahoma, sans-serif;
+  color: #333;
+  background-color: #fafafa;
+}
+
+.about-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.about-header h2 {
+  font-size: 2.2rem; /* scalable */
+  font-weight: bold;
+  margin-bottom: 20px;
+  letter-spacing: 1.5px;
+  color: #222;
+}
+
+.about-header p {
+  font-size: 1rem;
+  line-height: 1.7;
+  max-width: 900px;
+  margin: 10px auto;
+  color: #555;
+}
+
+/* Concept Section */
+.about-concept {
+  display: flex;
+  justify-content: center;
+}
+
+.about-text-card {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  max-width: 1100px;
+  width: 100%;
+}
+
+.about-row {
+  display: flex;
+  gap: 30px;
+  align-items: flex-start;
+  flex-wrap: wrap; /* ensures responsiveness */
+}
+
+.about-col {
+  flex: 1;
+  min-width: 280px; /* better for smaller screens */
+}
+
+.about-card-img {
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.about-col h3 {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: #222;
+}
+
+.about-col p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  color: #555;
+}
+
+.about-col ul {
+  list-style: none;
+  padding: 0;
+}
+
+.about-col li {
+  font-size: 0.9rem;
+  margin-bottom: 12px;
+  line-height: 1.5;
+  color: #444;
+}
+
+/* WhatsApp Floating Button */
+.whatsapp-fab {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 100;
+}
+
+.whatsapp-icon {
+  width: 50px;
+  height: 50px;
+}
+
+/* Media Queries for Responsiveness */
+@media screen and (max-width: 1024px) {
+  .about-page {
+    padding: 0 40px;
+  }
+  .about-header h2 {
+    font-size: 2rem;
+  }
+  .about-col h3 {
+    font-size: 1.4rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .about-page {
+    padding: 0 20px;
+  }
+  .about-header h2 {
+    font-size: 1.8rem;
+  }
+  .about-header p {
+    font-size: 0.95rem;
+  }
+  .about-row {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .about-col h3 {
+    font-size: 1.3rem;
+  }
+  .about-col p,
+  .about-col li {
+    font-size: 0.9rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .about-header h2 {
+    font-size: 1.5rem;
+  }
+  .about-header p {
+    font-size: 0.9rem;
+  }
+  .about-col h3 {
+    font-size: 1.2rem;
+  }
+  .about-col p,
+  .about-col li {
+    font-size: 0.85rem;
+  }
+  .whatsapp-icon {
+    width: 40px;
+    height: 40px;
+  }
+}
