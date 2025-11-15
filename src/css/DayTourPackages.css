@@ -1,0 +1,96 @@
+/* ============================
+   HERO SECTION
+============================ */
+.daytour-hero-section {
+    position: relative;
+    height: 45vh;
+    background: url("../assets/hero-destination.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.daytour-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.daytour-hero-content {
+    text-align: center;
+    color: #fff;
+}
+
+.daytour-hero-content h1 {
+    font-size: 3.8rem;
+    font-weight: 600;
+}
+
+.daytour-hero-content p {
+    margin-top: 10px;
+    font-size: 1rem;
+}
+
+/* ============================
+   GRID SECTION
+============================ */
+.daytour-grid-section {
+    padding: 50px 70px;
+}
+
+.daytour-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 35px;
+}
+
+.daytour-card {
+    position: relative;
+    background: #fff;
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    transition: 0.3s ease;
+}
+
+.daytour-card:hover {
+    transform: translateY(-10px);
+}
+
+.daytour-card img {
+    width: 100%;
+    height: 230px;
+    object-fit: cover;
+}
+
+.daytour-tag {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: #0aa2c0;
+    padding: 6px 16px;
+    border-radius: 8px;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.daytour-info {
+    padding: 18px 20px;
+}
+
+.daytour-info h3 {
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #222;
+}
+
+.daytour-meta {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}

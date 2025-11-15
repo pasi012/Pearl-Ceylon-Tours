@@ -1,28 +1,33 @@
 /* ===== Hero Section ===== */
 .destinations-hero {
     position: relative;
-    height: 60vh;
+    height: 45vh;
     background: url("../assets/hero-destination.jpg") center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin-top: 150px;
 }
 
 .destinations-hero .overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .destinations-hero .hero-content {
-    position: relative;
+    position: absolute;
     text-align: center;
     color: #fff;
 }
 
 .destinations-hero h1 {
-    font-size: 3rem;
-    font-weight: 700;
+    font-size: 4.0rem;
+    font-weight: 600;
+    color: #fff;
 }
 
 .destinations-hero p {
@@ -32,7 +37,7 @@
 
 /* ===== Grid Section ===== */
 .destinations-grid {
-    padding: 80px 100px;
+    padding: 60px 80px;
     background: #fff;
 }
 
@@ -57,9 +62,9 @@
 
 .destination-card img {
     width: 100%;
-    height: 250px;
+    height: 100%;
     object-fit: cover;
-    filter: brightness(80%);
+    filter: brightness(45%);
     transition: all 0.4s ease;
 }
 
@@ -75,43 +80,101 @@
 }
 
 .card-overlay p {
-    font-size: 0.9rem;
-    opacity: 0.9;
+    font-size: 1.3rem;
+    font-weight: 500;
+    font-family: 'Great Vibes', cursive;
 }
 
 .card-overlay h3 {
     font-size: 1.4rem;
-    margin-top: 5px;
+    margin-top: -20px;
 }
 
 /* ===== CTA Section ===== */
+/* Outer wrapper */
 .cta-section {
-    background: #007acc;
-    color: #fff;
-    padding: 50px 0;
-    text-align: center;
-    margin-top: 60px;
-}
-
-.cta-container {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 18px;
+    justify-content: center;
+    margin: 40px 0;
 }
 
+/* CTA blue box */
+.cta-box {
+    max-height: 100px;
+    background: #247cad;
+    padding: 30px 50px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    max-width: 120vh;
+    width: 100%;
+    position: relative;
+    color: #fff;
+}
+
+/* Left icon + text */
+.cta-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta-icon {
+    width: 60px;
+    height: auto;
+}
+
+/* Headline + description */
+.cta-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cta-text p {
+    font-size: 1rem;
+    opacity: 0.9;
+    margin-top: 5px;
+}
+
+/* Airplane curved path (same as screenshot) */
+.cta-plane {
+    position: absolute;
+    right: 170px;
+    top: 20px;
+    width: 150px;
+    
+    /* Animation */
+    animation: floatBox 3s both infinite;
+}
+
+/* Floating keyframes */
+@keyframes floatBox {
+
+    0%,
+    100% {
+        transform: translateX(-50%) translateY(0);
+    }
+
+    50% {
+        transform: translateX(-50%) translateY(-10px);
+    }
+}
+
+/* Button */
 .cta-btn {
     background: #fff;
-    color: #007acc;
+    color: #247cad;
     font-weight: 700;
-    padding: 12px 24px;
+    padding: 14px 28px;
     border: none;
     border-radius: 8px;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: 0.3s ease;
 }
 
 .cta-btn:hover {
-    background: #005f99;
+    background: #1c5f85;
     color: #fff;
 }

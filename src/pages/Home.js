@@ -9,10 +9,17 @@ import about1 from '../assets/about1.jpeg';
 import about2 from '../assets/about2.jpeg';
 
 import { FaArrowLeft, FaArrowRight, FaClock } from "react-icons/fa";
-import package1 from "../assets/package01.jpg";
-import package2 from "../assets/package02.jpg";
-import package3 from "../assets/package03.jpg";
-import package4 from "../assets/package04.jpg";
+import package1 from "../assets/pkg1.jpg";
+import package2 from "../assets/pkg2.jpg";
+import package3 from "../assets/pkg3.jpg";
+import package4 from "../assets/pkg4.jpg";
+import package5 from "../assets/pkg5.jpg";
+
+import day1 from "../assets/day1.jpg";
+import day2 from "../assets/day2.jpg";
+import day3 from "../assets/day3.jpg";
+import day4 from "../assets/day4.jpg";
+import day5 from "../assets/day5.jpg";
 
 import { motion } from "framer-motion";
 
@@ -36,6 +43,14 @@ function Home() {
     });
   }, []);
 
+  const dayTours = [
+    { title: "Colombo City Day Tour", hours: "8 hours", image: day1, tag: "City Tour" },
+    { title: "Galle & Unawatuna Day Tour", hours: "10 hours", image: day2, tag: "Beach Tour" },
+    { title: "Kandy Cultural Day Tour", hours: "9 hours", image: day3, tag: "Heritage" },
+    { title: "Sigiriya & Dambulla Day Tour", hours: "10 hours", image: day4, tag: "Adventure" },
+    { title: "Kithulgala Day Tour", hours: "10 hours", image: day5, tag: "Adventure" },
+  ];
+
   const packages = [
     {
       img: package1,
@@ -54,6 +69,11 @@ function Home() {
     },
     {
       img: package4,
+      days: "9 Days 8 Nights",
+      title: "Ramayana Tour",
+    },
+    {
+      img: package5,
       days: "9 Days 8 Nights",
       title: "Ramayana Tour",
     },
@@ -218,12 +238,12 @@ function Home() {
           </button>
 
           <div className="packages-slider" id="packagesSlider">
-            {packages.map((pkg, index) => (
+            {dayTours.map((pkg, index) => (
               <div className="package-card" key={index}>
-                <img src={pkg.img} alt={pkg.title} className="package-img" />
+                <img src={pkg.image} alt={pkg.title} className="package-img" />
                 <div className="package-info">
                   <p className="package-days">
-                    <FaClock className="clock-icon" /> {pkg.days}
+                    <FaClock className="clock-icon" /> {pkg.hours}
                   </p>
                   <h4>{pkg.title}</h4>
                 </div>
@@ -249,7 +269,7 @@ function Home() {
           </button>
 
           <div className="destinations-slider" id="destSlider">
-            <div className="destination-card">
+            <div className="destination-card-home">
               <img src={require("../assets/feature1.jpg")} alt="Yala" />
               <div className="destination-info">
                 <p className="location">📍 Uva Province, Sri Lanka</p>
@@ -261,7 +281,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="destination-card">
+            <div className="destination-card-home">
               <img src={require("../assets/feature2.jpg")} alt="Kandy" />
               <div className="destination-info">
                 <p className="location">📍 Central, Sri Lanka</p>
@@ -273,7 +293,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="destination-card">
+            <div className="destination-card-home">
               <img src={require("../assets/feature3.jpg")} alt="Nuwara Eliya" />
               <div className="destination-info">
                 <p className="location">📍 Central, Sri Lanka</p>
@@ -285,7 +305,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="destination-card">
+            <div className="destination-card-home">
               <img src={require("../assets/feature4.jpg")} alt="Eco Escapes" />
               <div className="destination-info">
                 <p className="location">📍 Eco Escapes, Sri Lanka</p>
@@ -297,7 +317,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="destination-card">
+            <div className="destination-card-home">
               <img src={require("../assets/feature5.jpg")} alt="Eco Escapes" />
               <div className="destination-info">
                 <p className="location">📍 Eco Escapes, Sri Lanka</p>
@@ -309,7 +329,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="destination-card">
+            <div className="destination-card-home">
               <img src={require("../assets/feature6.jpg")} alt="Eco Escapes" />
               <div className="destination-info">
                 <p className="location">📍 Eco Escapes, Sri Lanka</p>
@@ -321,7 +341,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="destination-card">
+            <div className="destination-card-home">
               <img src={require("../assets/feature7.jpg")} alt="Eco Escapes" />
               <div className="destination-info">
                 <p className="location">📍 Eco Escapes, Sri Lanka</p>
@@ -333,7 +353,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="destination-card">
+            <div className="destination-card-home">
               <img src={require("../assets/feature8.jpg")} alt="Eco Escapes" />
               <div className="destination-info">
                 <p className="location">📍 Eco Escapes, Sri Lanka</p>
@@ -345,7 +365,7 @@ function Home() {
               </div>
             </div>
 
-            <div className="destination-card">
+            <div className="destination-card-home">
               <img src={require("../assets/feature9.jpg")} alt="Eco Escapes" />
               <div className="destination-info">
                 <p className="location">📍 Eco Escapes, Sri Lanka</p>

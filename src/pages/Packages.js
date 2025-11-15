@@ -1,126 +1,80 @@
-// // src/pages/Packages.js
-// import React from "react";
-// import "../css/Packages.css";
-// import days7 from "../assets/7days.jpg";
-// import days14 from "../assets/14days.jpg";
-// import days21 from "../assets/21days.jpg";
-// import { useNavigate } from "react-router-dom"; // ✅ import useNavigate
+import React, { useEffect } from "react";
+import AOS from "aos";
+import "aos/dist/aos.css";
+import "../css/Packages.css";
 
-// const Packages = () => {
-//     const navigate = useNavigate(); // ✅ create navigate function
+import pkg1 from "../assets/pkg1.jpg";
+import pkg2 from "../assets/pkg2.jpg";
+import pkg3 from "../assets/pkg3.jpg";
+import pkg4 from "../assets/pkg4.jpg";
+import pkg5 from "../assets/pkg5.jpg";
 
-//     const packages = [
-//         {
-//             title: "7 DAYS",
-//             description:
-//                 "Enjoy a short and blissful stay with us as you embark on your journey of healing.",
-//             inclusions: [
-//                 "Doctor consultation",
-//                 "2 treatments / per day according to the doctor's recommendation",
-//                 "Medicine, as prescribed by the doctor",
-//                 "24 hours doctor care",
-//                 "24 hours nursing care",
-//                 "1 yoga and meditation program",
-//             ],
-//             img: days7,
-//         },
-//         {
-//             title: "14 DAYS",
-//             description:
-//                 "A more comprehensive programme, our experienced doctors will prescribe various treatments to suit your needs.",
-//             inclusions: [
-//                 "Full board accommodation (meal plan based on doctor’s recommendation)",
-//                 "Daily doctor consultation",
-//                 "2–3 treatments / per day",
-//                 "Medicine, as prescribed by the doctor",
-//                 "24 hours doctor & nursing care",
-//                 "Yoga & meditation program",
-//             ],
-//             img: days14,
-//         },
-//         {
-//             title: "21 DAYS",
-//             description:
-//                 "Our extended treatment programme offers holistic healing and revitalisation for long-lasting health benefits.",
-//             inclusions: [
-//                 "Full board accommodation",
-//                 "Daily doctor consultation",
-//                 "2–3 treatments / per day",
-//                 "Medicine, as prescribed by the doctor",
-//                 "24 hours doctor & nursing care",
-//                 "Daily yoga & meditation sessions",
-//                 "Specialised detox & rejuvenation therapies",
-//             ],
-//             img: days21,
-//         },
-//     ];
+function Packages() {
+    useEffect(() => {
+        AOS.init({ duration: 1000, once: true });
+    }, []);
 
-//     return (
-//         <div className="packages-page">
-//             {/* Header */}
-//             <div className="packages-header">
-//                 <h2>AYURVEDIC TREATMENTS & WELLNESS PACKAGES</h2>
-//                 <p>
-//                     At Winlion Hospital, each of our tailor made treatments has been
-//                     specially designed to help you achieve your goals to heal, cleanse,
-//                     revitalise and transform your mind and body.
-//                 </p>
-//                 <p>
-//                     Our specialised packages vary in length as we wish to offer you a
-//                     thorough treatment programme. Before you begin your treatment, you
-//                     will initially have a consultation with any Ayurveda physician who
-//                     will give a diagnosis and will specify the treatments you will
-//                     undertake and determine how rigorous your schedule will be.
-//                 </p>
-//             </div>
+    const packages = [
+        { title: "Culture Heritage Trails", days: "9 days", nights: "8 Nights", image: pkg1, tag: "Cultural Heritage" },
+        { title: "Accessible Holiday Tour", days: "12 days", nights: "11 Nights", image: pkg2, tag: "Holiday Tour" },
+        { title: "Honeymoon Trail", days: "14 days", nights: "13 Nights", image: pkg3, tag: "Honeymoon Trail" },
+        { title: "Ramayana Tour", days: "9 days", nights: "8 Nights", image: pkg4, tag: "Ramayana Tour" },
+        { title: "Eco Trail", days: "13 days", nights: "12 Nights", image: pkg5, tag: "Eco Trail" },
+    ];
 
-//             {/* Grid */}
-//             <div className="packages-grid">
-//                 {packages.map((pkg, index) => (
-//                     <div className="package-card" key={index}>
-//                         <div className="package-image">
-//                             <img src={pkg.img} alt={pkg.title} />
-//                         </div>
-//                         <div className="package-info">
-//                             <h4>{pkg.title}</h4>
-//                             <p>{pkg.description}</p>
-//                             <h5>Inclusions</h5>
-//                             <ul>
-//                                 {pkg.inclusions.map((item, idx) => (
-//                                     <li key={idx}>{item}</li>
-//                                 ))}
-//                             </ul>
-//                             <div className="package-links">
-//                                 <a href="#" className="read-more">
-//                                     READ MORE
-//                                 </a>
-//                                 <button
-//                                     className="book-now"
-//                                     onClick={() => navigate("/booking")} // ✅ navigate to booking
-//                                 >
-//                                     BOOK NOW
-//                                 </button>
-//                             </div>
-//                         </div>
-//                     </div>
-//                 ))}
-//             </div>
+    return (
+        <>
+            {/* HERO */}
+            <section className="packages-hero-section" data-aos="fade-down">
+                <div className="packages-hero-overlay">
+                    <div className="packages-hero-content">
+                        <h1>Tour Packages</h1>
+                        <p>Home &gt; Tour Packages</p>
+                    </div>
+                </div>
+            </section>
 
-//             {/* WhatsApp Floating Button */}
-//             <a
-//                 href="https://wa.me/94762307765"
-//                 className="whatsapp-fab"
-//                 target="_blank"
-//                 rel="noopener noreferrer"
-//             >
-//                 <img
-//                     src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/512px-WhatsApp.svg.png"
-//                     alt="WhatsApp"
-//                     className="whatsapp-icon"
-//                 />
-//             </a>
-//         </div>
-//     );
-// };
+            {/* GRID */}
+            <section className="package-grid-section" data-aos="fade-up">
+                <div className="package-grid-container">
+                    {packages.map((pkg, i) => (
+                        <div className="package-card" key={i} data-aos="zoom-in">
+                            <div className="package-tag">{pkg.tag}</div>
 
-// export default Packages;
+                            <img src={pkg.image} alt={pkg.title} />
+
+                            <div className="package-info">
+                                <h3>{pkg.title}</h3>
+
+                                <div className="package-meta">
+                                    <span>⏱ {pkg.days}</span>
+                                    <span>🌙 {pkg.nights}</span>
+                                </div>
+                            </div>
+                        </div>
+                    ))}
+                </div>
+            </section>
+
+            {/* ===== CTA Section ===== */}
+            <section className="cta-section" data-aos="fade-up">
+                <div className="cta-box">
+                    <div className="cta-left">
+                        <img src={require("../assets/hile.png")} className="cta-icon" alt="icon" />
+
+                        <div className="cta-text">
+                            <h2>Ready To Adventure And Enjoy Natural</h2>
+                            <p>Reach Captain Ceylon Tours For A Secure, Luxurious, And Unforgettable Adventure!</p>
+                        </div>
+                    </div>
+
+                    <img src={require("../assets/plan.png")} className="cta-plane" alt="plane" />
+
+                    <button className="cta-btn">LET’S GET STARTED</button>
+                </div>
+            </section>
+        </>
+    );
+}
+
+export default Packages;

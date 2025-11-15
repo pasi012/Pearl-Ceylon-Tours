@@ -507,7 +507,7 @@ p, li {
   display: none;
 }
 
-.destination-card {
+.destination-card-home {
   flex: 0 0 calc(25% - 20px);
   scroll-snap-align: start;
   background-color: #fff;
@@ -517,11 +517,11 @@ p, li {
   transition: transform 0.3s ease;
 }
 
-.destination-card:hover {
+.destination-card-home:hover {
   transform: translateY(-6px);
 }
 
-.destination-card img {
+.destination-card-home img {
   width: 100%;
   height: 220px;
   object-fit: cover;

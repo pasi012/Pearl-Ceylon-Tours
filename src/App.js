@@ -7,7 +7,8 @@ import Contact from "./pages/Contact";
 import Booking from "./pages/Booking";
 import Footer from "./components/Footer";
 import Destinations from "./pages/destinations";
-
+import DayTourPackages from "./pages/DayTourPackages";
+import TailorMadeTours from "./pages/TailorMadeTours";
 
 function App() {
   return (
@@ -17,6 +18,8 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/packages" element={<Packages />} />
+        <Route path="/day-tours" element={<DayTourPackages />} />
+        <Route path="/tailor-made-tours" element={<TailorMadeTours />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/booking" element={<Booking />} />
 

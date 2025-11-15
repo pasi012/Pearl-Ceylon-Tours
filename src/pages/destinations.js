@@ -34,10 +34,11 @@ function Destinations() {
         <>
             {/* ===== Hero Section ===== */}
             <section className="destinations-hero" data-aos="fade-down">
-                <div className="overlay"></div>
-                <div className="hero-content">
-                    <h1>Our Tour Destinations</h1>
-                    <p>Home &gt; Our Tour Destinations</p>
+                <div className="overlay">
+                    <div className="hero-content">
+                        <h1>Our Tour Destinations</h1>
+                        <p>Home &gt; Our Tour Destinations</p>
+                    </div>
                 </div>
             </section>
 
@@ -58,16 +59,22 @@ function Destinations() {
 
             {/* ===== CTA Section ===== */}
             <section className="cta-section" data-aos="fade-up">
-                <div className="cta-container">
-                    <div className="cta-text">
-                        <h2>Ready To Adventure And Enjoy Natural</h2>
-                        <p>
-                            Reach Captain Ceylon Tours for a secure, luxurious, and unforgettable adventure!
-                        </p>
+                <div className="cta-box">
+                    <div className="cta-left">
+                        <img src={require("../assets/hile.png")} className="cta-icon" alt="icon" />
+
+                        <div className="cta-text">
+                            <h2>Ready To Adventure And Enjoy Natural</h2>
+                            <p>Reach Captain Ceylon Tours For A Secure, Luxurious, And Unforgettable Adventure!</p>
+                        </div>
                     </div>
+
+                    <img src={require("../assets/plan.png")} className="cta-plane" alt="plane" />
+
                     <button className="cta-btn">LET’S GET STARTED</button>
                 </div>
             </section>
+
         </>
     );
 }
