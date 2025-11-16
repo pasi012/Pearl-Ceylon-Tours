@@ -1,155 +1,587 @@
-/* Base Styles */
-.about-page {
-  padding: 0 20px; /* reduced padding for smaller screens */
-  font-family: "Segoe UI", Tahoma, sans-serif;
-  color: #333;
-  background-color: #fafafa;
+/* ===== Hero Section ===== */
+.about-hero {
+  position: relative;
+  height: 45vh;
+  background: url("../assets/hero-destination.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 150px;
 }
 
-.about-header {
+.about-hero .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about-hero .hero-content {
   text-align: center;
-  margin-bottom: 40px;
+  color: #fff;
 }
 
-.about-header h2 {
-  font-size: 2.2rem; /* scalable */
-  font-weight: bold;
-  margin-bottom: 20px;
-  letter-spacing: 1.5px;
-  color: #222;
+.about-hero h1 {
+  font-size: 4rem;
+  font-weight: 600;
 }
 
-.about-header p {
+.about-hero p {
   font-size: 1rem;
-  line-height: 1.7;
-  max-width: 900px;
-  margin: 10px auto;
-  color: #555;
+  margin-top: 8px;
 }
 
-/* Concept Section */
-.about-concept {
+/* ===== Intro Section ===== */
+.about-intro {
+  text-align: center;
+  padding: 10px 50px;
+}
+
+.about-intro h4 {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.3rem;
+  color: #247cad;
+}
+
+.about-intro h2 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: -40px;
+}
+
+.intro-text {
+  margin-top: -30px;
+  font-size: 1.1rem;
+  width: 70%;
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.85;
+}
+
+/* ===== Founder Section ===== */
+.founder-section {
+  background: #0e1217;
+  padding: 70px 90px;
+  color: #fff;
+}
+
+.founder-container {
+  display: flex;
+  gap: 50px;
+  align-items: center;
+  justify-content: center;
+}
+
+.founder-img img {
+  width: 600px;
+  border-radius: 12px;
+}
+
+.experience-text {
+  margin-top: 10px;
+  font-size: 1.1rem;
+  color: #fff;
+  max-width: 600px;
+  text-align: center;
+}
+
+.founder-details {
+  max-width: 550px;
+}
+
+.founder-tag {
+  font-family: 'Great Vibes', cursive;
+  color: #0fc2ff;
+  font-size: 1.7rem;
+  margin-bottom: 10px;
+}
+
+.founder-name {
+  font-size: 2.3rem;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.blue-hand {
+  color: #0fc2ff;
+  font-family: 'Playfair Display', serif;
+  font-style: italic;
+  font-size: 1.8rem;
+}
+
+.company-name {
+  margin-top: 5px;
+  font-size: 1.6rem;
+  color: #fff;
+  opacity: 0.8;
+}
+
+.founder-description,
+.highlight-text {
+  margin-top: 15px;
+  opacity: 0.8;
+}
+
+.founder-list {
+  margin-top: 15px;
+  list-style: none;
+}
+
+.founder-list li {
+  margin-bottom: 8px;
+}
+
+.founder-btn {
+  margin-top: 20px;
+  padding: 12px 28px;
+  background: #0fc2ff;
+  border: none;
+  color: #000;
+  font-weight: 700;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+.founder-btn:hover {
+  background: #0aa0d1;
+}
+
+/* ===== Team Section ===== */
+.team-section {
+  text-align: center;
+  padding: 20px 50px;
+  background: #ffffff;
+}
+
+.team-subtitle {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #247cad;
+}
+
+.team-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: -40px;
+  margin-bottom: -30px;
+  color: #0e1217;
+
+}
+
+.team-title span {
+  font-family: "Playfair Display", serif;
+  color: #247cad;
+  font-style: italic;
+}
+
+.team-container {
+  margin-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.team-card {
+  width: 330px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 20px;
+  transition: 0.3s ease;
+}
+
+.team-card:hover {
+  transform: translateY(-10px);
+}
+
+.team-img {
+  width: 350px;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.team-role {
+  margin-top: 15px;
+  color: #247cad;
+  font-size: 1rem;
+}
+
+.team-name {
+  font-size: 1.4rem;
+  font-weight: 700;
+  margin-top: -15px;
+  color: #0e1217;
+}
+
+/* ===== Offer Section ===== */
+.offer-section {
+  text-align: center;
+  padding: 20px 60px;
+  margin-top: -50px;
+}
+
+.offer-subtitle {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2rem;
+  color: #247cad;
+}
+
+.offer-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: -35px;
+  margin-bottom: 40px;
+  color: #0e1217;
+}
+
+.offer-title .offer-style {
+  font-family: "Playfair Display", serif;
+  font-style: italic;
+  color: #247cad;
+}
+
+.offer-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.offer-card {
+  width: 300px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 30px;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 20px;
+  transition: .3s ease;
+  text-align: left;
+}
+
+.offer-card:hover {
+  transform: translateY(-10px);
+}
+
+.offer-icon {
+  width: 90px;
+  margin-bottom: -15px;
+}
+
+.offer-card-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #0e1217;
+}
+
+.offer-card-text {
+  font-size: 1rem;
+  opacity: 0.85;
+  line-height: 1.6;
+}
+
+/* ===== Call Us Section ===== */
+.sl-collage-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px 250px;
+}
+
+.sl-collage-container {
+  flex: 1;
+}
+
+.sl-collage-img {
+  width: 100%;
+  max-width: 650px;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
+}
+
+.sl-collage-content {
+  flex: 1;
+}
+
+/* Subtitle */
+.sl-subtitle {
+  color: #0a3d62;
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: -30px;
+  font-family: "Playfair Display", serif;
+}
+
+/* Main Title */
+.sl-main-title {
+  font-size: 3rem;
+  font-weight: 800;
+  color: #0e141b;
+  margin-bottom: 40px;
+  line-height: 1.2;
+}
+
+/* Accordion container */
+.sl-accordion {
+  width: 100%;
+  max-width: 700px;
+}
+
+/* Accordion Item */
+.sl-accordion-item {
+  background: #ffffff;
+  border-radius: 12px;
+  box-shadow: rgba(0, 0, 0, 0.06) 0px 4px 18px;
+  margin-bottom: 18px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Header */
+.sl-accordion-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 22px 25px;
+}
+
+.sl-accordion-header h3 {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+/* Arrow */
+.arrow {
+  width: 14px;
+  height: 14px;
+  border-right: 2px solid #0e141b;
+  border-bottom: 2px solid #0e141b;
+  transform: rotate(45deg);
+  transition: 0.3s ease;
+}
+
+/* Rotate arrow when active */
+.sl-accordion-item.active .arrow {
+  transform: rotate(-135deg);
+}
+
+/* Body */
+.sl-accordion-body {
+  padding: 0px 25px 22px 25px;
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.sl-accordion-item.active .sl-accordion-body {
+  display: block;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== Our Mission Section ===== */
+
+.mission-sl-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  margin: 10px 0;
+}
+
+.mission-sl-box {
+  width: 65%;
+  background: #247cad;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  position: relative;
+}
+
+/* Left Icon */
+.mission-sl-icon {
+  width: 80px;
+  height: auto;
+  margin-top: 70px;
+}
+
+/* Text */
+.mission-sl-text h2 {
+  font-size: 1.8rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.mission-sl-text p {
+  line-height: 1.7;
+  font-size: 1.0rem;
+  max-width: 900px;
+}
+
+/* Call Button */
+.mission-sl-call-btn {
+  position: absolute;
+  right: 60px;
+  top: 120px;
+  background: white;
+  border: none;
+  width: 100px;
+  height: 50px;
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.3rem;
+  color: blue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
+}
+
+.mission-sl-call-btn:hover {
+  background: yellow;
+  color: blue;
+}
+
+/* ===== Why Choose Us Section ===== */
+.why-choose-section {
+  margin: 50px auto;
+  padding: 60px;
+  background: url("../assets/hero-destination.jpg") center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  height: 300px;
+  justify-content: space-between;
+  gap: 40px;
+  margin-bottom: -30px;
+  color: white;
+}
+
+.why-choose-left {
+  flex: 1;
+}
+
+.why-title {
+  font-size: 2.5rem;
+  font-family: "Playfair Display", serif;
+  margin-bottom: 20px;
+  margin-left: 200px;
+}
+
+.why-description {
+  font-size: 1.1rem;
+  opacity: 0.9;
+  line-height: 1.7;
+  margin-left: 200px;
+  margin-bottom: 25px;
+}
+
+.why-btn {
+  padding: 12px 26px;
+  background: white;
+  margin-left: 200px;
+  color: #0a3d62;
+  border-radius: 8px;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.why-choose-right {
+  flex: 1;
   display: flex;
   justify-content: center;
 }
 
-.about-text-card {
-  background: #fff;
-  padding: 30px;
-  border-radius: 12px;
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-  max-width: 1100px;
+.why-single-img {
   width: 100%;
+  max-width: 430px;
+  border-radius: 20px;
 }
 
-.about-row {
+/* ===== Adventure & Travels Section ===== */
+.explore-sl-section {
+  text-align: center;
+  padding: 30px 80px;
+  background: #ffffff;
+}
+
+.explore-subtitle {
+  font-family: "Great Vibes", cursive;
+  color: #247cad;
+  font-size: 2rem;
+}
+
+.explore-title {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-top: -40px;
+  margin-bottom: 10px;
+}
+
+.explore-title span {
+  font-family: "Playfair Display", serif;
+  color: #247cad;
+  font-style: italic;
+}
+
+.explore-description {
+  margin: 20px auto 40px auto;
+  width: 60%;
+  opacity: 0.8;
+  font-size: 1.1rem;
+}
+
+.explore-card-container {
   display: flex;
-  gap: 30px;
-  align-items: flex-start;
-  flex-wrap: wrap; /* ensures responsiveness */
+  justify-content: center;
+  gap: 35px;
+  flex-wrap: wrap;
 }
 
-.about-col {
-  flex: 1;
-  min-width: 280px; /* better for smaller screens */
-}
-
-.about-card-img {
-  width: 100%;
+.explore-card {
+  width: 300px;
+  background: #fff;
   border-radius: 12px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+  text-align: left;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 4px 20px;
+  transition: 0.3s ease;
 }
 
-.about-col h3 {
-  font-size: 1.6rem;
+.explore-card:hover {
+  transform: translateY(-10px);
+}
+
+.explore-icon {
+  width: 75px;
   margin-bottom: 15px;
-  color: #222;
 }
 
-.about-col p {
-  font-size: 0.95rem;
+.explore-card h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.explore-card p {
+  font-size: 1rem;
+  opacity: 0.85;
   line-height: 1.6;
-  margin-bottom: 15px;
-  color: #555;
-}
-
-.about-col ul {
-  list-style: none;
-  padding: 0;
-}
-
-.about-col li {
-  font-size: 0.9rem;
-  margin-bottom: 12px;
-  line-height: 1.5;
-  color: #444;
-}
-
-/* WhatsApp Floating Button */
-.whatsapp-fab {
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 100;
-}
-
-.whatsapp-icon {
-  width: 50px;
-  height: 50px;
-}
-
-/* Media Queries for Responsiveness */
-@media screen and (max-width: 1024px) {
-  .about-page {
-    padding: 0 40px;
-  }
-  .about-header h2 {
-    font-size: 2rem;
-  }
-  .about-col h3 {
-    font-size: 1.4rem;
-  }
-}
-
-@media screen and (max-width: 768px) {
-  .about-page {
-    padding: 0 20px;
-  }
-  .about-header h2 {
-    font-size: 1.8rem;
-  }
-  .about-header p {
-    font-size: 0.95rem;
-  }
-  .about-row {
-    flex-direction: column;
-    gap: 20px;
-  }
-  .about-col h3 {
-    font-size: 1.3rem;
-  }
-  .about-col p,
-  .about-col li {
-    font-size: 0.9rem;
-  }
-}
-
-@media screen and (max-width: 480px) {
-  .about-header h2 {
-    font-size: 1.5rem;
-  }
-  .about-header p {
-    font-size: 0.9rem;
-  }
-  .about-col h3 {
-    font-size: 1.2rem;
-  }
-  .about-col p,
-  .about-col li {
-    font-size: 0.85rem;
-  }
-  .whatsapp-icon {
-    width: 40px;
-    height: 40px;
-  }
 }

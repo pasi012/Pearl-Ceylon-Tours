@@ -386,7 +386,7 @@ function Home() {
       </section>
 
       {/* Why Choose Us Section */}
-      <section className="why-choose-section" data-aos="fade-up">
+      <section className="why-choose-section-home" data-aos="fade-up">
         <div className="why-choose-container">
           <div className="why-choose-image">
             <img src={require("../assets/whychoose.jpg")} alt="Sri Lanka Coast" />
@@ -543,6 +543,7 @@ function Home() {
           className="whatsapp-icon"
         />
       </a>
+      
     </div>
   );
 }
