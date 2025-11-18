@@ -1,0 +1,226 @@
+/* HERO */
+.mirissa-hero {
+    height: 55vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 150px;
+    position: relative;
+}
+
+.mirissa-hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.mirissa-hero h1 {
+    color: #fff;
+    font-size: 4rem;
+    z-index: 2;
+}
+
+/* MAIN LAYOUT */
+.mirissa-container {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 60px 80px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* LEFT CONTENT */
+.mirissa-left h2 {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.mirissa-left h3 {
+    margin: 25px 0 10px;
+}
+
+.mirissa-left p {
+    line-height: 1.7;
+    margin-bottom: 10px;
+}
+
+.mirissa-gallery {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.mirissa-gallery img {
+    flex: 1;
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* LIST */
+.mirissa-list li {
+    margin-bottom: 8px;
+}
+
+/* RIGHT FORM */
+.mirissa-form {
+    background: #e3eef6;
+    padding: 25px;
+    border-radius: 10px;
+    height: fit-content;
+    width: 400px;
+}
+
+.mirissa-form h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    /* centers the title */
+}
+
+.mirissa-form form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+}
+
+.mirissa-form input,
+.mirissa-form textarea {
+    width: 100%;
+    max-width: 350px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: medium;
+}
+
+.mirissa-form select {
+    width: 100%;
+    max-width: 370px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: medium;
+}
+
+.mirissa-form textarea {
+    height: 100px;
+    resize: none;
+    font-size: large;
+}
+
+.mirissa-form button {
+    background: #247cad;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 370px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.mirissa-form button:hover {
+    background: #1d5a78;
+}
+
+.mirissa-top-gallery {
+    display: flex;
+    width: 100%;
+    gap: 20px;
+    margin: 25px 0;
+}
+
+.mirissa-top-gallery img {
+    flex: 1;
+    width: 100%;
+    height: 260px;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+.mirissa-extra h3 {
+    font-size: 1.4rem;
+    margin-top: 20px;
+}
+
+.mirissa-extra p {
+    margin-top: 10px;
+    line-height: 1.7;
+}
+
+/* ACTIVITIES */
+.mirissa-activities h2 {
+    margin-top: 40px;
+    font-size: 2rem;
+}
+
+.activity-box {
+    margin: 15px 0;
+    padding: 15px;
+    background: #fff;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.activity-box summary {
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.activity-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    margin-top: 15px;
+}
+
+.activity-card {
+    flex: 1;
+    min-width: 220px;
+    background: #fafafa;
+    padding: 10px;
+    border-radius: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+}
+
+.activity-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* PARROT ROCK */
+.mirissa-parrot-rock {
+    margin-top: 50px;
+}
+
+.parrot-gallery {
+    display: flex;
+    gap: 25px;
+    margin: 20px 0;
+}
+
+.parrot-gallery img {
+    flex: 1;
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    border-radius: 10px;
+}

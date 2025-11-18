@@ -2,7 +2,7 @@
 .about-hero {
   position: relative;
   height: 45vh;
-  background: url("../assets/hero-destination.jpg") center/cover no-repeat;
+  background: url("../assets/our-packages.jpg") center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -464,7 +464,7 @@
 .why-choose-section {
   margin: 50px auto;
   padding: 60px;
-  background: url("../assets/hero-destination.jpg") center/cover no-repeat;
+  background: url("../assets/plan_trip.png") center/cover no-repeat;
   display: flex;
   align-items: center;
   height: 300px;
@@ -511,8 +511,9 @@
 
 .why-single-img {
   width: 100%;
-  max-width: 430px;
+  max-width: 380px;
   border-radius: 20px;
+  margin-bottom: 30px;
 }
 
 /* ===== Adventure & Travels Section ===== */
@@ -584,4 +585,64 @@
   font-size: 1rem;
   opacity: 0.85;
   line-height: 1.6;
+}
+
+/* ===== Stats Section ===== */
+.stats-section {
+  background: url("../assets/whychoose.jpg") center/cover no-repeat;
+  padding: 80px 50px;
+  margin: 40px auto;
+  text-align: center;
+  position: relative;
+  height: 300px;
+}
+
+.stats-section::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+  position: relative;
+  z-index: 3;
+}
+
+.stats-box {
+  width: 260px;
+  height: 190px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #fff;
+  padding: 25px;
+  transition: 0.3s ease;
+}
+
+.stats-box:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.stats-icon {
+  font-size: 2.8rem;
+  color: #ffcc00;
+  margin-bottom: 10px;
+}
+
+.stats-box h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+
+.stats-box p {
+  font-size: 1.1rem;
+  opacity: 0.9;
 }

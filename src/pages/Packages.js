@@ -64,7 +64,7 @@ function Packages() {
 
                         <div className="cta-text">
                             <h2>Ready To Adventure And Enjoy Natural</h2>
-                            <p>Reach Captain Ceylon Tours For A Secure, Luxurious, And Unforgettable Adventure!</p>
+                            <p>Reach Pearl Ceylon Tours For A Secure, Luxurious, And Unforgettable Adventure!</p>
                         </div>
                     </div>
 

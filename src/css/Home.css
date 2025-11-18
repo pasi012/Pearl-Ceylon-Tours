@@ -1,5 +1,6 @@
 /* Global Typography */
-body, .home-container {
+body,
+.home-container {
   font-family: 'Poppins', sans-serif;
   color: #222;
   background-color: #fff;
@@ -20,7 +21,9 @@ body, .home-container {
 }
 
 /* Buttons */
-.explore-btn, .primary-btn, .outline-btn {
+.explore-btn,
+.primary-btn,
+.outline-btn {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.5px;
 }
@@ -51,7 +54,8 @@ body, .home-container {
 }
 
 /* Subheadings / Descriptive Text */
-p, li {
+p,
+li {
   font-family: 'Poppins', sans-serif;
   font-weight: 400;
   line-height: 1.7;
@@ -331,9 +335,12 @@ p, li {
 
 /* Floating keyframes */
 @keyframes floatBox {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(-10px);
   }
@@ -370,6 +377,7 @@ p, li {
   color: #007aff;
 }
 
+/* Wrapper shows only 4 cards */
 .packages-slider-wrapper {
   position: relative;
   display: flex;
@@ -400,14 +408,15 @@ p, li {
 
 .arrow-btn.left {
   position: absolute;
-  left: 200px;
+  left: 130px;
 }
 
 .arrow-btn.right {
   position: absolute;
-  right: 200px;
+  right: 130px;
 }
 
+/* Slider scrolls horizontally */
 .packages-slider {
   display: flex;
   gap: 25px;
@@ -416,23 +425,24 @@ p, li {
   scrollbar-width: none;
   -ms-overflow-style: none;
   padding: 10px 0;
+  scroll-snap-type: x mandatory;
 }
 
 .packages-slider::-webkit-scrollbar {
   display: none;
 }
 
-.package-card {
-  flex: 0 0 auto;
-  width: 280px;
-  border-radius: 16px;
+.package-card-home {
+  flex: 0 0 calc(25% - 20px);
+  scroll-snap-align: start;
   background-color: #fff;
+  border-radius: 16px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   overflow: hidden;
   transition: transform 0.3s ease;
 }
 
-.package-card:hover {
+.package-card-home:hover {
   transform: translateY(-6px);
 }
 
@@ -618,15 +628,18 @@ p, li {
   font-size: 1.2rem;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.3);
 
-/* Animation */
+  /* Animation */
   animation: floatBox1 3s ease-in-out infinite;
 }
 
 /* Floating keyframes */
 @keyframes floatBox1 {
-  0%, 100% {
+
+  0%,
+  100% {
     transform: translateX(-50%) translateY(0);
   }
+
   50% {
     transform: translateX(-50%) translateY(-10px);
   }

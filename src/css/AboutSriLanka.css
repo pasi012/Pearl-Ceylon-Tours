@@ -1,0 +1,185 @@
+/* ================= HERO ================= */
+.sl-hero {
+    height: 45vh;
+    margin-top: 150px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.sl-hero-overlay {
+    background: rgba(0, 0, 0, 0.55);
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.sl-hero h1 {
+    font-size: 3.6rem;
+    font-weight: 600;
+}
+
+.sl-hero p {
+    margin-top: 8px;
+    font-size: 1rem;
+}
+
+/* ================= WRAPPER ================= */
+.sl-wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 70px;
+    background: #fff;
+}
+
+/* LEFT ARTICLE */
+.sl-left {
+    width: 65%;
+    max-width: 800px;
+}
+
+.sl-main-img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.sl-info-row {
+    display: flex;
+    gap: 25px;
+    margin: 18px 0;
+    font-size: 0.95rem;
+    opacity: 0.8;
+}
+
+.sl-article-title {
+    font-size: 1.9rem;
+    font-weight: 700;
+    margin: 15px 0 20px;
+}
+
+.sl-sub-title {
+    margin-top: 25px;
+    font-size: 1.4rem;
+}
+
+.sl-left p {
+    line-height: 1.7;
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* QUOTE BOX */
+.sl-quote-box {
+    background: #f5f7f9;
+    padding: 35px 40px;
+    border-radius: 10px;
+    margin: 30px 0;
+    position: relative;
+}
+
+.sl-quote-text {
+    font-size: 1.3rem;
+    font-weight: 600;
+    line-height: 1.6;
+}
+
+.sl-quote-author {
+    margin-top: 20px;
+    font-size: 0.95rem;
+}
+
+.sl-quote-icon {
+    position: absolute;
+    right: 25px;
+    bottom: 25px;
+    font-size: 3rem;
+    color: #247cad;
+}
+
+/* ATTRACTIONS */
+.sl-attractions-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 40px;
+    margin: 30px 0;
+}
+
+.sl-attraction-list {
+    list-style: none;
+    width: 60%;
+    padding-left: 0;
+}
+
+.sl-attraction-list li {
+    margin-bottom: 15px;
+    font-size: 1.05rem;
+}
+
+.sl-attraction-list li::before {
+    content: "✔";
+    font-weight: bold;
+    margin-right: 10px;
+    color: #247cad;
+}
+
+.sl-attraction-img {
+    width: 300px;
+    border-radius: 12px;
+    object-fit: cover;
+}
+
+/* IMAGE ROW */
+.sl-image-row {
+    display: flex;
+    gap: 30px;
+    width: 100%;
+    margin: 20px 0 40px;
+}
+
+.sl-image-box {
+    width: 50%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* RIGHT AUTHOR CARD */
+.sl-right {
+    width: 28%;
+    max-width: 350px;
+}
+
+.sl-author-card {
+    background: #f3f7fa;
+    padding: 30px;
+    border-radius: 12px;
+    text-align: center;
+}
+
+.sl-author-img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.sl-author-name {
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-top: 10px;
+}
+
+.sl-author-desc {
+    margin-top: 10px;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}

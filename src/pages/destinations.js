@@ -1,4 +1,5 @@
 import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/Destinations.css";
@@ -18,6 +19,8 @@ function Destinations() {
         AOS.init({ duration: 1000, once: true });
     }, []);
 
+    const navigate = useNavigate();
+
     const destinations = [
         { name: "Mirissa", image: mirissa },
         { name: "Sigiriya", image: sigiriya },
@@ -30,9 +33,13 @@ function Destinations() {
         { name: "Eco Escapes", image: ecoEscapes },
     ];
 
+    // Convert name → safe URL (Mirissa → mirissa, Nuwara Eliya → nuwara-eliya)
+    const slugify = (text) =>
+        text.toLowerCase().replace(/\s+/g, "-");
+
     return (
         <>
-            {/* ===== Hero Section ===== */}
+            {/* Hero Section */}
             <section className="destinations-hero" data-aos="fade-down">
                 <div className="overlay">
                     <div className="hero-content">
@@ -42,11 +49,17 @@ function Destinations() {
                 </div>
             </section>
 
-            {/* ===== Destinations Grid ===== */}
+            {/* Destinations Grid */}
             <section className="destinations-grid" data-aos="fade-up">
                 <div className="grid-container">
                     {destinations.map((dest, index) => (
-                        <div className="destination-card" key={index} data-aos="zoom-in">
+                        <div
+                            className="destination-card"
+                            key={index}
+                            data-aos="zoom-in"
+                            onClick={() => navigate(`/destinations/${slugify(dest.name)}`)}
+                            style={{ cursor: "pointer" }}
+                        >
                             <img src={dest.image} alt={dest.name} />
                             <div className="card-overlay">
                                 <p>Travel To:</p>
@@ -57,15 +70,14 @@ function Destinations() {
                 </div>
             </section>
 
-            {/* ===== CTA Section ===== */}
+            {/* CTA Section */}
             <section className="cta-section" data-aos="fade-up">
                 <div className="cta-box">
                     <div className="cta-left">
                         <img src={require("../assets/hile.png")} className="cta-icon" alt="icon" />
-
                         <div className="cta-text">
                             <h2>Ready To Adventure And Enjoy Natural</h2>
-                            <p>Reach Captain Ceylon Tours For A Secure, Luxurious, And Unforgettable Adventure!</p>
+                            <p>Reach Pearl Ceylon Tours For A Secure, Luxurious, And Unforgettable Adventure!</p>
                         </div>
                     </div>
 
@@ -74,7 +86,6 @@ function Destinations() {
                     <button className="cta-btn">LET’S GET STARTED</button>
                 </div>
             </section>
-
         </>
     );
 }

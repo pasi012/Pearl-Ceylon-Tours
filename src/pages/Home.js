@@ -3,6 +3,8 @@ import '../css/Home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
+import { useNavigate } from "react-router-dom";
+
 import heroVideo from "../assets/hero.mp4";
 
 import about1 from '../assets/about1.jpeg';
@@ -25,60 +27,13 @@ import { motion } from "framer-motion";
 
 function Home() {
 
+  const navigate = useNavigate();
+
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
-  useEffect(() => {
-    const slider = document.getElementById("packagesSlider");
-    const prevBtn = document.getElementById("prevBtn");
-    const nextBtn = document.getElementById("nextBtn");
-
-    nextBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: 320, behavior: "smooth" });
-    });
-
-    prevBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: -320, behavior: "smooth" });
-    });
-  }, []);
-
-  const dayTours = [
-    { title: "Colombo City Day Tour", hours: "8 hours", image: day1, tag: "City Tour" },
-    { title: "Galle & Unawatuna Day Tour", hours: "10 hours", image: day2, tag: "Beach Tour" },
-    { title: "Kandy Cultural Day Tour", hours: "9 hours", image: day3, tag: "Heritage" },
-    { title: "Sigiriya & Dambulla Day Tour", hours: "10 hours", image: day4, tag: "Adventure" },
-    { title: "Kithulgala Day Tour", hours: "10 hours", image: day5, tag: "Adventure" },
-  ];
-
-  const packages = [
-    {
-      img: package1,
-      days: "9 Days 8 Nights",
-      title: "Culture Heritage Trails",
-    },
-    {
-      img: package2,
-      days: "12 Days 11 Nights",
-      title: "Accessible Holiday Tour",
-    },
-    {
-      img: package3,
-      days: "14 Days 13 Nights",
-      title: "Honeymoon Trail",
-    },
-    {
-      img: package4,
-      days: "9 Days 8 Nights",
-      title: "Ramayana Tour",
-    },
-    {
-      img: package5,
-      days: "9 Days 8 Nights",
-      title: "Ramayana Tour",
-    },
-  ];
-
+  //destinations
   useEffect(() => {
     const destSlider = document.getElementById("destSlider");
     const destPrevBtn = document.getElementById("destPrevBtn");
@@ -109,6 +64,63 @@ function Home() {
     return () => clearInterval(autoScroll);
   }, []);
 
+  //packages
+  useEffect(() => {
+    const slider = document.getElementById("pkgSlider");
+    const prevBtn = document.getElementById("pkgPrevBtn");
+    const nextBtn = document.getElementById("pkgNextBtn");
+
+    const scrollAmount = slider.offsetWidth / 4 + 20; // roughly one card width
+
+    // Manual scroll
+    nextBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+    prevBtn.addEventListener("click", () => {
+      slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+    // Auto-scroll every 4 seconds
+    const autoScroll = setInterval(() => {
+      if (
+        slider.scrollLeft + slider.clientWidth >=
+        slider.scrollWidth - 5
+      ) {
+        slider.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }, 4000);
+
+    return () => clearInterval(autoScroll);
+  }, []);
+
+  //day tour
+  useEffect(() => {
+    const daySlider = document.getElementById("daySlider");
+    const dayPrevBtn = document.getElementById("dayPrevBtn");
+    const dayNextBtn = document.getElementById("dayNextBtn");
+
+    const dayScrollAmount = daySlider.offsetWidth / 4 + 20;
+
+    dayNextBtn.addEventListener("click", () => {
+      daySlider.scrollBy({ left: dayScrollAmount, behavior: "smooth" });
+    });
+    dayPrevBtn.addEventListener("click", () => {
+      daySlider.scrollBy({ left: -dayScrollAmount, behavior: "smooth" });
+    });
+
+    const dayAutoScroll = setInterval(() => {
+      if (daySlider.scrollLeft + daySlider.clientWidth >= daySlider.scrollWidth - 5) {
+        daySlider.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        daySlider.scrollBy({ left: dayScrollAmount, behavior: "smooth" });
+      }
+    }, 4000);
+
+    return () => clearInterval(dayAutoScroll);
+  }, []);
+
   return (
     <div className="home-container">
 
@@ -128,7 +140,13 @@ function Home() {
           <h1 className="slide-text">
             Excitement Tours <br /> Adventure Awaits With Us!
           </h1>
-          <button className="explore-btn">CHECK OUT OUR PACKAGES</button>
+
+          <button
+            className="explore-btn"
+            onClick={() => navigate("/packages")}
+          >
+            CHECK OUT OUR PACKAGES
+          </button>
         </div>
       </section>
 
@@ -140,10 +158,10 @@ function Home() {
             Let Us Plan Your Holiday In <br /> <span>Sri Lanka</span>
           </h1>
 
-          <h2>Captain Ceylon Tours</h2>
+          <h2>Pearl Ceylon Tours</h2>
 
           <p>
-            Sri Lankan based locally owned company <strong>Captain Ceylon Tours</strong> specializes in handling
+            Sri Lankan based locally owned company <strong>Pearl Ceylon Tours</strong> specializes in handling
             wheelchair accessible holidays, senior citizen holidays, tailor-made family holidays, beach holidays,
             and wildlife tours in Sri Lanka. As one of the best travel agencies in Sri Lanka, we are fully geared
             to design and operate your holiday by putting together your interests and our expertise while maintaining
@@ -157,12 +175,22 @@ function Home() {
           </p>
 
           <div className="about-buttons">
-            <button className="primary-btn">Find Out More</button>
-            <button className="outline-btn">More About Sri Lanka</button>
+            <button
+              className="primary-btn"
+              onClick={() => navigate("/about")}
+            >
+              Find Out More
+            </button>
+            <button
+              className="outline-btn"
+              onClick={() => navigate("/about-sri-lanka")}
+            >
+              More About Sri Lanka
+            </button>
           </div>
 
           <p className="about-footer">
-            <i className="fa fa-map-marker-alt"></i> Start your Sri Lankan adventure with Captain Ceylon Tours.
+            <i className="fa fa-map-marker-alt"></i> Start your Sri Lankan adventure with Pearl Ceylon Tours.
             Your unforgettable journey awaits!
           </p>
         </div>
@@ -195,32 +223,67 @@ function Home() {
         </div>
       </section>
 
-      {/* Our Packages Section */}
+      {/* Packages Section */}
       <section className="packages-section" data-aos="fade-up">
         <h2>
           Our <span className="highlight">Packages</span>
         </h2>
 
         <div className="packages-slider-wrapper">
-          <button className="arrow-btn left" id="prevBtn">
+          <button className="arrow-btn left" id="pkgPrevBtn">
             <FaArrowLeft />
           </button>
 
-          <div className="packages-slider" id="packagesSlider">
-            {packages.map((pkg, index) => (
-              <div className="package-card" key={index}>
-                <img src={pkg.img} alt={pkg.title} className="package-img" />
-                <div className="package-info">
-                  <p className="package-days">
-                    <FaClock className="clock-icon" /> {pkg.days}
-                  </p>
-                  <h4>{pkg.title}</h4>
-                </div>
+          <div className="packages-slider" id="pkgSlider">
+
+            {/* Package 1 */}
+            <div className="package-card-home">
+              <img src={package1} className="package-img" alt="Culture Heritage Trails" />
+              <div className="package-info">
+                <p className="package-days"><FaClock /> 9 Days 8 Nights</p>
+                <h4>Culture Heritage Trails</h4>
               </div>
-            ))}
+            </div>
+
+            {/* Package 2 */}
+            <div className="package-card-home">
+              <img src={package2} className="package-img" alt="Accessible Holiday Tour" />
+              <div className="package-info">
+                <p className="package-days"><FaClock /> 12 Days 11 Nights</p>
+                <h4>Accessible Holiday Tour</h4>
+              </div>
+            </div>
+
+            {/* Package 3 */}
+            <div className="package-card-home">
+              <img src={package3} className="package-img" alt="Honeymoon Trail" />
+              <div className="package-info">
+                <p className="package-days"><FaClock /> 14 Days 13 Nights</p>
+                <h4>Honeymoon Trail</h4>
+              </div>
+            </div>
+
+            {/* Package 4 */}
+            <div className="package-card-home">
+              <img src={package4} className="package-img" alt="Ramayana Tour" />
+              <div className="package-info">
+                <p className="package-days"><FaClock /> 9 Days 8 Nights</p>
+                <h4>Ramayana Tour</h4>
+              </div>
+            </div>
+
+            {/* Package 5 */}
+            <div className="package-card-home">
+              <img src={package5} className="package-img" alt="Ramayana Tour" />
+              <div className="package-info">
+                <p className="package-days"><FaClock /> 9 Days 8 Nights</p>
+                <h4>Ramayana Tour</h4>
+              </div>
+            </div>
+
           </div>
 
-          <button className="arrow-btn right" id="nextBtn">
+          <button className="arrow-btn right" id="pkgNextBtn">
             <FaArrowRight />
           </button>
         </div>
@@ -233,25 +296,61 @@ function Home() {
         </h2>
 
         <div className="packages-slider-wrapper">
-          <button className="arrow-btn left" id="prevBtn">
+          {/* LEFT ARROW */}
+          <button className="arrow-btn left" id="dayPrevBtn">
             <FaArrowLeft />
           </button>
 
-          <div className="packages-slider" id="packagesSlider">
-            {dayTours.map((pkg, index) => (
-              <div className="package-card" key={index}>
-                <img src={pkg.image} alt={pkg.title} className="package-img" />
-                <div className="package-info">
-                  <p className="package-days">
-                    <FaClock className="clock-icon" /> {pkg.hours}
-                  </p>
-                  <h4>{pkg.title}</h4>
-                </div>
+          {/* SLIDER */}
+          <div className="packages-slider" id="daySlider">
+            {/* Day Tour 1 */}
+            <div className="package-card-home">
+              <img src={day1} className="package-img" alt="Colombo City Day Tour" />
+              <div className="package-info">
+                <p className="package-days"><FaClock /> 8 Hours</p>
+                <h4>Colombo City Day Tour</h4>
               </div>
-            ))}
+            </div>
+
+            {/* Day Tour 2 */}
+            <div className="package-card-home">
+              <img src={day2} className="package-img" alt="Galle & Unawatuna Day Tour" />
+              <div className="package-info">
+                <p className="package-days"><FaClock /> 10 Hours</p>
+                <h4>Galle & Unawatuna Day Tour</h4>
+              </div>
+            </div>
+
+            {/* Day Tour 3 */}
+            <div className="package-card-home">
+              <img src={day3} className="package-img" alt="Kandy Cultural Day Tour" />
+              <div class="package-info">
+                <p className="package-days"><FaClock /> 9 Hours</p>
+                <h4>Kandy Cultural Day Tour</h4>
+              </div>
+            </div>
+
+            {/* Day Tour 4 */}
+            <div className="package-card-home">
+              <img src={day4} className="package-img" alt="Sigiriya & Dambulla Day Tour" />
+              <div className="package-info">
+                <p className="package-days"><FaClock /> 10 Hours</p>
+                <h4>Sigiriya & Dambulla Day Tour</h4>
+              </div>
+            </div>
+
+            {/* Day Tour 5 */}
+            <div className="package-card-home">
+              <img src={day5} className="package-img" alt="Kithulgala Day Tour" />
+              <div className="package-info">
+                <p className="package-days"><FaClock /> 10 Hours</p>
+                <h4>Kithulgala Day Tour</h4>
+              </div>
+            </div>
           </div>
 
-          <button className="arrow-btn right" id="nextBtn">
+          {/* RIGHT ARROW */}
+          <button className="arrow-btn right" id="dayNextBtn">
             <FaArrowRight />
           </button>
         </div>
@@ -422,8 +521,8 @@ function Home() {
             </p>
 
             <div className="why-choose-buttons">
-              <button className="primary-btn">ABOUT CAPTAIN CEYLON TOURS</button>
-              <button className="outline-btn">WHY CAPTAIN CEYLON TOURS</button>
+              <button className="primary-btn">ABOUT Pearl CEYLON TOURS</button>
+              <button className="outline-btn">WHY Pearl CEYLON TOURS</button>
             </div>
           </div>
         </div>
@@ -543,7 +642,7 @@ function Home() {
           className="whatsapp-icon"
         />
       </a>
-      
+
     </div>
   );
 }

@@ -45,7 +45,7 @@
 .package-grid-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
-  gap: 20px;
+  gap: 30px;
 }
 
 .package-card {

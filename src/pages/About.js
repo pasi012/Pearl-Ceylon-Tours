@@ -5,10 +5,7 @@ import "../css/About.css";
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-
 import founderImg from "../assets/founder.jpg";
-import hileIcon from "../assets/hile.png";
-import planeIcon from "../assets/plan.png";
 
 function About() {
 
@@ -36,11 +33,11 @@ function About() {
 
             {/* ===== Welcome Section ===== */}
             <section className="about-intro" data-aos="fade-up">
-                <h4>Welcome To Captain Ceylon Tours</h4>
+                <h4>Welcome To Pearl Ceylon Tours</h4>
                 <h2>Your Gateway To An Unforgettable Sri Lankan Journey</h2>
 
                 <p className="intro-text">
-                    At Captain Ceylon Tours, we are committed to creating unique,
+                    At Pearl Ceylon Tours, we are committed to creating unique,
                     personalized travel experiences that immerse you in the beauty,
                     culture, and diversity of Sri Lanka. From the moment you begin your
                     journey with us, you'll experience a blend of professionalism, comfort,
@@ -63,19 +60,19 @@ function About() {
                         <p className="founder-tag">Meet Our Founder</p>
 
                         <h2 className="founder-name">
-                            Captain Dhammika<br />
+                            Pearl Dhammika<br />
                             Jayakody <span className="blue-hand">Founder & CEO</span>
                         </h2>
-                        <h3 className="company-name">Captain Ceylon Tours</h3>
+                        <h3 className="company-name">Pearl Ceylon Tours</h3>
 
                         <p className="founder-description">
-                            Meet Captain Ceylon Tours, a company founded by Captain Dhammika Jayakody,
+                            Meet Pearl Ceylon Tours, a company founded by Pearl Dhammika Jayakody,
                             a visionary leader with over 20 years of sea service and extensive global
                             travel experience.
                         </p>
 
                         <p className="highlight-text">
-                            With Expertise in Travel And Leadership, Captain Ceylon Tours Ensures Excellence
+                            With Expertise in Travel And Leadership, Pearl Ceylon Tours Ensures Excellence
                             And Reliability In Every Operation, Guided By A Profound Understanding Of
                             Travellers’ Needs.
                         </p>
@@ -193,7 +190,7 @@ function About() {
 
                     <h2 className="sl-main-title">
                         Discover Sri Lanka With <br />
-                        Captain Ceylon Tours
+                        Pearl Ceylon Tours
                     </h2>
 
                     {/* Accordion */}
@@ -211,7 +208,7 @@ function About() {
 
                             <div className="sl-accordion-body">
                                 <p>
-                                    Captain Ceylon Tours offers personalized travel plans tailored to your
+                                    Pearl Ceylon Tours offers personalized travel plans tailored to your
                                     preferences, ensuring memorable experiences for adventurers, honeymooners,
                                     families, or solo travelers.
                                 </p>
@@ -294,7 +291,7 @@ function About() {
             <section className="why-choose-section" data-aos="fade-up">
 
                 <div className="why-choose-left">
-                    <h3 className="why-title">Why Choose Captain Ceylon Tours?</h3>
+                    <h3 className="why-title">Why Choose Pearl Ceylon Tours?</h3>
 
                     <p className="why-description">
                         Unlike Many Other Travel Agencies, We Offer A Personal Touch,
@@ -302,15 +299,15 @@ function About() {
                         Experiences.
                     </p>
 
-                    <a href="mailto:info@captainceylontours.com" className="why-btn">
-                        Contact us at info@captainceylontours.com
+                    <a href="mailto:info@Pearlceylontours.com" className="why-btn">
+                        Contact us at info@Pearlceylontours.com
                     </a>
                 </div>
 
                 <div className="why-choose-right">
                     <img
                         src={require("../assets/why-single.png")}
-                        alt="Why Choose Captain Ceylon Tours"
+                        alt="Why Choose Pearl Ceylon Tours"
                         className="why-single-img"
                     />
                 </div>
@@ -369,6 +366,61 @@ function About() {
                         </p>
                     </div>
 
+                </div>
+            </section>
+
+            {/* ===== Stats Section (Counters) ===== */}
+            <section className="stats-section" data-aos="fade-up">
+
+                <div className="stats-container">
+
+                    {/* Box 1 */}
+                    <div className="stats-box" data-aos="zoom-in">
+                        <i className="fas fa-hiking stats-icon"></i>
+                        <h2>1,546</h2>
+                        <p>Happy Traveller</p>
+                    </div>
+
+                    {/* Box 2 */}
+                    <div className="stats-box" data-aos="zoom-in">
+                        <i className="fas fa-heart stats-icon"></i>
+                        <h2>64%</h2>
+                        <p>Total Positive Reviews</p>
+                    </div>
+
+                    {/* Box 3 */}
+                    <div className="stats-box" data-aos="zoom-in">
+                        <i className="fas fa-map-marked-alt stats-icon"></i>
+                        <h2>123+</h2>
+                        <p>Tour Completed</p>
+                    </div>
+
+                    {/* Box 4 */}
+                    <div className="stats-box" data-aos="zoom-in">
+                        <i className="fas fa-award stats-icon"></i>
+                        <h2>1,546</h2>
+                        <p>Awards Winning</p>
+                    </div>
+
+                </div>
+
+            </section>
+
+            {/* ===== CTA Section ===== */}
+            <section className="cta-section" data-aos="fade-up">
+                <div className="cta-box">
+                    <div className="cta-left">
+                        <img src={require("../assets/hile.png")} className="cta-icon" alt="icon" />
+
+                        <div className="cta-text">
+                            <h2>Ready To Adventure And Enjoy Natural</h2>
+                            <p>Reach Pearl Ceylon Tours For A Secure, Luxurious, And Unforgettable Adventure!</p>
+                        </div>
+                    </div>
+
+                    <img src={require("../assets/plan.png")} className="cta-plane" alt="plane" />
+
+                    <button className="cta-btn">LET’S GET STARTED</button>
                 </div>
             </section>
 
