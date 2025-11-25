@@ -33,6 +33,37 @@ function Home() {
     AOS.init({ duration: 1000 });
   }, []);
 
+  //testimonial
+  useEffect(() => {
+    const testimonialSlider = document.getElementById("testimonialSlider");
+    const testimonialPrevBtn = document.getElementById("testimonialPrevBtn");
+    const testimonialNextBtn = document.getElementById("testimonialNextBtn");
+
+    const scrollAmount = testimonialSlider.offsetWidth / 4 + 20; // roughly one card width
+
+    // Manual scroll
+    testimonialNextBtn.addEventListener("click", () => {
+      testimonialSlider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+    });
+    testimonialPrevBtn.addEventListener("click", () => {
+      testimonialSlider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
+    });
+
+    // Auto-scroll every 4 seconds
+    const autoScroll = setInterval(() => {
+      if (
+        testimonialSlider.scrollLeft + testimonialSlider.clientWidth >=
+        testimonialSlider.scrollWidth - 5
+      ) {
+        testimonialSlider.scrollTo({ left: 0, behavior: "smooth" });
+      } else {
+        testimonialSlider.scrollBy({ left: scrollAmount, behavior: "smooth" });
+      }
+    }, 4000);
+
+    return () => clearInterval(autoScroll);
+  }, []);
+
   //destinations
   useEffect(() => {
     const destSlider = document.getElementById("destSlider");
@@ -237,7 +268,11 @@ function Home() {
           <div className="packages-slider" id="pkgSlider">
 
             {/* Package 1 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/tour-package/CultureHeritage")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={package1} className="package-img" alt="Culture Heritage Trails" />
               <div className="package-info">
                 <p className="package-days"><FaClock /> 9 Days 8 Nights</p>
@@ -246,7 +281,11 @@ function Home() {
             </div>
 
             {/* Package 2 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/tour-package/HolidayTour")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={package2} className="package-img" alt="Accessible Holiday Tour" />
               <div className="package-info">
                 <p className="package-days"><FaClock /> 12 Days 11 Nights</p>
@@ -255,7 +294,11 @@ function Home() {
             </div>
 
             {/* Package 3 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/tour-package/HoneymoonTrail")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={package3} className="package-img" alt="Honeymoon Trail" />
               <div className="package-info">
                 <p className="package-days"><FaClock /> 14 Days 13 Nights</p>
@@ -264,7 +307,11 @@ function Home() {
             </div>
 
             {/* Package 4 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/tour-package/RamayanaTour")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={package4} className="package-img" alt="Ramayana Tour" />
               <div className="package-info">
                 <p className="package-days"><FaClock /> 9 Days 8 Nights</p>
@@ -273,11 +320,15 @@ function Home() {
             </div>
 
             {/* Package 5 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/tour-package/EcoTrail")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={package5} className="package-img" alt="Ramayana Tour" />
               <div className="package-info">
                 <p className="package-days"><FaClock /> 9 Days 8 Nights</p>
-                <h4>Ramayana Tour</h4>
+                <h4>Eco Trail</h4>
               </div>
             </div>
 
@@ -303,48 +354,69 @@ function Home() {
 
           {/* SLIDER */}
           <div className="packages-slider" id="daySlider">
+
             {/* Day Tour 1 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/day-tours/ColomboCityTour")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={day1} className="package-img" alt="Colombo City Day Tour" />
               <div className="package-info">
-                <p className="package-days"><FaClock /> 8 Hours</p>
-                <h4>Colombo City Day Tour</h4>
+                <p className="package-days"><FaClock /> 1 Day</p>
+                <h4>Colombo City Tour</h4>
               </div>
             </div>
 
             {/* Day Tour 2 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/day-tours/ColomboBenthotaGalle")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={day2} className="package-img" alt="Galle & Unawatuna Day Tour" />
               <div className="package-info">
-                <p className="package-days"><FaClock /> 10 Hours</p>
-                <h4>Galle & Unawatuna Day Tour</h4>
+                <p className="package-days"><FaClock /> 1 Day</p>
+                <h4>Colombo Galle Tour</h4>
               </div>
             </div>
 
             {/* Day Tour 3 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/day-tours/ColomboKandy")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={day3} className="package-img" alt="Kandy Cultural Day Tour" />
               <div class="package-info">
-                <p className="package-days"><FaClock /> 9 Hours</p>
-                <h4>Kandy Cultural Day Tour</h4>
+                <p className="package-days"><FaClock /> 1 Day</p>
+                <h4>Colombo Kandy Tour</h4>
               </div>
             </div>
 
             {/* Day Tour 4 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/day-tours/ColomboSigiriyaDambulla")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={day4} className="package-img" alt="Sigiriya & Dambulla Day Tour" />
               <div className="package-info">
-                <p className="package-days"><FaClock /> 10 Hours</p>
-                <h4>Sigiriya & Dambulla Day Tour</h4>
+                <p className="package-days"><FaClock /> 1 Day</p>
+                <h4>Colombo Sigiriya Tour</h4>
               </div>
             </div>
 
             {/* Day Tour 5 */}
-            <div className="package-card-home">
+            <div
+              className="package-card-home"
+              onClick={() => navigate("/day-tours/ColomboKithulgala")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={day5} className="package-img" alt="Kithulgala Day Tour" />
               <div className="package-info">
-                <p className="package-days"><FaClock /> 10 Hours</p>
-                <h4>Kithulgala Day Tour</h4>
+                <p className="package-days"><FaClock /> 1 Day</p>
+                <h4>Colombo Kithulgala Tour</h4>
               </div>
             </div>
           </div>
@@ -368,110 +440,138 @@ function Home() {
           </button>
 
           <div className="destinations-slider" id="destSlider">
-            <div className="destination-card-home">
+            <div
+              className="destination-card-home"
+              onClick={() => navigate("/destinations/Mirissa")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={require("../assets/feature1.jpg")} alt="Yala" />
               <div className="destination-info">
-                <p className="location">📍 Uva Province, Sri Lanka</p>
-                <h4>Yala</h4>
+                <p className="location">📍 South Coast, Sri Lanka</p>
+                <h4>Mirissa</h4>
+                <p>Southern beach gem.</p>
                 <p>
-                  Nature lovers and adventurers can relax amidst stunning views.
-                  Major attractions include Adam’s Peak, Nine Arches, and Ravana Falls.
+                  Coconut Tree Hill, Whale Watching, Parrot Rock, Surfing, Snorkeling, Driving, Beach Relaxation.
                 </p>
               </div>
             </div>
 
-            <div className="destination-card-home">
+            <div
+              className="destination-card-home"
+              onClick={() => navigate("/destinations/Sigiriya")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={require("../assets/feature2.jpg")} alt="Kandy" />
+              <div className="destination-info">
+                <p className="location">📍 Central, Sri Lanka</p>
+                <h4>Sigiriya</h4>
+                <p>
+                  City blends history, culture, beauty, adventure and sigiriya fortress the 8'th world wonder, showcasing nature's and mankind's marvels.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="destination-card-home"
+              onClick={() => navigate("/destinations/Anuradhapura")}
+              style={{ cursor: "pointer" }}
+            >
+              <img src={require("../assets/feature3.jpg")} alt="Nuwara Eliya" />
+              <div className="destination-info">
+                <p className="location">📍 North Central, Sri Lanka</p>
+                <h4>Anuradhapura</h4>
+                <p>
+                  Anuradhapura Sri Lanka’s first capital showcases ancient history, buddhist heritage and engineering marvels as a UNESCO world heritage site.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="destination-card-home"
+              onClick={() => navigate("/destinations/Polonnaruwa")}
+              style={{ cursor: "pointer" }}
+            >
+              <img src={require("../assets/feature4.jpg")} alt="Eco Escapes" />
+              <div className="destination-info">
+                <p className="location">📍 North Central, Sri Lanka</p>
+                <h4>Polonnaruwa</h4>
+                <p>
+                  UNESCO World Heritage site rich in historical exploration, cultural significance and ancient architectural marvels showcasing timeless beauty.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="destination-card-home"
+              onClick={() => navigate("/destinations/Ella")}
+              style={{ cursor: "pointer" }}
+            >
+              <img src={require("../assets/feature5.jpg")} alt="Eco Escapes" />
+              <div className="destination-info">
+                <p className="location">📍 Uva, Sri Lanka</p>
+                <h4>Ella</h4>
+                <p>
+                  Nature lovers and adventurers can relax amidst stunning views. major attractions include Adam's Peak, Nine Arches and Ravana Falls
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="destination-card-home"
+              onClick={() => navigate("/destinations/Yala")}
+              style={{ cursor: "pointer" }}
+            >
+              <img src={require("../assets/feature6.jpg")} alt="Eco Escapes" />
+              <div className="destination-info">
+                <p className="location">📍 Uva, Sri Lanka</p>
+                <h4>Yala</h4>
+                <p>
+                  Yala National Park is one of the most famous wildlife reserves in Sri Lanka. It is located in the southeastern part of the country and covers a large area of forests, grasslands, lagoons, and beaches.
+                </p>
+              </div>
+            </div>
+
+            <div
+              className="destination-card-home"
+              onClick={() => navigate("/destinations/Kandy")}
+              style={{ cursor: "pointer" }}
+            >
+              <img src={require("../assets/feature7.jpg")} alt="Eco Escapes" />
               <div className="destination-info">
                 <p className="location">📍 Central, Sri Lanka</p>
                 <h4>Kandy</h4>
                 <p>
-                  Kandy is a city located within the cultural triangle vibrant city,
-                  renowned for its heritage, scenic beauty, and religious significance.
+                  Kandy is a city located withing the culture triangle vibrant city renowed for its culture heritage, scieni beauty & Its religious significant.
                 </p>
               </div>
             </div>
 
-            <div className="destination-card-home">
-              <img src={require("../assets/feature3.jpg")} alt="Nuwara Eliya" />
+            <div
+              className="destination-card-home"
+              onClick={() => navigate("/destinations/Nuwara-Eliya")}
+              style={{ cursor: "pointer" }}
+            >
+              <img src={require("../assets/feature8.jpg")} alt="Eco Escapes" />
               <div className="destination-info">
                 <p className="location">📍 Central, Sri Lanka</p>
                 <h4>Nuwara Eliya</h4>
                 <p>
-                  Known as Little England, famous for its colonial architecture, cool
-                  climate, and tea plantations surrounded by lush greenery.
+                  Nuwara Eliya called little England, is a charming hill station famous for its colonial architecture, cool climate, tea plantations and greenery.
                 </p>
               </div>
             </div>
 
-            <div className="destination-card-home">
-              <img src={require("../assets/feature4.jpg")} alt="Eco Escapes" />
-              <div className="destination-info">
-                <p className="location">📍 Eco Escapes, Sri Lanka</p>
-                <h4>Eco Escapes</h4>
-                <p>
-                  UNESCO World Heritage sites rich in historical exploration, culture,
-                  and ancient architectural marvels showcasing timeless beauty.
-                </p>
-              </div>
-            </div>
-
-            <div className="destination-card-home">
-              <img src={require("../assets/feature5.jpg")} alt="Eco Escapes" />
-              <div className="destination-info">
-                <p className="location">📍 Eco Escapes, Sri Lanka</p>
-                <h4>Eco Escapes</h4>
-                <p>
-                  UNESCO World Heritage sites rich in historical exploration, culture,
-                  and ancient architectural marvels showcasing timeless beauty.
-                </p>
-              </div>
-            </div>
-
-            <div className="destination-card-home">
-              <img src={require("../assets/feature6.jpg")} alt="Eco Escapes" />
-              <div className="destination-info">
-                <p className="location">📍 Eco Escapes, Sri Lanka</p>
-                <h4>Eco Escapes</h4>
-                <p>
-                  UNESCO World Heritage sites rich in historical exploration, culture,
-                  and ancient architectural marvels showcasing timeless beauty.
-                </p>
-              </div>
-            </div>
-
-            <div className="destination-card-home">
-              <img src={require("../assets/feature7.jpg")} alt="Eco Escapes" />
-              <div className="destination-info">
-                <p className="location">📍 Eco Escapes, Sri Lanka</p>
-                <h4>Eco Escapes</h4>
-                <p>
-                  UNESCO World Heritage sites rich in historical exploration, culture,
-                  and ancient architectural marvels showcasing timeless beauty.
-                </p>
-              </div>
-            </div>
-
-            <div className="destination-card-home">
-              <img src={require("../assets/feature8.jpg")} alt="Eco Escapes" />
-              <div className="destination-info">
-                <p className="location">📍 Eco Escapes, Sri Lanka</p>
-                <h4>Eco Escapes</h4>
-                <p>
-                  UNESCO World Heritage sites rich in historical exploration, culture,
-                  and ancient architectural marvels showcasing timeless beauty.
-                </p>
-              </div>
-            </div>
-
-            <div className="destination-card-home">
+            <div
+              className="destination-card-home"
+              onClick={() => navigate("/destinations/Eco-Escapes")}
+              style={{ cursor: "pointer" }}
+            >
               <img src={require("../assets/feature9.jpg")} alt="Eco Escapes" />
               <div className="destination-info">
                 <p className="location">📍 Eco Escapes, Sri Lanka</p>
                 <h4>Eco Escapes</h4>
                 <p>
-                  UNESCO World Heritage sites rich in historical exploration, culture,
-                  and ancient architectural marvels showcasing timeless beauty.
+                  UNESCO World Heritage site rich in historical exploration, cultural significance, and ancient architectural marvels showcasing timeless beauty.
                 </p>
               </div>
             </div>
@@ -521,8 +621,8 @@ function Home() {
             </p>
 
             <div className="why-choose-buttons">
-              <button className="primary-btn">ABOUT Pearl CEYLON TOURS</button>
-              <button className="outline-btn">WHY Pearl CEYLON TOURS</button>
+              <button className="primary-btn" onClick={() => navigate("/about")}>ABOUT Pearl CEYLON TOURS</button>
+              <button className="outline-btn" onClick={() => navigate("/whyChooseUs")}>WHY Pearl CEYLON TOURS</button>
             </div>
           </div>
         </div>
@@ -586,7 +686,7 @@ function Home() {
         </div>
       </section>
 
-      {/* What Our Client Say About Us Section */}
+      {/* Testimonials Section */}
       <section className="testimonials-section" data-aos="fade-up">
         <h2 className="testimonials-title">
           What Our Client <span className="highlight">Say About Us</span>
@@ -597,35 +697,193 @@ function Home() {
           decisions while fostering stronger connections with existing customers.
         </p>
 
-        <div className="testimonials-container">
-          <div className="testimonial-card">
-            <div className="testimonial-profile"></div>
-            <h4>Gauthamabuddha</h4>
-            <div className="stars">★★★★★</div>
-            <p>
-              "We had done a family trip for 5 days covering central and southern Sri Lanka. It was a very happy, pleasant
-              and seamless experience with Harshan, a very professional chauffeur cum guide..."
-            </p>
+        <div className="testimonial-slider-wrapper">
+          <button className="arrow-btn1 left-des" id="testimonialPrevBtn">
+            <FaArrowLeft />
+          </button>
+
+          <div className="testimonial-slider" id="testimonialSlider">
+
+            <div className="testimonial-card">
+              <div className="testimonial-profile"></div>
+              <h4>Gauthamabuddha</h4>
+              <div className="stars">★★★★★</div>
+              <p>
+                "We had done a family trip for 5 days covering central and southern Sri Lanka. It was a very happy, pleasant
+                and seamless experience with Harshan, a very professional chauffeur cum guide..."
+              </p>
+            </div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-profile"></div>
+              <h4>Kuba S</h4>
+              <div className="stars">★★★★★</div>
+              <p>
+                "Very good guide. He arranged the tickets, showed us some cool places in Sri Lanka. Attractive price and good car.
+                I highly recommend."
+              </p>
+            </div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-profile"></div>
+              <h4>Tatiana</h4>
+              <div className="stars">★★★★★</div>
+              <p>
+                "Guide at the top, our stay was amazing thanks to him! It is very professional and it takes us to tourist places we love our stay!"
+              </p>
+            </div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-profile"></div>
+              <h4>Tatiana</h4>
+              <div className="stars">★★★★★</div>
+              <p>
+                "Guide at the top, our stay was amazing thanks to him! It is very professional and it takes us to tourist places we love our stay!"
+              </p>
+            </div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-profile"></div>
+              <h4>Tatiana</h4>
+              <div className="stars">★★★★★</div>
+              <p>
+                "Guide at the top, our stay was amazing thanks to him! It is very professional and it takes us to tourist places we love our stay!"
+              </p>
+            </div>
+
+            <div className="testimonial-card">
+              <div className="testimonial-profile"></div>
+              <h4>Tatiana</h4>
+              <div className="stars">★★★★★</div>
+              <p>
+                "Guide at the top, our stay was amazing thanks to him! It is very professional and it takes us to tourist places we love our stay!"
+              </p>
+            </div>
+
           </div>
 
-          <div className="testimonial-card">
-            <div className="testimonial-profile"></div>
-            <h4>Kuba S</h4>
-            <div className="stars">★★★★★</div>
-            <p>
-              "Very good guide. He arranged the tickets, showed us some cool places in Sri Lanka. Attractive price and good car.
-              I highly recommend."
-            </p>
+          <button className="arrow-btn1 right-des" id="testimonialNextBtn">
+            <FaArrowRight />
+          </button>
+
+        </div>
+
+      </section>
+
+      {/* Vehicles Section */}
+      <section className="vehicle-collection" data-aos="fade-up">
+        <h2 className="vehicle-title">Our Luxury Vehicles</h2>
+
+        <div className="vehicle-grid">
+
+          <div className="vehicle-card">
+            <div className="vehicle-img-wrapper color-1">
+              <img src={require("../assets/premio.jpg")} alt="Toyota Premio" />
+            </div>
+            <h4 className="vehicle-name">Toyota Premio</h4>
+            <p className="vehicle-seats">(2 Seats)</p>
           </div>
 
-          <div className="testimonial-card">
-            <div className="testimonial-profile"></div>
-            <h4>Tatiana</h4>
-            <div className="stars">★★★★★</div>
-            <p>
-              "Guide at the top, our stay was amazing thanks to him! It is very professional and it takes us to tourist places we love our stay!"
-            </p>
+          <div className="vehicle-card">
+            <div className="vehicle-img-wrapper color-2">
+              <img src={require("../assets/noah.jpg")} alt="Toyota Noah" />
+            </div>
+            <h4 className="vehicle-name">Toyota Noah</h4>
+            <p className="vehicle-seats">(4 Seats)</p>
           </div>
+
+          <div className="vehicle-card">
+            <div className="vehicle-img-wrapper color-3">
+              <img src={require("../assets/hiace.jpg")} alt="Toyota Hiace" />
+            </div>
+            <h4 className="vehicle-name">Toyota Hiace</h4>
+            <p className="vehicle-seats">(6 Seats)</p>
+          </div>
+
+          <div className="vehicle-card">
+            <div className="vehicle-img-wrapper color-4">
+              <img src={require("../assets/mitsubishiSafari.jpg")} alt="Mitsubishi Cab Safari" />
+            </div>
+            <h4 className="vehicle-name">Mitsubishi Cab – Safari</h4>
+            <p className="vehicle-seats">(3 Seats)</p>
+          </div>
+
+          <div className="vehicle-card">
+            <div className="vehicle-img-wrapper color-5">
+              <img src={require("../assets/mitsubishiRosa.png")} alt="Mitsubishi Rosa Bus" />
+            </div>
+            <h4 className="vehicle-name">Mitsubishi Rosa Bus</h4>
+            <p className="vehicle-seats">(12 Seats)</p>
+          </div>
+
+          <div className="vehicle-card">
+            <div className="vehicle-img-wrapper color-6">
+              <img src={require("../assets/kingLong.jpg")} alt="King Long Bus" />
+            </div>
+            <h4 className="vehicle-name">King Long Bus</h4>
+            <p className="vehicle-seats">(25 Seats)</p>
+          </div>
+
+          <p className='home-p'>Explore our top destinations voted by more than 1000+ customers around the world.</p>
+
+        </div>
+      </section>
+
+      {/* Hotel Brands Section */}
+      <section className="hotel-brands-section" data-aos="fade-up">
+        <h2 className="hotel-brands-title">
+          We’ve been mentioned in Below Brands
+        </h2>
+
+        <div className="hotel-brands-logos">
+
+          <img
+            src={require("../assets/brand-logo1.png")}
+            alt="The Kingsbury Hotel"
+            className="hotel-logo"
+          />
+
+          <img
+            src={require("../assets/brand-logo2.png")}
+            alt="Seagates"
+            className="hotel-logo"
+          />
+
+          <img
+            src={require("../assets/brand-logo3.png")}
+            alt="Jetwing Hotels"
+            className="hotel-logo"
+          />
+
+          <img
+            src={require("../assets/brand-logo4.png")}
+            alt="Shangri-La Hotel"
+            className="hotel-logo"
+          />
+
+          <img
+            src={require("../assets/brand-logo5.png")}
+            alt="Cinnamon Lodge"
+            className="hotel-logo"
+          />
+
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="cta-section" data-aos="fade-up">
+        <div className="cta-box">
+          <div className="cta-left">
+            <img src={require("../assets/hile.png")} className="cta-icon" alt="icon" />
+            <div className="cta-text">
+              <h2>Ready To Adventure And Enjoy Natural</h2>
+              <p>Reach Pearl Ceylon Tours For A Secure, Luxurious, And Unforgettable Adventure!</p>
+            </div>
+          </div>
+
+          <img src={require("../assets/plan.png")} className="cta-plane" alt="plane" />
+
+          <button className="cta-btn">LET’S GET STARTED</button>
         </div>
       </section>
 

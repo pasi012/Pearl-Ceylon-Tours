@@ -1,0 +1,301 @@
+/* HERO */
+.ch-hero {
+    position: relative;
+    margin-top: 150px;
+}
+
+.ch-hero-img {
+    width: 100%;
+    height: 35vh;
+    object-fit: cover;
+}
+
+/* TAB BAR */
+.ch-tabs {
+    background: #79c3e8;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 15px 25px;
+    border-radius: 50px;
+    width: fit-content;
+    margin: auto;
+    transform: translateY(-30px);
+}
+
+.ch-tabs button {
+    background: transparent;
+    border: none;
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #0b3b57;
+    width: 250px;
+    height: 65px;
+    padding: 12px 10px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.ch-tabs button.active {
+    background: #ffffff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* TITLE SECTION */
+.ch-title-section {
+    padding: 0 330px;
+    margin-top: 20px;
+}
+
+.ch-badge {
+    background: #ff4d4d;
+    color: #fff;
+    padding: 6px 14px;
+    font-size: 0.8rem;
+    border-radius: 6px;
+    display: inline-block;
+}
+
+.ch-days {
+    font-size: 1rem;
+    margin-top: 10px;
+}
+
+/* GALLERY */
+.ch-gallery {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 20px 330px;
+    gap: 25px;
+}
+
+.ch-gallery img {
+    width: 100%;
+    height: 330px;
+    object-fit: fill;
+    border-radius: 10px;
+}
+
+/* TWO COLUMN WRAPPER */
+.ch-two-column {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 40px;
+    padding: 40px 330px;
+}
+
+/* LEFT */
+.ch-left {
+    line-height: 1.7;
+}
+
+.ch-left section {
+    margin-bottom: 30px;
+}
+
+/* RIGHT FORM (same style as before) */
+.ch-right {
+    height: fit-content;
+    width: 400px;
+}
+
+.ch-right h3 {
+    margin-bottom: 15px;
+    text-align: center;
+    /* centers the title */
+}
+
+.ch-right form {
+    background: #79c3e8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    padding-bottom: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    height: fit-content;
+    width: 400px;
+}
+
+.ch-right input,
+.ch-right textarea {
+    width: 100%;
+    max-width: 350px;
+    height: 30px;
+    padding: 10px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: medium;
+}
+
+.ch-right select {
+    width: 100%;
+    max-width: 370px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #c3c3c3;
+    border-radius: 5px;
+    margin: 0 auto;
+    font-size: medium;
+}
+
+.ch-right textarea {
+    height: 100px;
+    resize: none;
+    font-size: large;
+}
+
+.ch-right button {
+    background: #247cad;
+    color: #fff;
+    border: none;
+    padding: 12px;
+    width: 370px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.ch-right button:hover {
+    background: #1d5a78;
+}
+
+.phone-row {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    max-width: 370px;
+}
+
+.phone-row .code {
+    width: 80px;
+    /* small box for country code */
+}
+
+.phone-row .phone {
+    flex: 1;
+    /* phone input takes the remaining space */
+}
+
+.confidence-box {
+    background: #eff2f5;
+    padding: 10px;
+    margin-top: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    width: 400px;
+}
+
+.confidence-box h3 {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    color: #0b3b57;
+}
+
+.conf-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 15px;
+}
+
+.conf-item img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+}
+
+.conf-item p {
+    margin: 0;
+    line-height: 3;
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.itinerary-left {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.itinerary-item {
+    border: 1px solid #dcdcdc;
+    border-radius: 10px;
+    overflow: hidden;
+    background: #fff;
+}
+
+.itinerary-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    cursor: pointer;
+    background: #f7f9fb;
+}
+
+.itinerary-header.open {
+    background: #e6f4ff;
+}
+
+.day-number {
+    background: #0b3b57;
+    color: #fff;
+    padding: 12px 18px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.itinerary-body {
+    padding: 20px;
+    line-height: 1.7;
+    background: #fff;
+}
+
+.arrow {
+    margin-left: auto;
+    font-size: 1.2rem;
+}
+
+.itinerary-body-text strong {
+    font-size: 1.05rem;
+    color: #0b3b57;
+}
+
+.itinerary-body-text {
+    line-height: 1.7;
+}
+
+.itinerary-body-text br {
+    margin-bottom: 8px;
+}
+
+.route-info {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 10px 15px;
+    border-radius: 8px;
+    margin-top: 10px;
+    font-size: 1rem;
+    font-weight: 600;
+    width: fit-content;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.map-container {
+    width: 100%;
+    height: 700px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 100%;
+    border: 0;
+}

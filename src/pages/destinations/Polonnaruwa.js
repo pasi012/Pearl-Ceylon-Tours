@@ -3,18 +3,13 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import mirissaHero from "../../assets/mirissa-hero.jpg";
-import mirissa1 from "../../assets/mirissa.jpg";
-import mirissa2 from "../../assets/mirissa1.jpg";
+import polonnaruwaHero from "../../assets/polonnaruwa-hero.jpg";
+import polonnaruwa1 from "../../assets/polonnaruwa1.jpg";
+import polonnaruwa2 from "../../assets/polonnaruwa2.jpg";
 
-import mirissa3 from "../../assets/mirissa2.jpg";
-import mirissa4 from "../../assets/mirissa3.jpg";
-import mirissa5 from "../../assets/mirissa4.jpg";
-
-import surfing from "../../assets/Surfing.png";
-import beginnerGuide from "../../assets/Beginner Guide.png";
-import relaxing from "../../assets/Relaxing.png";
-
+import polonnaruwa3 from "../../assets/polonnaruwa3.jpg";
+import polonnaruwa4 from "../../assets/polonnaruwa4.jpg";
+import polonnaruwa5 from "../../assets/polonnaruwa5.jpg";
 
 function Polonnaruwa() {
   useEffect(() => {
@@ -26,11 +21,11 @@ function Polonnaruwa() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${mirissaHero})` }}
+        style={{ backgroundImage: `url(${polonnaruwaHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
-          <h1>Mirissa</h1>
+          <h1>Polonnaruwa</h1>
         </div>
       </section>
 
@@ -39,71 +34,85 @@ function Polonnaruwa() {
         {/* LEFT CONTENT */}
         <div className="mirissa-left" data-aos="fade-right">
 
-          <h2>Mirissa</h2>
+          <h2>Polonnaruwa</h2>
           <p>
-            Hidden gem in southern beach, with many attractions such as coconut tree hill,
-            whale watching, parrot rock, surfing, snorkeling & diving, beach relaxation.
+            UNESCO World Heritage with rich exploration of history, culture, and ancient architecture.
           </p>
 
           <p>
-            Mirissa is a popular tourist destination in Sri Lanka, and most visitors come
-            to Mirissa Beach for a specialty in the winter.
+            The cultural triangle of Sri Lanka connects three cities: Anuradhapura, Polonnaruwa, and Kandy.
+            This cultural triangle contains numerous historical and ancient sites.
+            Polonnaruwa is an ancient city that is considered one of the eight UNESCO World Heritage Sites in Sri Lanka.
           </p>
 
           <div className="mirissa-gallery">
-            <img src={mirissa1} alt="Mirissa View" />
-            <img src={mirissa2} alt="Mirissa Beach" />
+            <img src={polonnaruwa1} alt="Mirissa View" />
+            <img src={polonnaruwa2} alt="Mirissa Beach" />
           </div>
 
-          <h3>Coconut Tree Hill</h3>
           <p>
-            Coconut tree Hill has recently become one of Sri Lanka's most popular tourist destinations,
-            located in the Mirissa region in the Southern Province. It is a small dome-shaped hill surrounded by palm trees.
-            The Coconut Hill is one place you should not miss during your trip to the south of Sri Lanka.
-            This a private coconut farm that is open all day and welcomes the public to visit. You don't need to buy tickets to enter.
-            Once you get there, you'll see stunning views of the Indian Ocean. This place is completely covered with palm trees,
-            and you can take stunning photos to post on Instagram. The sea breeze will help you feel more comfortable and relax.
+            It was recognized as the second oldest city in Sri Lanka, right after Anuradhapura.
+            Polonnaruwa was a kingdom in the history of Sri Lanka that was ruled and administered by many kings.
+            The two kingdoms differ mainly in that, unlike the kingdom of Anuradhapura,
+            the kingdom of Polonnaruwa was influenced by many Hindu elements and was even ruled by some Tamil kings.
+            This cultural city, in addition to Buddhist temples, also has many Hindu temples.
+            This city is also known for its agriculture. There are many farmers.
           </p>
 
-          <h3>Whale Watching</h3>
-          <p>
-            This is a great place to see whales in this beautiful country southern part in addition to trincomalee in eastern part.
-          </p>
+          <h3>Places to visit in Polonnaruwa</h3>
 
-          <h3>Routes to Coconut Tree Hill</h3>
           <ul className="mirissa-list">
-            <li>Through the beach of Mirissa</li>
-            <li>Through the Bandaramwela Temple</li>
+            <li>Ancient Ruins of the Royal Palace of King Parakramabahu</li>
+            <li>Gal Vihara</li>
+            <li>Lankatilaka Temple</li>
+            <li>Lankarama</li>
+            <li>Thuparama</li>
+            <li>Pothgul Vihara</li>
+            <li>Galpotha (Stone Book)</li>
+            <li>Parakrama Samudra</li>
+            <li>Local Markets and Craft Shops</li>
           </ul>
 
           {/* EXTRA CONTENT FROM SCREENSHOT */}
           <div className="mirissa-extra" data-aos="fade-up">
 
             <div className="mirissa-top-gallery">
-              <img src={mirissa3} alt="Surfing" />
-              <img src={mirissa4} alt="Snorkeling with Turtle" />
-              <img src={mirissa5} alt="Boat Fishing" />
+              <img src={polonnaruwa3} alt="Surfing" />
+              <img src={polonnaruwa4} alt="Snorkeling with Turtle" />
+              <img src={polonnaruwa5} alt="Boat Fishing" />
             </div>
 
             <h3>Most of the tourists and visitors come to this place through Mirissa beach.</h3>
 
             <p>
-              If you drive or do not want to walk on the beach, you can get there through the
-              Bandaramulla Temple. However, regardless of the path you choose, you will have to
-              overcome a difficult path to reach your goal.
+              In Polonnaruwa, an important place is the ancient ruins of the royal palace of King Parakramabahu.
+              Although you can see the ruins, they are a testament to great architecture and design.
             </p>
 
             <p>
-              Mirissa is usually crowded every day, both locals and foreigners. But if you can get
-              there in the morning, you can enjoy a wonderful sunrise in a less crowded environment.
-              Before 9 a.m., there are fewer people, which is something to consider before your visit.
+              Another main attraction is "Galvihara," which consists of numerous beautiful Buddha statues and sculptures.
+              It is a symbol of exceptional sculptural art. Additionally, in the city, there are several very important temples,
+              stupas, and religious places, such as Lankatilaka Temple, Lankarama, Tupparamaya, and Pothgul Vihara.Galpota.
+              Great Buddhist temple that reflects the religious importance of Polonnaruwa.
             </p>
 
             <p>
-              Sunset is a great time to visit the Palm Mountains. The weather report explains that
-              the rainy season in the region is from October to December. The best time to visit is
-              from January to May. Another factor to consider is that the beach is closed during the
-              monsoon season from May to September.
+              Parakrama Bahu Samudra: Enjoy the peaceful view and learn about the ancient irrigation system.
+              Great artificial reservoir, built by King Parakramabahu.
+            </p>
+
+            <p>
+              Local markets or craft shops: Local markets or craft shops: End the day by visiting the souvenir shops and food stalls in the city of Polonnaruwa.
+            </p>
+
+            <p>
+              Beautiful Sri Lanka, beautiful Polonnaruwa. You can include polonnaruwa in your tour itinerary.
+              which consists of very informative and educational. On this day,
+              you will learn about the various influences that the kingdom of Polonnaruwa has undergone,
+              the names of the rulers, and the impact of agriculture.
+              This is the perfect day trip for anyone who loves discovering new cultures and exploring history.
+              Sri Lanka, in general, has a very rich history in the realms of kingdoms,
+              agriculture, and civilization.This is about 4 to 5 hour tour.
             </p>
 
           </div>
@@ -111,86 +120,86 @@ function Polonnaruwa() {
           {/* ACTIVITIES SECTION */}
           <div className="mirissa-activities" data-aos="fade-up">
 
-            <h2>Activities.</h2>
-            <p>You have below activities in Mirissa beach.</p>
-
             {/* SURFING */}
             <details className="activity-box" open>
-              <summary>• Surfing: Ideal for beginners and intermediate surfers.</summary>
+              <summary>• Ancient Ruins of Second Capital in Sri Lanka</summary>
 
               <p>
-                Ride the waves in Mirissa’s crystal-clear waters, perfect for beginners and intermediate surfers
-                seeking thrilling experiences.
+                Polonnaruwa, the second capital of Sri Lanka, boasts magnificent ancient ruins, including King Parakramabahu's royal palace.
+                These remnants highlight impressive architecture and cultural influence from both Buddhist and Hindu traditions,
+                reflecting the city's historical significance and its role as a flourishing kingdom in Sri Lanka's rich heritage.
               </p>
 
               <div className="activity-gallery">
-                <div className="activity-card">
-                  <img src={surfing} alt="Surfing" />
-                  <p>Surfing</p>
-                </div>
+                <div className="activity-gallery">
+                  <div className="activity-card">
+                    <img src={require("../../assets/Gal Wiharaya.png")} alt="Whale Watching" />
+                    <p>Gal Wiharaya</p>
+                  </div>
 
-                <div className="activity-card">
-                  <img src={beginnerGuide} alt="Beginner Guide" />
-                  <p>Beginner Guide</p>
-                </div>
+                  <div className="activity-card">
+                    <img src={require("../../assets/Sandakada Pahana.png")} alt="Turtle Watching" />
+                    <p>Sandakada Pahana</p>
+                  </div>
 
-                <div className="activity-card">
-                  <img src={relaxing} alt="Relaxing" />
-                  <p>Relaxing</p>
+                  <div className="activity-card">
+                    <img src={require("../../assets/Galpoth (Rock Book).png")} alt="Turtle Feeding" />
+                    <p>Galpoth (Rock Book)</p>
+                  </div>
                 </div>
               </div>
             </details>
 
-            {/* SNORKELING */}
             <details className="activity-box">
-              <summary>• Snorkeling & Diving: Explore vibrant coral reefs and marine life.</summary>
+              <summary>• Irrigation System in Ancient Sri Lanka</summary>
 
               <p>
-                Discover vibrant coral reefs teeming with colorful fish and marine life,
-                creating unforgettable underwater adventures.
+                Polonnaruwa showcases the ingenuity of ancient Sri Lankan engineering through its irrigation marvels.
+                The Parakrama Samudra, a massive reservoir, demonstrates advanced water management techniques that supported agriculture and sustained the kingdom,
+                symbolizing King Parakramabahu's vision that 'not even a drop of water should flow into the ocean unused.'
               </p>
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Whale Watching.png")} alt="Whale Watching" />
-                  <p>Whale Watching</p>
+                  <img src={require("../../assets/Parakrama Samudra.png")} alt="Whale Watching" />
+                  <p>Parakrama Samudra</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Turtle Watching.png")} alt="Turtle Watching" />
-                  <p>Turtle Watching</p>
+                  <img src={require("../../assets/Parakrama Samudra irrigation system.png")} alt="Turtle Watching" />
+                  <p>Parakrama Samudra irrigation system</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Turtle Feeding.png")} alt="Turtle Feeding" />
-                  <p>Turtle Feeding</p>
+                  <img src={require("../../assets/Lotus Pond.png")} alt="Turtle Feeding" />
+                  <p>Lotus Pond</p>
                 </div>
               </div>
             </details>
 
-            {/* FISHING */}
             <details className="activity-box">
-              <summary>• Fishing Tours: Experience traditional Sri Lankan fishing.</summary>
+              <summary>• Local Hand Made Crafts</summary>
 
               <p>
-                Join traditional Sri Lankan fishing tours, enjoy serene coastal views,
-                and learn age-old fishing techniques firsthand.
+                Polonnaruwa’s vibrant local markets offer unique handmade crafts that reflect the region's cultural richness.
+                Traditional carvings, woven goods, and pottery exemplify the artisans' skills,
+                providing visitors with beautiful souvenirs while supporting the preservation of Sri Lanka's artisanal heritage and showcasing its diverse cultural traditions.
               </p>
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Boating.png")} alt="Whale Watching" />
-                  <p>Whale Watching</p>
+                  <img src={require("../../assets/Nataraja Statue.png")} alt="Whale Watching" />
+                  <p>Nataraja Statue</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Fishing.png")} alt="Turtle Watching" />
-                  <p>Turtle Watching</p>
+                  <img src={require("../../assets/Wooden Crafts.png")} alt="Turtle Watching" />
+                  <p>Wooden Crafts</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Traditional Fishing.png")} alt="Turtle Feeding" />
-                  <p>Turtle Feeding</p>
+                  <img src={require("../../assets/Arts and crafts.png")} alt="Turtle Feeding" />
+                  <p>Arts and crafts</p>
                 </div>
               </div>
             </details>
@@ -199,15 +208,11 @@ function Polonnaruwa() {
           {/* PARROT ROCK SECTION */}
           <div className="mirissa-parrot-rock" data-aos="fade-up">
 
-            <h3>Parrot Rock</h3>
-            <p>• A small rocky islet offering beautiful views of the coastline, reachable during low tide.</p>
-
             <div className="parrot-gallery">
-              <img src={require("../../assets/mirissa5.jpg")} alt="Parrot Rock Beach" />
-              <img src={require("../../assets/mirissa6.jpg")} alt="Seafood Dish" />
+              <img src={require("../../assets/polonnaruwa6.jpg")} alt="Parrot Rock Beach" />
+              <img src={require("../../assets/polonnaruwa7.jpg")} alt="Seafood Dish" />
             </div>
 
-            <h3>You can spend your time here unlimitedly.</h3>
           </div>
 
         </div>
@@ -217,35 +222,235 @@ function Polonnaruwa() {
           <h3>Make an Inquiry</h3>
 
           <form>
-            <input type="text" placeholder="Name *" required />
-            <input type="email" placeholder="Email Address *" required />
-            <input type="text" placeholder="Phone Number *" required />
+            <input name="name" type="text" placeholder="Name *" />
+            <input name="email" type="email" placeholder="Email Address *" />
+            <div className="phone-row">
+              <input name="code" className="code" type="text" placeholder="Code" />
+              <input name="phone" className="phone" type="text" placeholder="Phone Number *" />
+            </div>
 
-            <select>
+            <select name="country">
               <option>Choose Your Country *</option>
-              <option>Sri Lanka</option>
+              <option>Afghanistan</option>
+              <option>Albania</option>
+              <option>Algeria</option>
+              <option>Andorra</option>
+              <option>Angola</option>
+              <option>Antigua and Barbuda</option>
+              <option>Argentina</option>
+              <option>Armenia</option>
+              <option>Australia</option>
+              <option>Austria</option>
+              <option>Azerbaijan</option>
+              <option>Bahamas</option>
+              <option>Bahrain</option>
+              <option>Bangladesh</option>
+              <option>Barbados</option>
+              <option>Belarus</option>
+              <option>Belgium</option>
+              <option>Belize</option>
+              <option>Benin</option>
+              <option>Bhutan</option>
+              <option>Bolivia</option>
+              <option>Bosnia and Herzegovina</option>
+              <option>Botswana</option>
+              <option>Brazil</option>
+              <option>Brunei</option>
+              <option>Bulgaria</option>
+              <option>Burkina Faso</option>
+              <option>Burundi</option>
+              <option>Cabo Verde</option>
+              <option>Cambodia</option>
+              <option>Cameroon</option>
+              <option>Canada</option>
+              <option>Central African Republic</option>
+              <option>Chad</option>
+              <option>Chile</option>
+              <option>China</option>
+              <option>Colombia</option>
+              <option>Comoros</option>
+              <option>Congo, Democratic Republic of the</option>
+              <option>Congo, Republic of the</option>
+              <option>Costa Rica</option>
+              <option>Côte d’Ivoire</option>
+              <option>Croatia</option>
+              <option>Cuba</option>
+              <option>Cyprus</option>
+              <option>Czech Republic</option>
+              <option>Denmark</option>
+              <option>Djibouti</option>
+              <option>Dominica</option>
+              <option>Dominican Republic</option>
+              <option>Ecuador</option>
+              <option>Egypt</option>
+              <option>El Salvador</option>
+              <option>Equatorial Guinea</option>
+              <option>Eritrea</option>
+              <option>Estonia</option>
+              <option>Eswatini</option>
+              <option>Ethiopia</option>
+              <option>Fiji</option>
+              <option>Finland</option>
+              <option>France</option>
+              <option>Gabon</option>
+              <option>Gambia</option>
+              <option>Georgia</option>
+              <option>Germany</option>
+              <option>Ghana</option>
+              <option>Greece</option>
+              <option>Grenada</option>
+              <option>Guatemala</option>
+              <option>Guinea</option>
+              <option>Guinea-Bissau</option>
+              <option>Guyana</option>
+              <option>Haiti</option>
+              <option>Honduras</option>
+              <option>Hungary</option>
+              <option>Iceland</option>
               <option>India</option>
-              <option>UK</option>
-              <option>USA</option>
+              <option>Indonesia</option>
+              <option>Iran</option>
+              <option>Iraq</option>
+              <option>Ireland</option>
+              <option>Israel</option>
+              <option>Italy</option>
+              <option>Jamaica</option>
+              <option>Japan</option>
+              <option>Jordan</option>
+              <option>Kazakhstan</option>
+              <option>Kenya</option>
+              <option>Kiribati</option>
+              <option>Korea, North</option>
+              <option>Korea, South</option>
+              <option>Kuwait</option>
+              <option>Kyrgyzstan</option>
+              <option>Laos</option>
+              <option>Latvia</option>
+              <option>Lebanon</option>
+              <option>Lesotho</option>
+              <option>Liberia</option>
+              <option>Libya</option>
+              <option>Liechtenstein</option>
+              <option>Lithuania</option>
+              <option>Luxembourg</option>
+              <option>Madagascar</option>
+              <option>Malawi</option>
+              <option>Malaysia</option>
+              <option>Maldives</option>
+              <option>Mali</option>
+              <option>Malta</option>
+              <option>Marshall Islands</option>
+              <option>Mauritania</option>
+              <option>Mauritius</option>
+              <option>Mexico</option>
+              <option>Micronesia</option>
+              <option>Moldova</option>
+              <option>Monaco</option>
+              <option>Mongolia</option>
+              <option>Montenegro</option>
+              <option>Morocco</option>
+              <option>Mozambique</option>
+              <option>Myanmar (Burma)</option>
+              <option>Namibia</option>
+              <option>Nauru</option>
+              <option>Nepal</option>
+              <option>Netherlands</option>
+              <option>New Zealand</option>
+              <option>Nicaragua</option>
+              <option>Niger</option>
+              <option>Nigeria</option>
+              <option>North Macedonia</option>
+              <option>Norway</option>
+              <option>Oman</option>
+              <option>Pakistan</option>
+              <option>Palau</option>
+              <option>Panama</option>
+              <option>Papua New Guinea</option>
+              <option>Paraguay</option>
+              <option>Peru</option>
+              <option>Philippines</option>
+              <option>Poland</option>
+              <option>Portugal</option>
+              <option>Qatar</option>
+              <option>Romania</option>
+              <option>Russia</option>
+              <option>Rwanda</option>
+              <option>Saint Kitts and Nevis</option>
+              <option>Saint Lucia</option>
+              <option>Saint Vincent and the Grenadines</option>
+              <option>Samoa</option>
+              <option>San Marino</option>
+              <option>Sao Tome and Principe</option>
+              <option>Saudi Arabia</option>
+              <option>Senegal</option>
+              <option>Serbia</option>
+              <option>Seychelles</option>
+              <option>Sierra Leone</option>
+              <option>Singapore</option>
+              <option>Slovakia</option>
+              <option>Slovenia</option>
+              <option>Solomon Islands</option>
+              <option>Somalia</option>
+              <option>South Africa</option>
+              <option>South Sudan</option>
+              <option>Spain</option>
+              <option>Sri Lanka</option>
+              <option>Sudan</option>
+              <option>Suriname</option>
+              <option>Sweden</option>
+              <option>Switzerland</option>
+              <option>Syria</option>
+              <option>Taiwan</option>
+              <option>Tajikistan</option>
+              <option>Tanzania</option>
+              <option>Thailand</option>
+              <option>Timor-Leste</option>
+              <option>Togo</option>
+              <option>Tonga</option>
+              <option>Trinidad and Tobago</option>
+              <option>Tunisia</option>
+              <option>Turkey</option>
+              <option>Turkmenistan</option>
+              <option>Tuvalu</option>
+              <option>Uganda</option>
+              <option>Ukraine</option>
+              <option>United Arab Emirates</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Uruguay</option>
+              <option>Uzbekistan</option>
+              <option>Vanuatu</option>
+              <option>Vatican City</option>
+              <option>Venezuela</option>
+              <option>Vietnam</option>
+              <option>Yemen</option>
+              <option>Zambia</option>
+              <option>Zimbabwe</option>
             </select>
 
             <label>Arrival Date</label>
-            <input type="date" />
+            <input name="arrival" type="date" />
 
             <label>Departure Date</label>
-            <input type="date" />
+            <input name="departure" type="date" />
 
-            <select>
+            <select name="interest">
               <option>Choose Your Interest *</option>
+              <option>Eco</option>
               <option>Beach</option>
               <option>Cultural</option>
               <option>Adventure</option>
+              <option>Wild Life</option>
+              <option>Relax and Wellness</option>
+              <option>Honeymoon</option>
+              <option>Ramayana Trail</option>
+              <option>All in one Trails</option>
             </select>
 
-            <input type="number" placeholder="No. of Adults *" />
-            <input type="number" placeholder="No. of Kids" />
+            <input name="adults" type="number" placeholder="No. of Adults *" />
+            <input name="kids" type="number" placeholder="No. of Kids" />
 
-            <textarea placeholder="Enter your message here"></textarea>
+            <textarea name="message" placeholder="Enter your message here"></textarea>
 
             <button type="submit">SUBMIT</button>
           </form>

@@ -3,6 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/Packages.css";
 
+import { useNavigate } from "react-router-dom";
+
 import pkg1 from "../assets/pkg1.jpg";
 import pkg2 from "../assets/pkg2.jpg";
 import pkg3 from "../assets/pkg3.jpg";
@@ -10,16 +12,19 @@ import pkg4 from "../assets/pkg4.jpg";
 import pkg5 from "../assets/pkg5.jpg";
 
 function Packages() {
+
+    const navigate = useNavigate();
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
     }, []);
 
     const packages = [
-        { title: "Culture Heritage Trails", days: "9 days", nights: "8 Nights", image: pkg1, tag: "Cultural Heritage" },
-        { title: "Accessible Holiday Tour", days: "12 days", nights: "11 Nights", image: pkg2, tag: "Holiday Tour" },
-        { title: "Honeymoon Trail", days: "14 days", nights: "13 Nights", image: pkg3, tag: "Honeymoon Trail" },
-        { title: "Ramayana Tour", days: "9 days", nights: "8 Nights", image: pkg4, tag: "Ramayana Tour" },
-        { title: "Eco Trail", days: "13 days", nights: "12 Nights", image: pkg5, tag: "Eco Trail" },
+        { title: "Culture Heritage Trails", days: "9 days", nights: "8 Nights", image: pkg1, tag: "Cultural Heritage", link: "/tour-package/CultureHeritage" },
+        { title: "Accessible Holiday Tour", days: "12 days", nights: "11 Nights", image: pkg2, tag: "Holiday Tour", link: "/tour-package/HolidayTour" },
+        { title: "Honeymoon Trail", days: "14 days", nights: "13 Nights", image: pkg3, tag: "Honeymoon Trail", link: "/tour-package/HoneymoonTrail" },
+        { title: "Ramayana Tour", days: "9 days", nights: "8 Nights", image: pkg4, tag: "Ramayana Tour", link: "/tour-package/RamayanaTour" },
+        { title: "Eco Trail", days: "13 days", nights: "12 Nights", image: pkg5, tag: "Eco Trail", link: "/tour-package/EcoTrail" },
     ];
 
     return (
@@ -38,7 +43,14 @@ function Packages() {
             <section className="package-grid-section" data-aos="fade-up">
                 <div className="package-grid-container">
                     {packages.map((pkg, i) => (
-                        <div className="package-card" key={i} data-aos="zoom-in">
+                        <div
+                            className="package-card"
+                            key={i}
+                            data-aos="zoom-in"
+                            onClick={() => navigate(pkg.link)}
+                            style={{ cursor: "pointer" }}
+                        >
+
                             <div className="package-tag">{pkg.tag}</div>
 
                             <img src={pkg.image} alt={pkg.title} />

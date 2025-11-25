@@ -22,11 +22,14 @@ import sigiriya14 from "../../assets/sigiriya14.jpg";
 import sigiriya15 from "../../assets/sigiriya15.jpg";
 import sigiriya16 from "../../assets/sigiriya16.jpg";
 import sigiriya17 from "../../assets/sigiriya17.jpg";
+import sigiriya18 from "../../assets/sigiriya18.jpg";
+import sigiriya19 from "../../assets/sigiriya19.jpg";
+import sigiriya20 from "../../assets/sigiriya20.jpg";
+import sigiriya21 from "../../assets/sigiriya21.jpg";
 
-import surfing from "../../assets/Surfing.png";
-import beginnerGuide from "../../assets/Beginner Guide.png";
-import relaxing from "../../assets/Relaxing.png";
-
+import naturalWaterSprings from "../../assets/Natural Water Springs.png";
+import elephantRiding from "../../assets/Elephant Riding.png";
+import ancientPark from "../../assets/Ancient Park.png";
 
 function Sigiriya() {
   useEffect(() => {
@@ -108,7 +111,7 @@ function Sigiriya() {
               <img src={sigiriya5} alt="Boat Fishing" />
             </div>
 
-            <h3>Tour to Sigiriya Rock Fortress - The world 8th wonder</h3>
+            <h2>Tour to Sigiriya Rock Fortress - The world 8th wonder</h2>
 
             <p>
               The Sigiriya Rock Fortress tour will offer you one of the most exciting experiences.
@@ -175,20 +178,20 @@ function Sigiriya() {
               The garden with a pond at the top of the cliff showcases an astonishing hydraulic system that pumped water to the top of the Sigiriya cliff.
             </p>
 
-             <p>
+            <p>
               You can include sigiriya in your tour itinerary with Captain Ceylon Tours will give you unforgettable experience
             </p>
 
-             <p>
+            <p>
               You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
             </p>
 
-            <div className="mirissa-top-gallery">
+            <div className="mirissa-gallery">
               <img src={sigiriya8} alt="Surfing" />
               <img src={sigiriya9} alt="Snorkeling with Turtle" />
             </div>
 
-            <h3>Safari Tour at Habarana Eco Park</h3>
+            <h2>Safari Tour at Habarana Eco Park</h2>
 
             <p>
               The Habarana Ecological Park offers a peaceful and eco-friendly safari experience,
@@ -224,7 +227,7 @@ function Sigiriya() {
               <img src={sigiriya12} alt="Snorkeling with Turtle" />
             </div>
 
-            <h3>Minneriya National Park</h3>
+            <h2>Minneriya National Park</h2>
 
             <p>
               Minneriya National Park is another popular tourist destination in Sri Lanka.
@@ -303,12 +306,12 @@ function Sigiriya() {
               You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
             </p>
 
-            <div className="mirissa-top-gallery">
+            <div className="mirissa-gallery">
               <img src={sigiriya13} alt="Surfing" />
               <img src={sigiriya14} alt="Snorkeling with Turtle" />
             </div>
 
-            <h3>Kaudulla National Park</h3>
+            <h2>Kaudulla National Park</h2>
 
             <p>
               Sri Lankan elephants are the main attraction at Kaudulla National Park. From August to December,
@@ -392,94 +395,300 @@ function Sigiriya() {
               You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.
             </p>
 
+            <h2>Pidurangala Rock</h2>
+
+            <p>
+              Pidurangala is a popular tourist destination in Sri Lanka, known for its panoramic views and rich historical significance.
+              This enormous rock is located near the famous Lion Rock fortress and often attracts tourists seeking a unique hiking experience.
+            </p>
+
+            <h3>Historical significance:</h3>
+
+            <p>
+              Pidulangara has a close connection with the history of Buddhism.
+              This monument was the site of a monastery that, according to reports,
+              was built during the reign of King Kashyapapa. (477–495 CE).
+            </p>
+
+            <p>
+              Along the trail, you can see ancient caves and statues of the reclining Buddha, carved into the rocks.
+            </p>
+
+            <h3>Trekking trail:</h3>
+
+            <p>
+              The hike takes approximately 45 min to 1 hour, the difficulty is moderate, and near the top, there are steep rocky sections.
+              The trail combines forest paths and rocky terrain.
+            </p>
+
+            <h3>Panoramic view:</h3>
+
+            <p>
+              At the top of the mountain, a fantastic 360-degree panoramic view opens up, including the perfect angle of the Lion Rock.
+              Dawn and dusk are the best times to enjoy the magnificent landscapes.
+            </p>
+
+            <p>
+              Pidurangala is less crowded and more accessible, offering a tranquil experience.
+              If you explore the culture and natural beauties of Sri Lanka, this place is a must-visit!
+            </p>
+
+            <p>
+              Many tourists choose to climb Pidurangala Mountain early in the morning to watch the sunrise, and it truly is a magical experience.
+              If you have the opportunity to visit the Central Province of Sri Lanka, it is definitely worth it!
+            </p>
+
+            <p>
+              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.
+            </p>
+
+            <div className="mirissa-gallery">
+              <img src={sigiriya18} alt="Surfing" />
+              <img src={sigiriya19} alt="Snorkeling with Turtle" />
+            </div>
+
+            <h2>Dambulla Cave Temples</h2>
+
+            <p>
+              The Dambulla Cave Temple, also known as the Golden Temple of Dambulla,
+              is one of the most iconic cultural and religious sites in Sri Lanka. Located in the central province near Matale,
+              it is a UNESCO World Heritage site and an important attraction in the cultural triangle of Sri Lanka.
+            </p>
+
+            <h3>Historical significance:</h3>
+
+            <p>
+              Since the 1st century B.C., the temple complex served as a refuge for King Valaagamba during his exile.
+              When he regained the throne, he converted the caves into a temple.
+              Over the centuries, successive kings added to this place, thus enriching its historical and artistic value.
+            </p>
+
+            <h3>Cave complex:</h3>
+
+            <p>
+              The temple consists of five caves, each of which is decorated with intricate murals and more than 150 statues of Buddha,
+              as well as statues of Hindu gods and ancient kings.
+              The frescoes, which cover an area of 2100 square meters, illustrate the life of Buddha, Buddhist mythology, and local history.
+            </p>
+
+            <h3>The architectural grandeur:</h3>
+
+            <p>
+              The caves are carved into a massive rock 160 meters above the surrounding plains, creating a tranquil and expressive atmosphere.
+              The entrance is marked by a modern statue of the golden Buddha and a museum at the foot of the temple.
+            </p>
+
+            <h3>Spiritual and cultural value:</h3>
+
+            <p>
+              The place remains an active center of pilgrimage for Buddhists, with daily rituals and offerings.
+            </p>
+
+            <h3>Panoramic views:</h3>
+
+            <p>
+              The hilltop location offers stunning views of the surrounding landscape, including landmarks like Sigiriya Rock on clear days.
+              Visiting the Dambulla Cave Temple offers a combination of spirituality, history, and artistic value,
+              making it an unforgettable experience.
+              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.
+            </p>
+
+            <h2>Hiriwaduna village tour</h2>
+
+            <p>
+              The village of Hirivaduwa is a charming town located near Habarana, in the heart of Sri Lanka's cultural triangle.
+              It offers an authentic representation of traditional rural life in Sri Lanka and is a popular spot for ecotourism and cultural experiences.
+            </p>
+
+            <p>
+              Join here once-in-a-lifetime opportunity to experience the nature and culture of a genuine Sri Lankan village during our 2.5-hour tour.
+            </p>
+
+            <h3>Bullok cart ride:</h3>
+
+            <p>
+              This 2.5-hour tour usually begins with an bullok cart ride through unused village paths to Hiriwadunna.
+              The journey lasts between fifteen and twenty minutes and is pulled by two bulloks.
+              The journey ends near Lake Hiriwadunna, where you can get off the cart and embark on a catamaran boat ride.
+            </p>
+
+            <h3>Catamaran boat ride:</h3>
+
+            <p>
+              Lake hirivadunna is a place for a catamaran ride. During the boat ride,
+              you will be able to enjoy breath-taking views of the Sigiriya and Pidurangala rocks above the lake.
+              You can also join the boatman if you want to help row. He may surprise you with his ingenuity and craftsmanship.
+              A beautiful necklace for ladies and a hat for gentlemen.
+              The excursion boat will finally dock at the small town on the other side of the coast.
+            </p>
+
+            <h3>Village house activity:</h3>
+
+            <p>
+              The typical daily schedule of an authentic rural family is evident.
+              It is important to visit the garden where endemic vegetables are grown and the rice fields.
+              Try to keep the animals away from the rice field by climbing up to the wooden hut next to the rice field,
+              where the farmers spend the nights sleeping.
+            </p>
+
+            <p>
+              A woman from the village, dressed in a traditional Sri Lankan sari and a hat, warmly greeted us with a kind smile and said: AYUBOWAN!.
+            </p>
+
+            <h3>Cooking demonstration:</h3>
+
+            <p>
+              She suggested a culinary demonstration of traditional Sri Lankan food in thirty-five minutes.
+              Additionally, they can see how a woman from the village prepares roti or a traditional dish.
+              She shows how to make a roof from coconut leaves and how to separate the rice seeds from the straw and husks using kulla and mirisgala. You can also taste these products.
+              You can enjoy a simple and traditional dishes, prepared with vegetables picked by a farmer and a woman from the village.
+            </p>
+
+            <h3>Nature & wild life:</h3>
+
+            <p>
+              The natural areas around the village are rich in biodiversity, with the possibility of observing monkeys, birds, and other wildlife.
+              The surroundings feature tropical flora and stunning sunsets over the lake.
+            </p>
+
+            <h3>Cultural immersion:</h3>
+
+            <p>
+              Hiriwaduna offers an understanding of the simplicity and sustainability of rural life in Sri Lanka, beyond the hustle and bustle of the city.
+            </p>
+
+            <p>
+              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+            </p>
+
+            <div className="mirissa-gallery">
+              <img src={sigiriya20} alt="Surfing" />
+              <img src={sigiriya21} alt="Snorkeling with Turtle" />
+            </div>
+
+            <h2>Pleasure island Dambulla</h2>
+
+            <p>
+              Located in the picturesque region of Dambulla, Sathutu Dupata, or Pleasure Island,
+              is a piece of paradise that captures the essence of tranquility and adventure.
+              This tourist attraction offers visitors the opportunity to relax among the lush greenary and the tranquil streams.
+              When you set foot on the island, you are greeted by the gentle sounds of nature, making it an ideal place to relax or take a walk with the family.
+              The place is known for its extensive recreational facilities, which are suitable for both thrill-seekers and those looking for a peaceful retreat.
+              Families can enjoy picnics in designated areas or explore the diverse flora and fauna that thrive here.
+            </p>
+
+            <p>
+              The island is particularly known for its exciting activities, such as boat trips, fishing, and bird watching, which offer a unique experience for nature lovers.
+              The vibrant fauna, including colorful birds and playful monkeys, adds to the island's charm and makes it an ideal backdrop for both photography enthusiasts and nature lovers.
+              Whether you want to exercise outdoors or just enjoy the sun, Sathutu Dupata or pleasure island caters to all preferences.
+              The well-maintained trails and the island's amenities make navigation easy for visitors, enhancing the overall experience.
+            </p>
+
+            <p>
+              Sathutu Dupatha is also an excellent place to try the local cuisine at the nearby restaurants,
+              allowing you to enjoy the authentic flavors of Sri Lanka. The island is open every day from 7 AM to 7 PM,
+              providing ample time to explore its wonders. When planning your visit, remember that weekends can be more crowded,
+              making weekdays a quieter option for those who prefer a more peaceful atmosphere.
+              For an unforgettable day surrounded by the beauty of nature, Sathutu Dupatha is a must-visit place in Dambulla.
+            </p>
+
+            <p>
+              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+            </p>
+
           </div>
 
           {/* ACTIVITIES SECTION */}
           <div className="mirissa-activities" data-aos="fade-up">
 
-            <h2>Activities.</h2>
-            <p>You have below activities in Mirissa beach.</p>
+            <h2>Popular Activities</h2>
 
-            {/* SURFING */}
             <details className="activity-box" open>
-              <summary>• Surfing: Ideal for beginners and intermediate surfers.</summary>
+              <summary>• At the Sigiriya(ancient rock fortress)</summary>
 
               <p>
-                Ride the waves in Mirissa’s crystal-clear waters, perfect for beginners and intermediate surfers
-                seeking thrilling experiences.
+                Discover the majestic Sigiriya, where ancient wonders meet nature's beauty. Marvel at the natural water springs,
+                stroll through the lush Sigiriya Park, and embrace the serenity of its historic grounds.
+                Add a touch of adventure with elephant rides, immersing yourself in the breathtaking charm of this UNESCO World Heritage Site.
               </p>
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={surfing} alt="Surfing" />
-                  <p>Surfing</p>
+                  <img src={naturalWaterSprings} alt="Surfing" />
+                  <p>Natural Water Springs</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={beginnerGuide} alt="Beginner Guide" />
-                  <p>Beginner Guide</p>
+                  <img src={elephantRiding} alt="Beginner Guide" />
+                  <p>Elephant Riding</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={relaxing} alt="Relaxing" />
-                  <p>Relaxing</p>
+                  <img src={ancientPark} alt="Relaxing" />
+                  <p>Ancient Park</p>
                 </div>
               </div>
             </details>
 
-            {/* SNORKELING */}
             <details className="activity-box">
-              <summary>• Snorkeling & Diving: Explore vibrant coral reefs and marine life.</summary>
+              <summary>• Dambulla city Kandalama and Pleasure island</summary>
 
               <p>
-                Discover vibrant coral reefs teeming with colorful fish and marine life,
-                creating unforgettable underwater adventures.
+                Dambulla's Kandalama Lake, nestled amidst lush greenery, offers serene views and tranquil waters ideal for nature lovers.
+                Nearby Pleasure Island features thrilling activities like kayaking, paddleboarding, and nature trails.
+                Visitors can relax on the sandy shores, enjoy birdwatching, or savor a peaceful picnic, making it a perfect getaway for outdoor enthusiasts.
               </p>
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Whale Watching.png")} alt="Whale Watching" />
-                  <p>Whale Watching</p>
+                  <img src={require("../../assets/Relaxing At Pleasure Island.png")} alt="Whale Watching" />
+                  <p>Relaxing At Pleasure Island</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Turtle Watching.png")} alt="Turtle Watching" />
-                  <p>Turtle Watching</p>
+                  <img src={require("../../assets/Boat Riding.png")} alt="Turtle Watching" />
+                  <p>Boat Riding</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Turtle Feeding.png")} alt="Turtle Feeding" />
-                  <p>Turtle Feeding</p>
+                  <img src={require("../../assets/Kandalama Lake Tank View.png")} alt="Turtle Feeding" />
+                  <p>Kandalama Lake Tank View</p>
                 </div>
               </div>
             </details>
 
-            {/* FISHING */}
             <details className="activity-box">
-              <summary>• Fishing Tours: Experience traditional Sri Lankan fishing.</summary>
+              <summary>• Hiriwadunna village tour and nature park</summary>
 
               <p>
-                Join traditional Sri Lankan fishing tours, enjoy serene coastal views,
-                and learn age-old fishing techniques firsthand.
+                The Dambulla Hiriwadunna Village Tour offers a serene escape into nature, blending scenic beauty with cultural experiences.
+                Enjoy a relaxing boat ride across a tranquil lake, surrounded by lush greenery.
+                Experience traditional village life with a ride on an ancient ox cart, exploring the charm of rural Sri Lankan culture.
               </p>
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Boating.png")} alt="Whale Watching" />
-                  <p>Whale Watching</p>
+                  <img src={require("../../assets/Boat ride across a tranquil lake.png")} alt="Whale Watching" />
+                  <p>Boat ride across a tranquil lake</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Fishing.png")} alt="Turtle Watching" />
-                  <p>Turtle Watching</p>
+                  <img src={require("../../assets/Experiencing traditional village life.png")} alt="Turtle Watching" />
+                  <p>Experiencing traditional village life</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Traditional Fishing.png")} alt="Turtle Feeding" />
-                  <p>Turtle Feeding</p>
+                  <img src={require("../../assets/Ancient ox cart riding.png")} alt="Turtle Feeding" />
+                  <p>Ancient ox cart riding</p>
                 </div>
               </div>
             </details>
+
+            <div className="mirissa-gallery">
+              <img src={require("../../assets/sigiriya22.jpg")} alt="Surfing" />
+              <img src={require("../../assets/sigiriya23.jpg")} alt="Snorkeling with Turtle" />
+            </div>
+
           </div>
 
         </div>
@@ -489,35 +698,235 @@ function Sigiriya() {
           <h3>Make an Inquiry</h3>
 
           <form>
-            <input type="text" placeholder="Name *" required />
-            <input type="email" placeholder="Email Address *" required />
-            <input type="text" placeholder="Phone Number *" required />
+            <input name="name" type="text" placeholder="Name *" />
+            <input name="email" type="email" placeholder="Email Address *" />
+            <div className="phone-row">
+              <input name="code" className="code" type="text" placeholder="Code" />
+              <input name="phone" className="phone" type="text" placeholder="Phone Number *" />
+            </div>
 
-            <select>
+            <select name="country">
               <option>Choose Your Country *</option>
-              <option>Sri Lanka</option>
+              <option>Afghanistan</option>
+              <option>Albania</option>
+              <option>Algeria</option>
+              <option>Andorra</option>
+              <option>Angola</option>
+              <option>Antigua and Barbuda</option>
+              <option>Argentina</option>
+              <option>Armenia</option>
+              <option>Australia</option>
+              <option>Austria</option>
+              <option>Azerbaijan</option>
+              <option>Bahamas</option>
+              <option>Bahrain</option>
+              <option>Bangladesh</option>
+              <option>Barbados</option>
+              <option>Belarus</option>
+              <option>Belgium</option>
+              <option>Belize</option>
+              <option>Benin</option>
+              <option>Bhutan</option>
+              <option>Bolivia</option>
+              <option>Bosnia and Herzegovina</option>
+              <option>Botswana</option>
+              <option>Brazil</option>
+              <option>Brunei</option>
+              <option>Bulgaria</option>
+              <option>Burkina Faso</option>
+              <option>Burundi</option>
+              <option>Cabo Verde</option>
+              <option>Cambodia</option>
+              <option>Cameroon</option>
+              <option>Canada</option>
+              <option>Central African Republic</option>
+              <option>Chad</option>
+              <option>Chile</option>
+              <option>China</option>
+              <option>Colombia</option>
+              <option>Comoros</option>
+              <option>Congo, Democratic Republic of the</option>
+              <option>Congo, Republic of the</option>
+              <option>Costa Rica</option>
+              <option>Côte d’Ivoire</option>
+              <option>Croatia</option>
+              <option>Cuba</option>
+              <option>Cyprus</option>
+              <option>Czech Republic</option>
+              <option>Denmark</option>
+              <option>Djibouti</option>
+              <option>Dominica</option>
+              <option>Dominican Republic</option>
+              <option>Ecuador</option>
+              <option>Egypt</option>
+              <option>El Salvador</option>
+              <option>Equatorial Guinea</option>
+              <option>Eritrea</option>
+              <option>Estonia</option>
+              <option>Eswatini</option>
+              <option>Ethiopia</option>
+              <option>Fiji</option>
+              <option>Finland</option>
+              <option>France</option>
+              <option>Gabon</option>
+              <option>Gambia</option>
+              <option>Georgia</option>
+              <option>Germany</option>
+              <option>Ghana</option>
+              <option>Greece</option>
+              <option>Grenada</option>
+              <option>Guatemala</option>
+              <option>Guinea</option>
+              <option>Guinea-Bissau</option>
+              <option>Guyana</option>
+              <option>Haiti</option>
+              <option>Honduras</option>
+              <option>Hungary</option>
+              <option>Iceland</option>
               <option>India</option>
-              <option>UK</option>
-              <option>USA</option>
+              <option>Indonesia</option>
+              <option>Iran</option>
+              <option>Iraq</option>
+              <option>Ireland</option>
+              <option>Israel</option>
+              <option>Italy</option>
+              <option>Jamaica</option>
+              <option>Japan</option>
+              <option>Jordan</option>
+              <option>Kazakhstan</option>
+              <option>Kenya</option>
+              <option>Kiribati</option>
+              <option>Korea, North</option>
+              <option>Korea, South</option>
+              <option>Kuwait</option>
+              <option>Kyrgyzstan</option>
+              <option>Laos</option>
+              <option>Latvia</option>
+              <option>Lebanon</option>
+              <option>Lesotho</option>
+              <option>Liberia</option>
+              <option>Libya</option>
+              <option>Liechtenstein</option>
+              <option>Lithuania</option>
+              <option>Luxembourg</option>
+              <option>Madagascar</option>
+              <option>Malawi</option>
+              <option>Malaysia</option>
+              <option>Maldives</option>
+              <option>Mali</option>
+              <option>Malta</option>
+              <option>Marshall Islands</option>
+              <option>Mauritania</option>
+              <option>Mauritius</option>
+              <option>Mexico</option>
+              <option>Micronesia</option>
+              <option>Moldova</option>
+              <option>Monaco</option>
+              <option>Mongolia</option>
+              <option>Montenegro</option>
+              <option>Morocco</option>
+              <option>Mozambique</option>
+              <option>Myanmar (Burma)</option>
+              <option>Namibia</option>
+              <option>Nauru</option>
+              <option>Nepal</option>
+              <option>Netherlands</option>
+              <option>New Zealand</option>
+              <option>Nicaragua</option>
+              <option>Niger</option>
+              <option>Nigeria</option>
+              <option>North Macedonia</option>
+              <option>Norway</option>
+              <option>Oman</option>
+              <option>Pakistan</option>
+              <option>Palau</option>
+              <option>Panama</option>
+              <option>Papua New Guinea</option>
+              <option>Paraguay</option>
+              <option>Peru</option>
+              <option>Philippines</option>
+              <option>Poland</option>
+              <option>Portugal</option>
+              <option>Qatar</option>
+              <option>Romania</option>
+              <option>Russia</option>
+              <option>Rwanda</option>
+              <option>Saint Kitts and Nevis</option>
+              <option>Saint Lucia</option>
+              <option>Saint Vincent and the Grenadines</option>
+              <option>Samoa</option>
+              <option>San Marino</option>
+              <option>Sao Tome and Principe</option>
+              <option>Saudi Arabia</option>
+              <option>Senegal</option>
+              <option>Serbia</option>
+              <option>Seychelles</option>
+              <option>Sierra Leone</option>
+              <option>Singapore</option>
+              <option>Slovakia</option>
+              <option>Slovenia</option>
+              <option>Solomon Islands</option>
+              <option>Somalia</option>
+              <option>South Africa</option>
+              <option>South Sudan</option>
+              <option>Spain</option>
+              <option>Sri Lanka</option>
+              <option>Sudan</option>
+              <option>Suriname</option>
+              <option>Sweden</option>
+              <option>Switzerland</option>
+              <option>Syria</option>
+              <option>Taiwan</option>
+              <option>Tajikistan</option>
+              <option>Tanzania</option>
+              <option>Thailand</option>
+              <option>Timor-Leste</option>
+              <option>Togo</option>
+              <option>Tonga</option>
+              <option>Trinidad and Tobago</option>
+              <option>Tunisia</option>
+              <option>Turkey</option>
+              <option>Turkmenistan</option>
+              <option>Tuvalu</option>
+              <option>Uganda</option>
+              <option>Ukraine</option>
+              <option>United Arab Emirates</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Uruguay</option>
+              <option>Uzbekistan</option>
+              <option>Vanuatu</option>
+              <option>Vatican City</option>
+              <option>Venezuela</option>
+              <option>Vietnam</option>
+              <option>Yemen</option>
+              <option>Zambia</option>
+              <option>Zimbabwe</option>
             </select>
 
             <label>Arrival Date</label>
-            <input type="date" />
+            <input name="arrival" type="date" />
 
             <label>Departure Date</label>
-            <input type="date" />
+            <input name="departure" type="date" />
 
-            <select>
+            <select name="interest">
               <option>Choose Your Interest *</option>
+              <option>Eco</option>
               <option>Beach</option>
               <option>Cultural</option>
               <option>Adventure</option>
+              <option>Wild Life</option>
+              <option>Relax and Wellness</option>
+              <option>Honeymoon</option>
+              <option>Ramayana Trail</option>
+              <option>All in one Trails</option>
             </select>
 
-            <input type="number" placeholder="No. of Adults *" />
-            <input type="number" placeholder="No. of Kids" />
+            <input name="adults" type="number" placeholder="No. of Adults *" />
+            <input name="kids" type="number" placeholder="No. of Kids" />
 
-            <textarea placeholder="Enter your message here"></textarea>
+            <textarea name="message" placeholder="Enter your message here"></textarea>
 
             <button type="submit">SUBMIT</button>
           </form>

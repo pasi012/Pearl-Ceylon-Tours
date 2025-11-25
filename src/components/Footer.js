@@ -1,69 +1,90 @@
 import { Link } from "react-router-dom";
 import "../css/Footer.css";
+
 import logo from "../assets/logo.png";
 import { Phone, Mail, MapPin } from "lucide-react";
-import { FaFacebookF, FaInstagram, FaTripadvisor, FaYoutube } from "react-icons/fa";
-import tripAdvisor from "../assets/trip-advisior.png";
+import { FaFacebookF, FaInstagram, FaYoutube, FaPinterestP } from "react-icons/fa";
+
+import g1 from "../assets/feature1.jpg";
+import g2 from "../assets/Whale Watching.png";
+import g3 from "../assets/yala4.jpg";
+import g4 from "../assets/anuradhapura.jpg";
+import g5 from "../assets/Nine arch bridge view.png";
+import g6 from "../assets/sigiriya.jpg";
 
 function Footer() {
     return (
         <footer className="footer">
             <div className="footer-container">
-                {/* Left Section */}
+
+                {/* ABOUT LEFT SECTION */}
                 <div className="footer-about">
-                    <img src={logo} alt="Go Lanka Explorers" className="footer-logo" />
+                    <img src={logo} alt="Logo" className="footer-logo" />
+
                     <p>
-                        Experience unforgettable journeys with our tour company, offering
-                        personalized, eco-friendly adventures that celebrate cultural
-                        diversity and natural beauty.
+                        Explore Sri Lanka’s diverse landscapes, rich culture & unforgettable experiences with our expert travel services.
                     </p>
-                    <div className="footer-social">
-                        <a href="#" aria-label="Facebook"><FaFacebookF /></a>
-                        <a href="#" aria-label="Instagram"><FaInstagram /></a>
-                        <a href="#" aria-label="YouTube"><FaYoutube /></a>
+
+                    <div className="footer-contact-block">
+                        <p><Mail size={16} /> info@captainceylontours.com</p>
+                        <p><Phone size={16} /> 0778834842</p>
+                        <p><MapPin size={16} /> No. 25B, Nidahs Mawatha, Matale, Sri Lanka.</p>
                     </div>
                 </div>
 
-                {/* Quick Links */}
+                {/* SERVICES LINKS */}
                 <div className="footer-links">
-                    <h3>Quick Links</h3>
+                    <h3>Services Req</h3>
                     <ul>
-                        <li><Link to="/">HOME</Link></li>
-                        <li><Link to="/about">ABOUT</Link></li>
-                        <li><Link to="/packages">PACKAGES</Link></li>
-                        <li><Link to="/things-to-do">THINGS TO DO</Link></li>
-                        <li><Link to="/destinations">DESTINATIONS</Link></li>
-                        <li><Link to="/gallery">GALLERY</Link></li>
-                        <li><Link to="/contact">CONTACT</Link></li>
-                        <li><Link to="/tailor-made">TAILOR MADE</Link></li>
+                        <li><Link to="/about">About Us</Link></li>
+                        <li><Link to="/whyChooseUs">Why Choose Us</Link></li>
+                        <li><Link to="/terms">Terms & Conditions</Link></li>
+                        <li><Link to="/privacy">Privacy Policy</Link></li>
+                        <li><Link to="/tailor-made-tours">Tailor Made Tours</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
                     </ul>
                 </div>
 
-                {/* Contact Section */}
-                <div className="footer-contact">
-                    <h3>Contact Us</h3>
-                    <p><Phone size={16} /> +94 77 033 9497</p>
-                    <p><Mail size={16} /> info@golankaexplorers.com</p>
-                    <p><Mail size={16} /> hashan@golankaexplorers.com</p>
-                    <p><MapPin size={16} /> 263/A1, Daluwakotuwa, Kochchikade, Sri Lanka</p>
+                {/* GALLERY SECTION */}
+                <div className="footer-gallery">
+                    <h3>Gallery</h3>
+
+                    <div className="gallery-grid">
+                        <img src={g1} alt="Gallery 1" />
+                        <img src={g2} alt="Gallery 2" />
+                        <img src={g3} alt="Gallery 3" />
+                        <img src={g4} alt="Gallery 4" />
+                        <img src={g5} alt="Gallery 5" />
+                        <img src={g6} alt="Gallery 6" />
+                    </div>
                 </div>
 
-                {/* TripAdvisor Section */}
-                <div className="footer-trip">
-                    <h3>Trip Advisor</h3>
-                    <img
-                        src={tripAdvisor}
-                        alt="TripAdvisor"
-                        className="tripadvisor-logo"
-                    />
-                    <button className="visa-btn">APPLY VISA</button>
+                {/* NEWSLETTER SECTION */}
+                <div className="footer-newsletter">
+                    <h3>Newsletter</h3>
+
+                    <div className="newsletter-input">
+                        <input type="email" placeholder="Enter Email Address" />
+                        <button>➤</button>
+                    </div>
+
+                    <div className="newsletter-agree">
+                        <input type="checkbox" />
+                        <label>I agree to all your terms and policies</label>
+                    </div>
+
+                    <div className="footer-social-inline">
+                        <FaFacebookF />
+                        <FaYoutube />
+                        <FaInstagram />
+                        <FaPinterestP />
+                    </div>
                 </div>
+
             </div>
 
             <div className="footer-bottom">
-                <p>
-                    Copyright © 2025 PEARL CEYLON TOURS | Developed by SLTechnology (PVT) LTD
-                </p>
+                <p>Copyright © 2025 | Designed & Developed by SLTechnology (pvt) LTD</p>
             </div>
         </footer>
     );

@@ -3,18 +3,15 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import mirissaHero from "../../assets/mirissa-hero.jpg";
-import mirissa1 from "../../assets/mirissa.jpg";
-import mirissa2 from "../../assets/mirissa1.jpg";
+import anuradhapuraHero from "../../assets/anuradhapura-hero.jpg";
+import anuradhapura1 from "../../assets/anuradhapura.jpg";
+import anuradhapura2 from "../../assets/anuradhapura1.jpg";
 
-import mirissa3 from "../../assets/mirissa2.jpg";
-import mirissa4 from "../../assets/mirissa3.jpg";
-import mirissa5 from "../../assets/mirissa4.jpg";
-
-import surfing from "../../assets/Surfing.png";
-import beginnerGuide from "../../assets/Beginner Guide.png";
-import relaxing from "../../assets/Relaxing.png";
-
+import anuradhapura3 from "../../assets/anuradhapura2.jpg";
+import anuradhapura4 from "../../assets/anuradhapura3.jpg";
+import anuradhapura5 from "../../assets/anuradhapura4.jpg";
+import anuradhapura6 from "../../assets/anuradhapura5.jpg";
+import anuradhapura7 from "../../assets/anuradhapura6.jpg";
 
 function Anuradhapura() {
   useEffect(() => {
@@ -26,11 +23,11 @@ function Anuradhapura() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${mirissaHero})` }}
+        style={{ backgroundImage: `url(${anuradhapuraHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
-          <h1>Mirissa</h1>
+          <h1>Anuradhapura</h1>
         </div>
       </section>
 
@@ -39,175 +36,198 @@ function Anuradhapura() {
         {/* LEFT CONTENT */}
         <div className="mirissa-left" data-aos="fade-right">
 
-          <h2>Mirissa</h2>
+          <h2>Anuradhapura</h2>
           <p>
-            Hidden gem in southern beach, with many attractions such as coconut tree hill,
-            whale watching, parrot rock, surfing, snorkeling & diving, beach relaxation.
+            Anuradhapura, Sri Lanka's first capital and a UNESCO World Heritage Site, represents a fascinating journey through ancient history,
+            Buddhist heritage and remarkable engineering achievements.
           </p>
 
           <p>
-            Mirissa is a popular tourist destination in Sri Lanka, and most visitors come
-            to Mirissa Beach for a specialty in the winter.
+            Ourof Anuradhapura is specially designed to take you through the city and give you an unforgettable experience of its luxurious culture, pilgrimages and people.
+            Anuradhapura is one of the largest cities today in terms of size &ancient ruins .You will get a mentor with excellent local knowledge and communication skills.
+            Language guides can be provided on special request.
+            For those who love culture and history, this is the perfect tour to enlighten their soul.
           </p>
 
-          <div className="mirissa-gallery">
-            <img src={mirissa1} alt="Mirissa View" />
-            <img src={mirissa2} alt="Mirissa Beach" />
+          <div className="mirissa-top-gallery">
+            <img src={anuradhapura1} alt="Mirissa View" />
+            <img src={anuradhapura2} alt="Mirissa Beach" />
           </div>
 
-          <h3>Coconut Tree Hill</h3>
           <p>
-            Coconut tree Hill has recently become one of Sri Lanka's most popular tourist destinations,
-            located in the Mirissa region in the Southern Province. It is a small dome-shaped hill surrounded by palm trees.
-            The Coconut Hill is one place you should not miss during your trip to the south of Sri Lanka.
-            This a private coconut farm that is open all day and welcomes the public to visit. You don't need to buy tickets to enter.
-            Once you get there, you'll see stunning views of the Indian Ocean. This place is completely covered with palm trees,
-            and you can take stunning photos to post on Instagram. The sea breeze will help you feel more comfortable and relax.
+            Anuradhapura is one of the seven kingdoms in the history of Sri Lanka. It is the oldest, the largest and the most rich.
+            In 377 BCE, it was declared a kingdom, and King Pandukabhaya made it prosperous.
+            It is still considered the capital of the Central-North Province.
+            This kingdom existed for 12 centuries until it was destroyed in the 10th century AD.
           </p>
 
-          <h3>Whale Watching</h3>
-          <p>
-            This is a great place to see whales in this beautiful country southern part in addition to trincomalee in eastern part.
-          </p>
-
-          <h3>Routes to Coconut Tree Hill</h3>
-          <ul className="mirissa-list">
-            <li>Through the beach of Mirissa</li>
-            <li>Through the Bandaramwela Temple</li>
-          </ul>
-
-          {/* EXTRA CONTENT FROM SCREENSHOT */}
-          <div className="mirissa-extra" data-aos="fade-up">
-
-            <div className="mirissa-top-gallery">
-              <img src={mirissa3} alt="Surfing" />
-              <img src={mirissa4} alt="Snorkeling with Turtle" />
-              <img src={mirissa5} alt="Boat Fishing" />
-            </div>
-
-            <h3>Most of the tourists and visitors come to this place through Mirissa beach.</h3>
-
-            <p>
-              If you drive or do not want to walk on the beach, you can get there through the
-              Bandaramulla Temple. However, regardless of the path you choose, you will have to
-              overcome a difficult path to reach your goal.
-            </p>
-
-            <p>
-              Mirissa is usually crowded every day, both locals and foreigners. But if you can get
-              there in the morning, you can enjoy a wonderful sunrise in a less crowded environment.
-              Before 9 a.m., there are fewer people, which is something to consider before your visit.
-            </p>
-
-            <p>
-              Sunset is a great time to visit the Palm Mountains. The weather report explains that
-              the rainy season in the region is from October to December. The best time to visit is
-              from January to May. Another factor to consider is that the beach is closed during the
-              monsoon season from May to September.
-            </p>
-
+          <div className="mirissa-top-gallery">
+            <img src={anuradhapura3} alt="Mirissa View" />
+            <img src={anuradhapura4} alt="Mirissa Beach" />
+            <img src={anuradhapura5} alt="Mirissa Beach" />
           </div>
+
+          <p>
+            There are eight significant symbols that represent Sri Lanka's connection with Buddhism, all of which are located in Anuradhapura, thus the collection is known as 'Atmasthana', which means 'eight holy places.' Each of them is associated with a unique story or story. Most of them were built by the kings who ruled the Anuradhapura Kingdom.
+            You will visit all these places in our tour of the city of Anuradhapura.
+          </p>
+
+          <h3>Sri Maha Bodhi</h3>
+
+          <p>
+            That was 288 B.C. It is a BOO tree planted in.
+            It is considered sacred as it is believed that Buddha attained enlightenment by meditating under this tree.
+          </p>
+
+          <h3>Ruanvelisaya</h3>
+
+          <p>
+            It is a "stupa" built by King Dutugamunu and is one of the largest stupas completed to date.
+          </p>
+
+          <h3>Thuparamaya</h3>
+
+          <p>
+            It is the oldest 'dagoba' in Sri Lanka and, probably, the oldest to be found in the world.
+          </p>
+
+          <h3>Lovamahapaya</h3>
+
+          <p>
+            The significance of this building is that the roof was once covered with bronze tiles.
+          </p>
+
+          <h3>Abahayagiri</h3>
+
+          <p>
+            It is one of the largest monasteries in Anuradhapura. It was a monastery with 5000 monks.
+          </p>
+
+          <h3>Jethawanaramaya</h3>
+
+          <p>
+            This holy place is a World Heritage Site when it can accommodate about 3000 monks. It is very similar to Abhyagiri.
+          </p>
+
+          <h3>Mirisawatiya</h3>
+
+          <p>
+            This stupa was built by King Tutukemun after conquering King Elara.
+          </p>
+
+          <h3>Lankaramaya</h3>
+
+          <p>
+            Built by King Valakamba during the reign of Anuradhapura, it is one of the eight sacred places in the city.
+          </p>
+
+          <p>
+            There are many more places to see and enjoy. Join this day trip to see the major players in the history of Sri Lanka.
+            Your love for culture will grow after seeing the wealth of the city.
+          </p>
+
+          <p>
+            Please include Anuradhapura in your itinerary plan will give you unforgettable experience of its luxurious culture, pilgrimage.
+          </p>
 
           {/* ACTIVITIES SECTION */}
           <div className="mirissa-activities" data-aos="fade-up">
 
-            <h2>Activities.</h2>
-            <p>You have below activities in Mirissa beach.</p>
-
-            {/* SURFING */}
             <details className="activity-box" open>
-              <summary>• Surfing: Ideal for beginners and intermediate surfers.</summary>
+              <summary>• Religious and Pilgrimage Sites</summary>
 
               <p>
-                Ride the waves in Mirissa’s crystal-clear waters, perfect for beginners and intermediate surfers
-                seeking thrilling experiences.
+                Anuradhapura houses eight sacred Buddhist sites, including Sri Maha Bodhi, Ruwanwelisaya,
+                and Thuparamaya. These spiritual landmarks symbolize Sri Lanka’s deep Buddhist roots and offer profound religious experiences.
+                Each site is historically significant, built by ancient kings,
+                making the city a key pilgrimage destination for Buddhist devotees and history enthusiasts.
               </p>
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={surfing} alt="Surfing" />
-                  <p>Surfing</p>
+                  <img src={require("../../assets/Sri Maha Bodhi.png")} alt="Surfing" />
+                  <p>Sri Maha Bodhi</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={beginnerGuide} alt="Beginner Guide" />
-                  <p>Beginner Guide</p>
+                  <img src={require("../../assets/Ruwanwelisaya.png")} alt="Beginner Guide" />
+                  <p>Ruwanwelisaya</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={relaxing} alt="Relaxing" />
-                  <p>Relaxing</p>
+                  <img src={require("../../assets/Abhayagiriya.png")} alt="Relaxing" />
+                  <p>Abhayagiriya</p>
                 </div>
               </div>
             </details>
 
-            {/* SNORKELING */}
             <details className="activity-box">
-              <summary>• Snorkeling & Diving: Explore vibrant coral reefs and marine life.</summary>
+              <summary>• Historical and Archaeological Significance</summary>
 
               <p>
-                Discover vibrant coral reefs teeming with colorful fish and marine life,
-                creating unforgettable underwater adventures.
+                Anuradhapura, Sri Lanka's first kingdom, showcases ancient ruins, monasteries, stupas, and engineering marvels.
+                These structures reflect the grandeur and innovation of the Anuradhapura Kingdom.
+                Visitors can explore 12 centuries of history, from advanced irrigation systems to bronze-tiled buildings,
+                making it a treasure trove for historians and archaeology lovers.
               </p>
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Whale Watching.png")} alt="Whale Watching" />
-                  <p>Whale Watching</p>
+                  <img src={require("../../assets/Sandakada Pahana.png")} alt="Whale Watching" />
+                  <p>Sandakada Pahana</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Turtle Watching.png")} alt="Turtle Watching" />
-                  <p>Turtle Watching</p>
+                  <img src={require("../../assets/Mura Gal.png")} alt="Turtle Watching" />
+                  <p>Mura Gal</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Turtle Feeding.png")} alt="Turtle Feeding" />
-                  <p>Turtle Feeding</p>
+                  <img src={require("../../assets/Ancient Building Ruins.png")} alt="Turtle Feeding" />
+                  <p>Ancient Building Ruins</p>
                 </div>
               </div>
             </details>
 
-            {/* FISHING */}
             <details className="activity-box">
-              <summary>• Fishing Tours: Experience traditional Sri Lankan fishing.</summary>
+              <summary>• Cultural and Heritage Experience</summary>
 
               <p>
-                Join traditional Sri Lankan fishing tours, enjoy serene coastal views,
-                and learn age-old fishing techniques firsthand.
+                Dive into Anuradhapura’s luxurious culture with guided tours led by local experts.
+                Experience the traditions, stories, and architecture that defined this ancient kingdom.
+                Visitors will gain a profound appreciation for Sri Lanka’s heritage while enjoying the city's vibrant atmosphere,
+                making it an unforgettable cultural journey through time.
               </p>
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Boating.png")} alt="Whale Watching" />
-                  <p>Whale Watching</p>
+                  <img src={require("../../assets/Buddist Monks.png")} alt="Whale Watching" />
+                  <p>Buddist Monks</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Fishing.png")} alt="Turtle Watching" />
-                  <p>Turtle Watching</p>
+                  <img src={require("../../assets/Tanks.png")} alt="Turtle Watching" />
+                  <p>Tanks</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Traditional Fishing.png")} alt="Turtle Feeding" />
-                  <p>Turtle Feeding</p>
+                  <img src={require("../../assets/Buddist Paintings.png")} alt="Turtle Feeding" />
+                  <p>Buddist Paintings</p>
                 </div>
               </div>
+
             </details>
+
           </div>
 
           {/* PARROT ROCK SECTION */}
           <div className="mirissa-parrot-rock" data-aos="fade-up">
 
-            <h3>Parrot Rock</h3>
-            <p>• A small rocky islet offering beautiful views of the coastline, reachable during low tide.</p>
-
             <div className="parrot-gallery">
-              <img src={require("../../assets/mirissa5.jpg")} alt="Parrot Rock Beach" />
-              <img src={require("../../assets/mirissa6.jpg")} alt="Seafood Dish" />
+              <img src={anuradhapura6} alt="Parrot Rock Beach" />
+              <img src={anuradhapura7} alt="Seafood Dish" />
             </div>
 
-            <h3>You can spend your time here unlimitedly.</h3>
           </div>
 
         </div>
@@ -217,35 +237,235 @@ function Anuradhapura() {
           <h3>Make an Inquiry</h3>
 
           <form>
-            <input type="text" placeholder="Name *" required />
-            <input type="email" placeholder="Email Address *" required />
-            <input type="text" placeholder="Phone Number *" required />
+            <input name="name" type="text" placeholder="Name *" />
+            <input name="email" type="email" placeholder="Email Address *" />
+            <div className="phone-row">
+              <input name="code" className="code" type="text" placeholder="Code" />
+              <input name="phone" className="phone" type="text" placeholder="Phone Number *" />
+            </div>
 
-            <select>
+            <select name="country">
               <option>Choose Your Country *</option>
-              <option>Sri Lanka</option>
+              <option>Afghanistan</option>
+              <option>Albania</option>
+              <option>Algeria</option>
+              <option>Andorra</option>
+              <option>Angola</option>
+              <option>Antigua and Barbuda</option>
+              <option>Argentina</option>
+              <option>Armenia</option>
+              <option>Australia</option>
+              <option>Austria</option>
+              <option>Azerbaijan</option>
+              <option>Bahamas</option>
+              <option>Bahrain</option>
+              <option>Bangladesh</option>
+              <option>Barbados</option>
+              <option>Belarus</option>
+              <option>Belgium</option>
+              <option>Belize</option>
+              <option>Benin</option>
+              <option>Bhutan</option>
+              <option>Bolivia</option>
+              <option>Bosnia and Herzegovina</option>
+              <option>Botswana</option>
+              <option>Brazil</option>
+              <option>Brunei</option>
+              <option>Bulgaria</option>
+              <option>Burkina Faso</option>
+              <option>Burundi</option>
+              <option>Cabo Verde</option>
+              <option>Cambodia</option>
+              <option>Cameroon</option>
+              <option>Canada</option>
+              <option>Central African Republic</option>
+              <option>Chad</option>
+              <option>Chile</option>
+              <option>China</option>
+              <option>Colombia</option>
+              <option>Comoros</option>
+              <option>Congo, Democratic Republic of the</option>
+              <option>Congo, Republic of the</option>
+              <option>Costa Rica</option>
+              <option>Côte d’Ivoire</option>
+              <option>Croatia</option>
+              <option>Cuba</option>
+              <option>Cyprus</option>
+              <option>Czech Republic</option>
+              <option>Denmark</option>
+              <option>Djibouti</option>
+              <option>Dominica</option>
+              <option>Dominican Republic</option>
+              <option>Ecuador</option>
+              <option>Egypt</option>
+              <option>El Salvador</option>
+              <option>Equatorial Guinea</option>
+              <option>Eritrea</option>
+              <option>Estonia</option>
+              <option>Eswatini</option>
+              <option>Ethiopia</option>
+              <option>Fiji</option>
+              <option>Finland</option>
+              <option>France</option>
+              <option>Gabon</option>
+              <option>Gambia</option>
+              <option>Georgia</option>
+              <option>Germany</option>
+              <option>Ghana</option>
+              <option>Greece</option>
+              <option>Grenada</option>
+              <option>Guatemala</option>
+              <option>Guinea</option>
+              <option>Guinea-Bissau</option>
+              <option>Guyana</option>
+              <option>Haiti</option>
+              <option>Honduras</option>
+              <option>Hungary</option>
+              <option>Iceland</option>
               <option>India</option>
-              <option>UK</option>
-              <option>USA</option>
+              <option>Indonesia</option>
+              <option>Iran</option>
+              <option>Iraq</option>
+              <option>Ireland</option>
+              <option>Israel</option>
+              <option>Italy</option>
+              <option>Jamaica</option>
+              <option>Japan</option>
+              <option>Jordan</option>
+              <option>Kazakhstan</option>
+              <option>Kenya</option>
+              <option>Kiribati</option>
+              <option>Korea, North</option>
+              <option>Korea, South</option>
+              <option>Kuwait</option>
+              <option>Kyrgyzstan</option>
+              <option>Laos</option>
+              <option>Latvia</option>
+              <option>Lebanon</option>
+              <option>Lesotho</option>
+              <option>Liberia</option>
+              <option>Libya</option>
+              <option>Liechtenstein</option>
+              <option>Lithuania</option>
+              <option>Luxembourg</option>
+              <option>Madagascar</option>
+              <option>Malawi</option>
+              <option>Malaysia</option>
+              <option>Maldives</option>
+              <option>Mali</option>
+              <option>Malta</option>
+              <option>Marshall Islands</option>
+              <option>Mauritania</option>
+              <option>Mauritius</option>
+              <option>Mexico</option>
+              <option>Micronesia</option>
+              <option>Moldova</option>
+              <option>Monaco</option>
+              <option>Mongolia</option>
+              <option>Montenegro</option>
+              <option>Morocco</option>
+              <option>Mozambique</option>
+              <option>Myanmar (Burma)</option>
+              <option>Namibia</option>
+              <option>Nauru</option>
+              <option>Nepal</option>
+              <option>Netherlands</option>
+              <option>New Zealand</option>
+              <option>Nicaragua</option>
+              <option>Niger</option>
+              <option>Nigeria</option>
+              <option>North Macedonia</option>
+              <option>Norway</option>
+              <option>Oman</option>
+              <option>Pakistan</option>
+              <option>Palau</option>
+              <option>Panama</option>
+              <option>Papua New Guinea</option>
+              <option>Paraguay</option>
+              <option>Peru</option>
+              <option>Philippines</option>
+              <option>Poland</option>
+              <option>Portugal</option>
+              <option>Qatar</option>
+              <option>Romania</option>
+              <option>Russia</option>
+              <option>Rwanda</option>
+              <option>Saint Kitts and Nevis</option>
+              <option>Saint Lucia</option>
+              <option>Saint Vincent and the Grenadines</option>
+              <option>Samoa</option>
+              <option>San Marino</option>
+              <option>Sao Tome and Principe</option>
+              <option>Saudi Arabia</option>
+              <option>Senegal</option>
+              <option>Serbia</option>
+              <option>Seychelles</option>
+              <option>Sierra Leone</option>
+              <option>Singapore</option>
+              <option>Slovakia</option>
+              <option>Slovenia</option>
+              <option>Solomon Islands</option>
+              <option>Somalia</option>
+              <option>South Africa</option>
+              <option>South Sudan</option>
+              <option>Spain</option>
+              <option>Sri Lanka</option>
+              <option>Sudan</option>
+              <option>Suriname</option>
+              <option>Sweden</option>
+              <option>Switzerland</option>
+              <option>Syria</option>
+              <option>Taiwan</option>
+              <option>Tajikistan</option>
+              <option>Tanzania</option>
+              <option>Thailand</option>
+              <option>Timor-Leste</option>
+              <option>Togo</option>
+              <option>Tonga</option>
+              <option>Trinidad and Tobago</option>
+              <option>Tunisia</option>
+              <option>Turkey</option>
+              <option>Turkmenistan</option>
+              <option>Tuvalu</option>
+              <option>Uganda</option>
+              <option>Ukraine</option>
+              <option>United Arab Emirates</option>
+              <option>United Kingdom</option>
+              <option>United States</option>
+              <option>Uruguay</option>
+              <option>Uzbekistan</option>
+              <option>Vanuatu</option>
+              <option>Vatican City</option>
+              <option>Venezuela</option>
+              <option>Vietnam</option>
+              <option>Yemen</option>
+              <option>Zambia</option>
+              <option>Zimbabwe</option>
             </select>
 
             <label>Arrival Date</label>
-            <input type="date" />
+            <input name="arrival" type="date" />
 
             <label>Departure Date</label>
-            <input type="date" />
+            <input name="departure" type="date" />
 
-            <select>
+            <select name="interest">
               <option>Choose Your Interest *</option>
+              <option>Eco</option>
               <option>Beach</option>
               <option>Cultural</option>
               <option>Adventure</option>
+              <option>Wild Life</option>
+              <option>Relax and Wellness</option>
+              <option>Honeymoon</option>
+              <option>Ramayana Trail</option>
+              <option>All in one Trails</option>
             </select>
 
-            <input type="number" placeholder="No. of Adults *" />
-            <input type="number" placeholder="No. of Kids" />
+            <input name="adults" type="number" placeholder="No. of Adults *" />
+            <input name="kids" type="number" placeholder="No. of Kids" />
 
-            <textarea placeholder="Enter your message here"></textarea>
+            <textarea name="message" placeholder="Enter your message here"></textarea>
 
             <button type="submit">SUBMIT</button>
           </form>

@@ -182,6 +182,8 @@ li {
   flex-wrap: wrap;
   background: #fff;
   gap: 60px;
+  margin-top: -60px;
+  margin-left: 50px;
 }
 
 .about-left {
@@ -364,6 +366,7 @@ li {
   text-align: center;
   padding: 10px 50px;
   background-color: #fff;
+  margin-top: -10px;
 }
 
 .packages-section h2 {
@@ -481,6 +484,7 @@ li {
   text-align: center;
   padding: 80px 8%;
   background-color: #fff;
+  margin-top: -10px;
 }
 
 .best-destinations-section h2 {
@@ -592,6 +596,7 @@ li {
 .why-choose-section-home {
   background: #fff;
   padding: 50px 10%;
+  margin-top: -40px;
 }
 
 .why-choose-container {
@@ -707,97 +712,24 @@ li {
 
 /* -------------------- Hospitality Section -------------------- */
 .hospitality-section {
-  padding: 80px 10%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f9fafb;
-}
-
-.hospitality-container {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 40px;
-}
-
-.hospitality-image img {
-  width: 480px;
-  border-radius: 20px;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-  transition: transform 0.4s ease;
-}
-
-.hospitality-image img:hover {
-  transform: scale(1.05);
-}
-
-.hospitality-content {
-  flex: 1;
-  min-width: 320px;
-}
-
-.hospitality-content h2 {
-  font-size: 2.4rem;
-  margin-bottom: 15px;
-  color: #111;
-}
-
-.hospitality-content .highlight {
-  color: #007bff;
-}
-
-.hospitality-content p {
-  color: #555;
-  margin-bottom: 25px;
-  line-height: 1.6;
-}
-
-.hospitality-cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 20px;
-}
-
-.hospitality-card {
-  background: #fff;
-  padding: 25px;
-  border-radius: 16px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.hospitality-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
-}
-
-.hospitality-card h3 {
-  color: #007bff;
-  margin-bottom: 10px;
-  font-size: 1.2rem;
-}
-
-.hospitality-card p {
-  color: #555;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-
-/* --- Our Hospitality Highlights Section --- */
-.hospitality-section {
   background-color: #fff;
   padding: 80px 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -20px;
 }
 
+/* Container */
 .hospitality-container {
   display: flex;
+  flex-wrap: wrap;
   align-items: flex-start;
   justify-content: center;
-  flex-wrap: wrap;
   gap: 50px;
 }
 
+/* Image */
 .hospitality-image {
   flex: 1 1 400px;
   position: relative;
@@ -809,8 +741,14 @@ li {
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
   object-fit: cover;
+  transition: transform 0.4s ease;
 }
 
+.hospitality-image img:hover {
+  transform: scale(1.05);
+}
+
+/* Badge */
 .hospitality-badge {
   position: absolute;
   bottom: 30px;
@@ -826,9 +764,11 @@ li {
   max-width: 340px;
 }
 
+/* Content */
 .hospitality-content {
   flex: 1 1 500px;
   color: #333;
+  min-width: 320px;
 }
 
 .hospitality-content .sub-heading {
@@ -850,6 +790,13 @@ li {
   color: #007aff;
 }
 
+.hospitality-content p {
+  color: #555;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+/* Cards */
 .hospitality-cards {
   display: flex;
   flex-wrap: wrap;
@@ -877,6 +824,13 @@ li {
   margin-bottom: 10px;
 }
 
+.hospitality-card p {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+/* Card List Items */
 .hospitality-card ul {
   list-style: none;
   padding-left: 0;
@@ -905,6 +859,7 @@ li {
   color: white;
   text-align: center;
   position: relative;
+  margin-top: -50px;
 }
 
 .testimonials-section::before {
@@ -916,8 +871,7 @@ li {
 }
 
 .testimonials-title,
-.testimonials-subtitle,
-.testimonials-container {
+.testimonials-subtitle {
   position: relative;
   z-index: 1;
 }
@@ -926,6 +880,7 @@ li {
   font-size: 2.4rem;
   font-weight: 700;
   margin-bottom: 15px;
+  color: white;
 }
 
 .testimonials-subtitle {
@@ -936,21 +891,17 @@ li {
   line-height: 1.7;
 }
 
-.testimonials-container {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 25px;
-}
-
 .testimonial-card {
   background: rgba(0, 30, 50, 0.9);
   border-radius: 12px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
   padding: 25px;
-  width: 300px;
+  max-width: 250px;
   color: #cce7ff;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  flex: 0 0 calc(25% - 20px);
+  scroll-snap-align: start;
+  overflow: hidden;
 }
 
 .testimonial-card:hover {
@@ -981,6 +932,178 @@ li {
 .testimonial-card p {
   font-size: 0.85rem;
   line-height: 1.6;
+}
+
+.testimonial-slider-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.testimonial-slider {
+  display: flex;
+  gap: 25px;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  padding: 10px 0;
+  scroll-snap-type: x mandatory;
+}
+
+.testimonial-slider::-webkit-scrollbar {
+  display: none;
+}
+
+.arrow-btn1 {
+  position: absolute;
+  background-color: #007aff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  width: 45px;
+  height: 45px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: 0.3s;
+  z-index: 2;
+}
+
+.arrow-btn1:hover {
+  background-color: #005fcc;
+}
+
+.arrow-btn1.left-des {
+  left: 50px;
+}
+
+.arrow-btn1.right-des {
+  right: 50px;
+}
+
+.testimonial-card:nth-child(n+5) {
+  display: none;
+}
+
+/* Vehicles Section */
+.vehicle-collection {
+  text-align: center;
+  padding: 60px 0;
+  margin-top: -50px;
+}
+
+.vehicle-title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+}
+
+.vehicle-grid {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.vehicle-card {
+  text-align: center;
+  width: 220px;
+}
+
+.vehicle-img-wrapper {
+  width: 220px;
+  height: 170px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.vehicle-img-wrapper img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* Background color variations */
+.color-1 {
+  background: #c3881f;
+}
+
+.color-2 {
+  background: #287bb8;
+}
+
+.color-3 {
+  background: #c3881f;
+}
+
+.color-4 {
+  background: #287bb8;
+}
+
+.color-5 {
+  background: #c3881f;
+}
+
+.color-6 {
+  background: #287bb8;
+}
+
+.vehicle-name {
+  margin-top: 12px;
+  font-weight: 600;
+  color: #1d1d1d;
+}
+
+.vehicle-seats {
+  color: #004f98;
+  font-size: 0.9rem;
+}
+
+.home-p {
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  font-size: x-large;
+  font-weight: 700;
+  color: #000;
+  width: 100%;
+  margin-top: 40px;
+}
+
+/* Hotels Brands Section */
+.hotel-brands-section {
+  padding: 40px 0;
+  text-align: center;
+  background: #f7f9fc;
+  margin-bottom: 60px;
+}
+
+.hotel-brands-title {
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  font-weight: 700;
+  color: #0d1b2a;
+}
+
+.hotel-brands-logos {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 80px;
+  flex-wrap: wrap;
+}
+
+.hotel-logo {
+  width: 150px;
+  opacity: 0.9;
+  transition: 0.3s ease-in-out;
+}
+
+.hotel-logo:hover {
+  opacity: 1;
+  transform: scale(1.05);
 }
 
 /* WhatsApp Floating Button */

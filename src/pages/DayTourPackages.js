@@ -3,6 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/DayTourPackages.css";
 
+import { useNavigate } from "react-router-dom";
+
 import day1 from "../assets/day1.jpg";
 import day2 from "../assets/day2.jpg";
 import day3 from "../assets/day3.jpg";
@@ -10,16 +12,18 @@ import day4 from "../assets/day4.jpg";
 import day5 from "../assets/day5.jpg";
 
 function DayTourPackages() {
+    const navigate = useNavigate();
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
     }, []);
 
     const dayTours = [
-        { title: "Colombo City Day Tour", hours: "8 hours", image: day1, tag: "City Tour" },
-        { title: "Galle & Unawatuna Day Tour", hours: "10 hours", image: day2, tag: "Beach Tour" },
-        { title: "Kandy Cultural Day Tour", hours: "9 hours", image: day3, tag: "Heritage" },
-        { title: "Sigiriya & Dambulla Day Tour", hours: "10 hours", image: day4, tag: "Adventure" },
-        { title: "Kithulgala Day Tour", hours: "10 hours", image: day5, tag: "Adventure" },
+        { title: "Colombo City Tour", days: "1 day", nights: "0 Nights", image: day1, tag: "City Tour", link: "/day-tours/ColomboCityTour" },
+        { title: "Colombo Benthota Galle", days: "1 day", nights: "0 Nights", image: day2, tag: "Beach Tour", link: "/day-tours/ColomboBenthotaGalle" },
+        { title: "Colombo Kandy", days: "1 day", nights: "0 Nights", image: day3, tag: "Heritage", link: "/day-tours/ColomboKandy" },
+        { title: "Colombo Sigiriya Dambulla", days: "1 day", nights: "0 Nights", image: day4, tag: "Adventure", link: "/day-tours/ColomboSigiriyaDambulla" },
+        { title: "Colombo Kithulgala", days: "1 day", nights: "0 Nights", image: day5, tag: "Adventure", link: "/day-tours/ColomboKithulgala" },
     ];
 
     return (
@@ -38,7 +42,13 @@ function DayTourPackages() {
             <section className="daytour-grid-section" data-aos="fade-up">
                 <div className="daytour-grid-container">
                     {dayTours.map((tour, i) => (
-                        <div className="daytour-card" key={i} data-aos="zoom-in">
+                        <div
+                            className="daytour-card"
+                            key={i}
+                            data-aos="zoom-in"
+                            onClick={() => navigate(tour.link)}
+                            style={{ cursor: "pointer" }}
+                        >
                             <div className="daytour-tag">{tour.tag}</div>
 
                             <img src={tour.image} alt={tour.title} />
@@ -46,7 +56,8 @@ function DayTourPackages() {
                             <div className="daytour-info">
                                 <h3>{tour.title}</h3>
                                 <div className="daytour-meta">
-                                    <span>🕒 {tour.hours}</span>
+                                    <span>🕒 {tour.days}</span>
+                                    <span>🌙 {tour.nights}</span>
                                 </div>
                             </div>
                         </div>
@@ -54,7 +65,7 @@ function DayTourPackages() {
                 </div>
             </section>
 
-            {/* ===== CTA Section ===== */}
+            {/* CTA */}
             <section className="cta-section" data-aos="fade-up">
                 <div className="cta-box">
                     <div className="cta-left">

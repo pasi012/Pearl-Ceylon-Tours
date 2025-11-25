@@ -1,0 +1,91 @@
+/* =============== HERO SECTION ================= */
+.why-hero {
+    position: relative;
+    height: 45vh;
+    background: url("../assets/hero-destination.jpg") center/cover no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 150px;
+}
+
+.why-hero .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.45);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.why-hero .hero-content {
+    color: #fff;
+    text-align: center;
+}
+
+.why-hero h1 {
+    font-size: 4rem;
+    font-weight: 600;
+}
+
+/* =============== MAIN WRAPPER ================= */
+.why-wrapper {
+    padding: 70px 80px;
+    background: #fff;
+    margin-left: 200px;
+    margin-right: 200px;
+}
+
+.why-container {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 100px;
+}
+
+/* =============== LEFT SIDEBAR ================= */
+.why-sidebar {
+    background: #f7f9fc;
+    padding: 25px 0;
+    border-radius: 12px;
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
+    height: fit-content;
+    width: 350px;
+    flex: auto;
+}
+
+.why-nav-item {
+    padding: 18px 28px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-left: 3px solid transparent;
+    transition: all 0.25s ease;
+}
+
+.why-nav-item:hover {
+    background: #eef3f7;
+}
+
+.why-nav-item.active {
+    background: #fff;
+    border-left: 3px solid #247cad;
+    font-weight: 600;
+}
+
+/* =============== RIGHT CONTENT ================= */
+.why-content h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.why-content h4 {
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.why-content p {
+    margin-top: 10px;
+    line-height: 1.7;
+    font-size: 1rem;
+    color: #444;
+}
