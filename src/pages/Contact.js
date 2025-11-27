@@ -32,7 +32,7 @@ function Contact() {
                     <div className="info-card" data-aos="zoom-in">
                         <i className="fas fa-phone"></i>
                         <h4>Phone Number</h4>
-                        <p>0778834842</p>
+                        <p>077 356 2768</p>
                     </div>
 
                     <div className="info-card" data-aos="zoom-in">
@@ -66,7 +66,17 @@ function Contact() {
                     <h3>Fill Up The Form</h3>
                     <p>Your email address will not be published. Required fields are marked *</p>
 
-                    <form>
+                    <form
+                        onSubmit={(e) => {
+                            e.preventDefault();
+
+                            const name = e.target[0].value;
+                            const email = e.target[1].value;
+                            const message = e.target[2].value;
+
+                            window.location.href = `mailto:info@Pearlceylontours.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+                        }}
+                    >
                         <label>Your Name*</label>
                         <input type="text" placeholder="Enter your name" required />
 

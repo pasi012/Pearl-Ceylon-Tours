@@ -1,16 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/AboutSriLanka.css";
 
 // Images
 import heroImg from "../assets/hero-destination.jpg";
-import sigiriya from "../assets/blog-details.jpg";
-import captain from "../assets/founder.jpg";
+
+import { storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function AboutSriLanka() {
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
+    }, []);
+
+    //about
+    const [aboutSriLanka, setAboutSriLanka] = useState("");
+    const [founderUrl, setFounderUrl] = useState("");
+    const [img1, setImg1] = useState("");
+    const [img2, setImg2] = useState("");
+
+    useEffect(() => {
+        getDownloadURL(ref(storage, "blog-details.jpg")).then(setAboutSriLanka);
+        getDownloadURL(ref(storage, "founder.jpg")).then(setFounderUrl);
+        getDownloadURL(ref(storage, "coconut-beach.jpg")).then(setImg1);
+        getDownloadURL(ref(storage, "hotel-room.jpg")).then(setImg2);
     }, []);
 
     return (
@@ -33,7 +48,7 @@ function AboutSriLanka() {
                 {/* ==== LEFT MAIN ARTICLE ==== */}
                 <div className="sl-left">
 
-                    <img src={sigiriya} className="sl-main-img" alt="Sri Lanka" data-aos="fade-up" />
+                    {aboutSriLanka && <img src={aboutSriLanka} className="sl-main-img" data-aos="fade-up" />}
 
                     {/* Info Row */}
                     <div className="sl-info-row" data-aos="fade-up">
@@ -100,17 +115,14 @@ function AboutSriLanka() {
                             <li>Friendly locals and easy island travel.</li>
                         </ul>
 
-                        <img
-                            src={require("../assets/coconut-beach.jpg")}
-                            alt="Coconut Beach"
-                            className="sl-attraction-img"
-                        />
+                        {img1 && <img src={img1} className="sl-attraction-img" />}
+
                     </div>
 
                     {/* ================= IMAGE ROW ================= */}
                     <div className="sl-image-row" data-aos="fade-up">
-                        <img src={require("../assets/hotel-room.jpg")} alt="Room" className="sl-image-box" />
-                        <img src={require("../assets/coconut-beach.jpg")} alt="Beach" className="sl-image-box" />
+                        {img1 && <img src={img1} className="sl-image-box" />}
+                        {img2 && <img src={img2} className="sl-image-box" />}
                     </div>
 
                     <h3 className="sl-sub-title" data-aos="fade-up">Unforgettable Wildlife Encounters</h3>
@@ -154,7 +166,7 @@ function AboutSriLanka() {
                 {/* ==== RIGHT AUTHOR CARD ==== */}
                 <div className="sl-right" data-aos="fade-left">
                     <div className="sl-author-card">
-                        <img src={captain} alt="Captain" className="sl-author-img" />
+                        {founderUrl && <img src={founderUrl} className="sl-author-img" />}
 
                         <h4 className="sl-author-name">Captain Dammika</h4>
 

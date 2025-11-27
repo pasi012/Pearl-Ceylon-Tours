@@ -1,15 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/Packages.css";
 
 import { useNavigate } from "react-router-dom";
-
-import pkg1 from "../assets/pkg1.jpg";
-import pkg2 from "../assets/pkg2.jpg";
-import pkg3 from "../assets/pkg3.jpg";
-import pkg4 from "../assets/pkg4.jpg";
-import pkg5 from "../assets/pkg5.jpg";
+import { storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function Packages() {
 
@@ -17,6 +13,22 @@ function Packages() {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
+    }, []);
+
+    // Firebase Image States
+    const [pkg1, setPkg1] = useState("");
+    const [pkg2, setPkg2] = useState("");
+    const [pkg3, setPkg3] = useState("");
+    const [pkg4, setPkg4] = useState("");
+    const [pkg5, setPkg5] = useState("");
+
+    // Load all images from Firebase
+    useEffect(() => {
+        getDownloadURL(ref(storage, "pkg1.jpg")).then(setPkg1);
+        getDownloadURL(ref(storage, "pkg2.jpg")).then(setPkg2);
+        getDownloadURL(ref(storage, "pkg3.jpg")).then(setPkg3);
+        getDownloadURL(ref(storage, "pkg4.jpg")).then(setPkg4);
+        getDownloadURL(ref(storage, "pkg5.jpg")).then(setPkg5);
     }, []);
 
     const packages = [
@@ -50,7 +62,6 @@ function Packages() {
                             onClick={() => navigate(pkg.link)}
                             style={{ cursor: "pointer" }}
                         >
-
                             <div className="package-tag">{pkg.tag}</div>
 
                             <img src={pkg.image} alt={pkg.title} />

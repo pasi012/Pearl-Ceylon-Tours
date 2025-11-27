@@ -140,7 +140,7 @@ function NuwaraEliya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <h2>Train ride nuwara eliya ( Nanu Oya) to Ela</h2>
@@ -174,7 +174,7 @@ function NuwaraEliya() {
 
             <p>
               Travel tip: Duration: Approximately 3-4 hours. Photography: Have your camera ready; every turn reveals a new view.
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <h2>Gregory lake</h2>
@@ -218,7 +218,7 @@ function NuwaraEliya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <h2>Victoria park</h2>
@@ -271,7 +271,7 @@ function NuwaraEliya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <h2>Hakgala botanical garden</h2>
@@ -327,7 +327,7 @@ function NuwaraEliya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <h2>Ambewela farm- Little New Zealand</h2>
@@ -371,7 +371,7 @@ function NuwaraEliya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <h2>Sethaamman temple</h2>
@@ -420,7 +420,7 @@ function NuwaraEliya() {
               Dress code: It is recommended to wear modest clothing that covers the shoulders and knees.
               Best time to visit: in the morning or afternoon for a calmer experience.
               Accessibility: The temple is easily accessible by car from the city of Nuwara Eliya.
-              in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <h2>Golf club</h2>
@@ -454,7 +454,7 @@ function NuwaraEliya() {
               which facilitates the exploration of other attractions in Nuwara Eliya.
             </p>
 
-            <h3>in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.</h3>
+            <h3>in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience.</h3>
 
             <h2>Moon plains</h2>
 
@@ -464,7 +464,7 @@ function NuwaraEliya() {
               Duration: A typical visit lasts about 1-2 hours. Access: Located approximately 4 km from the town of Nuwara Eliya;
             </p>
 
-            <h3>in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.</h3>
+            <h3>in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience.</h3>
 
             <h2>Pedro tea state</h2>
 
@@ -492,7 +492,7 @@ function NuwaraEliya() {
               Tastings: Enjoy the freshly brewed Ceylon tea and experience its unparalleled taste and aroma. Historical significance: Picturesque plantations: Walks through the picturesque tea plantations, often shrouded in mist, offer excellent opportunities for photography. Cool climate: The high altitude creates a refreshing atmosphere, perfect for exploration. Tips for the visit: Best time: Morning hours for the excursion and the observation of the workers who are actively picking the tea leaves. Duration: The visit usually takes 1 to 2 hours. Photography: Photography is usually not allowed inside the factory, but it is permitted in the surrounding fields. Main attractions nearby: Combine your visit with Gregory Lake, the Lovers Leap waterfall, or the Hakgala Botanical Garden.
             </p>
 
-            <h3>in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.</h3>
+            <h3>in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience.</h3>
 
             <h2>Ramboda fall</h2>
 
@@ -539,7 +539,7 @@ function NuwaraEliya() {
             </p>
 
             <p>
-              In your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.
+              In your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience.
             </p>
 
             <h2>Damro Tea factory</h2>
@@ -580,7 +580,7 @@ function NuwaraEliya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
           </div>
@@ -680,15 +680,65 @@ function NuwaraEliya() {
         <div className="mirissa-form" data-aos="fade-left">
           <h3>Make an Inquiry</h3>
 
-          <form>
-            <input name="name" type="text" placeholder="Name *" />
-            <input name="email" type="email" placeholder="Email Address *" />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+
+              const name = e.target.name.value;
+              const email = e.target.email.value;
+              const country = e.target.country.value;
+              const code = e.target.code.value;
+              const phone = e.target.phone.value;
+              const arrival = e.target.arrival.value;
+              const departure = e.target.departure.value;
+              const interest = e.target.interest.value;
+              const adults = e.target.adults.value;
+              const kids = e.target.kids.value;
+              const message = e.target.message.value;
+
+              const fullMessage = `
+              📌 NEW TOUR INQUIRY
+
+              👤 Name: ${name}
+              📧 Email: ${email}
+              🌍 Country: ${country}
+              📞 Phone: ${code} ${phone}
+              📅 Arrival: ${arrival}
+              📅 Departure: ${departure}
+              🎯 Interest: ${interest}
+              👨‍👩‍👧 Adults: ${adults}
+              🧒 Kids: ${kids}
+
+              💬 Message: ${message}
+                    `;
+
+              // ✅ SEND WHATSAPP
+              const whatsappNumber = "94786086861"; // Your number
+              const whatsappURL =
+                "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(fullMessage);
+
+              window.open(whatsappURL, "_blank");
+
+              // ✅ SEND EMAIL
+              const mailto =
+                "mailto:s.a.pasindupiyushan@gmail.com" +
+                "?subject=" + encodeURIComponent("New Tour Inquiry") +
+                "&body=" + encodeURIComponent(fullMessage);
+
+              window.location.href = mailto;
+
+              alert("✅ Your Inquiry Has Been Sent!");
+            }}
+          >
+            <input name="name" type="text" placeholder="Name *" required />
+            <input name="email" type="email" placeholder="Email Address *" required />
+
             <div className="phone-row">
               <input name="code" className="code" type="text" placeholder="Code" />
-              <input name="phone" className="phone" type="text" placeholder="Phone Number *" />
+              <input name="phone" className="phone" type="text" placeholder="Phone Number *" required />
             </div>
 
-            <select name="country">
+            <select name="country" required>
               <option>Choose Your Country *</option>
               <option>Afghanistan</option>
               <option>Albania</option>
@@ -893,7 +943,7 @@ function NuwaraEliya() {
             <label>Departure Date</label>
             <input name="departure" type="date" />
 
-            <select name="interest">
+            <select name="interest" required>
               <option>Choose Your Interest *</option>
               <option>Eco</option>
               <option>Beach</option>
@@ -906,7 +956,7 @@ function NuwaraEliya() {
               <option>All in one Trails</option>
             </select>
 
-            <input name="adults" type="number" placeholder="No. of Adults *" />
+            <input name="adults" type="number" placeholder="No. of Adults *" required />
             <input name="kids" type="number" placeholder="No. of Kids" />
 
             <textarea name="message" placeholder="Enter your message here"></textarea>

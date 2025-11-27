@@ -87,7 +87,7 @@ function Sigiriya() {
           </p>
 
           <p>
-            You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.
+            You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience.
           </p>
 
           <h3>Routes to Coconut Tree Hill</h3>
@@ -179,11 +179,11 @@ function Sigiriya() {
             </p>
 
             <p>
-              You can include sigiriya in your tour itinerary with Captain Ceylon Tours will give you unforgettable experience
+              You can include sigiriya in your tour itinerary with Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <div className="mirissa-gallery">
@@ -303,7 +303,7 @@ function Sigiriya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <div className="mirissa-gallery">
@@ -392,7 +392,7 @@ function Sigiriya() {
             <h3>Observation of Lush Habitats:</h3>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience.
             </p>
 
             <h2>Pidurangala Rock</h2>
@@ -439,7 +439,7 @@ function Sigiriya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience.
             </p>
 
             <div className="mirissa-gallery">
@@ -490,7 +490,7 @@ function Sigiriya() {
               The hilltop location offers stunning views of the surrounding landscape, including landmarks like Sigiriya Rock on clear days.
               Visiting the Dambulla Cave Temple offers a combination of spirituality, history, and artistic value,
               making it an unforgettable experience.
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience.
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience.
             </p>
 
             <h2>Hiriwaduna village tour</h2>
@@ -558,7 +558,7 @@ function Sigiriya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
             <div className="mirissa-gallery">
@@ -593,7 +593,7 @@ function Sigiriya() {
             </p>
 
             <p>
-              You can include this destinations in your travel itinerary which we Captain Ceylon Tours will give you unforgettable experience
+              You can include this destinations in your travel itinerary which we Pearl Ceylon Tours will give you unforgettable experience
             </p>
 
           </div>
@@ -697,15 +697,65 @@ function Sigiriya() {
         <div className="mirissa-form" data-aos="fade-left">
           <h3>Make an Inquiry</h3>
 
-          <form>
-            <input name="name" type="text" placeholder="Name *" />
-            <input name="email" type="email" placeholder="Email Address *" />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+
+              const name = e.target.name.value;
+              const email = e.target.email.value;
+              const country = e.target.country.value;
+              const code = e.target.code.value;
+              const phone = e.target.phone.value;
+              const arrival = e.target.arrival.value;
+              const departure = e.target.departure.value;
+              const interest = e.target.interest.value;
+              const adults = e.target.adults.value;
+              const kids = e.target.kids.value;
+              const message = e.target.message.value;
+
+              const fullMessage = `
+              📌 NEW TOUR INQUIRY
+
+              👤 Name: ${name}
+              📧 Email: ${email}
+              🌍 Country: ${country}
+              📞 Phone: ${code} ${phone}
+              📅 Arrival: ${arrival}
+              📅 Departure: ${departure}
+              🎯 Interest: ${interest}
+              👨‍👩‍👧 Adults: ${adults}
+              🧒 Kids: ${kids}
+
+              💬 Message: ${message}
+                    `;
+
+              // ✅ SEND WHATSAPP
+              const whatsappNumber = "94786086861"; // Your number
+              const whatsappURL =
+                "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(fullMessage);
+
+              window.open(whatsappURL, "_blank");
+
+              // ✅ SEND EMAIL
+              const mailto =
+                "mailto:s.a.pasindupiyushan@gmail.com" +
+                "?subject=" + encodeURIComponent("New Tour Inquiry") +
+                "&body=" + encodeURIComponent(fullMessage);
+
+              window.location.href = mailto;
+
+              alert("✅ Your Inquiry Has Been Sent!");
+            }}
+          >
+            <input name="name" type="text" placeholder="Name *" required />
+            <input name="email" type="email" placeholder="Email Address *" required />
+
             <div className="phone-row">
               <input name="code" className="code" type="text" placeholder="Code" />
-              <input name="phone" className="phone" type="text" placeholder="Phone Number *" />
+              <input name="phone" className="phone" type="text" placeholder="Phone Number *" required />
             </div>
 
-            <select name="country">
+            <select name="country" required>
               <option>Choose Your Country *</option>
               <option>Afghanistan</option>
               <option>Albania</option>
@@ -910,7 +960,7 @@ function Sigiriya() {
             <label>Departure Date</label>
             <input name="departure" type="date" />
 
-            <select name="interest">
+            <select name="interest" required>
               <option>Choose Your Interest *</option>
               <option>Eco</option>
               <option>Beach</option>
@@ -923,7 +973,7 @@ function Sigiriya() {
               <option>All in one Trails</option>
             </select>
 
-            <input name="adults" type="number" placeholder="No. of Adults *" />
+            <input name="adults" type="number" placeholder="No. of Adults *" required />
             <input name="kids" type="number" placeholder="No. of Kids" />
 
             <textarea name="message" placeholder="Enter your message here"></textarea>

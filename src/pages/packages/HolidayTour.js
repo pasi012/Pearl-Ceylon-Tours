@@ -557,7 +557,7 @@ function HolidayTour() {
                                     <h2>Introduction</h2>
 
                                     <p>
-                                        We strongly believe that special need people have same rights to enjoy and like others. Holidays for people with disabilities in Sri Lanka are specially designed differently abled children / paraplegic travelers and others who are seeking for wheelchair friendly holidays in Sri Lanka.. The "Accessible Holidays" team at Captain Ceylon Tours is well-trained and dedicated to organizing HOLIDAYS FOR PEOPLE WITH SPECIAL NEEDS.
+                                        We strongly believe that special need people have same rights to enjoy and like others. Holidays for people with disabilities in Sri Lanka are specially designed differently abled children / paraplegic travelers and others who are seeking for wheelchair friendly holidays in Sri Lanka.. The "Accessible Holidays" team at Pearl Ceylon Tours is well-trained and dedicated to organizing HOLIDAYS FOR PEOPLE WITH SPECIAL NEEDS.
                                     </p>
 
                                     <p>
@@ -565,7 +565,7 @@ function HolidayTour() {
                                     </p>
 
                                     <p>
-                                        Every person has different accessibility needs, and Captain Ceylon Tours is ready to find the most suitable vacations for people with disabilities in Sri Lanka according to their requirements. For us, it is a task to find the right level of relaxation for people with disabilities, ensuring easy access to all parts of the relaxation, from transportation and accommodation to activities and excursions. But our dedicated team is fully informed about the resources available in the country to organize vacations for people with disabilities and develop the best possible plan.
+                                        Every person has different accessibility needs, and Pearl Ceylon Tours is ready to find the most suitable vacations for people with disabilities in Sri Lanka according to their requirements. For us, it is a task to find the right level of relaxation for people with disabilities, ensuring easy access to all parts of the relaxation, from transportation and accommodation to activities and excursions. But our dedicated team is fully informed about the resources available in the country to organize vacations for people with disabilities and develop the best possible plan.
                                     </p>
 
                                 </section>

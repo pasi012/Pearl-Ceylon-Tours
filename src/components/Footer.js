@@ -26,8 +26,8 @@ function Footer() {
                     </p>
 
                     <div className="footer-contact-block">
-                        <p><Mail size={16} /> info@captainceylontours.com</p>
-                        <p><Phone size={16} /> 0778834842</p>
+                        <p><Mail size={16} /> pearlceylontours01@gmail.com</p>
+                        <p><Phone size={16} /> 077 356 2768</p>
                         <p><MapPin size={16} /> No. 25B, Nidahs Mawatha, Matale, Sri Lanka.</p>
                     </div>
                 </div>

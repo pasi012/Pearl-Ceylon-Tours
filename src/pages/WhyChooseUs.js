@@ -22,17 +22,17 @@ function WhyChooseUs() {
         {
             id: 3,
             title: "24/7 Support",
-            desc: "Our customer service isn’t time bound. Travel agents at Captain Ceylon Tours are always ready to serve you at anytime. Reach us at anytime of the day and you’re sure to be guided by our friendly travel consultants with effective solutions to your travel problems.",
+            desc: "Our customer service isn’t time bound. Travel agents at Pearl Ceylon Tours are always ready to serve you at anytime. Reach us at anytime of the day and you’re sure to be guided by our friendly travel consultants with effective solutions to your travel problems.",
         },
         {
             id: 4,
             title: "Value For Money",
-            desc: "We don’t believe in a job half done. It’s not in our policies. We dig into the very last detail to make sure that our service is perfect. Travelling with Captain Ceylon Tours will create an experience which you will treasure, a service with unmatched quality and a journey worth your money.",
+            desc: "We don’t believe in a job half done. It’s not in our policies. We dig into the very last detail to make sure that our service is perfect. Travelling with Pearl Ceylon Tours will create an experience which you will treasure, a service with unmatched quality and a journey worth your money.",
         },
         {
             id: 5,
             title: "Instant Response",
-            desc: "At Captain Ceylon Tours we value time as much as you do. We dislike disappointing you with delays and forgotten inquiries which is why we strive to offer a service with instant response to your needs. From day one till your travel is complete and your feedback is heard we are in touch with you making sure everything you wanted your trip to be is just in their right places.",
+            desc: "At Pearl Ceylon Tours we value time as much as you do. We dislike disappointing you with delays and forgotten inquiries which is why we strive to offer a service with instant response to your needs. From day one till your travel is complete and your feedback is heard we are in touch with you making sure everything you wanted your trip to be is just in their right places.",
         },
         {
             id: 6,
@@ -42,7 +42,7 @@ function WhyChooseUs() {
         {
             id: 7,
             title: "Languages And Culture",
-            desc: "At Captain Ceylon Tours Communicating is made simple since personalized service to our clients are offered by multilingual customer service agent as you request with language proficiency in English, Japanese, Chinese, German, Russian, Arabic, French and Spanish. This ensures that with no doubt what is asked for is delivered.",
+            desc: "At Pearl Ceylon Tours Communicating is made simple since personalized service to our clients are offered by multilingual customer service agent as you request with language proficiency in English, Japanese, Chinese, German, Russian, Arabic, French and Spanish. This ensures that with no doubt what is asked for is delivered.",
         },
         {
             id: 8,

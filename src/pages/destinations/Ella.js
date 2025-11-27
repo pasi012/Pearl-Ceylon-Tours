@@ -43,7 +43,7 @@ function Ella() {
 
           <p>
             Do you want to include Ella in your itinerary? If so, you've come to the right place.
-            We are Captain Ceylon Tours, offering the best excursion tours for travellers coming to explore the beautiful Sri Lanka.
+            We are Pearl Ceylon Tours, offering the best excursion tours for travellers coming to explore the beautiful Sri Lanka.
             Our tour packages in Ella cover the most beautiful and famous places in the city,
             including hiking, trekking, adventures, and excursions.
           </p>
@@ -249,15 +249,65 @@ function Ella() {
         <div className="mirissa-form" data-aos="fade-left">
           <h3>Make an Inquiry</h3>
 
-          <form>
-            <input name="name" type="text" placeholder="Name *" />
-            <input name="email" type="email" placeholder="Email Address *" />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+
+              const name = e.target.name.value;
+              const email = e.target.email.value;
+              const country = e.target.country.value;
+              const code = e.target.code.value;
+              const phone = e.target.phone.value;
+              const arrival = e.target.arrival.value;
+              const departure = e.target.departure.value;
+              const interest = e.target.interest.value;
+              const adults = e.target.adults.value;
+              const kids = e.target.kids.value;
+              const message = e.target.message.value;
+
+              const fullMessage = `
+              📌 NEW TOUR INQUIRY
+
+              👤 Name: ${name}
+              📧 Email: ${email}
+              🌍 Country: ${country}
+              📞 Phone: ${code} ${phone}
+              📅 Arrival: ${arrival}
+              📅 Departure: ${departure}
+              🎯 Interest: ${interest}
+              👨‍👩‍👧 Adults: ${adults}
+              🧒 Kids: ${kids}
+
+              💬 Message: ${message}
+                    `;
+
+              // ✅ SEND WHATSAPP
+              const whatsappNumber = "94786086861"; // Your number
+              const whatsappURL =
+                "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(fullMessage);
+
+              window.open(whatsappURL, "_blank");
+
+              // ✅ SEND EMAIL
+              const mailto =
+                "mailto:s.a.pasindupiyushan@gmail.com" +
+                "?subject=" + encodeURIComponent("New Tour Inquiry") +
+                "&body=" + encodeURIComponent(fullMessage);
+
+              window.location.href = mailto;
+
+              alert("✅ Your Inquiry Has Been Sent!");
+            }}
+          >
+            <input name="name" type="text" placeholder="Name *" required />
+            <input name="email" type="email" placeholder="Email Address *" required />
+
             <div className="phone-row">
               <input name="code" className="code" type="text" placeholder="Code" />
-              <input name="phone" className="phone" type="text" placeholder="Phone Number *" />
+              <input name="phone" className="phone" type="text" placeholder="Phone Number *" required />
             </div>
 
-            <select name="country">
+            <select name="country" required>
               <option>Choose Your Country *</option>
               <option>Afghanistan</option>
               <option>Albania</option>
@@ -462,7 +512,7 @@ function Ella() {
             <label>Departure Date</label>
             <input name="departure" type="date" />
 
-            <select name="interest">
+            <select name="interest" required>
               <option>Choose Your Interest *</option>
               <option>Eco</option>
               <option>Beach</option>
@@ -475,7 +525,7 @@ function Ella() {
               <option>All in one Trails</option>
             </select>
 
-            <input name="adults" type="number" placeholder="No. of Adults *" />
+            <input name="adults" type="number" placeholder="No. of Adults *" required />
             <input name="kids" type="number" placeholder="No. of Kids" />
 
             <textarea name="message" placeholder="Enter your message here"></textarea>

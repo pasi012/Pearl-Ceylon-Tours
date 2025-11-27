@@ -1,25 +1,42 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/Destinations.css";
 
-import mirissa from "../assets/mirissa.jpg";
-import sigiriya from "../assets/sigiriya.jpg";
-import anuradhapura from "../assets/anuradhapura.jpg";
-import polonnaruwa from "../assets/polonnaruwa.jpg";
-import ella from "../assets/ella.jpg";
-import yala from "../assets/yala.jpg";
-import kandy from "../assets/kandy.jpg";
-import nuwaraEliya from "../assets/nuwara-eliya.jpg";
-import ecoEscapes from "../assets/eco-escapes.jpg";
+import { storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function Destinations() {
+    const navigate = useNavigate();
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
     }, []);
 
-    const navigate = useNavigate();
+    // Firebase image states
+    const [mirissa, setMirissa] = useState("");
+    const [sigiriya, setSigiriya] = useState("");
+    const [anuradhapura, setAnuradhapura] = useState("");
+    const [polonnaruwa, setPolonnaruwa] = useState("");
+    const [ella, setElla] = useState("");
+    const [yala, setYala] = useState("");
+    const [kandy, setKandy] = useState("");
+    const [nuwaraEliya, setNuwaraEliya] = useState("");
+    const [ecoEscapes, setEcoEscapes] = useState("");
+
+    // Load images
+    useEffect(() => {
+        getDownloadURL(ref(storage, "mirissa.jpg")).then(setMirissa);
+        getDownloadURL(ref(storage, "sigiriya.jpg")).then(setSigiriya);
+        getDownloadURL(ref(storage, "anuradhapura.jpg")).then(setAnuradhapura);
+        getDownloadURL(ref(storage, "polonnaruwa.jpg")).then(setPolonnaruwa);
+        getDownloadURL(ref(storage, "ella.jpg")).then(setElla);
+        getDownloadURL(ref(storage, "yala.jpg")).then(setYala);
+        getDownloadURL(ref(storage, "kandy.jpg")).then(setKandy);
+        getDownloadURL(ref(storage, "nuwara-eliya.jpg")).then(setNuwaraEliya);
+        getDownloadURL(ref(storage, "eco-escapes.jpg")).then(setEcoEscapes);
+    }, []);
 
     const destinations = [
         { name: "Mirissa", image: mirissa },
@@ -33,7 +50,7 @@ function Destinations() {
         { name: "Eco Escapes", image: ecoEscapes },
     ];
 
-    // Convert name → safe URL (Mirissa → mirissa, Nuwara Eliya → nuwara-eliya)
+    // Convert name → URL slug (ex: Nuwara Eliya → nuwara-eliya)
     const slugify = (text) =>
         text.toLowerCase().replace(/\s+/g, "-");
 
@@ -70,11 +87,12 @@ function Destinations() {
                 </div>
             </section>
 
-            {/* CTA Section */}
+            {/* ===== CTA Section ===== */}
             <section className="cta-section" data-aos="fade-up">
                 <div className="cta-box">
                     <div className="cta-left">
                         <img src={require("../assets/hile.png")} className="cta-icon" alt="icon" />
+
                         <div className="cta-text">
                             <h2>Ready To Adventure And Enjoy Natural</h2>
                             <p>Reach Pearl Ceylon Tours For A Secure, Luxurious, And Unforgettable Adventure!</p>

@@ -1,21 +1,34 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../css/DayTourPackages.css";
 
 import { useNavigate } from "react-router-dom";
 
-import day1 from "../assets/day1.jpg";
-import day2 from "../assets/day2.jpg";
-import day3 from "../assets/day3.jpg";
-import day4 from "../assets/day4.jpg";
-import day5 from "../assets/day5.jpg";
+import { storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function DayTourPackages() {
     const navigate = useNavigate();
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
+    }, []);
+
+    // Firebase image states
+    const [day1, setDay1] = useState("");
+    const [day2, setDay2] = useState("");
+    const [day3, setDay3] = useState("");
+    const [day4, setDay4] = useState("");
+    const [day5, setDay5] = useState("");
+
+    // Load all images from Firebase Storage
+    useEffect(() => {
+        getDownloadURL(ref(storage, "day1.jpg")).then(setDay1);
+        getDownloadURL(ref(storage, "day2.jpg")).then(setDay2);
+        getDownloadURL(ref(storage, "day3.jpg")).then(setDay3);
+        getDownloadURL(ref(storage, "day4.jpg")).then(setDay4);
+        getDownloadURL(ref(storage, "day5.jpg")).then(setDay5);
     }, []);
 
     const dayTours = [
@@ -65,7 +78,7 @@ function DayTourPackages() {
                 </div>
             </section>
 
-            {/* CTA */}
+            {/* ===== CTA Section ===== */}
             <section className="cta-section" data-aos="fade-up">
                 <div className="cta-box">
                     <div className="cta-left">

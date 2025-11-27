@@ -1,18 +1,29 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/CultureHeritage.css";
 
-import img1 from "../../assets/sigiriya1.jpg";
-import img2 from "../../assets/sigiriya6.jpg";
-import img3 from "../../assets/sigiriya5.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function ColomboSigiriya() {
+
     const [activeTab, setActiveTab] = React.useState("inclusion");
     const [activeAccordion, setActiveAccordion] = React.useState(null);
 
     useEffect(() => {
         AOS.init({ duration: 800, once: true });
+    }, []);
+
+    const [img1, setImg1] = useState("");
+    const [img2, setImg2] = useState("");
+    const [img3, setImg3] = useState("");
+
+    useEffect(() => {
+        getDownloadURL(ref(storage, "sigiriya1.jpg")).then(setImg1);
+        getDownloadURL(ref(storage, "sigiriya2.jpg")).then(setImg2);
+        getDownloadURL(ref(storage, "sigiriya3.jpg")).then(setImg3);
     }, []);
 
     return (
@@ -467,9 +478,9 @@ function ColomboSigiriya() {
 
                         {/* IMAGE GALLERY */}
                         <section className="ch-gallery" data-aos="fade-up">
-                            <img src={img1} alt="heritage" />
-                            <img src={img2} alt="beach" />
-                            <img src={img3} alt="wildlife" />
+                            {img1 && <img src={img1} />}
+                            {img2 && <img src={img2} />}
+                            {img3 && <img src={img3} />}
                         </section>
 
                         {/* --- NEW LAYOUT (LEFT CONTENT + RIGHT FORM) --- */}

@@ -37,15 +37,17 @@ function Navbar() {
             <li><Link to="/contact">Contact</Link></li>
           </ul>
 
-          <div className="navbar-right">
-            <div className="phone-box">
-              <Phone size={18} className="phone-icon" />
-              <div>
-                <span className="phone-label">PHONE</span>
-                <span className="phone-number">0778834842</span>
-              </div>
+          <div
+            className="phone-box"
+            onClick={() => window.location.href = "tel:0773562768"}
+          >
+            <Phone size={18} className="phone-icon" />
+            <div>
+              <span className="phone-label">PHONE</span>
+              <span className="phone-number">077 356 2768</span>
             </div>
           </div>
+
         </div>
       </nav>
     </>

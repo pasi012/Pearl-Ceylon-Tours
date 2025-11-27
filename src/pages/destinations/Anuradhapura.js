@@ -1,21 +1,61 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
 import anuradhapuraHero from "../../assets/anuradhapura-hero.jpg";
-import anuradhapura1 from "../../assets/anuradhapura.jpg";
-import anuradhapura2 from "../../assets/anuradhapura1.jpg";
 
-import anuradhapura3 from "../../assets/anuradhapura2.jpg";
-import anuradhapura4 from "../../assets/anuradhapura3.jpg";
-import anuradhapura5 from "../../assets/anuradhapura4.jpg";
-import anuradhapura6 from "../../assets/anuradhapura5.jpg";
-import anuradhapura7 from "../../assets/anuradhapura6.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function Anuradhapura() {
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  const [img1, setImg1] = useState("");
+  const [img2, setImg2] = useState("");
+
+  const [g3, setG3] = useState("");
+  const [g4, setG4] = useState("");
+  const [g5, setG5] = useState("");
+  const [g6, setG6] = useState("");
+  const [g7, setG7] = useState("");
+
+  const [act1, setAct1] = useState("");
+  const [act2, setAct2] = useState("");
+  const [act3, setAct3] = useState("");
+  const [act4, setAct4] = useState("");
+  const [act5, setAct5] = useState("");
+  const [act6, setAct6] = useState("");
+  const [act7, setAct7] = useState("");
+  const [act8, setAct8] = useState("");
+  const [act9, setAct9] = useState("");
+
+  useEffect(() => {
+    getDownloadURL(ref(storage, "anuradhapura.jpg")).then(setImg1);
+    getDownloadURL(ref(storage, "anuradhapura1.jpg")).then(setImg2);
+
+    getDownloadURL(ref(storage, "anuradhapura2.jpg")).then(setG3);
+    getDownloadURL(ref(storage, "anuradhapura3.jpg")).then(setG4);
+    getDownloadURL(ref(storage, "anuradhapura4.jpg")).then(setG5);
+    getDownloadURL(ref(storage, "anuradhapura5.jpg")).then(setG6);
+    getDownloadURL(ref(storage, "anuradhapura6.jpg")).then(setG7);
+
+    // Activity icons
+    getDownloadURL(ref(storage, "Sri Maha Bodhi.png")).then(setAct1);
+    getDownloadURL(ref(storage, "Ruwanwelisaya.png")).then(setAct2);
+    getDownloadURL(ref(storage, "Abhayagiriya.png")).then(setAct3);
+
+    getDownloadURL(ref(storage, "Sandakada Pahana.png")).then(setAct4);
+    getDownloadURL(ref(storage, "Mura Gal.png")).then(setAct5);
+    getDownloadURL(ref(storage, "Ancient Building Ruins.png")).then(setAct6);
+
+    getDownloadURL(ref(storage, "Buddist Monks.png")).then(setAct7);
+    getDownloadURL(ref(storage, "Tanks.png")).then(setAct8);
+    getDownloadURL(ref(storage, "Buddist Paintings.png")).then(setAct9);
   }, []);
 
   return (
@@ -50,8 +90,8 @@ function Anuradhapura() {
           </p>
 
           <div className="mirissa-top-gallery">
-            <img src={anuradhapura1} alt="Mirissa View" />
-            <img src={anuradhapura2} alt="Mirissa Beach" />
+            <img src={img1} alt="View" />
+            <img src={img2} alt="Beach" />
           </div>
 
           <p>
@@ -62,9 +102,9 @@ function Anuradhapura() {
           </p>
 
           <div className="mirissa-top-gallery">
-            <img src={anuradhapura3} alt="Mirissa View" />
-            <img src={anuradhapura4} alt="Mirissa Beach" />
-            <img src={anuradhapura5} alt="Mirissa Beach" />
+            <img src={g3} alt="" />
+            <img src={g4} alt="" />
+            <img src={g5} alt="" />
           </div>
 
           <p>
@@ -145,17 +185,17 @@ function Anuradhapura() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Sri Maha Bodhi.png")} alt="Surfing" />
+                  <img src={act1} alt="Sri Maha Bodhi" />
                   <p>Sri Maha Bodhi</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Ruwanwelisaya.png")} alt="Beginner Guide" />
+                  <img src={act2} alt="Ruwanwelisaya" />
                   <p>Ruwanwelisaya</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Abhayagiriya.png")} alt="Relaxing" />
+                  <img src={act3} alt="Abhayagiriya" />
                   <p>Abhayagiriya</p>
                 </div>
               </div>
@@ -173,17 +213,17 @@ function Anuradhapura() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Sandakada Pahana.png")} alt="Whale Watching" />
+                  <img src={act4} alt="Sandakada Pahana" />
                   <p>Sandakada Pahana</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Mura Gal.png")} alt="Turtle Watching" />
-                  <p>Mura Gal</p>
+                  <img src={act5} alt="Mura Gal" />
+                  <p>Mura Gala</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Ancient Building Ruins.png")} alt="Turtle Feeding" />
+                  <img src={act6} alt="Ruins" />
                   <p>Ancient Building Ruins</p>
                 </div>
               </div>
@@ -201,17 +241,17 @@ function Anuradhapura() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Buddist Monks.png")} alt="Whale Watching" />
+                  <img src={act7} alt="Monks" />
                   <p>Buddist Monks</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Tanks.png")} alt="Turtle Watching" />
+                  <img src={act8} alt="Tanks" />
                   <p>Tanks</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Buddist Paintings.png")} alt="Turtle Feeding" />
+                  <img src={act9} alt="Paintings" />
                   <p>Buddist Paintings</p>
                 </div>
               </div>
@@ -224,8 +264,8 @@ function Anuradhapura() {
           <div className="mirissa-parrot-rock" data-aos="fade-up">
 
             <div className="parrot-gallery">
-              <img src={anuradhapura6} alt="Parrot Rock Beach" />
-              <img src={anuradhapura7} alt="Seafood Dish" />
+              <img src={g6} alt="Gallery 1" />
+              <img src={g7} alt="Gallery 2" />
             </div>
 
           </div>
@@ -236,15 +276,65 @@ function Anuradhapura() {
         <div className="mirissa-form" data-aos="fade-left">
           <h3>Make an Inquiry</h3>
 
-          <form>
-            <input name="name" type="text" placeholder="Name *" />
-            <input name="email" type="email" placeholder="Email Address *" />
+          <form
+            onSubmit={(e) => {
+              e.preventDefault();
+
+              const name = e.target.name.value;
+              const email = e.target.email.value;
+              const country = e.target.country.value;
+              const code = e.target.code.value;
+              const phone = e.target.phone.value;
+              const arrival = e.target.arrival.value;
+              const departure = e.target.departure.value;
+              const interest = e.target.interest.value;
+              const adults = e.target.adults.value;
+              const kids = e.target.kids.value;
+              const message = e.target.message.value;
+
+              const fullMessage = `
+              📌 NEW TOUR INQUIRY
+
+              👤 Name: ${name}
+              📧 Email: ${email}
+              🌍 Country: ${country}
+              📞 Phone: ${code} ${phone}
+              📅 Arrival: ${arrival}
+              📅 Departure: ${departure}
+              🎯 Interest: ${interest}
+              👨‍👩‍👧 Adults: ${adults}
+              🧒 Kids: ${kids}
+
+              💬 Message: ${message}
+                    `;
+
+              // ✅ SEND WHATSAPP
+              const whatsappNumber = "94786086861"; // Your number
+              const whatsappURL =
+                "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(fullMessage);
+
+              window.open(whatsappURL, "_blank");
+
+              // ✅ SEND EMAIL
+              const mailto =
+                "mailto:s.a.pasindupiyushan@gmail.com" +
+                "?subject=" + encodeURIComponent("New Tour Inquiry") +
+                "&body=" + encodeURIComponent(fullMessage);
+
+              window.location.href = mailto;
+
+              alert("✅ Your Inquiry Has Been Sent!");
+            }}
+          >
+            <input name="name" type="text" placeholder="Name *" required />
+            <input name="email" type="email" placeholder="Email Address *" required />
+
             <div className="phone-row">
               <input name="code" className="code" type="text" placeholder="Code" />
-              <input name="phone" className="phone" type="text" placeholder="Phone Number *" />
+              <input name="phone" className="phone" type="text" placeholder="Phone Number *" required />
             </div>
 
-            <select name="country">
+            <select name="country" required>
               <option>Choose Your Country *</option>
               <option>Afghanistan</option>
               <option>Albania</option>
@@ -449,7 +539,7 @@ function Anuradhapura() {
             <label>Departure Date</label>
             <input name="departure" type="date" />
 
-            <select name="interest">
+            <select name="interest" required>
               <option>Choose Your Interest *</option>
               <option>Eco</option>
               <option>Beach</option>
@@ -462,7 +552,7 @@ function Anuradhapura() {
               <option>All in one Trails</option>
             </select>
 
-            <input name="adults" type="number" placeholder="No. of Adults *" />
+            <input name="adults" type="number" placeholder="No. of Adults *" required />
             <input name="kids" type="number" placeholder="No. of Kids" />
 
             <textarea name="message" placeholder="Enter your message here"></textarea>
@@ -470,6 +560,7 @@ function Anuradhapura() {
             <button type="submit">SUBMIT</button>
           </form>
         </div>
+
       </section>
 
       {/* CTA Section */}

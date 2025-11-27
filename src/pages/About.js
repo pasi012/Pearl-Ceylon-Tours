@@ -5,7 +5,8 @@ import "../css/About.css";
 
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
-import founderImg from "../assets/founder.jpg";
+import { storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function About() {
 
@@ -17,6 +18,19 @@ function About() {
 
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
+    }, []);
+
+    //about
+    const [founderUrl, setFounderUrl] = useState("");
+    const [memberUrl1, setMemberUrl1] = useState("");
+    const [memberUrl2, setMemberUrl2] = useState("");
+    const [callUsUrl, setCallUsUrl] = useState("");
+
+    useEffect(() => {
+        getDownloadURL(ref(storage, "founder.jpg")).then(setFounderUrl);
+        getDownloadURL(ref(storage, "team1.jpg")).then(setMemberUrl1);
+        getDownloadURL(ref(storage, "team2.jpg")).then(setMemberUrl2);
+        getDownloadURL(ref(storage, "about-collage.png")).then(setCallUsUrl);
     }, []);
 
     return (
@@ -50,7 +64,7 @@ function About() {
                 <div className="founder-container">
 
                     <div className="founder-img" data-aos="zoom-in">
-                        <img src={founderImg} alt="Founder" />
+                        {founderUrl && <img src={founderUrl} />}
                         <p className="experience-text">
                             20 Years of dedicated sea service and extensive global travel experience
                         </p>
@@ -98,21 +112,21 @@ function About() {
 
                     {/* Member 1 */}
                     <div className="team-card" data-aos="zoom-in">
-                        <img src={require("../assets/founder.jpg")} alt="Team Member" className="team-img" />
+                        {founderUrl && <img src={founderUrl} className="team-img" />}
                         <p className="team-role">Founder/CEO</p>
                         <h3 className="team-name">Dhammika Jayakody</h3>
                     </div>
 
                     {/* Member 2 */}
                     <div className="team-card" data-aos="zoom-in">
-                        <img src={require("../assets/team1.jpg")} alt="Team Member" className="team-img" />
+                        {memberUrl1 && <img src={memberUrl1} className="team-img" />}
                         <p className="team-role">Tour Operational Executive</p>
                         <h3 className="team-name">K.M.N. Tennakoon</h3>
                     </div>
 
                     {/* Member 3 */}
                     <div className="team-card" data-aos="zoom-in">
-                        <img src={require("../assets/team2.jpg")} alt="Team Member" className="team-img" />
+                        {memberUrl2 && <img src={memberUrl2} className="team-img" />}
                         <p className="team-role">Chief Financial Officer</p>
                         <h3 className="team-name">Neranjana Tennakoon</h3>
                     </div>
@@ -177,11 +191,7 @@ function About() {
             <section className="sl-collage-section" data-aos="fade-up">
 
                 <div className="sl-collage-container">
-                    <img
-                        src={require("../assets/about-collage.png")}
-                        alt="Sri Lanka Collage"
-                        className="sl-collage-img"
-                    />
+                    {callUsUrl && <img src={callUsUrl} className="sl-collage-img" />}
                 </div>
 
                 <div className="sl-collage-content">

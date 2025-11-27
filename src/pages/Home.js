@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import { useEffect, useState } from "react";
 import '../css/Home.css';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -7,21 +7,10 @@ import { useNavigate } from "react-router-dom";
 
 import heroVideo from "../assets/hero.mp4";
 
-import about1 from '../assets/about1.jpeg';
-import about2 from '../assets/about2.jpeg';
+import { storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 import { FaArrowLeft, FaArrowRight, FaClock } from "react-icons/fa";
-import package1 from "../assets/pkg1.jpg";
-import package2 from "../assets/pkg2.jpg";
-import package3 from "../assets/pkg3.jpg";
-import package4 from "../assets/pkg4.jpg";
-import package5 from "../assets/pkg5.jpg";
-
-import day1 from "../assets/day1.jpg";
-import day2 from "../assets/day2.jpg";
-import day3 from "../assets/day3.jpg";
-import day4 from "../assets/day4.jpg";
-import day5 from "../assets/day5.jpg";
 
 import { motion } from "framer-motion";
 
@@ -31,6 +20,120 @@ function Home() {
 
   useEffect(() => {
     AOS.init({ duration: 1000 });
+  }, []);
+
+  //about
+  const [about1Url, setAbout1Url] = useState("");
+  const [about2Url, setAbout2Url] = useState("");
+
+  useEffect(() => {
+    getDownloadURL(ref(storage, "about1.jpeg")).then(setAbout1Url);
+    getDownloadURL(ref(storage, "about2.jpeg")).then(setAbout2Url);
+  }, []);
+
+  //packages
+  // States for images
+  const [pkgImg1, setPkgImg1] = useState("");
+  const [pkgImg2, setPkgImg2] = useState("");
+  const [pkgImg3, setPkgImg3] = useState("");
+  const [pkgImg4, setPkgImg4] = useState("");
+  const [pkgImg5, setPkgImg5] = useState("");
+
+  useEffect(() => {
+    // Get all package images
+    getDownloadURL(ref(storage, "pkg1.jpg")).then(setPkgImg1);
+    getDownloadURL(ref(storage, "pkg2.jpg")).then(setPkgImg2);
+    getDownloadURL(ref(storage, "pkg3.jpg")).then(setPkgImg3);
+    getDownloadURL(ref(storage, "pkg4.jpg")).then(setPkgImg4);
+    getDownloadURL(ref(storage, "pkg5.jpg")).then(setPkgImg5);
+  }, []);
+
+  //day Tours
+  // States for images
+  const [dayImg1, setDayImg1] = useState("");
+  const [dayImg2, setDayImg2] = useState("");
+  const [dayImg3, setDayImg3] = useState("");
+  const [dayImg4, setDayImg4] = useState("");
+  const [dayImg5, setDayImg5] = useState("");
+
+  useEffect(() => {
+    // Get all package images
+    getDownloadURL(ref(storage, "day1.jpg")).then(setDayImg1);
+    getDownloadURL(ref(storage, "day2.jpg")).then(setDayImg2);
+    getDownloadURL(ref(storage, "day3.jpg")).then(setDayImg3);
+    getDownloadURL(ref(storage, "day4.jpg")).then(setDayImg4);
+    getDownloadURL(ref(storage, "day5.jpg")).then(setDayImg5);
+  }, []);
+
+  //destinations
+  const [destiImg1, setDestiImg1] = useState("");
+  const [destiImg2, setDestiImg2] = useState("");
+  const [destiImg3, setDestiImg3] = useState("");
+  const [destiImg4, setDestiImg4] = useState("");
+  const [destiImg5, setDestiImg5] = useState("");
+  const [destiImg6, setDestiImg6] = useState("");
+  const [destiImg7, setDestiImg7] = useState("");
+  const [destiImg8, setDestiImg8] = useState("");
+  const [destiImg9, setDestiImg9] = useState("");
+
+  useEffect(() => {
+    getDownloadURL(ref(storage, "feature1.jpg")).then(setDestiImg1);
+    getDownloadURL(ref(storage, "feature2.jpg")).then(setDestiImg2);
+    getDownloadURL(ref(storage, "feature3.jpg")).then(setDestiImg3);
+    getDownloadURL(ref(storage, "feature4.jpg")).then(setDestiImg4);
+    getDownloadURL(ref(storage, "feature5.jpg")).then(setDestiImg5);
+    getDownloadURL(ref(storage, "feature6.jpg")).then(setDestiImg6);
+    getDownloadURL(ref(storage, "feature7.jpg")).then(setDestiImg7);
+    getDownloadURL(ref(storage, "feature8.jpg")).then(setDestiImg8);
+    getDownloadURL(ref(storage, "feature9.jpg")).then(setDestiImg9);
+  }, []);
+
+  //why choose us
+  const [whyChooseUsImg, setWhyChooseUsImg] = useState("");
+
+  useEffect(() => {
+    getDownloadURL(ref(storage, "whychoose.jpg")).then(setWhyChooseUsImg);
+  }, []);
+
+  //hospitality
+  const [hospitalityImg, setHospitalityImg] = useState("");
+
+  useEffect(() => {
+    getDownloadURL(ref(storage, "hospitality.jpg")).then(setHospitalityImg);
+  }, []);
+
+  //vehicle
+  const [vehicleImg1, setVehicleImg1] = useState("");
+  const [vehicleImg2, setVehicleImg2] = useState("");
+  const [vehicleImg3, setVehicleImg3] = useState("");
+  const [vehicleImg4, setVehicleImg4] = useState("");
+  const [vehicleImg5, setVehicleImg5] = useState("");
+  const [vehicleImg6, setVehicleImg6] = useState("");
+
+  useEffect(() => {
+    getDownloadURL(ref(storage, "premio.jpg")).then(setVehicleImg1);
+    getDownloadURL(ref(storage, "noah.jpg")).then(setVehicleImg2);
+    getDownloadURL(ref(storage, "hiace.jpg")).then(setVehicleImg3);
+    getDownloadURL(ref(storage, "mitsubishiSafari.jpg")).then(setVehicleImg4);
+    getDownloadURL(ref(storage, "mitsubishiRosa.png")).then(setVehicleImg5);
+    getDownloadURL(ref(storage, "kingLong.jpg")).then(setVehicleImg6);
+  }, []);
+
+  //hotel
+  const [hotelImg1, setHotelImg1] = useState("");
+  const [hotelImg2, setHotelImg2] = useState("");
+  const [hotelImg3, setHotelImg3] = useState("");
+  const [hotelImg4, setHotelImg4] = useState("");
+  const [hotelImg5, setHotelImg5] = useState("");
+  const [hotelImg6, setHotelImg6] = useState("");
+
+  useEffect(() => {
+    getDownloadURL(ref(storage, "brand-logo1.png")).then(setHotelImg1);
+    getDownloadURL(ref(storage, "brand-logo2.png")).then(setHotelImg2);
+    getDownloadURL(ref(storage, "brand-logo3.png")).then(setHotelImg3);
+    getDownloadURL(ref(storage, "brand-logo4.png")).then(setHotelImg4);
+    getDownloadURL(ref(storage, "brand-logo5.png")).then(setHotelImg5);
+    getDownloadURL(ref(storage, "brand-logo6.png")).then(setHotelImg6);
   }, []);
 
   //testimonial
@@ -230,10 +333,10 @@ function Home() {
         <div className="about-right" data-aos="fade-left">
           <div className="image-container">
             <div className="image-left">
-              <img src={about1} alt="Pool view" />
+              {about1Url && <img src={about1Url} alt="Pool view" />}
             </div>
             <div className="image-right">
-              <img src={about2} alt="Beach sunset" />
+              {about2Url && <img src={about2Url} alt="Beach sunset" />}
             </div>
 
             <div className="ribbon">
@@ -273,7 +376,7 @@ function Home() {
               onClick={() => navigate("/tour-package/CultureHeritage")}
               style={{ cursor: "pointer" }}
             >
-              <img src={package1} className="package-img" alt="Culture Heritage Trails" />
+              {pkgImg1 && <img src={pkgImg1} className="package-img" alt="Culture Heritage Trails" />}
               <div className="package-info">
                 <p className="package-days"><FaClock /> 9 Days 8 Nights</p>
                 <h4>Culture Heritage Trails</h4>
@@ -286,7 +389,7 @@ function Home() {
               onClick={() => navigate("/tour-package/HolidayTour")}
               style={{ cursor: "pointer" }}
             >
-              <img src={package2} className="package-img" alt="Accessible Holiday Tour" />
+              {pkgImg2 && <img src={pkgImg2} className="package-img" alt="Accessible Holiday Tour" />}
               <div className="package-info">
                 <p className="package-days"><FaClock /> 12 Days 11 Nights</p>
                 <h4>Accessible Holiday Tour</h4>
@@ -299,7 +402,7 @@ function Home() {
               onClick={() => navigate("/tour-package/HoneymoonTrail")}
               style={{ cursor: "pointer" }}
             >
-              <img src={package3} className="package-img" alt="Honeymoon Trail" />
+              {pkgImg3 && <img src={pkgImg3} className="package-img" alt="Honeymoon Trail" />}
               <div className="package-info">
                 <p className="package-days"><FaClock /> 14 Days 13 Nights</p>
                 <h4>Honeymoon Trail</h4>
@@ -312,7 +415,7 @@ function Home() {
               onClick={() => navigate("/tour-package/RamayanaTour")}
               style={{ cursor: "pointer" }}
             >
-              <img src={package4} className="package-img" alt="Ramayana Tour" />
+              {pkgImg4 && <img src={pkgImg4} className="package-img" alt="Ramayana Tour" />}
               <div className="package-info">
                 <p className="package-days"><FaClock /> 9 Days 8 Nights</p>
                 <h4>Ramayana Tour</h4>
@@ -325,7 +428,7 @@ function Home() {
               onClick={() => navigate("/tour-package/EcoTrail")}
               style={{ cursor: "pointer" }}
             >
-              <img src={package5} className="package-img" alt="Ramayana Tour" />
+              {pkgImg5 && <img src={pkgImg5} className="package-img" alt="Eco Trail" />}
               <div className="package-info">
                 <p className="package-days"><FaClock /> 9 Days 8 Nights</p>
                 <h4>Eco Trail</h4>
@@ -361,7 +464,7 @@ function Home() {
               onClick={() => navigate("/day-tours/ColomboCityTour")}
               style={{ cursor: "pointer" }}
             >
-              <img src={day1} className="package-img" alt="Colombo City Day Tour" />
+              {dayImg1 && <img src={dayImg1} className="package-img" alt="Colombo City Day Tour" />}
               <div className="package-info">
                 <p className="package-days"><FaClock /> 1 Day</p>
                 <h4>Colombo City Tour</h4>
@@ -374,7 +477,7 @@ function Home() {
               onClick={() => navigate("/day-tours/ColomboBenthotaGalle")}
               style={{ cursor: "pointer" }}
             >
-              <img src={day2} className="package-img" alt="Galle & Unawatuna Day Tour" />
+              {dayImg2 && <img src={dayImg2} className="package-img" alt="Galle & Unawatuna Day Tour" />}
               <div className="package-info">
                 <p className="package-days"><FaClock /> 1 Day</p>
                 <h4>Colombo Galle Tour</h4>
@@ -387,7 +490,7 @@ function Home() {
               onClick={() => navigate("/day-tours/ColomboKandy")}
               style={{ cursor: "pointer" }}
             >
-              <img src={day3} className="package-img" alt="Kandy Cultural Day Tour" />
+              {dayImg3 && <img src={dayImg3} className="package-img" alt="Kandy Cultural Day Tour" />}
               <div class="package-info">
                 <p className="package-days"><FaClock /> 1 Day</p>
                 <h4>Colombo Kandy Tour</h4>
@@ -400,7 +503,7 @@ function Home() {
               onClick={() => navigate("/day-tours/ColomboSigiriyaDambulla")}
               style={{ cursor: "pointer" }}
             >
-              <img src={day4} className="package-img" alt="Sigiriya & Dambulla Day Tour" />
+              {dayImg4 && <img src={dayImg4} className="package-img" alt="Sigiriya & Dambulla Day Tour" />}
               <div className="package-info">
                 <p className="package-days"><FaClock /> 1 Day</p>
                 <h4>Colombo Sigiriya Tour</h4>
@@ -413,7 +516,7 @@ function Home() {
               onClick={() => navigate("/day-tours/ColomboKithulgala")}
               style={{ cursor: "pointer" }}
             >
-              <img src={day5} className="package-img" alt="Kithulgala Day Tour" />
+              {dayImg5 && <img src={dayImg5} className="package-img" alt="Kithulgala Day Tour" />}
               <div className="package-info">
                 <p className="package-days"><FaClock /> 1 Day</p>
                 <h4>Colombo Kithulgala Tour</h4>
@@ -445,7 +548,7 @@ function Home() {
               onClick={() => navigate("/destinations/Mirissa")}
               style={{ cursor: "pointer" }}
             >
-              <img src={require("../assets/feature1.jpg")} alt="Yala" />
+              {destiImg1 && <img src={destiImg1} alt="Yala" />}
               <div className="destination-info">
                 <p className="location">📍 South Coast, Sri Lanka</p>
                 <h4>Mirissa</h4>
@@ -461,7 +564,7 @@ function Home() {
               onClick={() => navigate("/destinations/Sigiriya")}
               style={{ cursor: "pointer" }}
             >
-              <img src={require("../assets/feature2.jpg")} alt="Kandy" />
+              {destiImg2 && <img src={destiImg2} alt="Kandy" />}
               <div className="destination-info">
                 <p className="location">📍 Central, Sri Lanka</p>
                 <h4>Sigiriya</h4>
@@ -476,7 +579,7 @@ function Home() {
               onClick={() => navigate("/destinations/Anuradhapura")}
               style={{ cursor: "pointer" }}
             >
-              <img src={require("../assets/feature3.jpg")} alt="Nuwara Eliya" />
+              {destiImg3 && <img src={destiImg3} alt="Yala" />}
               <div className="destination-info">
                 <p className="location">📍 North Central, Sri Lanka</p>
                 <h4>Anuradhapura</h4>
@@ -491,7 +594,7 @@ function Home() {
               onClick={() => navigate("/destinations/Polonnaruwa")}
               style={{ cursor: "pointer" }}
             >
-              <img src={require("../assets/feature4.jpg")} alt="Eco Escapes" />
+              {destiImg4 && <img src={destiImg4} alt="Yala" />}
               <div className="destination-info">
                 <p className="location">📍 North Central, Sri Lanka</p>
                 <h4>Polonnaruwa</h4>
@@ -506,7 +609,7 @@ function Home() {
               onClick={() => navigate("/destinations/Ella")}
               style={{ cursor: "pointer" }}
             >
-              <img src={require("../assets/feature5.jpg")} alt="Eco Escapes" />
+              {destiImg5 && <img src={destiImg5} alt="Yala" />}
               <div className="destination-info">
                 <p className="location">📍 Uva, Sri Lanka</p>
                 <h4>Ella</h4>
@@ -521,7 +624,7 @@ function Home() {
               onClick={() => navigate("/destinations/Yala")}
               style={{ cursor: "pointer" }}
             >
-              <img src={require("../assets/feature6.jpg")} alt="Eco Escapes" />
+              {destiImg6 && <img src={destiImg6} alt="Yala" />}
               <div className="destination-info">
                 <p className="location">📍 Uva, Sri Lanka</p>
                 <h4>Yala</h4>
@@ -536,7 +639,7 @@ function Home() {
               onClick={() => navigate("/destinations/Kandy")}
               style={{ cursor: "pointer" }}
             >
-              <img src={require("../assets/feature7.jpg")} alt="Eco Escapes" />
+              {destiImg7 && <img src={destiImg7} alt="Yala" />}
               <div className="destination-info">
                 <p className="location">📍 Central, Sri Lanka</p>
                 <h4>Kandy</h4>
@@ -551,7 +654,7 @@ function Home() {
               onClick={() => navigate("/destinations/Nuwara-Eliya")}
               style={{ cursor: "pointer" }}
             >
-              <img src={require("../assets/feature8.jpg")} alt="Eco Escapes" />
+              {destiImg8 && <img src={destiImg8} alt="Yala" />}
               <div className="destination-info">
                 <p className="location">📍 Central, Sri Lanka</p>
                 <h4>Nuwara Eliya</h4>
@@ -566,7 +669,7 @@ function Home() {
               onClick={() => navigate("/destinations/Eco-Escapes")}
               style={{ cursor: "pointer" }}
             >
-              <img src={require("../assets/feature9.jpg")} alt="Eco Escapes" />
+              {destiImg9 && <img src={destiImg9} alt="Yala" />}
               <div className="destination-info">
                 <p className="location">📍 Eco Escapes, Sri Lanka</p>
                 <h4>Eco Escapes</h4>
@@ -588,7 +691,7 @@ function Home() {
       <section className="why-choose-section-home" data-aos="fade-up">
         <div className="why-choose-container">
           <div className="why-choose-image">
-            <img src={require("../assets/whychoose.jpg")} alt="Sri Lanka Coast" />
+            {whyChooseUsImg && <img src={whyChooseUsImg} />}
             <div className="explore-badge">
               <span>Never stop<br />Exploring</span>
             </div>
@@ -635,7 +738,7 @@ function Home() {
 
           {/* Left Image Side */}
           <div className="hospitality-image" data-aos="fade-right">
-            <img src={require("../assets/hospitality.jpg")} alt="Hospitality" />
+            {hospitalityImg && <img src={hospitalityImg} />}
             <div className="hospitality-badge">
               <span>Exclusive offer and comprehensive<br />travel package details provided.</span>
             </div>
@@ -778,7 +881,7 @@ function Home() {
 
           <div className="vehicle-card">
             <div className="vehicle-img-wrapper color-1">
-              <img src={require("../assets/premio.jpg")} alt="Toyota Premio" />
+              {vehicleImg1 && <img src={vehicleImg1} />}
             </div>
             <h4 className="vehicle-name">Toyota Premio</h4>
             <p className="vehicle-seats">(2 Seats)</p>
@@ -786,7 +889,7 @@ function Home() {
 
           <div className="vehicle-card">
             <div className="vehicle-img-wrapper color-2">
-              <img src={require("../assets/noah.jpg")} alt="Toyota Noah" />
+              {vehicleImg2 && <img src={vehicleImg2} />}
             </div>
             <h4 className="vehicle-name">Toyota Noah</h4>
             <p className="vehicle-seats">(4 Seats)</p>
@@ -794,7 +897,7 @@ function Home() {
 
           <div className="vehicle-card">
             <div className="vehicle-img-wrapper color-3">
-              <img src={require("../assets/hiace.jpg")} alt="Toyota Hiace" />
+              {vehicleImg3 && <img src={vehicleImg3} />}
             </div>
             <h4 className="vehicle-name">Toyota Hiace</h4>
             <p className="vehicle-seats">(6 Seats)</p>
@@ -802,7 +905,7 @@ function Home() {
 
           <div className="vehicle-card">
             <div className="vehicle-img-wrapper color-4">
-              <img src={require("../assets/mitsubishiSafari.jpg")} alt="Mitsubishi Cab Safari" />
+              {vehicleImg4 && <img src={vehicleImg4} />}
             </div>
             <h4 className="vehicle-name">Mitsubishi Cab – Safari</h4>
             <p className="vehicle-seats">(3 Seats)</p>
@@ -810,7 +913,7 @@ function Home() {
 
           <div className="vehicle-card">
             <div className="vehicle-img-wrapper color-5">
-              <img src={require("../assets/mitsubishiRosa.png")} alt="Mitsubishi Rosa Bus" />
+              {vehicleImg5 && <img src={vehicleImg5} />}
             </div>
             <h4 className="vehicle-name">Mitsubishi Rosa Bus</h4>
             <p className="vehicle-seats">(12 Seats)</p>
@@ -818,7 +921,7 @@ function Home() {
 
           <div className="vehicle-card">
             <div className="vehicle-img-wrapper color-6">
-              <img src={require("../assets/kingLong.jpg")} alt="King Long Bus" />
+              {vehicleImg6 && <img src={vehicleImg6} />}
             </div>
             <h4 className="vehicle-name">King Long Bus</h4>
             <p className="vehicle-seats">(25 Seats)</p>
@@ -837,35 +940,17 @@ function Home() {
 
         <div className="hotel-brands-logos">
 
-          <img
-            src={require("../assets/brand-logo1.png")}
-            alt="The Kingsbury Hotel"
-            className="hotel-logo"
-          />
+          {hotelImg1 && <img src={hotelImg1} className="hotel-logo"/>}
 
-          <img
-            src={require("../assets/brand-logo2.png")}
-            alt="Seagates"
-            className="hotel-logo"
-          />
+          {hotelImg2 && <img src={hotelImg2} className="hotel-logo"/>}
 
-          <img
-            src={require("../assets/brand-logo3.png")}
-            alt="Jetwing Hotels"
-            className="hotel-logo"
-          />
+          {hotelImg3 && <img src={hotelImg3} className="hotel-logo"/>}
 
-          <img
-            src={require("../assets/brand-logo4.png")}
-            alt="Shangri-La Hotel"
-            className="hotel-logo"
-          />
+          {hotelImg4 && <img src={hotelImg4} className="hotel-logo"/>}
 
-          <img
-            src={require("../assets/brand-logo5.png")}
-            alt="Cinnamon Lodge"
-            className="hotel-logo"
-          />
+          {hotelImg5 && <img src={hotelImg5} className="hotel-logo"/>}
+
+          {hotelImg6 && <img src={hotelImg6} className="hotel-logo"/>}
 
         </div>
       </section>
