@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import "../../css/CultureHeritage.css";
 
-import img1 from "../../assets/ecoTrail1.jpg";
-import img2 from "../../assets/ecoTrail2.jpg";
-import img3 from "../../assets/ecoTrail3.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function EcoTrail() {
+
     const [activeTab, setActiveTab] = React.useState("inclusion");
     const [activeAccordion, setActiveAccordion] = React.useState(null);
 
@@ -15,12 +17,26 @@ function EcoTrail() {
         AOS.init({ duration: 800, once: true });
     }, []);
 
+    const [img1, setImg1] = useState("");
+    const [img2, setImg2] = useState("");
+    const [img3, setImg3] = useState("");
+
+    const [imgHero, setImgHero] = useState("");
+
+    useEffect(() => {
+        getDownloadURL(ref(storage, "ecoTrail1.jpg")).then(setImg1);
+        getDownloadURL(ref(storage, "ecoTrail2.jpg")).then(setImg2);
+        getDownloadURL(ref(storage, "ecoTrail3.jpg")).then(setImg3);
+
+        getDownloadURL(ref(storage, "ecoTrail-hero.jpg")).then(setImgHero);
+    }, []);
+
     return (
         <>
             {/* HERO SECTION */}
             <section className="ch-hero" data-aos="fade-down">
                 <img
-                    src={require("../../assets/ecoTrail-hero.jpg")}
+                    src={imgHero}
                     alt="banner"
                     className="ch-hero-img"
                 />

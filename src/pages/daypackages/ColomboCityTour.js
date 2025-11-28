@@ -19,10 +19,14 @@ function ColomboCityTour() {
     const [img2, setImg2] = useState("");
     const [img3, setImg3] = useState("");
 
+    const [imgHero, setImgHero] = useState("");
+
     useEffect(() => {
         getDownloadURL(ref(storage, "colombo1.jpg")).then(setImg1);
         getDownloadURL(ref(storage, "colombo2.jpg")).then(setImg2);
         getDownloadURL(ref(storage, "colombo3.jpg")).then(setImg3);
+
+        getDownloadURL(ref(storage, "colombo-hero.jpg")).then(setImgHero);
     }, []);
 
     return (
@@ -30,7 +34,7 @@ function ColomboCityTour() {
             {/* HERO SECTION */}
             <section className="ch-hero" data-aos="fade-down">
                 <img
-                    src={require("../../assets/colombo-hero.jpg")}
+                    src={imgHero}
                     alt="banner"
                     className="ch-hero-img"
                 />

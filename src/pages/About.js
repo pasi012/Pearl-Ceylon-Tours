@@ -74,13 +74,13 @@ function About() {
                         <p className="founder-tag">Meet Our Founder</p>
 
                         <h2 className="founder-name">
-                            Pearl Dhammika<br />
-                            Jayakody <span className="blue-hand">Founder & CEO</span>
+                            Amila Dissanayake<br />
+                            <span className="blue-hand">Founder & CEO</span>
                         </h2>
                         <h3 className="company-name">Pearl Ceylon Tours</h3>
 
                         <p className="founder-description">
-                            Meet Pearl Ceylon Tours, a company founded by Pearl Dhammika Jayakody,
+                            Meet Pearl Ceylon Tours, a company founded by Amila Dissanayake,
                             a visionary leader with over 20 years of sea service and extensive global
                             travel experience.
                         </p>
@@ -97,7 +97,12 @@ function About() {
                             <li>✔ Let your local guide personalize your journey to match your preferences.</li>
                         </ul>
 
-                        <button className="founder-btn">CALL NOW !</button>
+                        <button
+                            className="founder-btn"
+                            onClick={() => window.location.href = "tel:0773562768"}
+                        >
+                            CALL NOW !
+                        </button>
                     </div>
 
                 </div>
@@ -114,7 +119,7 @@ function About() {
                     <div className="team-card" data-aos="zoom-in">
                         {founderUrl && <img src={founderUrl} className="team-img" />}
                         <p className="team-role">Founder/CEO</p>
-                        <h3 className="team-name">Dhammika Jayakody</h3>
+                        <h3 className="team-name">Amila Dissanayake</h3>
                     </div>
 
                     {/* Member 2 */}
@@ -291,7 +296,10 @@ function About() {
                     </div>
 
                     {/* Call Button */}
-                    <button className="mission-sl-call-btn">
+                    <button
+                        className="mission-sl-call-btn"
+                        onClick={() => window.location.href = "tel:0773562768"}
+                    >
                         <i className="fa-solid fa-phone"></i>
                     </button>
                 </div>
@@ -309,8 +317,12 @@ function About() {
                         Experiences.
                     </p>
 
-                    <a href="mailto:info@Pearlceylontours.com" className="why-btn">
-                        Contact us at info@Pearlceylontours.com
+                    <a
+                        href="mailto:pearlceylontours01@gmail.com"
+                        className="why-btn"
+                        onClick={(e) => e.stopPropagation()}   // <--- IMPORTANT
+                    >
+                        Contact us at pearlceylontours01@gmail.com
                     </a>
                 </div>
 

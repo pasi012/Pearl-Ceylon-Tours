@@ -1,17 +1,71 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import ellaHero from "../../assets/ella-hero.jpg";
-import ella1 from "../../assets/ella1.jpg";
-import ella2 from "../../assets/ella2.jpg";
-
-import ella3 from "../../assets/ella3.jpg";
-import ella4 from "../../assets/ella4.jpg";
-import ella5 from "../../assets/ella5.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function Ella() {
+
+  const [imgHero, setImgHero] = useState("");
+
+  // Top images
+  const [ella1, setElla1] = useState("");
+  const [ella2, setElla2] = useState("");
+
+  // Extra gallery
+  const [ella3, setElla3] = useState("");
+  const [ella4, setElla4] = useState("");
+  const [ella5, setElla5] = useState("");
+
+  // Activity icons
+  const [act1, setAct1] = useState("");
+  const [act2, setAct2] = useState("");
+  const [act3, setAct3] = useState("");
+  const [act4, setAct4] = useState("");
+  const [act5, setAct5] = useState("");
+  const [act6, setAct6] = useState("");
+  const [act7, setAct7] = useState("");
+  const [act8, setAct8] = useState("");
+  const [act9, setAct9] = useState("");
+
+  // Bottom gallery
+  const [ella6, setElla6] = useState("");
+  const [ella7, setElla7] = useState("");
+
+  useEffect(() => {
+
+    getDownloadURL(ref(storage, "ella-hero.jpg")).then(setImgHero);
+
+    // TOP GALLERY
+    getDownloadURL(ref(storage, "ella1.jpg")).then(setElla1);
+    getDownloadURL(ref(storage, "ella2.jpg")).then(setElla2);
+
+    // EXTRA GALLERY
+    getDownloadURL(ref(storage, "ella3.jpg")).then(setElla3);
+    getDownloadURL(ref(storage, "ella4.jpg")).then(setElla4);
+    getDownloadURL(ref(storage, "ella5.jpg")).then(setElla5);
+
+    // ACTIVITY IMAGES
+    getDownloadURL(ref(storage, "Adam's peak.png")).then(setAct1);
+    getDownloadURL(ref(storage, "Nine arch bridge view.png")).then(setAct2);
+    getDownloadURL(ref(storage, "Diyaluma Falls.png")).then(setAct3);
+
+    getDownloadURL(ref(storage, "Ravana falls.png")).then(setAct4);
+    getDownloadURL(ref(storage, "Ravana cave.png")).then(setAct5);
+    getDownloadURL(ref(storage, "Tea planters.png")).then(setAct6);
+
+    getDownloadURL(ref(storage, "Mountain view ella.png")).then(setAct7);
+    getDownloadURL(ref(storage, "Nine Arch Bridge View1.png")).then(setAct8);
+    getDownloadURL(ref(storage, "Ella Rock View.png")).then(setAct9);
+
+    // BOTTOM
+    getDownloadURL(ref(storage, "ella6.jpg")).then(setElla6);
+    getDownloadURL(ref(storage, "ella7.jpg")).then(setElla7);
+
+  }, []);
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
@@ -21,7 +75,7 @@ function Ella() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${ellaHero})` }}
+        style={{ backgroundImage: `url(${imgHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
@@ -49,8 +103,8 @@ function Ella() {
           </p>
 
           <div className="mirissa-gallery">
-            <img src={ella1} alt="Mirissa View" />
-            <img src={ella2} alt="Mirissa Beach" />
+            <img src={ella1} alt="Ella View" />
+            <img src={ella2} alt="Ella Nature" />
           </div>
 
           <p>
@@ -150,17 +204,17 @@ function Ella() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Adam's peak.png")} alt="Whale Watching" />
+                  <img src={act1} alt="Adam's Peak" />
                   <p>Adam's peak</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Nine arch bridge view.png")} alt="Turtle Watching" />
+                  <img src={act2} alt="Nine arch" />
                   <p>Nine arch bridge view</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Diyaluma Falls.png")} alt="Turtle Feeding" />
+                  <img src={act3} alt="Diyaluma Falls" />
                   <p>Diyaluma Falls</p>
                 </div>
               </div>
@@ -178,17 +232,17 @@ function Ella() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Ravana falls.png")} alt="Whale Watching" />
+                  <img src={act4} alt="Ravana falls" />
                   <p>Ravana falls</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Ravana cave.png")} alt="Turtle Watching" />
+                  <img src={act5} alt="Ravana cave" />
                   <p>Ravana cave</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Tea planters.png")} alt="Turtle Feeding" />
+                  <img src={act6} alt="Tea planters" />
                   <p>Tea planters</p>
                 </div>
               </div>
@@ -205,17 +259,17 @@ function Ella() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Mountain view ella.png")} alt="Whale Watching" />
+                  <img src={act7} alt="Mountain view" />
                   <p>Mountain view ella</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Nine Arch Bridge View1.png")} alt="Turtle Watching" />
+                  <img src={act8} alt="Nine Arch Bridge View" />
                   <p>Nine Arch Bridge View</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Ella Rock View.png")} alt="Turtle Feeding" />
+                  <img src={act9} alt="Ella Rock View" />
                   <p>Ella Rock View</p>
                 </div>
               </div>
@@ -237,8 +291,8 @@ function Ella() {
             </p>
 
             <div className="parrot-gallery">
-              <img src={require("../../assets/ella6.jpg")} alt="Parrot Rock Beach" />
-              <img src={require("../../assets/ella7.jpg")} alt="Seafood Dish" />
+              <img src={ella6} alt="Parrot Rock Beach" />
+              <img src={ella7} alt="Seafood Dish" />
             </div>
 
           </div>

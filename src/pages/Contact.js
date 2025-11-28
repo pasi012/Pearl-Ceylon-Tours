@@ -38,7 +38,7 @@ function Contact() {
                     <div className="info-card" data-aos="zoom-in">
                         <i className="fas fa-envelope"></i>
                         <h4>Mail Address</h4>
-                        <p>info@Pearlceylontours.com</p>
+                        <p>pearlceylontours01@gmail.com</p>
                     </div>
                 </div>
             </section>
@@ -74,7 +74,7 @@ function Contact() {
                             const email = e.target[1].value;
                             const message = e.target[2].value;
 
-                            window.location.href = `mailto:info@Pearlceylontours.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+                            window.location.href = `mailto:pearlceylontours01@gmail.com?subject=Message from ${name}&body=Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
                         }}
                     >
                         <label>Your Name*</label>

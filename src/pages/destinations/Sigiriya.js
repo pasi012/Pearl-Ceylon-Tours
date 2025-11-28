@@ -1,39 +1,124 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import sigiriyaHero from "../../assets/sigiriya-hero.jpg";
-import sigiriya1 from "../../assets/sigiriya1.jpg";
-import sigiriya2 from "../../assets/sigiriya2.jpg";
-
-import sigiriya3 from "../../assets/sigiriya3.jpg";
-import sigiriya4 from "../../assets/sigiriya4.jpg";
-import sigiriya5 from "../../assets/sigiriya5.jpg";
-import sigiriya6 from "../../assets/sigiriya6.jpg";
-import sigiriya7 from "../../assets/sigiriya7.jpg";
-import sigiriya8 from "../../assets/sigiriya8.jpg";
-import sigiriya9 from "../../assets/sigiriya9.jpg";
-import sigiriya10 from "../../assets/sigiriya10.jpg";
-import sigiriya11 from "../../assets/sigiriya11.jpg";
-import sigiriya12 from "../../assets/sigiriya12.jpg";
-import sigiriya13 from "../../assets/sigiriya13.jpg";
-import sigiriya14 from "../../assets/sigiriya14.jpg";
-import sigiriya15 from "../../assets/sigiriya15.jpg";
-import sigiriya16 from "../../assets/sigiriya16.jpg";
-import sigiriya17 from "../../assets/sigiriya17.jpg";
-import sigiriya18 from "../../assets/sigiriya18.jpg";
-import sigiriya19 from "../../assets/sigiriya19.jpg";
-import sigiriya20 from "../../assets/sigiriya20.jpg";
-import sigiriya21 from "../../assets/sigiriya21.jpg";
-
-import naturalWaterSprings from "../../assets/Natural Water Springs.png";
-import elephantRiding from "../../assets/Elephant Riding.png";
-import ancientPark from "../../assets/Ancient Park.png";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function Sigiriya() {
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  const [imgHero, setImgHero] = useState("");
+
+  // MAIN GALLERY
+  const [sigiriya1, setSigiriya1] = useState("");
+  const [sigiriya2, setSigiriya2] = useState("");
+
+  // EXTRA GALLERY (3 images)
+  const [sigiriya3, setSigiriya3] = useState("");
+  const [sigiriya4, setSigiriya4] = useState("");
+  const [sigiriya5, setSigiriya5] = useState("");
+
+  // SECOND EXTRA GALLERY
+  const [sigiriya6, setSigiriya6] = useState("");
+  const [sigiriya7, setSigiriya7] = useState("");
+
+  // NATIONAL PARK GALLERY
+  const [sigiriya8, setSigiriya8] = useState("");
+  const [sigiriya9, setSigiriya9] = useState("");
+
+  const [sigiriya10, setSigiriya10] = useState("");
+  const [sigiriya11, setSigiriya11] = useState("");
+  const [sigiriya12, setSigiriya12] = useState("");
+
+  const [sigiriya13, setSigiriya13] = useState("");
+  const [sigiriya14, setSigiriya14] = useState("");
+
+  const [sigiriya15, setSigiriya15] = useState("");
+  const [sigiriya16, setSigiriya16] = useState("");
+  const [sigiriya17, setSigiriya17] = useState("");
+
+  const [sigiriya18, setSigiriya18] = useState("");
+  const [sigiriya19, setSigiriya19] = useState("");
+
+  const [sigiriya20, setSigiriya20] = useState("");
+  const [sigiriya21, setSigiriya21] = useState("");
+
+  const [sigiriya22, setSigiriya22] = useState("");
+  const [sigiriya23, setSigiriya23] = useState("");
+
+  // ICONS
+  const [naturalWaterSprings, setNaturalWaterSprings] = useState("");
+  const [elephantRiding, setElephantRiding] = useState("");
+  const [ancientPark, setAncientPark] = useState("");
+
+  const [relaxingAtPleasureIsland, setRelaxingAtPleasureIsland] = useState("");
+  const [boatRiding, setBoatRiding] = useState("");
+  const [kandalamaLakeTankView, setKandalamaLakeTankView] = useState("");
+
+  const [boatRideAcrossATranquilLake, setBoatRideAcrossATranquilLake] = useState("");
+  const [experiencingTraditionalVillageLife, setExperiencingTraditionalVillageLife] = useState("");
+  const [ancientOxCartRiding, setAncientOxCartRiding] = useState("");
+
+  useEffect(() => {
+
+    getDownloadURL(ref(storage, "sigiriya-hero.jpg")).then(setImgHero);
+
+    // MAIN GALLERY
+    getDownloadURL(ref(storage, "sigiriya1.jpg")).then(setSigiriya1);
+    getDownloadURL(ref(storage, "sigiriya2.jpg")).then(setSigiriya2);
+
+    // EXTRA GALLERY
+    getDownloadURL(ref(storage, "sigiriya3.jpg")).then(setSigiriya3);
+    getDownloadURL(ref(storage, "sigiriya4.jpg")).then(setSigiriya4);
+    getDownloadURL(ref(storage, "sigiriya5.jpg")).then(setSigiriya5);
+
+    // EXTRA GALLERY 2
+    getDownloadURL(ref(storage, "sigiriya6.jpg")).then(setSigiriya6);
+    getDownloadURL(ref(storage, "sigiriya7.jpg")).then(setSigiriya7);
+
+    // NATIONAL PARK GALLERY
+    getDownloadURL(ref(storage, "sigiriya8.jpg")).then(setSigiriya8);
+    getDownloadURL(ref(storage, "sigiriya9.jpg")).then(setSigiriya9);
+
+    getDownloadURL(ref(storage, "sigiriya10.jpg")).then(setSigiriya10);
+    getDownloadURL(ref(storage, "sigiriya11.jpg")).then(setSigiriya11);
+    getDownloadURL(ref(storage, "sigiriya12.jpg")).then(setSigiriya12);
+
+    getDownloadURL(ref(storage, "sigiriya13.jpg")).then(setSigiriya13);
+    getDownloadURL(ref(storage, "sigiriya14.jpg")).then(setSigiriya14);
+
+    getDownloadURL(ref(storage, "sigiriya15.jpg")).then(setSigiriya15);
+    getDownloadURL(ref(storage, "sigiriya16.jpg")).then(setSigiriya16);
+    getDownloadURL(ref(storage, "sigiriya17.jpg")).then(setSigiriya17);
+
+    getDownloadURL(ref(storage, "sigiriya18.jpg")).then(setSigiriya18);
+    getDownloadURL(ref(storage, "sigiriya19.jpg")).then(setSigiriya19);
+
+    getDownloadURL(ref(storage, "sigiriya20.jpg")).then(setSigiriya20);
+    getDownloadURL(ref(storage, "sigiriya21.jpg")).then(setSigiriya21);
+
+    getDownloadURL(ref(storage, "sigiriya22.jpg")).then(setSigiriya22);
+    getDownloadURL(ref(storage, "sigiriya23.jpg")).then(setSigiriya23);
+
+    // ICONS
+    getDownloadURL(ref(storage, "Natural Water Springs.png")).then(setNaturalWaterSprings);
+    getDownloadURL(ref(storage, "Elephant Riding.png")).then(setElephantRiding);
+    getDownloadURL(ref(storage, "Ancient Park.png")).then(setAncientPark);
+
+    getDownloadURL(ref(storage, "Relaxing At Pleasure Island.png")).then(setRelaxingAtPleasureIsland);
+    getDownloadURL(ref(storage, "Boat Riding.png")).then(setBoatRiding);
+    getDownloadURL(ref(storage, "Kandalama Lake Tank View.png")).then(setKandalamaLakeTankView);
+
+    getDownloadURL(ref(storage, "Boat ride across a tranquil lake.png")).then(setBoatRideAcrossATranquilLake);
+    getDownloadURL(ref(storage, "Experiencing traditional village life.png")).then(setExperiencingTraditionalVillageLife);
+    getDownloadURL(ref(storage, "Ancient ox cart riding.png")).then(setAncientOxCartRiding);
+
   }, []);
 
   return (
@@ -41,7 +126,7 @@ function Sigiriya() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${sigiriyaHero})` }}
+        style={{ backgroundImage: `url(${imgHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
@@ -641,17 +726,17 @@ function Sigiriya() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Relaxing At Pleasure Island.png")} alt="Whale Watching" />
+                  <img src={relaxingAtPleasureIsland} alt="Relaxing At Pleasure Island" />
                   <p>Relaxing At Pleasure Island</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Boat Riding.png")} alt="Turtle Watching" />
+                  <img src={boatRiding} alt="Boat Riding" />
                   <p>Boat Riding</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Kandalama Lake Tank View.png")} alt="Turtle Feeding" />
+                  <img src={kandalamaLakeTankView} alt="Kandalama Lake Tank View" />
                   <p>Kandalama Lake Tank View</p>
                 </div>
               </div>
@@ -668,25 +753,25 @@ function Sigiriya() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Boat ride across a tranquil lake.png")} alt="Whale Watching" />
+                  <img src={boatRideAcrossATranquilLake} alt="Boat ride across a tranquil lake" />
                   <p>Boat ride across a tranquil lake</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Experiencing traditional village life.png")} alt="Turtle Watching" />
+                  <img src={experiencingTraditionalVillageLife} alt="Experiencing traditional village life" />
                   <p>Experiencing traditional village life</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Ancient ox cart riding.png")} alt="Turtle Feeding" />
+                  <img src={ancientOxCartRiding} alt="Ancient ox cart riding" />
                   <p>Ancient ox cart riding</p>
                 </div>
               </div>
             </details>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/sigiriya22.jpg")} alt="Surfing" />
-              <img src={require("../../assets/sigiriya23.jpg")} alt="Snorkeling with Turtle" />
+              <img src={sigiriya22} alt="Surfing" />
+              <img src={sigiriya23} alt="Snorkeling with Turtle" />
             </div>
 
           </div>

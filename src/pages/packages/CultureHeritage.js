@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import "../../css/CultureHeritage.css";
 
-import img1 from "../../assets/heritage1.jpg";
-import img2 from "../../assets/heritage2.jpg";
-import img3 from "../../assets/heritage3.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function CultureHeritage() {
+
     const [activeTab, setActiveTab] = React.useState("inclusion");
     const [activeAccordion, setActiveAccordion] = React.useState(null);
 
@@ -15,12 +17,26 @@ function CultureHeritage() {
         AOS.init({ duration: 800, once: true });
     }, []);
 
+    const [imgHero, setImgHero] = useState("");
+
+    const [img1, setImg1] = useState("");
+    const [img2, setImg2] = useState("");
+    const [img3, setImg3] = useState("");
+
+    useEffect(() => {
+        getDownloadURL(ref(storage, "heritage1.jpg")).then(setImg1);
+        getDownloadURL(ref(storage, "heritage2.jpg")).then(setImg2);
+        getDownloadURL(ref(storage, "heritage3.jpg")).then(setImg3);
+
+        getDownloadURL(ref(storage, "heritage-hero.jpg")).then(setImgHero);
+    }, []);
+
     return (
         <>
             {/* HERO SECTION */}
             <section className="ch-hero" data-aos="fade-down">
                 <img
-                    src={require("../../assets/heritage-hero.jpg")}
+                    src={imgHero}
                     alt="banner"
                     className="ch-hero-img"
                 />

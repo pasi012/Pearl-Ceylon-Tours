@@ -1,21 +1,80 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import kandyHero from "../../assets/kandy-hero.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function Kandy() {
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
   }, []);
+
+  const [imgHero, setImgHero] = useState("");
+
+  // Top images
+  const [kandy1, setKandy1] = useState("");
+  const [kandy2, setKandy2] = useState("");
+
+  // Extra gallery
+  const [kandy3, setKandy3] = useState("");
+  const [kandy4, setKandy4] = useState("");
+  const [kandy5, setKandy5] = useState("");
+
+  // Activity icons
+  const [act1, setAct1] = useState("");
+  const [act2, setAct2] = useState("");
+  const [act3, setAct3] = useState("");
+  const [act4, setAct4] = useState("");
+  const [act5, setAct5] = useState("");
+  const [act6, setAct6] = useState("");
+  const [act7, setAct7] = useState("");
+  const [act8, setAct8] = useState("");
+  const [act9, setAct9] = useState("");
+
+  // Bottom gallery
+  const [kandy6, setKandy6] = useState("");
+  const [kandy7, setKandy7] = useState("");
+
+  useEffect(() => {
+
+    getDownloadURL(ref(storage, "kandy-hero.jpg")).then(setImgHero);
+
+    // TOP GALLERY
+    getDownloadURL(ref(storage, "kandy1.jpg")).then(setKandy1);
+    getDownloadURL(ref(storage, "kandy2.jpg")).then(setKandy2);
+
+    // EXTRA GALLERY
+    getDownloadURL(ref(storage, "kandy3.jpg")).then(setKandy3);
+    getDownloadURL(ref(storage, "kandy4.jpg")).then(setKandy4);
+    getDownloadURL(ref(storage, "kandy5.jpg")).then(setKandy5);
+
+    // ACTIVITY IMAGES
+    getDownloadURL(ref(storage, "Temple of the Tooth.png")).then(setAct1);
+    getDownloadURL(ref(storage, "Kandyan dance.png")).then(setAct2);
+    getDownloadURL(ref(storage, "Kandy Lake.png")).then(setAct3);
+    getDownloadURL(ref(storage, "Peradeniya Botanical Garden.png")).then(setAct4);
+    getDownloadURL(ref(storage, "Udawattakele Forest Reserve.png")).then(setAct5);
+    getDownloadURL(ref(storage, "Picturesque landscapes.png")).then(setAct6);
+    getDownloadURL(ref(storage, "Hanthana Bird Park.png")).then(setAct7);
+    getDownloadURL(ref(storage, "Unwinding amidst scenic views.png")).then(setAct8);
+    getDownloadURL(ref(storage, "Cool climate.png")).then(setAct9);
+
+    // BOTTOM GALLERY
+    getDownloadURL(ref(storage, "kandy6.jpg")).then(setKandy6);
+    getDownloadURL(ref(storage, "kandy7.jpg")).then(setKandy7);
+
+  }, []);
+
 
   return (
     <>
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${kandyHero})` }}
+        style={{ backgroundImage: `url(${imgHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
@@ -34,8 +93,8 @@ function Kandy() {
           </p>
 
           <div className="mirissa-gallery">
-            <img src={require("../../assets/kandy1.jpg")} alt="Mirissa View" />
-            <img src={require("../../assets/kandy2.jpg")} alt="Mirissa View" />
+            <img src={kandy1} alt="Mirissa View" />
+            <img src={kandy2} alt="Mirissa View" />
           </div>
 
           <p>
@@ -57,9 +116,9 @@ function Kandy() {
           <div className="mirissa-extra" data-aos="fade-up">
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/kandy3.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/kandy4.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/kandy5.jpg")} alt="Mirissa View" />
+              <img src={kandy3} alt="Mirissa View" />
+              <img src={kandy4} alt="Mirissa View" />
+              <img src={kandy5} alt="Mirissa View" />
             </div>
 
             <h2>Temple of The Tooth</h2>
@@ -329,17 +388,17 @@ function Kandy() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Temple of the Tooth.png")} alt="Whale Watching" />
+                  <img src={act1} alt="Whale Watching" />
                   <p>Temple of the Tooth</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Kandyan dance.png")} alt="Turtle Watching" />
+                  <img src={act2} alt="Turtle Watching" />
                   <p>Kandyan dance</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Kandy Lake.png")} alt="Turtle Feeding" />
+                  <img src={act3} alt="Turtle Feeding" />
                   <p>Kandy Lake</p>
                 </div>
               </div>
@@ -355,17 +414,17 @@ function Kandy() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Peradeniya Botanical Garden.png")} alt="Whale Watching" />
+                  <img src={act4} alt="Whale Watching" />
                   <p>Peradeniya Botanical Garden</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Udawattakele Forest Reserve.png")} alt="Turtle Watching" />
+                  <img src={act5} alt="Turtle Watching" />
                   <p>Udawattakele Forest Reserve</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Picturesque landscapes.png")} alt="Turtle Feeding" />
+                  <img src={act6} alt="Turtle Feeding" />
                   <p>Picturesque landscapes</p>
                 </div>
               </div>
@@ -380,17 +439,17 @@ function Kandy() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Hanthana Bird Park.png")} alt="Whale Watching" />
+                  <img src={act7} alt="Whale Watching" />
                   <p>Hanthana Bird Park</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Unwinding amidst scenic views.png")} alt="Turtle Watching" />
+                  <img src={act8} alt="Turtle Watching" />
                   <p>Unwinding amidst scenic views</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Cool climate.png")} alt="Turtle Feeding" />
+                  <img src={act9} alt="Turtle Feeding" />
                   <p>Cool climate</p>
                 </div>
               </div>
@@ -401,8 +460,8 @@ function Kandy() {
           <div className="mirissa-parrot-rock" data-aos="fade-up">
 
             <div className="parrot-gallery">
-              <img src={require("../../assets/kandy6.jpg")} alt="Parrot Rock Beach" />
-              <img src={require("../../assets/kandy7.jpg")} alt="Seafood Dish" />
+              <img src={kandy6} alt="Parrot Rock Beach" />
+              <img src={kandy7} alt="Seafood Dish" />
             </div>
 
           </div>

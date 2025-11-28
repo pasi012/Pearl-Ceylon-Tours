@@ -1,13 +1,80 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import yalaHero from "../../assets/yala-hero.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function Yala() {
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  const [imgHero, setImgHero] = useState("");
+
+  // Top gallery
+  const [yala1, setYala1] = useState("");
+  const [yala2, setYala2] = useState("");
+
+  // Extra gallery
+  const [yala3, setYala3] = useState("");
+  const [yala4, setYala4] = useState("");
+  const [yala5, setYala5] = useState("");
+
+  // Activity icons – Entering Yala
+  const [bear, setBear] = useState("");
+  const [dear, setDear] = useState("");
+  const [adventure, setAdventure] = useState("");
+
+  // Safari Adventure icons
+  const [caption, setCaption] = useState("");
+  const [caption1, setCaption1] = useState("");
+  const [caption2, setCaption2] = useState("");
+
+  // Coastal Area icons
+  const [caption3, setCaption3] = useState("");
+  const [caption4, setCaption4] = useState("");
+  const [caption5, setCaption5] = useState("");
+
+  // Final gallery
+  const [yala6, setYala6] = useState("");
+  const [yala7, setYala7] = useState("");
+
+  useEffect(() => {
+
+    getDownloadURL(ref(storage, "yala-hero.jpg")).then(setImgHero);
+
+    // TOP GALLERY
+    getDownloadURL(ref(storage, "yala1.jpg")).then(setYala1);
+    getDownloadURL(ref(storage, "yala2.jpg")).then(setYala2);
+
+    // EXTRA GALLERY
+    getDownloadURL(ref(storage, "yala3.jpg")).then(setYala3);
+    getDownloadURL(ref(storage, "yala4.jpg")).then(setYala4);
+    getDownloadURL(ref(storage, "yala5.jpg")).then(setYala5);
+
+    // ENTERING YALA
+    getDownloadURL(ref(storage, "Sri Lanka Bear.png")).then(setBear);
+    getDownloadURL(ref(storage, "Sri Lanka Dear.png")).then(setDear);
+    getDownloadURL(ref(storage, "Maximum adventure.png")).then(setAdventure);
+
+    // SAFARI ADVENTURE
+    getDownloadURL(ref(storage, "caption.png")).then(setCaption);
+    getDownloadURL(ref(storage, "caption1.png")).then(setCaption1);
+    getDownloadURL(ref(storage, "caption2.png")).then(setCaption2);
+
+    // COASTAL BELT
+    getDownloadURL(ref(storage, "caption3.png")).then(setCaption3);
+    getDownloadURL(ref(storage, "caption4.png")).then(setCaption4);
+    getDownloadURL(ref(storage, "caption5.png")).then(setCaption5);
+
+    // PARROT ROCK / FINAL SECTION
+    getDownloadURL(ref(storage, "yala6.jpg")).then(setYala6);
+    getDownloadURL(ref(storage, "yala7.jpg")).then(setYala7);
+
   }, []);
 
   return (
@@ -15,7 +82,7 @@ function Yala() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${yalaHero})` }}
+        style={{ backgroundImage: `url(${imgHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
@@ -40,8 +107,8 @@ function Yala() {
           </p>
 
           <div className="mirissa-gallery">
-            <img src={require("../../assets/yala1.jpg")} alt="Mirissa View" />
-            <img src={require("../../assets/yala2.jpg")} alt="Mirissa View" />
+            <img src={yala1} alt="Yala View" />
+            <img src={yala2} alt="Yala View" />
           </div>
 
           <p>
@@ -62,9 +129,9 @@ function Yala() {
           <div className="mirissa-extra" data-aos="fade-up">
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/yala3.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/yala4.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/yala5.jpg")} alt="Mirissa View" />
+              <img src={yala3} alt="Yala View" />
+              <img src={yala4} alt="Yala View" />
+              <img src={yala5} alt="Yala View" />
             </div>
 
             <p>
@@ -92,17 +159,17 @@ function Yala() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Sri Lanka Bear.png")} alt="Whale Watching" />
+                  <img src={bear} alt="Bear" />
                   <p>Sri Lanka Bear</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Sri Lanka Dear.png")} alt="Turtle Watching" />
+                  <img src={dear} alt="Dear" />
                   <p>Sri Lanka Dear</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Maximum adventure.png")} alt="Turtle Feeding" />
+                  <img src={adventure} alt="Adventure" />
                   <p>Maximum adventure</p>
                 </div>
               </div>
@@ -120,17 +187,17 @@ function Yala() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/caption.png")} alt="Whale Watching" />
+                  <img src={caption} alt="caption" />
                   <p>caption</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/caption1.png")} alt="Turtle Watching" />
+                  <img src={caption1} alt="caption" />
                   <p>caption</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/caption2.png")} alt="Turtle Feeding" />
+                  <img src={caption2} alt="caption" />
                   <p>caption</p>
                 </div>
               </div>
@@ -147,17 +214,17 @@ function Yala() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/caption3.png")} alt="Whale Watching" />
+                  <img src={caption3} alt="caption" />
                   <p>caption</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/caption4.png")} alt="Turtle Watching" />
+                  <img src={caption4} alt="caption" />
                   <p>caption</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/caption5.png")} alt="Turtle Feeding" />
+                  <img src={caption5} alt="caption" />
                   <p>caption</p>
                 </div>
               </div>
@@ -168,8 +235,8 @@ function Yala() {
           <div className="mirissa-parrot-rock" data-aos="fade-up">
 
             <div className="parrot-gallery">
-              <img src={require("../../assets/yala6.jpg")} alt="Parrot Rock Beach" />
-              <img src={require("../../assets/yala7.jpg")} alt="Seafood Dish" />
+              <img src={yala6} alt="Yala" />
+              <img src={yala7} alt="Yala" />
             </div>
 
           </div>

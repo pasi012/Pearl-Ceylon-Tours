@@ -21,10 +21,14 @@ function ColomboBenthotaGalle() {
     const [img2, setImg2] = useState("");
     const [img3, setImg3] = useState("");
 
+    const [imgHero, setImgHero] = useState("");
+
     useEffect(() => {
         getDownloadURL(ref(storage, "colomboBenthotaGalle1.jpg")).then(setImg1);
         getDownloadURL(ref(storage, "colomboBenthotaGalle2.jpg")).then(setImg2);
         getDownloadURL(ref(storage, "colomboBenthotaGalle3.jpg")).then(setImg3);
+
+        getDownloadURL(ref(storage, "colomboBenthotaGalle-hero.jpg")).then(setImgHero);
     }, []);
 
     return (
@@ -32,7 +36,7 @@ function ColomboBenthotaGalle() {
             {/* HERO SECTION */}
             <section className="ch-hero" data-aos="fade-down">
                 <img
-                    src={require("../../assets/colomboBenthotaGalle-hero.jpg")}
+                    src={imgHero}
                     alt="banner"
                     className="ch-hero-img"
                 />

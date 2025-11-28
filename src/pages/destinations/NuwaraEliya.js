@@ -1,13 +1,68 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import nuwaraEliyaHero from "../../assets/nuwara-eliya-hero.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function NuwaraEliya() {
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  const [imgHero, setImgHero] = useState("");
+
+  // MAIN GALLERY
+  const [n1, setN1] = useState("");
+  const [n2, setN2] = useState("");
+
+  // EXTRA GALLERY
+  const [n3, setN3] = useState("");
+  const [n4, setN4] = useState("");
+  const [n5, setN5] = useState("");
+
+  const [hortonPlains, setHortonPlains] = useState("");
+  const [moonPlains, setMoonPlains] = useState("");
+  const [gregoryLake, setGregoryLake] = useState("");
+  const [sitaTemple, setSitaTemple] = useState("");
+  const [golfClub, setGolfClub] = useState("");
+  const [victoriaPark, setVictoriaPark] = useState("");
+  const [trainRides, settrainRides] = useState("");
+  const [waterfalls, setWaterfalls] = useState("");
+  const [ambewelaFarm, setAmbewelaFarm] = useState("");
+
+  const [n6, setN6] = useState("");
+  const [n7, setN7] = useState("");
+
+  useEffect(() => {
+
+    getDownloadURL(ref(storage, "nuwara-eliya-hero.jpg")).then(setImgHero);
+
+    // TOP GALLERY
+    getDownloadURL(ref(storage, "nuwaraEliya1.jpg")).then(setN1);
+    getDownloadURL(ref(storage, "nuwaraEliya2.jpg")).then(setN2);
+
+    // EXTRA GALLERY
+    getDownloadURL(ref(storage, "nuwaraEliya3.jpg")).then(setN3);
+    getDownloadURL(ref(storage, "nuwaraEliya4.jpg")).then(setN4);
+    getDownloadURL(ref(storage, "nuwaraEliya5.jpg")).then(setN5);
+
+    // ACTIVITIES – Nature
+    getDownloadURL(ref(storage, "Horton Plains.png")).then(setHortonPlains);
+    getDownloadURL(ref(storage, "Moon Plains.png")).then(setMoonPlains);
+    getDownloadURL(ref(storage, "Gregory Lake.png")).then(setGregoryLake);
+    getDownloadURL(ref(storage, "Sita Amman Temple.png")).then(setSitaTemple);
+    getDownloadURL(ref(storage, "Golf Club.png")).then(setGolfClub);
+    getDownloadURL(ref(storage, "Victoria Park.png")).then(setVictoriaPark);
+    getDownloadURL(ref(storage, "Train rides.png")).then(settrainRides);
+    getDownloadURL(ref(storage, "Waterfalls.png")).then(setWaterfalls);
+    getDownloadURL(ref(storage, "Ambewela Farm.png")).then(setAmbewelaFarm);
+
+    getDownloadURL(ref(storage, "nuwaraEliya6.jpg")).then(setN6);
+    getDownloadURL(ref(storage, "nuwaraEliya7.jpg")).then(setN7);
+
   }, []);
 
   return (
@@ -15,7 +70,7 @@ function NuwaraEliya() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${nuwaraEliyaHero})` }}
+        style={{ backgroundImage: `url(${imgHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
@@ -58,8 +113,8 @@ function NuwaraEliya() {
           </p>
 
           <div className="mirissa-gallery">
-            <img src={require("../../assets/nuwaraEliya1.jpg")} alt="Mirissa View" />
-            <img src={require("../../assets/nuwaraEliya2.jpg")} alt="Mirissa View" />
+            <img src={n1} alt="Nuwara Eliya" />
+            <img src={n2} alt="Nuwara Eliya" />
           </div>
 
           <h3>Activities in nuwara eliya</h3>
@@ -83,9 +138,9 @@ function NuwaraEliya() {
           <div className="mirissa-extra" data-aos="fade-up">
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/nuwaraEliya3.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/nuwaraEliya4.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/nuwaraEliya5.jpg")} alt="Mirissa View" />
+              <img src={n3} alt="Nuwara Eliya" />
+              <img src={n4} alt="Nuwara Eliya" />
+              <img src={n5} alt="Nuwara Eliya" />
             </div>
 
             <h2>Horton plains national park</h2>
@@ -597,17 +652,17 @@ function NuwaraEliya() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Horton Plains.png")} alt="Whale Watching" />
+                  <img src={hortonPlains} alt="Horton Plains" />
                   <p>Horton Plains</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Moon Plains.png")} alt="Turtle Watching" />
+                  <img src={moonPlains} alt="Moon Plains" />
                   <p>Moon Plains</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Gregory Lake.png")} alt="Turtle Feeding" />
+                  <img src={gregoryLake} alt="Gregory Lake" />
                   <p>Gregory Lake</p>
                 </div>
               </div>
@@ -622,17 +677,17 @@ function NuwaraEliya() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Sita Amman Temple.png")} alt="Whale Watching" />
+                  <img src={sitaTemple} alt="Sita Amman Temple" />
                   <p>Sita Amman Temple</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Golf Club.png")} alt="Turtle Watching" />
+                  <img src={golfClub} alt="Golf Club" />
                   <p>Golf Club</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Victoria Park.png")} alt="Turtle Feeding" />
+                  <img src={victoriaPark} alt="Victoria Park" />
                   <p>Victoria Park</p>
                 </div>
               </div>
@@ -647,17 +702,17 @@ function NuwaraEliya() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Train rides.png")} alt="Whale Watching" />
-                  <p>Train rides</p>
+                  <img src={trainRides} alt="Train Rides" />
+                  <p>Train Rides</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Waterfalls.png")} alt="Turtle Watching" />
+                  <img src={waterfalls} alt="Waterfalls" />
                   <p>Waterfalls</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Ambewela Farm.png")} alt="Turtle Feeding" />
+                  <img src={ambewelaFarm} alt="Turtle Feeding" />
                   <p>Ambewela Farm</p>
                 </div>
               </div>
@@ -668,8 +723,8 @@ function NuwaraEliya() {
           <div className="mirissa-parrot-rock" data-aos="fade-up">
 
             <div className="parrot-gallery">
-              <img src={require("../../assets/nuwaraEliya6.jpg")} alt="Parrot Rock Beach" />
-              <img src={require("../../assets/nuwaraEliya7.jpg")} alt="Seafood Dish" />
+              <img src={n6} alt="Parrot Rock Beach" />
+              <img src={n7} alt="Seafood Dish" />
             </div>
 
           </div>

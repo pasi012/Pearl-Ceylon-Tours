@@ -20,10 +20,14 @@ function ColomboSigiriya() {
     const [img2, setImg2] = useState("");
     const [img3, setImg3] = useState("");
 
+    const [imgHero, setImgHero] = useState("");
+
     useEffect(() => {
         getDownloadURL(ref(storage, "sigiriya1.jpg")).then(setImg1);
         getDownloadURL(ref(storage, "sigiriya2.jpg")).then(setImg2);
         getDownloadURL(ref(storage, "sigiriya3.jpg")).then(setImg3);
+
+        getDownloadURL(ref(storage, "colomboSigiriya-hero.jpg")).then(setImgHero);
     }, []);
 
     return (
@@ -31,7 +35,7 @@ function ColomboSigiriya() {
             {/* HERO SECTION */}
             <section className="ch-hero" data-aos="fade-down">
                 <img
-                    src={require("../../assets/colomboSigiriya-hero.jpg")}
+                    src={imgHero}
                     alt="banner"
                     className="ch-hero-img"
                 />

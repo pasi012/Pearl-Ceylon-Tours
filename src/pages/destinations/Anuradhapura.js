@@ -4,8 +4,6 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import anuradhapuraHero from "../../assets/anuradhapura-hero.jpg";
-
 import { storage } from "../../firebase";
 import { ref, getDownloadURL } from "firebase/storage";
 
@@ -34,6 +32,8 @@ function Anuradhapura() {
   const [act8, setAct8] = useState("");
   const [act9, setAct9] = useState("");
 
+  const [imgHero, setImgHero] = useState("");
+
   useEffect(() => {
     getDownloadURL(ref(storage, "anuradhapura.jpg")).then(setImg1);
     getDownloadURL(ref(storage, "anuradhapura1.jpg")).then(setImg2);
@@ -56,6 +56,8 @@ function Anuradhapura() {
     getDownloadURL(ref(storage, "Buddist Monks.png")).then(setAct7);
     getDownloadURL(ref(storage, "Tanks.png")).then(setAct8);
     getDownloadURL(ref(storage, "Buddist Paintings.png")).then(setAct9);
+
+    getDownloadURL(ref(storage, "anuradhapura-hero.jpg")).then(setImgHero);
   }, []);
 
   return (
@@ -63,7 +65,7 @@ function Anuradhapura() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${anuradhapuraHero})` }}
+        style={{ backgroundImage: `url(${imgHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">

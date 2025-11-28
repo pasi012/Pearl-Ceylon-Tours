@@ -1,13 +1,53 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import ecoEscapesHero from "../../assets/ecoEscapes-hero.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function EcoEscapes() {
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  // Extra gallery
+  const [yala3, setYala3] = useState("");
+  const [yala4, setYala4] = useState("");
+  const [yala5, setYala5] = useState("");
+
+  const [imgHero, setImgHero] = useState("");
+
+  useEffect(() => {
+
+    // EXTRA GALLERY
+    getDownloadURL(ref(storage, "yala3.jpg")).then(setYala3);
+    getDownloadURL(ref(storage, "yala4.jpg")).then(setYala4);
+    getDownloadURL(ref(storage, "yala5.jpg")).then(setYala5);
+
+    getDownloadURL(ref(storage, "ecoEscapes-hero.jpg")).then(setImgHero);
+
+  }, []);
+
+  const [ecoImages, setEcoImages] = useState(Array(79).fill(""));
+
+  useEffect(() => {
+    const loadAllImages = async () => {
+      const promises = [];
+
+      for (let i = 1; i <= 79; i++) {
+        const fileName = `ecoEscapesHero${i}.jpg`;
+        const fileRef = ref(storage, fileName);
+        promises.push(getDownloadURL(fileRef));
+      }
+
+      const urls = await Promise.all(promises);
+      setEcoImages(urls);
+    };
+
+    loadAllImages();
   }, []);
 
   return (
@@ -15,7 +55,7 @@ function EcoEscapes() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${ecoEscapesHero})` }}
+        style={{ backgroundImage: `url(${imgHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
@@ -57,8 +97,8 @@ function EcoEscapes() {
           </ul>
 
           <div className="mirissa-gallery">
-            <img src={require("../../assets/ecoEscapesHero1.jpg")} alt="Mirissa View" />
-            <img src={require("../../assets/ecoEscapesHero2.jpg")} alt="Mirissa Beach" />
+            <img src={ecoImages[0]} alt="Eco 1" />
+            <img src={ecoImages[1]} alt="Eco 1" />
           </div>
 
           <h2>Sinharaja Forest Reserve</h2>
@@ -69,8 +109,8 @@ function EcoEscapes() {
           </p>
 
           <div className="mirissa-gallery">
-            <img src={require("../../assets/ecoEscapesHero3.jpg")} alt="Mirissa View" />
-            <img src={require("../../assets/ecoEscapesHero4.jpg")} alt="Mirissa Beach" />
+            <img src={ecoImages[2]} alt="Eco 1" />
+            <img src={ecoImages[3]} alt="Eco 1" />
           </div>
 
           <p>
@@ -98,9 +138,9 @@ function EcoEscapes() {
           <div className="mirissa-extra" data-aos="fade-up">
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero5.jpg")} alt="Surfing" />
-              <img src={require("../../assets/ecoEscapesHero6.jpg")} alt="Surfing" />
-              <img src={require("../../assets/ecoEscapesHero7.jpg")} alt="Surfing" />
+              <img src={ecoImages[4]} alt="Eco 1" />
+              <img src={ecoImages[5]} alt="Eco 1" />
+              <img src={ecoImages[6]} alt="Eco 1" />
             </div>
 
             <h3>Yala National Park</h3>
@@ -110,8 +150,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero8.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero9.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[7]} alt="Eco 1" />
+              <img src={ecoImages[8]} alt="Eco 1" />
             </div>
 
             <p>
@@ -155,9 +195,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/yala3.jpg")} alt="Surfing" />
-              <img src={require("../../assets/yala4.jpg")} alt="Surfing" />
-              <img src={require("../../assets/yala5.jpg")} alt="Surfing" />
+              <img src={yala3} alt="Surfing" />
+              <img src={yala4} alt="Surfing" />
+              <img src={yala5} alt="Surfing" />
             </div>
 
             <h2>Udawalawe National Park</h2>
@@ -167,8 +207,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero10.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero11.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[9]} alt="Eco 1" />
+              <img src={ecoImages[10]} alt="Eco 1" />
             </div>
 
             <p>
@@ -205,9 +245,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero12.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero13.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero14.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[11]} alt="Eco 1" />
+              <img src={ecoImages[12]} alt="Eco 1" />
+              <img src={ecoImages[13]} alt="Eco 1" />
             </div>
 
             <h2>Knuckles Mountain Range</h2>
@@ -217,8 +257,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero15.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero16.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[14]} alt="Eco 1" />
+              <img src={ecoImages[15]} alt="Eco 1" />
             </div>
 
             <p>
@@ -230,9 +270,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero17.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero18.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero19.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[16]} alt="Eco 1" />
+              <img src={ecoImages[17]} alt="Eco 1" />
+              <img src={ecoImages[18]} alt="Eco 1" />
             </div>
 
             <h2>Horton Plains National Park</h2>
@@ -242,8 +282,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero20.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero21.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[19]} alt="Eco 1" />
+              <img src={ecoImages[20]} alt="Eco 1" />
             </div>
 
             <p>
@@ -287,9 +327,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero22.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero23.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero24.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[21]} alt="Eco 1" />
+              <img src={ecoImages[22]} alt="Eco 1" />
+              <img src={ecoImages[23]} alt="Eco 1" />
             </div>
 
             <h2>Madu Ganga River Safari</h2>
@@ -299,8 +339,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero25.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero26.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[24]} alt="Eco 1" />
+              <img src={ecoImages[25]} alt="Eco 1" />
             </div>
 
             <p>
@@ -328,9 +368,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero27.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero28.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero29.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[26]} alt="Eco 1" />
+              <img src={ecoImages[27]} alt="Eco 1" />
+              <img src={ecoImages[28]} alt="Eco 1" />
             </div>
 
             <h2>Wilpattu National Park</h2>
@@ -342,8 +382,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero8.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero9.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[7]} alt="Eco 1" />
+              <img src={ecoImages[8]} alt="Eco 1" />
             </div>
 
             <p>
@@ -359,9 +399,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/yala3.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/yala4.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/yala5.jpg")} alt="Mirissa Beach" />
+              <img src={yala3} alt="Mirissa View" />
+              <img src={yala4} alt="Mirissa Beach" />
+              <img src={yala5} alt="Mirissa Beach" />
             </div>
 
             <h2>Minneriya National Park</h2>
@@ -374,8 +414,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero30.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero31.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[29]} alt="Eco 1" />
+              <img src={ecoImages[30]} alt="Eco 1" />
             </div>
 
             <h3>. Elephants</h3>
@@ -433,9 +473,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero32.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero33.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero34.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[31]} alt="Eco 1" />
+              <img src={ecoImages[32]} alt="Eco 1" />
+              <img src={ecoImages[33]} alt="Eco 1" />
             </div>
 
             <h2>Bundala National Park</h2>
@@ -445,8 +485,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero35.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero36.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[34]} alt="Eco 1" />
+              <img src={ecoImages[35]} alt="Eco 1" />
             </div>
 
             <p>
@@ -490,9 +530,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero37.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero38.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero39.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[36]} alt="Eco 1" />
+              <img src={ecoImages[37]} alt="Eco 1" />
+              <img src={ecoImages[38]} alt="Eco 1" />
             </div>
 
             <h2>Mirissa</h2>
@@ -502,8 +542,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero40.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero41.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[39]} alt="Eco 1" />
+              <img src={ecoImages[40]} alt="Eco 1" />
             </div>
 
             <p>
@@ -547,9 +587,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero42.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero43.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero44.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[41]} alt="Eco 1" />
+              <img src={ecoImages[42]} alt="Eco 1" />
+              <img src={ecoImages[43]} alt="Eco 1" />
             </div>
 
             <h2>KALPITIYA</h2>
@@ -559,8 +599,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero45.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero46.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[44]} alt="Eco 1" />
+              <img src={ecoImages[45]} alt="Eco 1" />
             </div>
 
             <p>
@@ -580,9 +620,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero47.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero48.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero49.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[46]} alt="Eco 1" />
+              <img src={ecoImages[47]} alt="Eco 1" />
+              <img src={ecoImages[48]} alt="Eco 1" />
             </div>
 
             <h2>GAL OYA NATIONAL PARK</h2>
@@ -592,8 +632,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero50.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero51.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[49]} alt="Eco 1" />
+              <img src={ecoImages[50]} alt="Eco 1" />
             </div>
 
             <p>
@@ -606,9 +646,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero52.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero53.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero54.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[51]} alt="Eco 1" />
+              <img src={ecoImages[52]} alt="Eco 1" />
+              <img src={ecoImages[53]} alt="Eco 1" />
             </div>
 
             <h2>UDAWATHTHAKELE FOREST RESERVE</h2>
@@ -618,8 +658,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero55.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero56.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[54]} alt="Eco 1" />
+              <img src={ecoImages[55]} alt="Eco 1" />
             </div>
 
             <p>
@@ -647,9 +687,9 @@ function EcoEscapes() {
             </ul>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero57.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero58.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero59.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[56]} alt="Eco 1" />
+              <img src={ecoImages[57]} alt="Eco 1" />
+              <img src={ecoImages[58]} alt="Eco 1" />
             </div>
 
             <h2>PIDGEON ISLAND</h2>
@@ -660,8 +700,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero60.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero61.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[59]} alt="Eco 1" />
+              <img src={ecoImages[60]} alt="Eco 1" />
             </div>
 
             <p>
@@ -691,9 +731,9 @@ function EcoEscapes() {
             </ul>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero62.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero63.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero64.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[61]} alt="Eco 1" />
+              <img src={ecoImages[62]} alt="Eco 1" />
+              <img src={ecoImages[63]} alt="Eco 1" />
             </div>
 
             <h2>PIDURANGALA ROCK</h2>
@@ -706,8 +746,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero66.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero65.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[64]} alt="Eco 1" />
+              <img src={ecoImages[65]} alt="Eco 1" />
             </div>
 
             <p>
@@ -719,9 +759,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero67.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero68.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero69.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[66]} alt="Eco 1" />
+              <img src={ecoImages[67]} alt="Eco 1" />
+              <img src={ecoImages[68]} alt="Eco 1" />
             </div>
 
             <h2>MUTHURAJAWELA WET LAND</h2>
@@ -731,8 +771,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero70.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero71.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[69]} alt="Eco 1" />
+              <img src={ecoImages[70]} alt="Eco 1" />
             </div>
 
             <p>
@@ -740,9 +780,9 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero72.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero73.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero74.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[71]} alt="Eco 1" />
+              <img src={ecoImages[72]} alt="Eco 1" />
+              <img src={ecoImages[73]} alt="Eco 1" />
             </div>
 
             <h2>KUMANA NATIONAL PARK</h2>
@@ -752,8 +792,8 @@ function EcoEscapes() {
             </p>
 
             <div className="mirissa-gallery">
-              <img src={require("../../assets/ecoEscapesHero75.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero76.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[74]} alt="Eco 1" />
+              <img src={ecoImages[75]} alt="Eco 1" />
             </div>
 
             <p>
@@ -774,9 +814,9 @@ function EcoEscapes() {
             </ul>
 
             <div className="mirissa-top-gallery">
-              <img src={require("../../assets/ecoEscapesHero77.jpg")} alt="Mirissa View" />
-              <img src={require("../../assets/ecoEscapesHero78.jpg")} alt="Mirissa Beach" />
-              <img src={require("../../assets/ecoEscapesHero79.jpg")} alt="Mirissa Beach" />
+              <img src={ecoImages[76]} alt="Eco 1" />
+              <img src={ecoImages[77]} alt="Eco 1" />
+              <img src={ecoImages[78]} alt="Eco 1" />
             </div>
 
           </div>

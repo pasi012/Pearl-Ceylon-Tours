@@ -1,13 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
+
 import "../../css/CultureHeritage.css";
 
-import img1 from "../../assets/pkg2.jpg";
-import img2 from "../../assets/sigiriya19.jpg";
-import img3 from "../../assets/sigiriya22.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function HolidayTour() {
+
     const [activeTab, setActiveTab] = React.useState("inclusion");
     const [activeAccordion, setActiveAccordion] = React.useState(null);
 
@@ -15,12 +17,26 @@ function HolidayTour() {
         AOS.init({ duration: 800, once: true });
     }, []);
 
+    const [img1, setImg1] = useState("");
+    const [img2, setImg2] = useState("");
+    const [img3, setImg3] = useState("");
+
+    const [imgHero, setImgHero] = useState("");
+
+    useEffect(() => {
+        getDownloadURL(ref(storage, "pkg2.jpg")).then(setImg1);
+        getDownloadURL(ref(storage, "sigiriya19.jpg")).then(setImg2);
+        getDownloadURL(ref(storage, "sigiriya22.jpg")).then(setImg3);
+
+        getDownloadURL(ref(storage, "holidayTour-hero.jpg")).then(setImgHero);
+    }, []);
+
     return (
         <>
             {/* HERO SECTION */}
             <section className="ch-hero" data-aos="fade-down">
                 <img
-                    src={require("../../assets/holidayTour-hero.jpg")}
+                    src={imgHero}
                     alt="banner"
                     className="ch-hero-img"
                 />

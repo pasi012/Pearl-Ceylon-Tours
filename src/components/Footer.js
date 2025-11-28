@@ -1,18 +1,37 @@
+import React, { useEffect, useState } from "react";
+
 import { Link } from "react-router-dom";
 import "../css/Footer.css";
 
+import { storage } from "../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
+
 import logo from "../assets/logo.png";
+
 import { Phone, Mail, MapPin } from "lucide-react";
 import { FaFacebookF, FaInstagram, FaYoutube, FaPinterestP } from "react-icons/fa";
 
-import g1 from "../assets/feature1.jpg";
-import g2 from "../assets/Whale Watching.png";
-import g3 from "../assets/yala4.jpg";
-import g4 from "../assets/anuradhapura.jpg";
-import g5 from "../assets/Nine arch bridge view.png";
-import g6 from "../assets/sigiriya.jpg";
-
 function Footer() {
+
+    const [g1, setG1] = useState("");
+    const [g2, setG2] = useState("");
+    const [g3, setG3] = useState("");
+    const [g4, setG4] = useState("");
+    const [g5, setG5] = useState("");
+    const [g6, setG6] = useState("");
+
+    useEffect(() => {
+
+        // FOOTER GALLERY IMAGES
+        getDownloadURL(ref(storage, "feature1.jpg")).then(setG1);
+        getDownloadURL(ref(storage, "Whale Watching.png")).then(setG2);
+        getDownloadURL(ref(storage, "yala4.jpg")).then(setG3);
+        getDownloadURL(ref(storage, "anuradhapura.jpg")).then(setG4);
+        getDownloadURL(ref(storage, "Nine arch bridge view.png")).then(setG5);
+        getDownloadURL(ref(storage, "sigiriya.jpg")).then(setG6);
+
+    }, []);
+
     return (
         <footer className="footer">
             <div className="footer-container">

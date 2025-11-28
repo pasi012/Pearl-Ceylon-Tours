@@ -168,10 +168,10 @@ function AboutSriLanka() {
                     <div className="sl-author-card">
                         {founderUrl && <img src={founderUrl} className="sl-author-img" />}
 
-                        <h4 className="sl-author-name">Captain Dammika</h4>
+                        <h4 className="sl-author-name">Amila Dissanayake</h4>
 
                         <p className="sl-author-desc">
-                            Captain Dharmika Jayakody, a visionary leader with global travel experience.
+                            Amila Dissanayake, a visionary leader with global travel experience.
                         </p>
                     </div>
                 </div>

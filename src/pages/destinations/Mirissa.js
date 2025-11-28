@@ -1,24 +1,82 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import mirissaHero from "../../assets/mirissa-hero.jpg";
-import mirissa1 from "../../assets/mirissa.jpg";
-import mirissa2 from "../../assets/mirissa1.jpg";
-
-import mirissa3 from "../../assets/mirissa2.jpg";
-import mirissa4 from "../../assets/mirissa3.jpg";
-import mirissa5 from "../../assets/mirissa4.jpg";
-
-import surfing from "../../assets/Surfing.png";
-import beginnerGuide from "../../assets/Beginner Guide.png";
-import relaxing from "../../assets/Relaxing.png";
-
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function Mirissa() {
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  const [imgHero, setImgHero] = useState("");
+
+  // TOP GALLERY
+  const [mirissa1, setMirissa1] = useState("");
+  const [mirissa2, setMirissa2] = useState("");
+
+  // EXTRA GALLERY
+  const [mirissa3, setMirissa3] = useState("");
+  const [mirissa4, setMirissa4] = useState("");
+  const [mirissa5, setMirissa5] = useState("");
+
+  // ACTIVITY ICONS (Surfing section)
+  const [surfing, setSurfing] = useState("");
+  const [beginnerGuide, setBeginnerGuide] = useState("");
+  const [relaxing, setRelaxing] = useState("");
+
+  // SNORKELING / DIVING ICONS
+  const [whaleWatching, setWhaleWatching] = useState("");
+  const [turtleWatching, setTurtleWatching] = useState("");
+  const [turtleFeeding, setTurtleFeeding] = useState("");
+
+  // FISHING ICONS
+  const [boatFishing, setBoatFishing] = useState("");
+  const [fishing, setFishing] = useState("");
+  const [traditionalFishing, setTraditionalFishing] = useState("");
+
+  // PARROT ROCK GALLERY
+  const [mirissa6, setMirissa6] = useState("");
+  const [mirissa7, setMirissa7] = useState("");
+
+  useEffect(() => {
+
+    getDownloadURL(ref(storage, "mirissa-hero.jpg")).then(setImgHero);
+
+    // TOP GALLERY
+    getDownloadURL(ref(storage, "mirissa1.jpg")).then(setMirissa1);
+    getDownloadURL(ref(storage, "mirissa2.jpg")).then(setMirissa2);
+
+    // EXTRA GALLERY
+    getDownloadURL(ref(storage, "mirissa3.jpg")).then(setMirissa3);
+    getDownloadURL(ref(storage, "mirissa4.jpg")).then(setMirissa4);
+    getDownloadURL(ref(storage, "mirissa5.jpg")).then(setMirissa5);
+
+    // SURFING ICONS
+    getDownloadURL(ref(storage, "Surfing.png")).then(setSurfing);
+    getDownloadURL(ref(storage, "Beginner Guide.png")).then(setBeginnerGuide);
+    getDownloadURL(ref(storage, "Relaxing.png")).then(setRelaxing);
+
+    // SNORKELING ICONS
+    getDownloadURL(ref(storage, "Whale Watching.png")).then(setWhaleWatching);
+    getDownloadURL(ref(storage, "Turtle Watching.png")).then(setTurtleWatching);
+    getDownloadURL(ref(storage, "Turtle Feeding.png")).then(setTurtleFeeding);
+
+    // FISHING ICONS
+    getDownloadURL(ref(storage, "Boating.png")).then(setBoatFishing);
+    getDownloadURL(ref(storage, "Fishing.png")).then(setFishing);
+    getDownloadURL(ref(storage, "Traditional Fishing.png")).then(
+      setTraditionalFishing
+    );
+
+    // PARROT ROCK
+    getDownloadURL(ref(storage, "mirissa6.jpg")).then(setMirissa6);
+    getDownloadURL(ref(storage, "mirissa.jpg")).then(setMirissa7);
+
   }, []);
 
   return (
@@ -26,7 +84,7 @@ function Mirissa() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${mirissaHero})` }}
+        style={{ backgroundImage: `url(${imgHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
@@ -152,17 +210,17 @@ function Mirissa() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Whale Watching.png")} alt="Whale Watching" />
+                  <img src={whaleWatching} alt="Whale Watching" />
                   <p>Whale Watching</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Turtle Watching.png")} alt="Turtle Watching" />
+                  <img src={turtleWatching} alt="Turtle Watching" />
                   <p>Turtle Watching</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Turtle Feeding.png")} alt="Turtle Feeding" />
+                  <img src={turtleFeeding} alt="Turtle Feeding" />
                   <p>Turtle Feeding</p>
                 </div>
               </div>
@@ -179,18 +237,18 @@ function Mirissa() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Boating.png")} alt="Whale Watching" />
-                  <p>Whale Watching</p>
+                  <img src={boatFishing} alt="Boating" />
+                  <p>Boating</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Fishing.png")} alt="Turtle Watching" />
-                  <p>Turtle Watching</p>
+                  <img src={fishing} alt="Fishing" />
+                  <p>Fishing</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Traditional Fishing.png")} alt="Turtle Feeding" />
-                  <p>Turtle Feeding</p>
+                  <img src={traditionalFishing} alt="Traditional Fishing" />
+                  <p>Traditional Fishing</p>
                 </div>
               </div>
             </details>
@@ -203,8 +261,8 @@ function Mirissa() {
             <p>• A small rocky islet offering beautiful views of the coastline, reachable during low tide.</p>
 
             <div className="parrot-gallery">
-              <img src={require("../../assets/mirissa5.jpg")} alt="Parrot Rock Beach" />
-              <img src={require("../../assets/mirissa6.jpg")} alt="Seafood Dish" />
+              <img src={mirissa6} alt="Parrot Rock" />
+              <img src={mirissa7} alt="Seafood Dish" />
             </div>
 
             <h3>You can spend your time here unlimitedly.</h3>

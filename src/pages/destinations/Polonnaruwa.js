@@ -1,19 +1,77 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+
 import AOS from "aos";
 import "aos/dist/aos.css";
 import "../../css/Mirissa.css";
 
-import polonnaruwaHero from "../../assets/polonnaruwa-hero.jpg";
-import polonnaruwa1 from "../../assets/polonnaruwa1.jpg";
-import polonnaruwa2 from "../../assets/polonnaruwa2.jpg";
-
-import polonnaruwa3 from "../../assets/polonnaruwa3.jpg";
-import polonnaruwa4 from "../../assets/polonnaruwa4.jpg";
-import polonnaruwa5 from "../../assets/polonnaruwa5.jpg";
+import { storage } from "../../firebase";
+import { ref, getDownloadURL } from "firebase/storage";
 
 function Polonnaruwa() {
+
   useEffect(() => {
     AOS.init({ duration: 1000, once: true });
+  }, []);
+
+  const [imgHero, setImgHero] = useState("");
+
+  // TOP GALLERY
+  const [polonnaruwa1, setPolonnaruwa1] = useState("");
+  const [polonnaruwa2, setPolonnaruwa2] = useState("");
+
+  // EXTRA GALLERY
+  const [polonnaruwa3, setPolonnaruwa3] = useState("");
+  const [polonnaruwa4, setPolonnaruwa4] = useState("");
+  const [polonnaruwa5, setPolonnaruwa5] = useState("");
+
+  // ACTIVITIES IMAGES
+  const [galWiharaya, setGalWiharaya] = useState("");
+  const [sandakadaPahana, setSandakadaPahana] = useState("");
+  const [galpotha, setGalpotha] = useState("");
+
+  const [parakramaSamudra, setParakramaSamudra] = useState("");
+  const [parakramaSystem, setParakramaSystem] = useState("");
+  const [lotusPond, setLotusPond] = useState("");
+
+  const [nataraja, setNataraja] = useState("");
+  const [woodCrafts, setWoodCrafts] = useState("");
+  const [artsCrafts, setArtsCrafts] = useState("");
+
+  // PARROT ROCK SECTION
+  const [polonnaruwa6, setPolonnaruwa6] = useState("");
+  const [polonnaruwa7, setPolonnaruwa7] = useState("");
+
+  useEffect(() => {
+
+    getDownloadURL(ref(storage, "polonnaruwa-hero.jpg")).then(setImgHero);
+
+    // TOP GALLERY
+    getDownloadURL(ref(storage, "polonnaruwa1.jpg")).then(setPolonnaruwa1);
+    getDownloadURL(ref(storage, "polonnaruwa2.jpg")).then(setPolonnaruwa2);
+
+    // EXTRA GALLERY
+    getDownloadURL(ref(storage, "polonnaruwa3.jpg")).then(setPolonnaruwa3);
+    getDownloadURL(ref(storage, "polonnaruwa4.jpg")).then(setPolonnaruwa4);
+    getDownloadURL(ref(storage, "polonnaruwa5.jpg")).then(setPolonnaruwa5);
+
+    // ACTIVITIES (ANCIENT CITY)
+    getDownloadURL(ref(storage, "Gal Wiharaya.png")).then(setGalWiharaya);
+    getDownloadURL(ref(storage, "Sandakada Pahana.png")).then(setSandakadaPahana);
+    getDownloadURL(ref(storage, "Galpoth (Rock Book).png")).then(setGalpotha);
+
+    // IRRIGATION
+    getDownloadURL(ref(storage, "Parakrama Samudra.png")).then(setParakramaSamudra);
+    getDownloadURL(ref(storage, "Parakrama Samudra irrigation system.png")).then(setParakramaSystem);
+    getDownloadURL(ref(storage, "Lotus Pond.png")).then(setLotusPond);
+
+    // CRAFTS
+    getDownloadURL(ref(storage, "Nataraja Statue.png")).then(setNataraja);
+    getDownloadURL(ref(storage, "Wooden Crafts.png")).then(setWoodCrafts);
+    getDownloadURL(ref(storage, "Arts and crafts.png")).then(setArtsCrafts);
+
+    // PARROT ROCK SECTION
+    getDownloadURL(ref(storage, "polonnaruwa6.jpg")).then(setPolonnaruwa6);
+    getDownloadURL(ref(storage, "polonnaruwa7.jpg")).then(setPolonnaruwa7);
   }, []);
 
   return (
@@ -21,7 +79,7 @@ function Polonnaruwa() {
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
-        style={{ backgroundImage: `url(${polonnaruwaHero})` }}
+        style={{ backgroundImage: `url(${imgHero})` }}
         data-aos="fade-down"
       >
         <div className="overlay">
@@ -46,8 +104,8 @@ function Polonnaruwa() {
           </p>
 
           <div className="mirissa-gallery">
-            <img src={polonnaruwa1} alt="Mirissa View" />
-            <img src={polonnaruwa2} alt="Mirissa Beach" />
+            <img src={polonnaruwa1} alt="Polonnaruwa View" />
+            <img src={polonnaruwa2} alt="Polonnaruwa Temple" />
           </div>
 
           <p>
@@ -77,9 +135,9 @@ function Polonnaruwa() {
           <div className="mirissa-extra" data-aos="fade-up">
 
             <div className="mirissa-top-gallery">
-              <img src={polonnaruwa3} alt="Surfing" />
-              <img src={polonnaruwa4} alt="Snorkeling with Turtle" />
-              <img src={polonnaruwa5} alt="Boat Fishing" />
+              <img src={polonnaruwa3} alt="Image 1" />
+              <img src={polonnaruwa4} alt="Image 2" />
+              <img src={polonnaruwa5} alt="Image 3" />
             </div>
 
             <h3>Most of the tourists and visitors come to this place through Mirissa beach.</h3>
@@ -120,7 +178,6 @@ function Polonnaruwa() {
           {/* ACTIVITIES SECTION */}
           <div className="mirissa-activities" data-aos="fade-up">
 
-            {/* SURFING */}
             <details className="activity-box" open>
               <summary>• Ancient Ruins of Second Capital in Sri Lanka</summary>
 
@@ -133,17 +190,17 @@ function Polonnaruwa() {
               <div className="activity-gallery">
                 <div className="activity-gallery">
                   <div className="activity-card">
-                    <img src={require("../../assets/Gal Wiharaya.png")} alt="Whale Watching" />
+                    <img src={galWiharaya} alt="Gal Wiharaya" />
                     <p>Gal Wiharaya</p>
                   </div>
 
                   <div className="activity-card">
-                    <img src={require("../../assets/Sandakada Pahana.png")} alt="Turtle Watching" />
+                    <img src={sandakadaPahana} alt="Sandakada Pahana" />
                     <p>Sandakada Pahana</p>
                   </div>
 
                   <div className="activity-card">
-                    <img src={require("../../assets/Galpoth (Rock Book).png")} alt="Turtle Feeding" />
+                    <img src={galpotha} alt="Galpotha" />
                     <p>Galpoth (Rock Book)</p>
                   </div>
                 </div>
@@ -161,17 +218,17 @@ function Polonnaruwa() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Parakrama Samudra.png")} alt="Whale Watching" />
+                  <img src={parakramaSamudra} alt="Parakrama Samudra" />
                   <p>Parakrama Samudra</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Parakrama Samudra irrigation system.png")} alt="Turtle Watching" />
+                  <img src={parakramaSystem} alt="Irrigation system" />
                   <p>Parakrama Samudra irrigation system</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Lotus Pond.png")} alt="Turtle Feeding" />
+                  <img src={lotusPond} alt="Lotus Pond" />
                   <p>Lotus Pond</p>
                 </div>
               </div>
@@ -188,17 +245,17 @@ function Polonnaruwa() {
 
               <div className="activity-gallery">
                 <div className="activity-card">
-                  <img src={require("../../assets/Nataraja Statue.png")} alt="Whale Watching" />
+                  <img src={nataraja} alt="Nataraja" />
                   <p>Nataraja Statue</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Wooden Crafts.png")} alt="Turtle Watching" />
+                  <img src={woodCrafts} alt="Wood Crafts" />
                   <p>Wooden Crafts</p>
                 </div>
 
                 <div className="activity-card">
-                  <img src={require("../../assets/Arts and crafts.png")} alt="Turtle Feeding" />
+                  <img src={artsCrafts} alt="Arts and Crafts" />
                   <p>Arts and crafts</p>
                 </div>
               </div>
@@ -209,8 +266,8 @@ function Polonnaruwa() {
           <div className="mirissa-parrot-rock" data-aos="fade-up">
 
             <div className="parrot-gallery">
-              <img src={require("../../assets/polonnaruwa6.jpg")} alt="Parrot Rock Beach" />
-              <img src={require("../../assets/polonnaruwa7.jpg")} alt="Seafood Dish" />
+              <img src={polonnaruwa6} alt="Polonnaruwa Lake" />
+              <img src={polonnaruwa7} alt="Polonnaruwa Village" />
             </div>
 
           </div>

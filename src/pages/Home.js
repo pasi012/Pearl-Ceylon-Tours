@@ -136,37 +136,6 @@ function Home() {
     getDownloadURL(ref(storage, "brand-logo6.png")).then(setHotelImg6);
   }, []);
 
-  //testimonial
-  useEffect(() => {
-    const testimonialSlider = document.getElementById("testimonialSlider");
-    const testimonialPrevBtn = document.getElementById("testimonialPrevBtn");
-    const testimonialNextBtn = document.getElementById("testimonialNextBtn");
-
-    const scrollAmount = testimonialSlider.offsetWidth / 4 + 20; // roughly one card width
-
-    // Manual scroll
-    testimonialNextBtn.addEventListener("click", () => {
-      testimonialSlider.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    });
-    testimonialPrevBtn.addEventListener("click", () => {
-      testimonialSlider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    });
-
-    // Auto-scroll every 4 seconds
-    const autoScroll = setInterval(() => {
-      if (
-        testimonialSlider.scrollLeft + testimonialSlider.clientWidth >=
-        testimonialSlider.scrollWidth - 5
-      ) {
-        testimonialSlider.scrollTo({ left: 0, behavior: "smooth" });
-      } else {
-        testimonialSlider.scrollBy({ left: scrollAmount, behavior: "smooth" });
-      }
-    }, 4000);
-
-    return () => clearInterval(autoScroll);
-  }, []);
-
   //destinations
   useEffect(() => {
     const destSlider = document.getElementById("destSlider");
@@ -801,71 +770,69 @@ function Home() {
         </p>
 
         <div className="testimonial-slider-wrapper">
-          <button className="arrow-btn1 left-des" id="testimonialPrevBtn">
+          <button className="arrow-btn1 left-des" id="destPrevBtn">
             <FaArrowLeft />
           </button>
 
-          <div className="testimonial-slider" id="testimonialSlider">
+          <div className="testimonial-slider" id="destSlider">
 
             <div className="testimonial-card">
-              <div className="testimonial-profile"></div>
-              <h4>Gauthamabuddha</h4>
+              <div className="testimonial-profile" style={{ backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRntUEjrTUhlmUHWEwAi87I3LyP_t-_c7hCkg&s")' }}></div>
+              <h4>William Griffin</h4>
               <div className="stars">★★★★★</div>
               <p>
-                "We had done a family trip for 5 days covering central and southern Sri Lanka. It was a very happy, pleasant
-                and seamless experience with Harshan, a very professional chauffeur cum guide..."
+                "We had an unforgettable 5-day family tour across central and southern Sri Lanka..."
               </p>
             </div>
 
             <div className="testimonial-card">
-              <div className="testimonial-profile"></div>
+              <div className="testimonial-profile" style={{ backgroundImage: 'url("https://media.licdn.com/dms/image/v2/D5603AQHuywq_W9_KEQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1677774441926?e=2147483647&v=beta&t=N57KbeBCH4u74M1T1zMH4myJJB24p1kip5MZYVG4msA")' }}></div>
               <h4>Kuba S</h4>
               <div className="stars">★★★★★</div>
               <p>
-                "Very good guide. He arranged the tickets, showed us some cool places in Sri Lanka. Attractive price and good car.
-                I highly recommend."
+                "Great guide! He arranged tickets, took us to amazing spots..."
               </p>
             </div>
 
             <div className="testimonial-card">
-              <div className="testimonial-profile"></div>
+              <div className="testimonial-profile" style={{ backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT6bc5y-8hwPZxADjpBwl5qKTlHjBnBFUjvpA&s")' }}></div>
               <h4>Tatiana</h4>
               <div className="stars">★★★★★</div>
               <p>
-                "Guide at the top, our stay was amazing thanks to him! It is very professional and it takes us to tourist places we love our stay!"
+                "Exceptional guide! Our trip was absolutely perfect..."
               </p>
             </div>
 
             <div className="testimonial-card">
-              <div className="testimonial-profile"></div>
-              <h4>Tatiana</h4>
+              <div className="testimonial-profile" style={{ backgroundImage: 'url("https://media.licdn.com/dms/image/v2/C5103AQHCum1kLu_YnA/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1516867846397?e=2147483647&v=beta&t=qQnolx_9yQClzO3ZVk3ej4SBiyc5kAQq3gzQsndVSnE")' }}></div>
+              <h4>Mark Johnson</h4>
               <div className="stars">★★★★★</div>
               <p>
-                "Guide at the top, our stay was amazing thanks to him! It is very professional and it takes us to tourist places we love our stay!"
+                "Amazing service from start to finish..."
               </p>
             </div>
 
             <div className="testimonial-card">
-              <div className="testimonial-profile"></div>
-              <h4>Tatiana</h4>
+              <div className="testimonial-profile" style={{ backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSMs8RFq8_k6eHajOmHy5LKr1YLeDDgbO85XA&s")' }}></div>
+              <h4>Angel Sophia</h4>
               <div className="stars">★★★★★</div>
               <p>
-                "Guide at the top, our stay was amazing thanks to him! It is very professional and it takes us to tourist places we love our stay!"
+                "Our Sri Lanka holiday became extra special..."
               </p>
             </div>
 
             <div className="testimonial-card">
-              <div className="testimonial-profile"></div>
-              <h4>Tatiana</h4>
+              <div className="testimonial-profile" style={{ backgroundImage: 'url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW1wS1o1vIdgX9OOBOHJ8YgPUQfRYLKBeb8A&s")' }}></div>
+              <h4>Daniel K</h4>
               <div className="stars">★★★★★</div>
               <p>
-                "Guide at the top, our stay was amazing thanks to him! It is very professional and it takes us to tourist places we love our stay!"
+                "Professional, kind, and extremely knowledgeable..."
               </p>
             </div>
 
           </div>
 
-          <button className="arrow-btn1 right-des" id="testimonialNextBtn">
+          <button className="arrow-btn1 right-des" id="destNextBtn">
             <FaArrowRight />
           </button>
 
@@ -940,17 +907,17 @@ function Home() {
 
         <div className="hotel-brands-logos">
 
-          {hotelImg1 && <img src={hotelImg1} className="hotel-logo"/>}
+          {hotelImg1 && <img src={hotelImg1} className="hotel-logo" />}
 
-          {hotelImg2 && <img src={hotelImg2} className="hotel-logo"/>}
+          {hotelImg2 && <img src={hotelImg2} className="hotel-logo" />}
 
-          {hotelImg3 && <img src={hotelImg3} className="hotel-logo"/>}
+          {hotelImg3 && <img src={hotelImg3} className="hotel-logo" />}
 
-          {hotelImg4 && <img src={hotelImg4} className="hotel-logo"/>}
+          {hotelImg4 && <img src={hotelImg4} className="hotel-logo" />}
 
-          {hotelImg5 && <img src={hotelImg5} className="hotel-logo"/>}
+          {hotelImg5 && <img src={hotelImg5} className="hotel-logo" />}
 
-          {hotelImg6 && <img src={hotelImg6} className="hotel-logo"/>}
+          {hotelImg6 && <img src={hotelImg6} className="hotel-logo" />}
 
         </div>
       </section>
@@ -974,7 +941,7 @@ function Home() {
 
       {/* WhatsApp Floating Button */}
       <a
-        href="https://wa.me/94762307765"
+        href="https://wa.me/94773562768"
         className="whatsapp-fab"
         target="_blank"
         rel="noopener noreferrer"
