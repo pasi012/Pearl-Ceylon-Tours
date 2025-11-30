@@ -1,12 +1,13 @@
-/* Global Typography */
+/* Home.css */
 body,
 .home-container {
   font-family: 'Poppins', sans-serif;
   color: #222;
   background-color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scroll */
 }
 
-/* Hero Section – Elegant headline + clean subtitle */
+/* Hero Section */
 .slide-title {
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
@@ -20,10 +21,7 @@ body,
   font-weight: 700;
 }
 
-/* Buttons */
-.explore-btn,
-.primary-btn,
-.outline-btn {
+.explore-btn {
   font-family: 'Montserrat', sans-serif;
   letter-spacing: 0.5px;
 }
@@ -117,7 +115,7 @@ li {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
   z-index: 0;
 }
 
@@ -274,7 +272,7 @@ li {
 .image-left img {
   width: 360px;
   height: 360px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 8px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
@@ -288,7 +286,7 @@ li {
 .image-right img {
   width: 360px;
   height: 360px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 8px;
   box-shadow: 0 6px 14px rgba(0, 0, 0, 0.2);
 }
@@ -452,7 +450,7 @@ li {
 .package-img {
   width: 100%;
   height: 180px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .package-info {
@@ -538,7 +536,7 @@ li {
 .destination-card-home img {
   width: 100%;
   height: 220px;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .destination-info {
@@ -617,7 +615,7 @@ li {
   max-width: 550px;
   border-radius: 8px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  object-fit: cover;
+  object-fit: fill;
 }
 
 .explore-badge {
@@ -740,7 +738,7 @@ li {
   max-width: 720px;
   border-radius: 10px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  object-fit: cover;
+  object-fit: fill;
   transition: transform 0.4s ease;
 }
 
@@ -1026,7 +1024,7 @@ li {
 .vehicle-img-wrapper img {
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: fill;
 }
 
 /* Background color variations */
@@ -1129,4 +1127,298 @@ li {
 .whatsapp-icon {
   width: 50px;
   height: 50px;
+}
+
+/* ======================= */
+/* RESPONSIVE MEDIA QUERIES */
+/* ======================= */
+
+/* ===== 1024px ===== */
+@media (max-width: 1024px) {
+
+  /* Hero Section */
+  .hero {
+    height: 80vh;
+  }
+
+  .slide-text {
+    font-size: 3rem;
+    max-width: 550px;
+  }
+
+  .slide-content {
+    left: 10%;
+    top: 40%;
+  }
+
+  .explore-btn {
+    padding: 12px 25px;
+    font-size: 0.95rem;
+  }
+
+  /* Packages Section */
+  .packages-slider-wrapper .arrow-btn.left {
+    left: 80px;
+  }
+
+  .packages-slider-wrapper .arrow-btn.right {
+    right: 80px;
+  }
+
+  .destination-card-home,
+  .package-card-home {
+    flex: 0 0 calc(33.33% - 20px);
+  }
+
+  /* Why Choose Section */
+  .why-choose-container {
+    gap: 30px;
+  }
+
+  .why-choose-image {
+    flex: 1 1 250px;
+  }
+
+  .why-choose-content {
+    flex: 1 1 400px;
+  }
+}
+
+/* ===== 768px ===== */
+@media (max-width: 768px) {
+
+  /* Hero Section */
+  .hero {
+    height: 70vh;
+  }
+
+  .slide-text {
+    font-size: 2.5rem;
+    max-width: 400px;
+  }
+
+  .slide-content {
+    left: 5%;
+    top: 35%;
+  }
+
+  .explore-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Packages Section */
+  .packages-slider-wrapper .arrow-btn.left,
+  .packages-slider-wrapper .arrow-btn.right {
+    left: 10px;
+    right: 10px;
+  }
+
+  .destination-card-home,
+  .package-card-home {
+    flex: 0 0 calc(50% - 15px);
+  }
+
+  /* About Section */
+  .about-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 25px;
+  }
+
+  .about-content h2 {
+    font-size: 1.8rem;
+  }
+
+  .about-content p {
+    font-size: 0.95rem;
+  }
+
+  .about-image img {
+    max-width: 100%;
+  }
+
+  /* Why Choose Section */
+  .why-choose-container {
+    flex-direction: column;
+    gap: 25px;
+  }
+
+  .why-choose-image,
+  .why-choose-content {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+}
+
+/* ===== 480px ===== */
+@media (max-width: 480px) {
+
+  /* Hero Section */
+  .hero {
+    height: 60vh;
+  }
+
+  .slide-text {
+    font-size: 1.8rem;
+    max-width: 300px;
+  }
+
+  .slide-title {
+    font-size: 1.4rem;
+  }
+
+  .slide-content {
+    left: 5%;
+    top: 30%;
+  }
+
+  .explore-btn {
+    padding: 8px 16px;
+    font-size: 0.85rem;
+  }
+
+  /* Packages & Destinations Section */
+  .package-card-home,
+  .destination-card-home {
+    flex: 0 0 100%;
+  }
+
+  .packages-slider-wrapper .arrow-btn.left,
+  .packages-slider-wrapper .arrow-btn.right {
+    display: none;
+  }
+
+  /* About Section */
+  .about {
+    padding: 40px 15px;
+  }
+
+  .about-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .about-content p {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+
+  .learn-more-btn {
+    padding: 8px 20px;
+    font-size: 0.85rem;
+  }
+
+  /* Why Choose Section */
+  .why-choose-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .why-choose-image,
+  .why-choose-content {
+    flex: 1 1 100%;
+  }
+
+  /* Buttons */
+  .primary-btn,
+  .outline-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Hospitality Section */
+  .hospitality-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+}
+
+/* ===== 768px ===== */
+@media (max-width: 768px) {
+
+  /* Hide all arrows on tablets and smaller */
+  .arrow-btn,
+  .arrow-btn1 {
+    display: none !important;
+  }
+}
+
+/* ===== 480px ===== */
+@media (max-width: 480px) {
+
+  /* Already hiding arrows in your code, just ensure all are included */
+  .arrow-btn,
+  .arrow-btn1 {
+    display: none !important;
+  }
+}
+
+/* ===== 768px ===== */
+@media (max-width: 768px) {
+
+  /* Hide all arrows on tablets and smaller */
+  .arrow-btn,
+  .arrow-btn1 {
+    display: none !important;
+  }
+
+  /* Hide right side images in About section */
+  .about-right {
+    display: none !important;
+  }
+}
+
+/* ===== 480px ===== */
+@media (max-width: 480px) {
+
+  /* Hide all arrows on mobile */
+  .arrow-btn,
+  .arrow-btn1 {
+    display: none !important;
+  }
+
+  /* Hide right side images in About section */
+  .about-right {
+    display: none !important;
+  }
+}
+
+/* ===== 768px ===== */
+@media (max-width: 768px) {
+
+  /* Hide testimonial arrows */
+  .arrow-btn1 {
+    display: none !important;
+  }
+
+  /* Show 2 testimonial cards per row */
+  .testimonial-card {
+    flex: 0 0 calc(50% - 15px);
+    scroll-snap-align: start;
+  }
+
+  .testimonial-slider {
+    padding: 10px 5px;
+  }
+}
+
+/* ===== 480px ===== */
+@media (max-width: 480px) {
+
+  /* Hide testimonial arrows */
+  .arrow-btn1 {
+    display: none !important;
+  }
+
+  /* Show 1 testimonial card per row */
+  .testimonial-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+    scroll-snap-align: start;
+  }
+
+  .testimonial-slider {
+    padding: 10px 0;
+  }
 }

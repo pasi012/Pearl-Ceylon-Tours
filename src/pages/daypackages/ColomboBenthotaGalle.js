@@ -32,7 +32,7 @@ function ColomboBenthotaGalle() {
     }, []);
 
     return (
-        <>
+        <div className="main-container">
             {/* HERO SECTION */}
             <section className="ch-hero" data-aos="fade-down">
                 <img
@@ -1653,7 +1653,7 @@ function ColomboBenthotaGalle() {
                     <button className="cta-btn">LET’S GET STARTED</button>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
 

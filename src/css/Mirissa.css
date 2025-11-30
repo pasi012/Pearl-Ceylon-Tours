@@ -1,3 +1,12 @@
+body,
+.destination-container {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background-color: #fff;
+  overflow-x: hidden;
+  width: 100%;
+}
+
 /* HERO */
 .mirissa-hero {
     height: 55vh;
@@ -202,7 +211,7 @@
 .activity-card img {
     width: 100%;
     height: 180px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 8px;
 }
 
@@ -221,6 +230,190 @@
     flex: 1;
     width: 100%;
     height: 400px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 10px;
+}
+
+/* ------------------------------------------ */
+/* RESPONSIVE FOR TABLETS (max-width: 1024px) */
+/* ------------------------------------------ */
+@media (max-width: 1024px) {
+
+    .mirissa-container {
+        grid-template-columns: 1fr;
+        padding: 40px 30px;
+    }
+
+    .mirissa-form {
+        width: 100%;
+        margin: 0 auto;
+    }
+
+    .mirissa-gallery img {
+        height: 260px;
+    }
+
+    .activity-gallery {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .activity-card {
+        width: 45%;
+    }
+}
+
+
+/* ------------------------------------------ */
+/* RESPONSIVE FOR MOBILE (max-width: 768px)   */
+/* ------------------------------------------ */
+@media (max-width: 768px) {
+
+    /* HERO SECTION */
+    .mirissa-hero {
+        height: 35vh;
+        margin-top: 130px;
+    }
+
+    .mirissa-hero h1 {
+        font-size: 2.2rem;
+    }
+
+    /* CONTAINER */
+    .mirissa-container {
+        grid-template-columns: 1fr;
+        padding: 20px;
+        gap: 20px;
+    }
+
+    /* GALLERY */
+    .mirissa-gallery {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .mirissa-gallery img {
+        height: 100px;
+        object-fit: fill;
+    }
+
+    /* EXTRA TOP GALLERY */
+    .mirissa-top-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .mirissa-top-gallery img {
+        height: 100px;
+        width: 100%;
+        object-fit: fill;
+    }
+
+    /* ACTIVITY GALLERY */
+    .activity-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .activity-card {
+        width: 95%;
+    }
+
+    /* PARROT ROCK */
+    .parrot-gallery {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .parrot-gallery img {
+        height: 220px;
+        width: 100%;
+        object-fit: fill;
+    }
+
+    /* FORM */
+    .mirissa-form {
+        width: 400px;
+        padding: 20px;
+    }
+
+    .mirissa-form input,
+    .mirissa-form textarea,
+    .mirissa-form button {
+        max-width: 350px;
+        width: 100%;
+    }
+
+    .mirissa-form select {
+        max-width: 370px;
+        width: 100%;
+    }
+
+    .phone-row {
+        display: flex;
+        gap: 10px;
+    }
+
+    .phone-row .code,
+    .phone-row .phone {
+        width: 100%;
+    }
+
+    /* CTA SECTION */
+    .cta-section {
+        padding: 10px;
+    }
+
+    .cta-box {
+        gap: 30px;
+    }
+
+    .cta-plane {
+        visibility: hidden;
+    }
+
+    .cta-text h2 {
+        font-size: 1.1rem;
+        margin-top: 200px;
+        margin-left: 20px;
+    }
+
+    .cta-text p {
+        visibility: hidden;
+    }
+
+    .cta-btn {
+        width: 100%;
+    }
+
+}
+
+/* ------------------------------------------ */
+/* EXTRA SMALL MOBILE (max-width: 480px)      */
+/* ------------------------------------------ */
+@media (max-width: 480px) {
+
+    .mirissa-hero h1 {
+        font-size: 1.8rem;
+    }
+
+    .mirissa-left h2 {
+        font-size: 1.6rem;
+    }
+
+    .mirissa-left p {
+        font-size: 0.95rem;
+    }
+
+    .mirissa-form button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
+
+    .cta-plane {
+        width: 80%;
+    }
 }

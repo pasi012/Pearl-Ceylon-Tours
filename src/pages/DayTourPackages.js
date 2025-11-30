@@ -40,7 +40,7 @@ function DayTourPackages() {
     ];
 
     return (
-        <>
+        <div className="dayTour-container">
             {/* HERO */}
             <section className="daytour-hero-section" data-aos="fade-down">
                 <div className="daytour-hero-overlay">
@@ -95,7 +95,7 @@ function DayTourPackages() {
                     <button className="cta-btn">LET’S GET STARTED</button>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
 

@@ -1,0 +1,259 @@
+body,
+.privacy-wrapper {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background-color: #fff;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.privacy-hero {
+    position: relative;
+    width: 100%;
+    height: 45vh;
+    background-image: url("../assets/our-packages.jpg");
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 150px;
+}
+
+.privacy-hero .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.45);
+    /* dark overlay */
+}
+
+.privacy-hero h1 {
+    position: relative;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 10px;
+    z-index: 2;
+}
+
+.privacy-hero p {
+    position: relative;
+    font-size: 18px;
+    opacity: 0.9;
+    z-index: 2;
+}
+
+/* ===========================
+   CONTENT WRAPPER
+=========================== */
+.privacy-container {
+    max-width: 1100px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.privacy-title {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.privacy-text {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #555;
+}
+
+/* ===========================
+   SECTIONS
+=========================== */
+.privacy-section {
+    margin-bottom: 45px;
+}
+
+.privacy-section h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    color: #222;
+}
+
+.privacy-section p {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #555;
+}
+
+.privacy-section ul {
+    margin: 15px 0 20px 25px;
+}
+
+.privacy-section ul li {
+    font-size: 16px;
+    line-height: 1.8;
+    color: #444;
+    list-style: disc;
+}
+
+/* ===========================
+   CONTACT SECTION
+=========================== */
+.privacy-contact {
+    margin-top: 50px;
+    padding: 30px;
+    background: #f8f8f8;
+    border-radius: 8px;
+}
+
+.privacy-contact h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+}
+
+.privacy-contact p {
+    font-size: 16px;
+    color: #555;
+}
+
+.privacy-contact .email a {
+    color: #0077cc;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.privacy-contact .email a:hover {
+    text-decoration: underline;
+}
+
+/* =====================================================
+   RESPONSIVE STYLES
+===================================================== */
+
+/* ========== 1024px (Small Laptops / Tablets Landscape) ========== */
+@media (max-width: 1024px) {
+    .privacy-hero {
+        height: 38vh;
+        margin-top: 120px;
+    }
+
+    .privacy-hero h1 {
+        font-size: 40px;
+    }
+
+    .privacy-hero p {
+        font-size: 16px;
+    }
+
+    .privacy-container {
+        padding: 0 30px;
+    }
+
+    .privacy-title {
+        font-size: 28px;
+    }
+
+    .privacy-section h3 {
+        font-size: 22px;
+    }
+}
+
+/* ========== 768px (Tablets + Large Mobile) ========== */
+@media (max-width: 768px) {
+    .privacy-hero {
+        height: 32vh;
+        margin-top: 100px;
+        background-position: center top;
+    }
+
+    .privacy-hero h1 {
+        font-size: 32px;
+    }
+
+    .privacy-hero p {
+        font-size: 15px;
+    }
+
+    .privacy-container {
+        padding: 0 20px;
+        margin: 40px auto;
+    }
+
+    .privacy-title {
+        font-size: 26px;
+    }
+
+    .privacy-section h3 {
+        font-size: 20px;
+    }
+
+    .privacy-section p,
+    .privacy-text {
+        font-size: 15px;
+        line-height: 1.7;
+    }
+
+    .privacy-contact {
+        padding: 25px;
+    }
+
+    .privacy-contact h3 {
+        font-size: 22px;
+    }
+}
+
+/* ========== 480px (Mobile Phones) ========== */
+@media (max-width: 480px) {
+    .privacy-hero {
+        height: 28vh;
+        margin-top: 90px;
+        background-position: top;
+    }
+
+    .privacy-hero h1 {
+        font-size: 26px;
+    }
+
+    .privacy-hero p {
+        font-size: 14px;
+    }
+
+    .privacy-container {
+        padding: 0 15px;
+        margin: 30px auto;
+    }
+
+    .privacy-title {
+        font-size: 22px;
+    }
+
+    .privacy-section h3 {
+        font-size: 18px;
+    }
+
+    .privacy-section p,
+    .privacy-text {
+        font-size: 14px;
+        line-height: 1.6;
+    }
+
+    .privacy-contact {
+        padding: 20px;
+    }
+
+    .privacy-contact h3 {
+        font-size: 20px;
+    }
+
+    .privacy-contact p {
+        font-size: 14px;
+    }
+
+    .privacy-contact .email a {
+        font-size: 15px;
+    }
+}

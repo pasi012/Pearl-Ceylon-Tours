@@ -83,7 +83,7 @@
 .gallery-grid img {
     width: 80px;
     height: 80px;
-    object-fit: cover;
+    object-fit: fill;
     border-radius: 6px;
 }
 
@@ -140,4 +140,132 @@
     padding-top: 15px;
     font-size: 13px;
     color: #aaa;
+}
+
+/* ============================================================
+   RESPONSIVE STYLES FOR FOOTER
+============================================================ */
+
+/* =============== 1024px (Large Tablets / Small Laptops) =============== */
+@media (max-width: 1024px) {
+    .footer-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+        justify-items: start;
+    }
+
+    .footer-about {
+        margin-left: 20px;
+    }
+
+    .gallery-grid img {
+        width: 70px;
+        height: 70px;
+    }
+}
+
+/* =============== 768px (Tablets) =============== */
+@media (max-width: 768px) {
+    .footer {
+        padding: 50px 25px 20px;
+    }
+
+    .footer-container {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        justify-items: center;
+        text-align: center;
+    }
+
+    .footer-about {
+        margin-left: 0;
+    }
+
+    .footer-contact-block p {
+        justify-content: center;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: auto;
+        gap: 10px;
+    }
+
+    .gallery-grid img {
+        width: 60px;
+        height: 60px;
+    }
+
+    .newsletter-input {
+        flex-direction: column;
+    }
+
+    .newsletter-input input {
+        padding: 8px 12px;
+    }
+
+    .newsletter-input button {
+        padding: 8px 12px;
+        width: 100%;
+        margin-top: 6px;
+    }
+
+    .footer-social-inline {
+        justify-content: center;
+    }
+}
+
+/* =============== 480px (Mobile Phones) =============== */
+@media (max-width: 480px) {
+    .footer {
+        padding: 40px 15px 20px;
+    }
+
+    .footer-about p {
+        font-size: 13px;
+        line-height: 1.5;
+    }
+
+    .footer-contact-block p {
+        font-size: 13px;
+    }
+
+    .footer-links h3,
+    .footer-gallery h3,
+    .footer-newsletter h3 {
+        font-size: 16px;
+    }
+
+    .footer-links a {
+        font-size: 13px;
+    }
+
+    .gallery-grid img {
+        width: 50px;
+        height: 50px;
+    }
+
+    .newsletter-input input {
+        font-size: 13px;
+        padding: 7px 10px;
+    }
+
+    .newsletter-input button {
+        font-size: 16px;
+        padding: 7px 10px;
+    }
+
+    .newsletter-agree {
+        font-size: 13px;
+    }
+
+    .footer-social-inline {
+        gap: 12px;
+        font-size: 16px;
+    }
+
+    .footer-bottom {
+        font-size: 12px;
+        padding-top: 10px;
+    }
 }

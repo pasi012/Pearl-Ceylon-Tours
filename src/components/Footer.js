@@ -47,7 +47,7 @@ function Footer() {
                     <div className="footer-contact-block">
                         <p><Mail size={16} /> pearlceylontours01@gmail.com</p>
                         <p><Phone size={16} /> 077 356 2768</p>
-                        <p><MapPin size={16} /> No. 25B, Nidahs Mawatha, Matale, Sri Lanka.</p>
+                        <p><MapPin size={16} /> No 13, Gotuwala Rd, Meeriya kale, Ella, Sri Lanka.</p>
                     </div>
                 </div>
 
@@ -57,8 +57,8 @@ function Footer() {
                     <ul>
                         <li><Link to="/about">About Us</Link></li>
                         <li><Link to="/whyChooseUs">Why Choose Us</Link></li>
-                        <li><Link to="/terms">Terms & Conditions</Link></li>
-                        <li><Link to="/privacy">Privacy Policy</Link></li>
+                        <li><Link to="/terms-condition">Terms & Conditions</Link></li>
+                        <li><Link to="/privacy-policy">Privacy Policy</Link></li>
                         <li><Link to="/tailor-made-tours">Tailor Made Tours</Link></li>
                         <li><Link to="/contact">Contact</Link></li>
                     </ul>

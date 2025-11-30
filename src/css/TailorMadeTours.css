@@ -1,3 +1,12 @@
+body,
+.tailor-container {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background-color: #fff;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
 /* HERO */
 .tmt-hero-section {
     position: relative;
@@ -121,4 +130,136 @@ textarea {
     border-radius: 8px;
     cursor: pointer;
     font-weight: 600;
+}
+
+/* ============================================================
+   RESPONSIVE STYLES FOR TAILOR MADE TOURS
+============================================================ */
+
+/* =============== 1024px (Large Tablets / Small Laptops) =============== */
+@media (max-width: 1024px) {
+    .tmt-hero-section {
+        height: 40vh;
+        margin-top: 120px;
+    }
+
+    .tmt-hero-content h1 {
+        font-size: 3.2rem;
+    }
+
+    .tmt-features-section {
+        padding: 20px 30px;
+    }
+
+    .tmt-form-section {
+        padding: 35px 40px;
+    }
+
+    .tmt-grid {
+        gap: 12px;
+    }
+
+}
+
+/* =============== 768px (Tablets) =============== */
+@media (max-width: 768px) {
+    .tmt-hero-section {
+        height: 35vh;
+        margin-top: 100px;
+    }
+
+    .tmt-hero-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .tmt-title-section h2 {
+        font-size: 1.7rem;
+    }
+
+    .tmt-features-section ul {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+
+    .tmt-form-section {
+        padding: 30px 25px;
+    }
+
+    .tmt-grid input,
+    .tmt-grid select {
+        padding: 10px;
+        font-size: 0.85rem;
+    }
+
+    .tmt-interests,
+    .tmt-radio-group {
+        gap: 15px;
+    }
+
+    textarea {
+        height: 100px;
+        font-size: 0.9rem;
+    }
+
+    .tmt-submit-btn {
+        padding: 10px 25px;
+        font-size: 0.9rem;
+    }
+
+}
+
+/* =============== 480px (Mobile Phones) =============== */
+@media (max-width: 480px) {
+    .tmt-hero-section {
+        height: 30vh;
+        margin-top: 80px;
+    }
+
+    .tmt-hero-content h1 {
+        font-size: 2rem;
+    }
+
+    .tmt-title-section h2 {
+        font-size: 1.4rem;
+    }
+
+    .tmt-title-section p {
+        font-size: 0.85rem;
+    }
+
+    .tmt-features-section ul {
+        grid-template-columns: 1fr;
+        gap: 8px;
+        font-size: 0.85rem;
+    }
+
+    .tmt-form-section {
+        padding: 20px 15px;
+    }
+
+    .tmt-grid {
+        gap: 10px;
+    }
+
+    .tmt-grid input,
+    .tmt-grid select {
+        padding: 8px;
+        font-size: 0.8rem;
+    }
+
+    .tmt-interests,
+    .tmt-radio-group {
+        gap: 10px;
+    }
+
+    textarea {
+        height: 90px;
+        font-size: 0.85rem;
+    }
+
+    .tmt-submit-btn {
+        padding: 10px 20px;
+        font-size: 0.85rem;
+    }
+
 }

@@ -55,7 +55,7 @@ function Destinations() {
         text.toLowerCase().replace(/\s+/g, "-");
 
     return (
-        <>
+        <div className="destinations-container">
             {/* Hero Section */}
             <section className="destinations-hero" data-aos="fade-down">
                 <div className="overlay">
@@ -104,7 +104,7 @@ function Destinations() {
                     <button className="cta-btn">LET’S GET STARTED</button>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
 

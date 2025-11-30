@@ -1,3 +1,12 @@
+body,
+.about-container {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background-color: #fff;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
 /* ================= HERO ================= */
 .sl-hero {
     height: 45vh;
@@ -182,4 +191,132 @@
     margin-top: 10px;
     font-size: 0.95rem;
     line-height: 1.5;
+}
+
+/* ========================================================== */
+/* ================== RESPONSIVE BREAKPOINTS ================= */
+/* ========================================================== */
+
+/* ---------- 1024px ---------- */
+@media (max-width: 1024px) {
+    .sl-wrapper {
+        padding: 50px 40px;
+        gap: 30px;
+    }
+
+    .sl-left {
+        width: 65%;
+    }
+
+    .sl-right {
+        width: 30%;
+    }
+
+    .sl-hero h1 {
+        font-size: 3rem;
+    }
+
+    .sl-attraction-img {
+        width: 250px;
+    }
+}
+
+/* ---------- 768px (TABLETS) ---------- */
+@media (max-width: 768px) {
+    .sl-wrapper {
+        flex-direction: column;
+        padding: 40px 25px;
+        gap: 50px;
+    }
+
+    .sl-left,
+    .sl-right {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .sl-hero {
+        margin-top: 120px;
+        height: 38vh;
+    }
+
+    .sl-hero h1 {
+        font-size: 2.6rem;
+    }
+
+    .sl-info-row {
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    .sl-attractions-wrapper {
+        flex-direction: column;
+        gap: 25px;
+    }
+
+    .sl-attraction-list {
+        width: 100%;
+    }
+
+    .sl-attraction-img {
+        width: 100%;
+    }
+
+    .sl-image-row {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .sl-image-box {
+        width: 100%;
+    }
+}
+
+/* ---------- 480px (MOBILE) ---------- */
+@media (max-width: 480px) {
+
+    .sl-wrapper {
+        padding: 30px 15px;
+    }
+
+    .sl-hero {
+        margin-top: 100px;
+        height: 32vh;
+    }
+
+    .sl-hero h1 {
+        font-size: 2rem;
+    }
+
+    .sl-hero p {
+        font-size: 0.85rem;
+    }
+
+    .sl-article-title {
+        font-size: 1.5rem;
+    }
+
+    .sl-sub-title {
+        font-size: 1.2rem;
+    }
+
+    .sl-quote-text {
+        font-size: 1.1rem;
+    }
+
+    .sl-quote-box {
+        padding: 25px;
+    }
+
+    .sl-attraction-img {
+        width: 100%;
+    }
+
+    .sl-info-row span {
+        font-size: 0.85rem;
+    }
+
+    .sl-author-card {
+        padding: 25px;
+    }
 }

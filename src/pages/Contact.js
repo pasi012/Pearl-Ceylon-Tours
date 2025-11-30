@@ -4,12 +4,13 @@ import "aos/dist/aos.css";
 import "../css/Contact.css";
 
 function Contact() {
+
     useEffect(() => {
         AOS.init({ duration: 1000, once: true });
     }, []);
 
     return (
-        <>
+        <div className="contact-container">
             {/* ===== Hero Section ===== */}
             <section className="contact-hero" data-aos="fade-down">
                 <div className="overlay">
@@ -92,7 +93,7 @@ function Contact() {
                     </form>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
 

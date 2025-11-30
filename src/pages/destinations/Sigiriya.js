@@ -122,7 +122,7 @@ function Sigiriya() {
   }, []);
 
   return (
-    <>
+    <div className="destination-container">
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
@@ -1084,7 +1084,7 @@ function Sigiriya() {
           <button className="cta-btn">LET’S GET STARTED</button>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

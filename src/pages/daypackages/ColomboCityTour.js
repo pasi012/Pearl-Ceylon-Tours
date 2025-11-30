@@ -30,7 +30,7 @@ function ColomboCityTour() {
     }, []);
 
     return (
-        <>
+        <div className="main-container">
             {/* HERO SECTION */}
             <section className="ch-hero" data-aos="fade-down">
                 <img
@@ -1656,7 +1656,7 @@ function ColomboCityTour() {
                     <button className="cta-btn">LET’S GET STARTED</button>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
 

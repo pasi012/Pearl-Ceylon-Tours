@@ -391,7 +391,7 @@ function About() {
                 </div>
             </section>
 
-            {/* ===== Stats Section (Counters) ===== */}
+            {/* ===== Stats Section ===== */}
             <section className="stats-section" data-aos="fade-up">
 
                 <div className="stats-container">

@@ -95,7 +95,7 @@ function TailorMadeTours() {
     };
 
     return (
-        <>
+        <div className="tailor-container">
             {/* HERO */}
             <section className="tmt-hero-section" data-aos="fade-down">
                 <div className="tmt-hero-overlay">
@@ -462,7 +462,7 @@ function TailorMadeTours() {
                     <button className="cta-btn">LET’S GET STARTED</button>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
 

@@ -70,7 +70,7 @@ function Kandy() {
 
 
   return (
-    <>
+    <div className="destination-container">
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
@@ -774,7 +774,7 @@ function Kandy() {
           <button className="cta-btn">LET’S GET STARTED</button>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

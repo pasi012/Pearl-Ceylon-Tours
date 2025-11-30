@@ -78,7 +78,7 @@ function Yala() {
   }, []);
 
   return (
-    <>
+    <div className="destination-container">
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
@@ -549,7 +549,7 @@ function Yala() {
           <button className="cta-btn">LET’S GET STARTED</button>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

@@ -40,7 +40,7 @@ function Packages() {
     ];
 
     return (
-        <>
+        <div className="packages-container">
             {/* HERO */}
             <section className="packages-hero-section" data-aos="fade-down">
                 <div className="packages-hero-overlay">
@@ -96,7 +96,7 @@ function Packages() {
                     <button className="cta-btn">LET’S GET STARTED</button>
                 </div>
             </section>
-        </>
+        </div>
     );
 }
 

@@ -29,7 +29,7 @@ function AboutSriLanka() {
     }, []);
 
     return (
-        <>
+        <div className="about-container">
             {/* ================= HERO ================= */}
             <section
                 className="sl-hero"
@@ -196,7 +196,7 @@ function AboutSriLanka() {
                 </div>
             </section>
 
-        </>
+        </div>
     );
 }
 

@@ -200,7 +200,7 @@
 .team-img {
   width: 350px;
   height: 400px;
-  object-fit: cover;
+  object-fit: fill;
   border-radius: 12px;
 }
 
@@ -516,6 +516,67 @@
   margin-bottom: 30px;
 }
 
+/* =========================
+   Mobile Responsive
+   ========================= */
+@media (max-width: 1024px) {
+  .why-title {
+    font-size: 2rem;
+  }
+  .why-description {
+    font-size: 1rem;
+  }
+  .why-btn {
+    font-size: 0.95rem;
+    padding: 10px 22px;
+  }
+  .why-single-img {
+    max-width: 320px;
+  }
+}
+
+@media (max-width: 768px) {
+  .why-choose-section {
+    flex-direction: column; /* stack left and right */
+    text-align: center;
+    padding: 40px 20px;
+    gap: 30px;
+  }
+
+  .why-title {
+    font-size: 1.8rem;
+    margin-left: 0;
+  }
+  .why-description {
+    font-size: 0.95rem;
+    margin-left: 0;
+  }
+  .why-btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    margin: 0 auto;
+  }
+  .why-single-img {
+    display: none;
+  }
+}
+
+@media (max-width: 480px) {
+  .why-title {
+    font-size: 1.5rem;
+  }
+  .why-description {
+    font-size: 0.85rem;
+  }
+  .why-btn {
+    font-size: 0.8rem;
+    padding: 8px 18px;
+  }
+  .why-single-img {
+    display: none;
+  }
+}
+
 /* ===== Adventure & Travels Section ===== */
 .explore-sl-section {
   text-align: center;
@@ -645,4 +706,257 @@
 .stats-box p {
   font-size: 1.1rem;
   opacity: 0.9;
+}
+
+/* =======================
+   📱 RESPONSIVE DESIGN
+   ======================= */
+
+/* ========== 1024px ========== */
+@media (max-width: 1024px) {
+
+  .about-hero {
+    height: 38vh;
+    margin-top: 120px;
+  }
+
+  .founder-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .founder-img img {
+    width: 450px;
+  }
+
+  .sl-collage-section {
+    padding: 40px 100px;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offer-container,
+  .team-container,
+  .explore-card-container {
+    gap: 20px;
+  }
+
+  .mission-sl-call-btn {
+    display: none !important;
+  }
+
+  .mission-sl-text p {
+    font-size: 0.9rem;
+    /* smaller than default 1rem */
+  }
+
+}
+
+/* ========== 768px Tablets ========== */
+@media (max-width: 768px) {
+
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .about-intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .intro-text {
+    width: 90%;
+  }
+
+  .founder-img img {
+    width: 350px;
+  }
+
+  .founder-section {
+    padding: 50px 40px;
+  }
+
+  .team-card {
+    width: 280px;
+  }
+
+  .offer-card {
+    width: 260px;
+  }
+
+  .sl-collage-section {
+    padding: 30px 40px;
+  }
+
+  .sl-collage-img {
+    max-width: 100%;
+  }
+
+  .why-choose-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .why-choose-right img {
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  .mission-sl-call-btn {
+    display: none !important;
+  }
+
+  .mission-sl-text p {
+    font-size: 0.85rem;
+  }
+
+}
+
+/* ========== 480px Mobile ========== */
+@media (max-width: 480px) {
+
+  .about-hero {
+    height: 28vh;
+    margin-top: 100px;
+  }
+
+  .about-hero h1 {
+    font-size: 2.0rem;
+  }
+
+  .about-hero p {
+    font-size: 0.8rem;
+  }
+
+  .about-intro {
+    padding: 10px 20px;
+  }
+
+  .about-intro h2 {
+    font-size: 1.7rem;
+  }
+
+  .founder-section {
+    padding: 30px 20px;
+  }
+
+  .founder-img img {
+    width: 100%;
+  }
+
+  .founder-name {
+    font-size: 1.8rem;
+  }
+
+  .team-card {
+    width: 100%;
+  }
+
+  .offer-card {
+    width: 100%;
+    padding: 20px;
+  }
+
+  .sl-collage-section {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .sl-collage-content {
+    text-align: center;
+  }
+
+  .explore-card {
+    width: 100%;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .mission-sl-call-btn {
+    display: none !important;
+  }
+
+  .mission-sl-text p {
+    font-size: 0.8rem;
+  }
+
+}
+
+/* ===== Stats Section Responsiveness ===== */
+
+/* ========== 1024px ========== */
+@media (max-width: 1024px) {
+  .stats-section {
+    padding: 60px 30px;
+    height: auto;
+  }
+
+  .stats-box {
+    width: 220px;
+    height: 180px;
+  }
+
+  .stats-box h2 {
+    font-size: 2rem;
+  }
+
+  .stats-box p {
+    font-size: 1rem;
+  }
+}
+
+/* ========== 768px Tablets ========== */
+@media (max-width: 768px) {
+  .stats-section {
+    padding: 50px 20px;
+    height: auto;
+  }
+
+  .stats-box {
+    width: 200px;
+    height: 160px;
+  }
+
+  .stats-box h2 {
+    font-size: 1.8rem;
+  }
+
+  .stats-box p {
+    font-size: 0.95rem;
+  }
+}
+
+/* ========== 480px Mobile ========== */
+@media (max-width: 480px) {
+  .stats-section {
+    padding: 40px 10px;
+    height: auto;
+  }
+
+  .stats-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+
+  .stats-box {
+    width: 90%;
+    height: auto;
+    padding: 20px;
+  }
+
+  .stats-box h2 {
+    font-size: 1.6rem;
+  }
+
+  .stats-box p {
+    font-size: 0.9rem;
+  }
+
+  .stats-icon {
+    font-size: 2.2rem;
+  }
 }

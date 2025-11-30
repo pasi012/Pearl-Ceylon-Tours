@@ -1,3 +1,12 @@
+body,
+.dayTour-container {
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background-color: #fff;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
+}
+
 /* ============================
    HERO SECTION
 ============================ */
@@ -93,4 +102,124 @@
     margin-top: 10px;
     font-size: 0.95rem;
     opacity: 0.8;
+}
+
+/* ============================
+   CTA SECTION
+============================ */
+.cta-section {
+    padding: 60px 70px;
+}
+
+.cta-box {
+    background: #fff;
+    border-radius: 20px;
+    padding: 35px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+}
+
+.cta-left {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.cta-icon {
+    width: 80px;
+}
+
+.cta-text h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.cta-text p {
+    margin-top: 5px;
+    opacity: 0.8;
+}
+
+.cta-plane {
+    width: 140px;
+}
+
+.cta-btn {
+    background: #0aa2c0;
+    color: #fff;
+    padding: 14px 28px;
+    border-radius: 10px;
+    font-weight: 600;
+    border: none;
+}
+
+
+/* ======================================================
+   🔵 RESPONSIVE BREAKPOINTS
+====================================================== */
+
+/* ============== 1024px ============== */
+@media (max-width: 1024px) {
+    .daytour-hero-content h1 {
+        font-size: 3rem;
+    }
+
+    .daytour-grid-section {
+        padding: 40px;
+    }
+
+}
+
+/* ============== 768px ============== */
+@media (max-width: 768px) {
+    .daytour-hero-section {
+        height: 38vh;
+        margin-top: 120px;
+    }
+
+    .daytour-hero-content h1 {
+        font-size: 2.4rem;
+    }
+
+    .daytour-grid-container {
+        grid-template-columns: 1fr 1fr;
+        gap: 25px;
+    }
+
+    .daytour-card img {
+        height: 200px;
+    }
+
+}
+
+/* ============== 480px (Mobile) ============== */
+@media (max-width: 480px) {
+    .daytour-hero-section {
+        height: 30vh;
+        margin-top: 100px;
+    }
+
+    .daytour-hero-content h1 {
+        font-size: 1.9rem;
+        line-height: 1.3;
+    }
+
+    .daytour-hero-content p {
+        font-size: 0.85rem;
+    }
+
+    .daytour-grid-section {
+        padding: 20px;
+    }
+
+    .daytour-grid-container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .daytour-card img {
+        height: 170px;
+    }
+
 }

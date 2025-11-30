@@ -30,6 +30,8 @@ import ColomboBenthotaGalle from "./pages/daypackages/ColomboBenthotaGalle";
 import ColomboKandy from "./pages/daypackages/ColomboKandy";
 import ColomboSigiriya from "./pages/daypackages/ColomboSigiriya";
 import ColomboKithulgala from "./pages/daypackages/ColomboKithulgala";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import TermsAndCondition from "./pages/TermsAndCondition";
 
 function App() {
   return (
@@ -45,6 +47,8 @@ function App() {
         <Route path="/destinations" element={<Destinations />} />
         <Route path="/about-sri-lanka" element={<AboutSriLanka />} />
         <Route path="/whyChooseUs" element={<WhyChooseUs />} />
+        <Route path="/terms-condition" element={<TermsAndCondition />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
 
         {/* destinations */}
         <Route path="/destinations/Mirissa" element={<Mirissa />} />

@@ -61,7 +61,7 @@ function Anuradhapura() {
   }, []);
 
   return (
-    <>
+    <div className="destination-container">
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
@@ -581,7 +581,7 @@ function Anuradhapura() {
           <button className="cta-btn">LET’S GET STARTED</button>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 

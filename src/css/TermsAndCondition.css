@@ -1,5 +1,5 @@
 body,
-.why-container {
+.tc-container {
   font-family: 'Poppins', sans-serif;
   color: #222;
   background-color: #fff;
@@ -7,7 +7,7 @@ body,
 }
 
 /* =============== HERO SECTION ================= */
-.why-hero {
+.tc-hero {
     position: relative;
     height: 45vh;
     background: url("../assets/hero-destination.jpg") center/cover no-repeat;
@@ -17,7 +17,7 @@ body,
     margin-top: 150px;
 }
 
-.why-hero .overlay {
+.tc-hero .overlay {
     position: absolute;
     inset: 0;
     background: rgba(0, 0, 0, 0.45);
@@ -26,183 +26,170 @@ body,
     justify-content: center;
 }
 
-.why-hero .hero-content {
+.tc-hero .hero-content {
     color: #fff;
     text-align: center;
 }
 
-.why-hero h1 {
+.tc-hero h1 {
     font-size: 4rem;
     font-weight: 600;
 }
 
 /* =============== MAIN WRAPPER ================= */
-.why-wrapper {
+.tc-wrapper {
     padding: 70px 80px;
     background: #fff;
     margin-left: 200px;
     margin-right: 200px;
 }
 
-.why-container {
+.tc-container {
     display: grid;
     grid-template-columns: 300px 1fr;
-    gap: 100px;
+    gap: 80px;
 }
 
 /* =============== LEFT SIDEBAR ================= */
-.why-sidebar {
+.tc-sidebar {
     background: #f7f9fc;
     padding: 25px 0;
     border-radius: 12px;
     box-shadow: 0 8px 18px rgba(0, 0, 0, 0.08);
     height: fit-content;
     width: 350px;
-    flex: auto;
 }
 
-.why-nav-item {
-    padding: 18px 28px;
-    font-size: 1.1rem;
+.tc-nav-item {
+    padding: 18px 25px;
+    font-size: 1.05rem;
     cursor: pointer;
     border-left: 3px solid transparent;
     transition: all 0.25s ease;
 }
 
-.why-nav-item:hover {
+.tc-nav-item:hover {
     background: #eef3f7;
 }
 
-.why-nav-item.active {
+.tc-nav-item.active {
     background: #fff;
     border-left: 3px solid #247cad;
     font-weight: 600;
 }
 
 /* =============== RIGHT CONTENT ================= */
-.why-content h2 {
+.tc-content h2 {
     font-size: 2rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
-.why-content h4 {
-    font-size: 1.1rem;
+.tc-content h3 {
+    font-size: 1.2rem;
     font-weight: 600;
 }
 
-.why-content p {
+.tc-content p {
     margin-top: 10px;
     line-height: 1.7;
     font-size: 1rem;
     color: #444;
 }
 
-/* ============================================================
-   RESPONSIVE STYLES FOR WHY CHOOSE US PAGE
-============================================================ */
+/* ================================================
+   RESPONSIVE STYLES
+================================================ */
 
-/* =============== 1024px (Large Tablets / Small Laptops) =============== */
+/* ------------ 1024px (Large Tablets / Laptops) ------------ */
 @media (max-width: 1024px) {
-
-    .why-wrapper {
-        padding: 60px 40px;
+    .tc-wrapper {
+        padding: 50px 40px;
         margin-left: 80px;
         margin-right: 80px;
     }
 
-    .why-container {
+    .tc-container {
         grid-template-columns: 260px 1fr;
-        gap: 60px;
+        gap: 50px;
     }
 
-    .why-sidebar {
+    .tc-sidebar {
         width: 260px;
     }
 
-    .why-hero h1 {
+    .tc-hero h1 {
         font-size: 3rem;
     }
 }
 
-/* =============== 768px (Tablets) =============== */
+/* ------------ 768px (Tablets) ------------ */
 @media (max-width: 768px) {
-
-    .why-wrapper {
-        padding: 40px 25px;
-        margin-left: 25px;
-        margin-right: 25px;
+    .tc-wrapper {
+        padding: 40px 30px;
+        margin-left: 30px;
+        margin-right: 30px;
     }
 
-    .why-container {
+    .tc-container {
         grid-template-columns: 1fr;
-        /* Sidebar above content */
-        gap: 40px;
+        /* sidebar above content */
+        gap: 35px;
     }
 
-    .why-sidebar {
+    .tc-sidebar {
         width: 100%;
     }
 
-    .why-nav-item {
+    .tc-nav-item {
         font-size: 1rem;
-        padding: 15px 20px;
+        padding: 15px 18px;
     }
 
-    .why-content h2 {
-        font-size: 1.7rem;
-    }
-
-    .why-content p {
-        font-size: 0.95rem;
-        line-height: 1.65;
-    }
-
-    .why-hero h1 {
-        font-size: 2.4rem;
+    .tc-hero h1 {
+        font-size: 2.5rem;
     }
 }
 
-/* =============== 480px (Mobile Phones) =============== */
+/* ------------ 480px (Mobile) ------------ */
 @media (max-width: 480px) {
-
-    .why-hero {
+    .tc-hero {
         height: 35vh;
     }
 
-    .why-hero h1 {
+    .tc-hero h1 {
         font-size: 1.8rem;
     }
 
-    .why-wrapper {
+    .tc-wrapper {
         padding: 20px 15px;
         margin-left: 0;
         margin-right: 0;
     }
 
-    .why-container {
+    .tc-container {
         gap: 25px;
     }
 
-    .why-sidebar {
-        padding: 10px 0;
+    .tc-sidebar {
+        padding: 15px 0;
     }
 
-    .why-nav-item {
+    .tc-nav-item {
         padding: 12px 15px;
         font-size: 0.95rem;
     }
 
-    .why-content h2 {
-        font-size: 1.4rem;
+    .tc-content h2 {
+        font-size: 1.5rem;
     }
 
-    .why-content h4 {
+    .tc-content h3 {
         font-size: 1rem;
     }
 
-    .why-content p {
+    .tc-content p {
         font-size: 0.9rem;
-        line-height: 1.55;
+        line-height: 1.6;
     }
 }

@@ -51,7 +51,7 @@ function EcoEscapes() {
   }, []);
 
   return (
-    <>
+    <div className="destination-container">
       {/* HERO SECTION */}
       <section
         className="mirissa-hero"
@@ -1129,7 +1129,7 @@ function EcoEscapes() {
           <button className="cta-btn">LET’S GET STARTED</button>
         </div>
       </section>
-    </>
+    </div>
   );
 }
 
