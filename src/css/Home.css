@@ -4,7 +4,8 @@ body,
   font-family: 'Poppins', sans-serif;
   color: #222;
   background-color: #fff;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+  overflow-x: hidden;
+  /* Prevent horizontal scroll */
 }
 
 /* Hero Section */
@@ -181,7 +182,6 @@ li {
   background: #fff;
   gap: 60px;
   margin-top: -60px;
-  margin-left: 50px;
 }
 
 .about-left {
@@ -1133,6 +1133,10 @@ li {
 /* RESPONSIVE MEDIA QUERIES */
 /* ======================= */
 
+/* ======================= */
+/* RESPONSIVE MEDIA QUERIES */
+/* ======================= */
+
 /* ===== 1024px ===== */
 @media (max-width: 1024px) {
 
@@ -1220,11 +1224,13 @@ li {
   }
 
   /* About Section */
-  .about-container {
+  .about-container,
+  .about {
     flex-direction: column;
     align-items: center;
     text-align: center;
     gap: 25px;
+    padding: 0 15px;
   }
 
   .about-content h2 {
@@ -1233,10 +1239,6 @@ li {
 
   .about-content p {
     font-size: 0.95rem;
-  }
-
-  .about-image img {
-    max-width: 100%;
   }
 
   /* Why Choose Section */
@@ -1249,6 +1251,45 @@ li {
   .why-choose-content {
     flex: 1 1 100%;
     max-width: 100%;
+  }
+
+  /* Packages Section Margin */
+  .packages-section {
+    margin-top: 10px;
+  }
+
+  /* Buttons */
+  .primary-btn,
+  .outline-btn {
+    padding: 10px 20px;
+    font-size: 0.9rem;
+  }
+
+  /* Hospitality Cards */
+  .hospitality-cards {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  /* Hide arrows */
+  .arrow-btn,
+  .arrow-btn1 {
+    display: none !important;
+  }
+
+  /* Hide About right side images */
+  .about-right {
+    display: none !important;
+  }
+
+  /* Testimonial Section */
+  .testimonial-card {
+    flex: 0 0 calc(50% - 15px);
+    scroll-snap-align: start;
+  }
+
+  .testimonial-slider {
+    padding: 10px 5px;
   }
 }
 
@@ -1279,15 +1320,14 @@ li {
     font-size: 0.85rem;
   }
 
+  .packages-section {
+    margin-top: 10px;
+  }
+
   /* Packages & Destinations Section */
   .package-card-home,
   .destination-card-home {
     flex: 0 0 100%;
-  }
-
-  .packages-slider-wrapper .arrow-btn.left,
-  .packages-slider-wrapper .arrow-btn.right {
-    display: none;
   }
 
   /* About Section */
@@ -1320,105 +1360,33 @@ li {
     flex: 1 1 100%;
   }
 
-  /* Buttons */
-  .primary-btn,
-  .outline-btn {
-    padding: 10px 20px;
-    font-size: 0.9rem;
-  }
-
-  /* Hospitality Section */
-  .hospitality-cards {
-    flex-direction: column;
-    gap: 15px;
-  }
-}
-
-/* ===== 768px ===== */
-@media (max-width: 768px) {
-
-  /* Hide all arrows on tablets and smaller */
-  .arrow-btn,
-  .arrow-btn1 {
-    display: none !important;
-  }
-}
-
-/* ===== 480px ===== */
-@media (max-width: 480px) {
-
-  /* Already hiding arrows in your code, just ensure all are included */
-  .arrow-btn,
-  .arrow-btn1 {
-    display: none !important;
-  }
-}
-
-/* ===== 768px ===== */
-@media (max-width: 768px) {
-
-  /* Hide all arrows on tablets and smaller */
-  .arrow-btn,
-  .arrow-btn1 {
-    display: none !important;
-  }
-
-  /* Hide right side images in About section */
-  .about-right {
-    display: none !important;
-  }
-}
-
-/* ===== 480px ===== */
-@media (max-width: 480px) {
-
-  /* Hide all arrows on mobile */
-  .arrow-btn,
-  .arrow-btn1 {
-    display: none !important;
-  }
-
-  /* Hide right side images in About section */
-  .about-right {
-    display: none !important;
-  }
-}
-
-/* ===== 768px ===== */
-@media (max-width: 768px) {
-
-  /* Hide testimonial arrows */
-  .arrow-btn1 {
-    display: none !important;
-  }
-
-  /* Show 2 testimonial cards per row */
-  .testimonial-card {
-    flex: 0 0 calc(50% - 15px);
-    scroll-snap-align: start;
-  }
-
-  .testimonial-slider {
-    padding: 10px 5px;
-  }
-}
-
-/* ===== 480px ===== */
-@media (max-width: 480px) {
-
-  /* Hide testimonial arrows */
-  .arrow-btn1 {
-    display: none !important;
-  }
-
-  /* Show 1 testimonial card per row */
+  /* Testimonial Section */
   .testimonial-card {
     flex: 0 0 100%;
     max-width: 100%;
-    scroll-snap-align: start;
   }
 
   .testimonial-slider {
     padding: 10px 0;
+  }
+
+  /* Mobile H1 Resize */
+  h1,
+  .slide-title,
+  .about-left h1,
+  .packages-section h2,
+  .best-destinations-section h2 {
+    font-size: 1.5rem !important;
+  }
+
+  /* Ensure all arrows hidden */
+  .arrow-btn,
+  .arrow-btn1 {
+    display: none !important;
+  }
+
+  /* Hide About right side images */
+  .about-right {
+    display: none !important;
   }
 }

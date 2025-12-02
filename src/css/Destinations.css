@@ -232,7 +232,7 @@ body,
     /* HERO */
     .destinations-hero {
         height: 35vh;
-        margin-top: 110px;
+        margin-top: 20%;
     }
 
     .destinations-hero h1 {
@@ -267,8 +267,8 @@ body,
 
     /* HERO */
     .destinations-hero {
-        height: 28vh;
-        margin-top: 90px;
+        height: 30vh;
+        margin-top: 10%;
     }
 
     .destinations-hero h1 {

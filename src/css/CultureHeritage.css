@@ -1,9 +1,10 @@
 body,
 .main-container {
-  font-family: 'Poppins', sans-serif;
-  color: #222;
-  background-color: #fff;
-  overflow-x: hidden; /* Prevent horizontal scroll */
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background-color: #fff;
+    overflow-x: hidden;
+    /* Prevent horizontal scroll */
 }
 
 /* HERO */
@@ -328,9 +329,11 @@ body,
     }
 
     /* Center only the right box */
-    .ch-right {
-        margin-left: auto;
-        margin-right: auto;
+    .ch-right form {
+        width: 100%;
+        max-width: 400px;
+        margin: 20px auto;
+        /* Add vertical spacing */
     }
 
     .ch-tabs {
@@ -347,8 +350,6 @@ body,
         height: auto !important;
     }
 }
-
-
 
 /* ================================
    📱 768px (Tablet / Large Mobile)
@@ -403,18 +404,35 @@ body,
         width: 100%;
     }
 
-    /* Center only the right box */
-    .ch-right {
-        margin-left: auto;
-        margin-right: auto;
+    /* FORM */
+    .ch-right form {
+        width: 100%;
+        max-width: 350px;
+        margin: 20px auto;
+        /* vertical spacing */
+        padding: 20px;
+        /* optional padding reduction */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .ch-right form {
-        margin: 0 auto;
+    .ch-right form h3 {
+        text-align: center;
+    }
+
+    /* FORM ELEMENTS */
+    .ch-right input,
+    .ch-right textarea,
+    .ch-right select,
+    .ch-right button {
+        width: 100%;
+        max-width: 350px;
     }
 
     .ch-hero-img {
         height: 200px;
+        margin-top: -20%;
     }
 
     .ch-tabs {
@@ -441,67 +459,45 @@ body,
     }
 }
 
-
-
 /* ================================
    📱 480px (Mobile Phone)
 ================================ */
 @media (max-width: 480px) {
 
-    /* TITLE TEXT SMALLER */
-    .ch-title-section h1 {
-        font-size: 22px !important;
-        line-height: 30px !important;
+    body,
+    .ch-title-section,
+    .ch-left,
+    .ch-left section,
+    .ch-gallery,
+    .ch-gallery img,
+    .confidence-box,
+    .conf-item p,
+    .itinerary-body,
+    .route-info,
+    .phone-row input,
+    .phone-row .code,
+    .phone-row .phone {
+        align-items: center;
+        justify-content: center;
+        text-align: left;
     }
 
-    .ch-badge {
-        font-size: 13px !important;
-    }
-
-    .ch-days {
-        font-size: 14px !important;
-    }
-
-    /* GALLERY SPACING */
-    .ch-gallery {
-        gap: 12px !important;
-    }
-
+    /* Adjust flex alignments to center elements */
     .ch-two-column {
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 0 10px;
-        gap: 25px;
-    }
-
-    .ch-left,
-    .ch-right {
-        width: 100%;
-        padding: 0;
-    }
-
-    /* Center only the right box */
-    .ch-right {
-        margin-left: auto;
-        margin-right: auto;
+        align-items: center;
     }
 
     .phone-row {
         flex-direction: column;
-    }
-
-    .phone-row input {
-        width: 100%;
-    }
-
-    .ch-hero-img {
-        height: 240px;
+        align-items: center;
     }
 
     .ch-tabs {
         flex-direction: column;
-        gap: 8px;
+        align-items: center;
     }
 
     .ch-tabs button {
@@ -514,14 +510,42 @@ body,
         align-items: flex-start;
     }
 
-    form input,
-    form select,
-    form textarea {
-        font-size: 14px;
+    .ch-right form {
+        width: 95%;
+        max-width: 95%;
+        margin: 15px auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        /* stacks children vertically */
+        align-items: center;
+        /* centers children horizontally */
+        justify-content: center;
+        /* optional: centers children vertically */
+        text-align: center;
+        /* centers text inside children */
     }
 
-    button[type="submit"] {
-        width: 100%;
-        font-size: 15px;
+    /* FORM ELEMENTS */
+    .ch-right input,
+    .ch-right textarea,
+    .ch-right button {
+        width: 90%;
+        max-width: 350px;
     }
+
+    .ch-right select {
+        width: 95%;
+    }
+
+    .ch-right h3 {
+        font-size: 1.1rem;
+    }
+
+    .ch-right button {
+        font-size: 0.9rem;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+    
 }

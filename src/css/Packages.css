@@ -132,8 +132,8 @@ body,
 /* ========== 768px (Tablets + Large Mobile) ========== */
 @media (max-width: 768px) {
   .packages-hero-section {
-    height: 32vh;
-    margin-top: 100px;
+    height: 35vh;
+    margin-top: 20%;
   }
 
   .packages-hero-content h1 {
@@ -162,8 +162,8 @@ body,
 /* ========== 480px (Mobile Phones) ========== */
 @media (max-width: 480px) {
   .packages-hero-section {
-    height: 28vh;
-    background-position: top;
+    height: 30vh;
+    margin-top: 10%;
   }
 
   .packages-hero-content h1 {

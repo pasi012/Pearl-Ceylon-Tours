@@ -1,3 +1,11 @@
+/* body,
+.about-container {
+  font-family: 'Poppins', sans-serif;
+  color: #222;
+  background-color: #fff;
+  overflow-x: hidden;
+} */
+
 /* ===== Hero Section ===== */
 .about-hero {
   position: relative;
@@ -523,13 +531,16 @@
   .why-title {
     font-size: 2rem;
   }
+
   .why-description {
     font-size: 1rem;
   }
+
   .why-btn {
     font-size: 0.95rem;
     padding: 10px 22px;
   }
+
   .why-single-img {
     max-width: 320px;
   }
@@ -537,7 +548,8 @@
 
 @media (max-width: 768px) {
   .why-choose-section {
-    flex-direction: column; /* stack left and right */
+    flex-direction: column;
+    /* stack left and right */
     text-align: center;
     padding: 40px 20px;
     gap: 30px;
@@ -547,15 +559,18 @@
     font-size: 1.8rem;
     margin-left: 0;
   }
+
   .why-description {
     font-size: 0.95rem;
     margin-left: 0;
   }
+
   .why-btn {
     font-size: 0.9rem;
     padding: 10px 20px;
     margin: 0 auto;
   }
+
   .why-single-img {
     display: none;
   }
@@ -565,13 +580,16 @@
   .why-title {
     font-size: 1.5rem;
   }
+
   .why-description {
     font-size: 0.85rem;
   }
+
   .why-btn {
     font-size: 0.8rem;
     padding: 8px 18px;
   }
+
   .why-single-img {
     display: none;
   }
@@ -709,17 +727,17 @@
 }
 
 /* =======================
-   📱 RESPONSIVE DESIGN
+      1024px 
    ======================= */
-
-/* ========== 1024px ========== */
 @media (max-width: 1024px) {
 
+  /* Hero */
   .about-hero {
     height: 38vh;
     margin-top: 120px;
   }
 
+  /* Founder */
   .founder-container {
     flex-direction: column;
     text-align: center;
@@ -729,166 +747,30 @@
     width: 450px;
   }
 
+  /* Sri Lanka Collage */
   .sl-collage-section {
     padding: 40px 100px;
     flex-direction: column;
     text-align: center;
   }
 
+  /* Cards Containers */
   .offer-container,
   .team-container,
   .explore-card-container {
     gap: 20px;
   }
 
+  /* Mission */
   .mission-sl-call-btn {
     display: none !important;
   }
 
   .mission-sl-text p {
     font-size: 0.9rem;
-    /* smaller than default 1rem */
   }
 
-}
-
-/* ========== 768px Tablets ========== */
-@media (max-width: 768px) {
-
-  .about-hero h1 {
-    font-size: 2.5rem;
-  }
-
-  .about-intro h2 {
-    font-size: 2.2rem;
-  }
-
-  .intro-text {
-    width: 90%;
-  }
-
-  .founder-img img {
-    width: 350px;
-  }
-
-  .founder-section {
-    padding: 50px 40px;
-  }
-
-  .team-card {
-    width: 280px;
-  }
-
-  .offer-card {
-    width: 260px;
-  }
-
-  .sl-collage-section {
-    padding: 30px 40px;
-  }
-
-  .sl-collage-img {
-    max-width: 100%;
-  }
-
-  .why-choose-section {
-    flex-direction: column;
-    text-align: center;
-    padding: 30px;
-  }
-
-  .why-choose-right img {
-    width: 300px;
-    margin-top: 20px;
-  }
-
-  .mission-sl-call-btn {
-    display: none !important;
-  }
-
-  .mission-sl-text p {
-    font-size: 0.85rem;
-  }
-
-}
-
-/* ========== 480px Mobile ========== */
-@media (max-width: 480px) {
-
-  .about-hero {
-    height: 28vh;
-    margin-top: 100px;
-  }
-
-  .about-hero h1 {
-    font-size: 2.0rem;
-  }
-
-  .about-hero p {
-    font-size: 0.8rem;
-  }
-
-  .about-intro {
-    padding: 10px 20px;
-  }
-
-  .about-intro h2 {
-    font-size: 1.7rem;
-  }
-
-  .founder-section {
-    padding: 30px 20px;
-  }
-
-  .founder-img img {
-    width: 100%;
-  }
-
-  .founder-name {
-    font-size: 1.8rem;
-  }
-
-  .team-card {
-    width: 100%;
-  }
-
-  .offer-card {
-    width: 100%;
-    padding: 20px;
-  }
-
-  .sl-collage-section {
-    padding: 20px;
-    flex-direction: column;
-  }
-
-  .sl-collage-content {
-    text-align: center;
-  }
-
-  .explore-card {
-    width: 100%;
-  }
-
-  .stats-container {
-    flex-direction: column;
-    gap: 20px;
-  }
-
-  .mission-sl-call-btn {
-    display: none !important;
-  }
-
-  .mission-sl-text p {
-    font-size: 0.8rem;
-  }
-
-}
-
-/* ===== Stats Section Responsiveness ===== */
-
-/* ========== 1024px ========== */
-@media (max-width: 1024px) {
+  /* Stats */
   .stats-section {
     padding: 60px 30px;
     height: auto;
@@ -908,8 +790,79 @@
   }
 }
 
-/* ========== 768px Tablets ========== */
+/* =======================
+      768px Tablets
+   ======================= */
 @media (max-width: 768px) {
+
+  /* Hero */
+  .about-hero {
+    height: 35vh;
+    margin-top: 20%;
+  }
+
+  .about-hero h1 {
+    font-size: 2.5rem;
+  }
+
+  /* Intro */
+  .about-intro h2 {
+    font-size: 2.2rem;
+  }
+
+  .intro-text {
+    width: 90%;
+  }
+
+  /* Founder */
+  .founder-img img {
+    width: 350px;
+  }
+
+  .founder-section {
+    padding: 50px 40px;
+  }
+
+  /* Cards */
+  .team-card {
+    width: 280px;
+  }
+
+  .offer-card {
+    width: 260px;
+  }
+
+  /* Sri Lanka Collage */
+  .sl-collage-section {
+    padding: 30px 40px;
+  }
+
+  .sl-collage-img {
+    max-width: 100%;
+  }
+
+  /* Why Choose */
+  .why-choose-section {
+    flex-direction: column;
+    text-align: center;
+    padding: 30px;
+  }
+
+  .why-choose-right img {
+    width: 300px;
+    margin-top: 20px;
+  }
+
+  /* Mission */
+  .mission-sl-call-btn {
+    display: none !important;
+  }
+
+  .mission-sl-text p {
+    font-size: 0.85rem;
+  }
+
+  /* Stats */
   .stats-section {
     padding: 50px 20px;
     height: auto;
@@ -927,10 +880,72 @@
   .stats-box p {
     font-size: 0.95rem;
   }
+
 }
 
-/* ========== 480px Mobile ========== */
+/* =======================
+      480px Mobile
+   ======================= */
 @media (max-width: 480px) {
+
+  /* Hero */
+  .about-hero {
+    height: 30vh;
+    margin-top: 10%;
+  }
+
+  .about-hero h1 {
+    font-size: 2rem;
+  }
+
+  .about-hero p {
+    font-size: 0.8rem;
+  }
+
+  /* Intro */
+  .about-intro {
+    padding: 10px 20px;
+  }
+
+  .about-intro h2 {
+    font-size: 1.7rem;
+  }
+
+  /* Founder */
+  .founder-section {
+    padding: 30px 20px;
+  }
+
+  .founder-img img {
+    width: 100%;
+  }
+
+  .founder-name {
+    font-size: 1.8rem;
+  }
+
+  /* Cards */
+  .team-card,
+  .offer-card,
+  .explore-card {
+    width: 100%;
+  }
+
+  .offer-card {
+    padding: 20px;
+  }
+
+  /* SL Collage */
+  .sl-collage-section {
+    padding: 20px;
+    flex-direction: column;
+  }
+
+  .sl-collage-content {
+    text-align: center;
+  }
+
+  /* Stats Section */
   .stats-section {
     padding: 40px 10px;
     height: auto;
@@ -959,4 +974,14 @@
   .stats-icon {
     font-size: 2.2rem;
   }
+
+  /* Mission */
+  .mission-sl-call-btn {
+    display: none !important;
+  }
+
+  .mission-sl-text p {
+    font-size: 0.8rem;
+  }
 }
+

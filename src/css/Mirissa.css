@@ -1,10 +1,10 @@
 body,
 .destination-container {
-  font-family: 'Poppins', sans-serif;
-  color: #222;
-  background-color: #fff;
-  overflow-x: hidden;
-  width: 100%;
+    font-family: 'Poppins', sans-serif;
+    color: #222;
+    background-color: #fff;
+    overflow-x: hidden;
+    width: 100%;
 }
 
 /* HERO */
@@ -32,6 +32,7 @@ body,
     color: #fff;
     font-size: 4rem;
     z-index: 2;
+    text-align: center;
 }
 
 /* MAIN LAYOUT */
@@ -91,7 +92,6 @@ body,
 .mirissa-form h3 {
     margin-bottom: 15px;
     text-align: center;
-    /* centers the title */
 }
 
 .mirissa-form form {
@@ -204,7 +204,7 @@ body,
     background: #fafafa;
     padding: 10px;
     border-radius: 10px;
-    text-align: center;
+    text-align: left;
     border: 1px solid #ddd;
 }
 
@@ -235,10 +235,9 @@ body,
 }
 
 /* ------------------------------------------ */
-/* RESPONSIVE FOR TABLETS (max-width: 1024px) */
+/* TABLETS (max-width: 1024px) */
 /* ------------------------------------------ */
 @media (max-width: 1024px) {
-
     .mirissa-container {
         grid-template-columns: 1fr;
         padding: 40px 30px;
@@ -246,7 +245,9 @@ body,
 
     .mirissa-form {
         width: 100%;
-        margin: 0 auto;
+        max-width: 400px;
+        margin: 20px auto;
+        /* Add vertical spacing */
     }
 
     .mirissa-gallery img {
@@ -263,103 +264,77 @@ body,
     }
 }
 
-
 /* ------------------------------------------ */
-/* RESPONSIVE FOR MOBILE (max-width: 768px)   */
+/* MOBILE (max-width: 768px) */
 /* ------------------------------------------ */
 @media (max-width: 768px) {
 
-    /* HERO SECTION */
+    /* CENTER LAYOUT ONLY — NOT TEXT */
+    .mirissa-container,
+    .mirissa-left,
+    .mirissa-gallery,
+    .mirissa-top-gallery,
+    .activity-gallery,
+    .parrot-gallery {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: left;
+    }
+
+    /* HERO */
     .mirissa-hero {
         height: 35vh;
-        margin-top: 130px;
+        margin-top: 10%;
     }
 
     .mirissa-hero h1 {
         font-size: 2.2rem;
-    }
-
-    /* CONTAINER */
-    .mirissa-container {
-        grid-template-columns: 1fr;
-        padding: 20px;
-        gap: 20px;
-    }
-
-    /* GALLERY */
-    .mirissa-gallery {
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .mirissa-gallery img {
-        height: 100px;
-        object-fit: fill;
-    }
-
-    /* EXTRA TOP GALLERY */
-    .mirissa-top-gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 12px;
-    }
-
-    .mirissa-top-gallery img {
-        height: 100px;
-        width: 100%;
-        object-fit: fill;
-    }
-
-    /* ACTIVITY GALLERY */
-    .activity-gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .activity-card {
-        width: 95%;
-    }
-
-    /* PARROT ROCK */
-    .parrot-gallery {
-        display: flex;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .parrot-gallery img {
-        height: 220px;
-        width: 100%;
-        object-fit: fill;
+        text-align: center;
     }
 
     /* FORM */
     .mirissa-form {
-        width: 400px;
+        width: 100%;
+        max-width: 350px;
+        margin: 20px auto;
+        /* vertical spacing */
         padding: 20px;
+        /* optional padding reduction */
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
+    .mirissa-form h3 {
+        text-align: center;
+    }
+
+    /* GALLERIES */
+    .mirissa-gallery img,
+    .mirissa-top-gallery img {
+        height: 100px;
+    }
+
+    /* ACTIVITIES */
+    .activity-card {
+        width: 95%;
+        text-align: left;
+    }
+
+    /* PARROT */
+    .parrot-gallery img {
+        height: 220px;
+    }
+
+    /* FORM ELEMENTS */
     .mirissa-form input,
     .mirissa-form textarea,
+    .mirissa-form select,
     .mirissa-form button {
+        width: 100%;
         max-width: 350px;
-        width: 100%;
-    }
-
-    .mirissa-form select {
-        max-width: 370px;
-        width: 100%;
-    }
-
-    .phone-row {
-        display: flex;
-        gap: 10px;
-    }
-
-    .phone-row .code,
-    .phone-row .phone {
-        width: 100%;
     }
 
     /* CTA SECTION */
@@ -388,13 +363,60 @@ body,
     .cta-btn {
         width: 100%;
     }
-
 }
 
 /* ------------------------------------------ */
-/* EXTRA SMALL MOBILE (max-width: 480px)      */
+/* SMALL MOBILE (max-width: 480px) */
 /* ------------------------------------------ */
 @media (max-width: 480px) {
+
+    .mirissa-container,
+    .mirissa-left,
+    .mirissa-gallery,
+    .mirissa-top-gallery,
+    .activity-gallery,
+    .parrot-gallery {
+        align-items: center;
+        justify-content: center;
+        text-align: left;
+    }
+
+    .mirissa-form {
+        width: 95%;
+        max-width: 95%;
+        margin: 15px auto;
+        padding: 10px;
+        display: flex;
+        flex-direction: column;
+        /* stacks children vertically */
+        align-items: center;
+        /* centers children horizontally */
+        justify-content: center;
+        /* optional: centers children vertically */
+        text-align: center;
+        /* centers text inside children */
+    }
+
+    /* FORM ELEMENTS */
+    .mirissa-form input,
+    .mirissa-form textarea,
+    .mirissa-form button {
+        width: 90%;
+        max-width: 350px;
+    }
+
+    .mirissa-form select {
+        width: 100%;
+    }
+
+    .mirissa-form h3 {
+        font-size: 1.1rem;
+    }
+
+    .mirissa-form button {
+        font-size: 0.9rem;
+        padding: 10px;
+    }
 
     .mirissa-hero h1 {
         font-size: 1.8rem;
@@ -406,11 +428,6 @@ body,
 
     .mirissa-left p {
         font-size: 0.95rem;
-    }
-
-    .mirissa-form button {
-        font-size: 0.9rem;
-        padding: 10px;
     }
 
     .cta-plane {

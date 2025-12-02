@@ -59,7 +59,7 @@ function WhyChooseUs() {
     const [active, setActive] = useState(1);
 
     return (
-        <div className="why-container">
+        <div className="whyChoose-container">
             {/* Hero Section */}
             <section className="why-hero" data-aos="fade-down">
                 <div className="overlay">

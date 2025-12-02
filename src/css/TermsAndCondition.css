@@ -154,7 +154,8 @@ body,
 /* ------------ 480px (Mobile) ------------ */
 @media (max-width: 480px) {
     .tc-hero {
-        height: 35vh;
+        height: 30vh;
+        margin-top: 10%;
     }
 
     .tc-hero h1 {

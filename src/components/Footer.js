@@ -32,6 +32,17 @@ function Footer() {
 
     }, []);
 
+    const [selectedImage, setSelectedImage] = useState(null);
+
+    const openModal = (img) => {
+        setSelectedImage(img);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+    };
+
+
     return (
         <footer className="footer">
             <div className="footer-container">
@@ -69,14 +80,24 @@ function Footer() {
                     <h3>Gallery</h3>
 
                     <div className="gallery-grid">
-                        <img src={g1} alt="Gallery 1" />
-                        <img src={g2} alt="Gallery 2" />
-                        <img src={g3} alt="Gallery 3" />
-                        <img src={g4} alt="Gallery 4" />
-                        <img src={g5} alt="Gallery 5" />
-                        <img src={g6} alt="Gallery 6" />
+                        <img src={g1} alt="Gallery 1" onClick={() => openModal(g1)} />
+                        <img src={g2} alt="Gallery 2" onClick={() => openModal(g2)} />
+                        <img src={g3} alt="Gallery 3" onClick={() => openModal(g3)} />
+                        <img src={g4} alt="Gallery 4" onClick={() => openModal(g4)} />
+                        <img src={g5} alt="Gallery 5" onClick={() => openModal(g5)} />
+                        <img src={g6} alt="Gallery 6" onClick={() => openModal(g6)} />
                     </div>
+
                 </div>
+
+                {selectedImage && (
+                    <div className="image-modal" onClick={closeModal}>
+                        <div className="image-modal-content" onClick={(e) => e.stopPropagation()}>
+                            <img src={selectedImage} alt="Large preview" />
+                            <span className="close-btn" onClick={closeModal}>×</span>
+                        </div>
+                    </div>
+                )}
 
                 {/* NEWSLETTER SECTION */}
                 <div className="footer-newsletter">

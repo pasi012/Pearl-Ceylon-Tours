@@ -34,7 +34,7 @@ function About() {
     }, []);
 
     return (
-        <>
+        <div>
             {/* ===== Hero Section ===== */}
             <section className="about-hero" data-aos="fade-down">
                 <div className="overlay">
@@ -295,13 +295,6 @@ function About() {
                         </p>
                     </div>
 
-                    {/* Call Button */}
-                    <button
-                        className="mission-sl-call-btn"
-                        onClick={() => window.location.href = "tel:0773562768"}
-                    >
-                        <i className="fa-solid fa-phone"></i>
-                    </button>
                 </div>
             </section>
 
@@ -446,7 +439,7 @@ function About() {
                 </div>
             </section>
 
-        </>
+        </div>
     );
 }
 

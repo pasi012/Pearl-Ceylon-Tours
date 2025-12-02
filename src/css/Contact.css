@@ -230,7 +230,7 @@ body,
   /* Hero */
   .contact-hero {
     height: 35vh;
-    margin-top: 110px;
+    margin-top: 20%;
   }
 
   .contact-hero h1 {
@@ -247,7 +247,7 @@ body,
   }
 
   .map-container iframe {
-    height: 350px;
+    height: 300px;
   }
 
   .contact-form {
@@ -266,8 +266,8 @@ body,
 
   /* Hero */
   .contact-hero {
-    height: 32vh;
-    margin-top: 90px;
+    height: 30vh;
+    margin-top: 10%;
   }
 
   .contact-hero h1 {
@@ -311,7 +311,7 @@ body,
 
   /* Form */
   .contact-form {
-    padding: 25px;
+    padding: 25px 25px;
   }
 
   .contact-form h3 {
@@ -324,7 +324,7 @@ body,
 
   .contact-form input,
   .contact-form textarea {
-    width: 100%;
+    width: 90%;
   }
 
   .submit-btn {

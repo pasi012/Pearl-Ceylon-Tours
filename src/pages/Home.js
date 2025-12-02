@@ -170,18 +170,8 @@ function Home() {
   //packages
   useEffect(() => {
     const slider = document.getElementById("pkgSlider");
-    const prevBtn = document.getElementById("pkgPrevBtn");
-    const nextBtn = document.getElementById("pkgNextBtn");
 
     const scrollAmount = slider.offsetWidth / 4 + 20; // roughly one card width
-
-    // Manual scroll
-    nextBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: scrollAmount, behavior: "smooth" });
-    });
-    prevBtn.addEventListener("click", () => {
-      slider.scrollBy({ left: -scrollAmount, behavior: "smooth" });
-    });
 
     // Auto-scroll every 4 seconds
     const autoScroll = setInterval(() => {
@@ -201,17 +191,8 @@ function Home() {
   //day tour
   useEffect(() => {
     const daySlider = document.getElementById("daySlider");
-    const dayPrevBtn = document.getElementById("dayPrevBtn");
-    const dayNextBtn = document.getElementById("dayNextBtn");
 
     const dayScrollAmount = daySlider.offsetWidth / 4 + 20;
-
-    dayNextBtn.addEventListener("click", () => {
-      daySlider.scrollBy({ left: dayScrollAmount, behavior: "smooth" });
-    });
-    dayPrevBtn.addEventListener("click", () => {
-      daySlider.scrollBy({ left: -dayScrollAmount, behavior: "smooth" });
-    });
 
     const dayAutoScroll = setInterval(() => {
       if (daySlider.scrollLeft + daySlider.clientWidth >= daySlider.scrollWidth - 5) {
@@ -333,9 +314,6 @@ function Home() {
         </h2>
 
         <div className="packages-slider-wrapper">
-          <button className="arrow-btn left" id="pkgPrevBtn">
-            <FaArrowLeft />
-          </button>
 
           <div className="packages-slider" id="pkgSlider">
 
@@ -406,9 +384,6 @@ function Home() {
 
           </div>
 
-          <button className="arrow-btn right" id="pkgNextBtn">
-            <FaArrowRight />
-          </button>
         </div>
       </section>
 
@@ -419,10 +394,6 @@ function Home() {
         </h2>
 
         <div className="packages-slider-wrapper">
-          {/* LEFT ARROW */}
-          <button className="arrow-btn left" id="dayPrevBtn">
-            <FaArrowLeft />
-          </button>
 
           {/* SLIDER */}
           <div className="packages-slider" id="daySlider">
@@ -493,10 +464,6 @@ function Home() {
             </div>
           </div>
 
-          {/* RIGHT ARROW */}
-          <button className="arrow-btn right" id="dayNextBtn">
-            <FaArrowRight />
-          </button>
         </div>
       </section>
 
@@ -770,9 +737,6 @@ function Home() {
         </p>
 
         <div className="testimonial-slider-wrapper">
-          <button className="arrow-btn1 left-des" id="destPrevBtn">
-            <FaArrowLeft />
-          </button>
 
           <div className="testimonial-slider" id="destSlider">
 
@@ -831,10 +795,6 @@ function Home() {
             </div>
 
           </div>
-
-          <button className="arrow-btn1 right-des" id="destNextBtn">
-            <FaArrowRight />
-          </button>
 
         </div>
 

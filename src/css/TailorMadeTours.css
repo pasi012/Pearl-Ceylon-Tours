@@ -165,7 +165,7 @@ textarea {
 @media (max-width: 768px) {
     .tmt-hero-section {
         height: 35vh;
-        margin-top: 100px;
+        margin-top: 20%;
     }
 
     .tmt-hero-content h1 {
@@ -212,7 +212,7 @@ textarea {
 @media (max-width: 480px) {
     .tmt-hero-section {
         height: 30vh;
-        margin-top: 80px;
+        margin-top: 10%;
     }
 
     .tmt-hero-content h1 {
@@ -255,6 +255,7 @@ textarea {
     textarea {
         height: 90px;
         font-size: 0.85rem;
+        width: 90%;
     }
 
     .tmt-submit-btn {

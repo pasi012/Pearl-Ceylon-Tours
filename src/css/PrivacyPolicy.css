@@ -165,9 +165,8 @@ body,
 /* ========== 768px (Tablets + Large Mobile) ========== */
 @media (max-width: 768px) {
     .privacy-hero {
-        height: 32vh;
-        margin-top: 100px;
-        background-position: center top;
+        height: 35vh;
+        margin-top: 20%;
     }
 
     .privacy-hero h1 {
@@ -209,9 +208,8 @@ body,
 /* ========== 480px (Mobile Phones) ========== */
 @media (max-width: 480px) {
     .privacy-hero {
-        height: 28vh;
-        margin-top: 90px;
-        background-position: top;
+        height: 30vh;
+        margin-top: 10%;
     }
 
     .privacy-hero h1 {
