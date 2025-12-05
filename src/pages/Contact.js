@@ -27,7 +27,7 @@ function Contact() {
                     <div className="info-card" data-aos="zoom-in">
                         <i className="fas fa-map-marker-alt"></i>
                         <h4>Address Line</h4>
-                        <p>No. 258, Nidahas Mawatha,<br />Matale, Sri Lanka.</p>
+                        <p>No 13, Gotuwala Rd, Meeriya kale,<br />Ella, Sri Lanka.</p>
                     </div>
 
                     <div className="info-card" data-aos="zoom-in">

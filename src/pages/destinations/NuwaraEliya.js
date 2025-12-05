@@ -768,7 +768,7 @@ function NuwaraEliya() {
                     `;
 
               // ✅ SEND WHATSAPP
-              const whatsappNumber = "94786086861"; // Your number
+              const whatsappNumber = "94773562768"; // Your number
               const whatsappURL =
                 "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(fullMessage);
 
@@ -776,7 +776,7 @@ function NuwaraEliya() {
 
               // ✅ SEND EMAIL
               const mailto =
-                "mailto:s.a.pasindupiyushan@gmail.com" +
+                "mailto:pearlceylontours01@gmail.com" +
                 "?subject=" + encodeURIComponent("New Tour Inquiry") +
                 "&body=" + encodeURIComponent(fullMessage);
 

@@ -1133,9 +1133,27 @@ li {
 /* RESPONSIVE MEDIA QUERIES */
 /* ======================= */
 
-/* ======================= */
-/* RESPONSIVE MEDIA QUERIES */
-/* ======================= */
+@media (min-width: 1025px) {
+
+  .why-choose-container {
+    gap: 40px;
+    align-items: center;
+  }
+
+  .why-choose-image img {
+    max-width: 100%;
+    max-height: 100%;
+  }
+
+  .explore-badge {
+    bottom: 30px;
+    left: 100px;
+  }
+
+  .why-choose-content {
+    max-width: 550px;
+  }
+}
 
 /* ===== 1024px ===== */
 @media (max-width: 1024px) {
@@ -1174,17 +1192,36 @@ li {
     flex: 0 0 calc(33.33% - 20px);
   }
 
-  /* Why Choose Section */
   .why-choose-container {
-    gap: 30px;
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
   }
 
   .why-choose-image {
-    flex: 1 1 250px;
+    display: flex;
+    justify-content: center;
+  }
+
+  .why-choose-image img {
+    max-width: 430px;
+  }
+
+  /* Fix badge position */
+  .explore-badge {
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%) rotate(-10deg);
   }
 
   .why-choose-content {
-    flex: 1 1 400px;
+    flex: unset;
+    max-width: 650px;
+    text-align: center;
+  }
+
+  .why-choose-buttons {
+    justify-content: center;
   }
 }
 
@@ -1253,6 +1290,18 @@ li {
     max-width: 100%;
   }
 
+  .explore-badge {
+    padding: 20px 18px;
+    font-size: 1rem;
+    bottom: 20px;
+    left: 100px;
+    transform: rotate(-10deg);
+  }
+
+  .explore-badge span {
+    font-size: 1.4rem;
+  }
+
   /* Packages Section Margin */
   .packages-section {
     margin-top: 10px;
@@ -1269,6 +1318,19 @@ li {
   .hospitality-cards {
     flex-direction: column;
     gap: 15px;
+  }
+
+  .hospitality-badge {
+    padding: 8px 14px;
+    width: 150px;
+    height: 120px;
+    bottom: 30px;
+    left: 200px;
+    transform: rotate(5deg);
+  }
+
+  .hospitality-badge span {
+    font-size: 0.85rem;
   }
 
   /* Hide arrows */
@@ -1360,6 +1422,18 @@ li {
     flex: 1 1 100%;
   }
 
+  .explore-badge {
+    padding: 14px 14px;
+    font-size: 0.8rem;
+    bottom: 8px;
+    left: 70px;
+    transform: rotate(-8deg);
+  }
+
+  .explore-badge span {
+    font-size: 1.1rem;
+  }
+
   /* Testimonial Section */
   .testimonial-card {
     flex: 0 0 100%;
@@ -1389,4 +1463,18 @@ li {
   .about-right {
     display: none !important;
   }
+
+  .hospitality-badge {
+    padding: 5px 10px;
+    width: 120px;
+    height: 100px;
+    bottom: 20px;
+    left: 170px;
+    transform: rotate(5deg);
+  }
+
+  .hospitality-badge span {
+    font-size: 0.75rem;
+  }
+
 }

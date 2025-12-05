@@ -84,6 +84,8 @@
 
 .founder-img img {
   width: 600px;
+  height: 600px;
+  object-fit: fill;
   border-radius: 12px;
 }
 
@@ -524,9 +526,6 @@
   margin-bottom: 30px;
 }
 
-/* =========================
-   Mobile Responsive
-   ========================= */
 @media (max-width: 1024px) {
   .why-title {
     font-size: 2rem;
@@ -984,4 +983,3 @@
     font-size: 0.8rem;
   }
 }
-

@@ -1,7 +1,8 @@
 /* ============================
    MAIN NAVBAR
 ============================ */
-html, body {
+html,
+body {
   margin: 0;
   padding: 0;
   width: 100%;
@@ -67,7 +68,7 @@ html, body {
 }
 
 .navbar-shrink .phone-box {
-   margin-right: 70px;
+  margin-right: 70px;
 }
 
 /* ============================
@@ -107,7 +108,7 @@ html, body {
   border-radius: 8px;
   transition: all 0.4s ease;
   cursor: pointer;
-  
+
 }
 
 .phone-box:hover {
@@ -142,31 +143,36 @@ html, body {
   z-index: 1001;
 }
 
-/* ============================
-   MOBILE MENU
-============================ */
 .mobile-menu {
   display: none;
 }
 
 /* =====================================================
-   RESPONSIVE NAVBAR — FULL WIDTH FOR SMALL SCREENS
+   📱 RESPONSIVE NAVBAR — CLEAN COMBINED VERSION
 ===================================================== */
 
-/* ---------- 1024px ---------- */
+/* ---------- 1024px (Tablets & Small Laptops) ---------- */
 @media (max-width: 1024px) {
+
   .main-navbar {
     top: 20px;
   }
 
   .navbar-container {
     width: 90%;
+    max-width: 100%;
     padding: 15px 25px;
     border-radius: 0 0 6px 6px;
+    margin: 0 auto;
+    justify-content: space-between;
   }
 
   .logo {
     height: 55px;
+  }
+
+  .navbar-menu {
+    gap: 20px;
   }
 
   .phone-box {
@@ -174,7 +180,7 @@ html, body {
   }
 }
 
-/* ---------- 768px ---------- */
+/* ---------- 768px (Mobile Landscape & Tablets Portrait) ---------- */
 @media (max-width: 768px) {
 
   .main-navbar {
@@ -197,12 +203,11 @@ html, body {
     display: none;
   }
 
-  /* Show menu toggle */
+  /* Show mobile menu toggle */
   .mobile-menu-btn {
     display: block;
   }
 
-  /* Logo size */
   .logo {
     height: 48px;
   }
@@ -216,7 +221,7 @@ html, body {
     display: none;
   }
 
-  /* Mobile dropdown menu */
+  /* Mobile dropdown */
   .mobile-menu {
     display: flex;
     flex-direction: column;
@@ -225,7 +230,7 @@ html, body {
     background: #fff;
     padding: 20px 0;
     border-radius: 0 0 8px 8px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     animation: slideDown 0.3s ease forwards;
     z-index: 999;
@@ -235,8 +240,6 @@ html, body {
     font-size: 18px;
     font-weight: 600;
     color: #111;
-    text-decoration: none;
-    transition: color 0.3s;
   }
 
   .mobile-menu li a:hover {
@@ -244,12 +247,19 @@ html, body {
   }
 
   @keyframes slideDown {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
+
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
   }
 }
 
-/* ---------- 480px ---------- */
+/* ---------- 480px (Mobile Portrait) ---------- */
 @media (max-width: 480px) {
 
   .navbar-container {
@@ -267,11 +277,34 @@ html, body {
   }
 
   .mobile-menu {
-    width: 100% !important;
     padding: 15px 0;
   }
 
   .mobile-menu li a {
     font-size: 16px;
+  }
+}
+
+/* ---------- DESKTOP (1025px and above) ---------- */
+@media (min-width: 1025px) {
+
+  .navbar-container {
+    width: 85%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 18px 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-menu {
+    flex: 1;
+    justify-content: center;
+  }
+
+  .logo-box,
+  .phone-box {
+    flex-shrink: 0;
   }
 }

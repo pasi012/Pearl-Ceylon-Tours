@@ -19,7 +19,7 @@ const PrivacyPolicy = () => {
             <div className="privacy-container">
                 <h2 className="privacy-title">PRIVACY POLICY</h2>
                 <p className="privacy-text">
-                    At Captain Ceylon Tours, we are committed to protecting the privacy and security of our clients’ personal information.
+                    At Pearl Ceylon Tours, we are committed to protecting the privacy and security of our clients’ personal information.
                     This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website or make an inquiry.
                     By using our website, you consent to the practices described in this policy.
                 </p>

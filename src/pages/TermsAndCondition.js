@@ -76,7 +76,7 @@ function TermsAndCondition() {
         {
             id: 10,
             title: "Privacy Policy",
-            desc: `At Captain Ceylon Tours, we are committed to protecting the privacy and security of our clients’ personal information. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website or make an inquiry. By using our website, you consent to the practices described in this policy.
+            desc: `At Pearl Ceylon Tours, we are committed to protecting the privacy and security of our clients’ personal information. This Privacy Policy outlines how we collect, use, and safeguard your information when you visit our website or make an inquiry. By using our website, you consent to the practices described in this policy.
             <strong>Information We Collect</strong><br/>
             When you visit our website or make an inquiry, we may collect certain information about you, including: Personal identification information (such as your name, email address, phone number) provided voluntarily by you during inquiries or booking requests. Travel-related details, including preferences and special requests, necessary to tailor our services to your needs. Browsing information, such as your IP address, browser type, and device information, collected automatically using cookies and similar technologies.<br/><br/>
             <strong>Use of Information</strong><br/>
@@ -102,7 +102,7 @@ function TermsAndCondition() {
     const [active, setActive] = useState(1);
 
     return (
-        <div className="tc-container">
+        <div className="tcc-container">
             {/* HERO SECTION */}
             <section className="tc-hero" data-aos="fade-down">
                 <div className="overlay">

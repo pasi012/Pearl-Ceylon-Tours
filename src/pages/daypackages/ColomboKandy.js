@@ -189,7 +189,7 @@ function ColomboKandy() {
                                             `;
 
                                         // ✅ SEND WHATSAPP
-                                        const whatsappNumber = "94786086861"; // your WhatsApp number
+                                        const whatsappNumber = "94773562768"; // your WhatsApp number
                                         const whatsappURL =
                                             "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(fullMessage);
 
@@ -197,7 +197,7 @@ function ColomboKandy() {
 
                                         // ✅ SEND EMAIL
                                         const mailto =
-                                            "mailto:s.a.pasindupiyushan@gmail.com" +
+                                            "mailto:pearlceylontours01@gmail.com" +
                                             "?subject=" + encodeURIComponent("New Tour Booking") +
                                             "&body=" + encodeURIComponent(fullMessage);
 
@@ -599,7 +599,7 @@ function ColomboKandy() {
                                             `;
 
                                         // ✅ SEND WHATSAPP
-                                        const whatsappNumber = "94786086861"; // your WhatsApp number
+                                        const whatsappNumber = "94773562768"; // your WhatsApp number
                                         const whatsappURL =
                                             "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(fullMessage);
 
@@ -607,7 +607,7 @@ function ColomboKandy() {
 
                                         // ✅ SEND EMAIL
                                         const mailto =
-                                            "mailto:s.a.pasindupiyushan@gmail.com" +
+                                            "mailto:pearlceylontours01@gmail.com" +
                                             "?subject=" + encodeURIComponent("New Tour Booking") +
                                             "&body=" + encodeURIComponent(fullMessage);
 
@@ -991,7 +991,7 @@ function ColomboKandy() {
                                             `;
 
                                         // ✅ SEND WHATSAPP
-                                        const whatsappNumber = "94786086861"; // your WhatsApp number
+                                        const whatsappNumber = "94773562768"; // your WhatsApp number
                                         const whatsappURL =
                                             "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(fullMessage);
 
@@ -999,7 +999,7 @@ function ColomboKandy() {
 
                                         // ✅ SEND EMAIL
                                         const mailto =
-                                            "mailto:s.a.pasindupiyushan@gmail.com" +
+                                            "mailto:pearlceylontours01@gmail.com" +
                                             "?subject=" + encodeURIComponent("New Tour Booking") +
                                             "&body=" + encodeURIComponent(fullMessage);
 
@@ -1338,7 +1338,7 @@ function ColomboKandy() {
                                             `;
 
                                     // ✅ SEND WHATSAPP
-                                    const whatsappNumber = "94786086861"; // your WhatsApp number
+                                    const whatsappNumber = "94773562768"; // your WhatsApp number
                                     const whatsappURL =
                                         "https://wa.me/" + whatsappNumber + "?text=" + encodeURIComponent(fullMessage);
 
@@ -1346,7 +1346,7 @@ function ColomboKandy() {
 
                                     // ✅ SEND EMAIL
                                     const mailto =
-                                        "mailto:s.a.pasindupiyushan@gmail.com" +
+                                        "mailto:pearlceylontours01@gmail.com" +
                                         "?subject=" + encodeURIComponent("New Tour Booking") +
                                         "&body=" + encodeURIComponent(fullMessage);
 

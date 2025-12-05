@@ -85,12 +85,12 @@ function TailorMadeTours() {
         `;
 
         // ⭐ WhatsApp send
-        const whatsappNumber = "94786086861";
+        const whatsappNumber = "94773562768";
         const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(fullMessage)}`;
         window.open(whatsappURL, "_blank");
 
         // ⭐ Email send
-        const emailURL = `mailto:s.a.pasindupiyushan@gmail.com?subject=Tailor Made Tour Request&body=${encodeURIComponent(fullMessage)}`;
+        const emailURL = `mailto:pearlceylontours01@gmail.com?subject=Tailor Made Tour Request&body=${encodeURIComponent(fullMessage)}`;
         window.location.href = emailURL;
     };
 
