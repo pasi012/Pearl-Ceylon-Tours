@@ -1306,15 +1306,29 @@ function ColomboCityTour() {
                                     style={{ border: 0 }}
                                     loading="lazy"
                                     allowFullScreen
-                                    src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyAMSBflSdMe2iqCbOsRtIGLTUC-SOjBxmg&origin=CITY1&destination=CITY2
-                                        &origin=Colombo,Sri+Lanka
-                                        &destination=Galle,Sri+Lanka
-                                        &waypoints=Kandy|Sigiriya|Anuradhapura|Polonnaruwa|Ella|Yala|Mirissa
-                                        &avoid=tolls|highways`
-                                    }>
-                                </iframe>
-
+                                    src={`https://www.google.com/maps/embed/v1/directions?
+                                        key=AIzaSyDZqfXy1xcje1qgbyaF-Kb_qoRtUJc_lik
+                                        &origin=National+Museum+of+Colombo
+                                        &destination=Pettah+Market+Colombo
+                                        &waypoints=
+                                            Independence+Arcade|
+                                            Independence+Square|
+                                            Diyatha+Uyana|
+                                            Viharamahadevi+Park|
+                                            Gangaramaya+Temple|
+                                            Lotus+Tower+Colombo|
+                                            St+Lucias+Cathedral+Colombo|
+                                            Red+Mosque+Colombo|
+                                            Old+Parliament+Building+Colombo|
+                                            Galle+Face+Green|
+                                            One+Galle+Face+Mall|
+                                            Laksala+Colombo
+                                            &avoid=tolls|highways`
+                                            .replace(/\s+/g, "")
+                                    }
+                                ></iframe>
                             </div>
+
 
                             <div className="route-info">
                                 <p><strong>Distance:</strong> 26.1 km</p>

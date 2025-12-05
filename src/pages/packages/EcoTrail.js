@@ -1649,15 +1649,33 @@ function EcoTrail() {
                                     style={{ border: 0 }}
                                     loading="lazy"
                                     allowFullScreen
-                                    src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyAMSBflSdMe2iqCbOsRtIGLTUC-SOjBxmg&origin=CITY1&destination=CITY2
-                                        &origin=Colombo,Sri+Lanka
-                                        &destination=Galle,Sri+Lanka
-                                        &waypoints=Kandy|Sigiriya|Anuradhapura|Polonnaruwa|Ella|Yala|Mirissa
+                                    src={`https://www.google.com/maps/embed/v1/directions?
+                                        key=AIzaSyDZqfXy1xcje1qgbyaF-Kb_qoRtUJc_lik
+                                        &origin=Bandaranaike+International+Airport
+                                        &destination=Colombo
+                                        &waypoints=
+                                            Negombo|
+                                            Muthurajawela|
+                                            Sigiriya|
+                                            Dambulla|
+                                            Kandy|
+                                            Knuckles+Range|
+                                            Pinnawala|
+                                            Hatton|
+                                            Nuwara+Eliya|
+                                            Horton+Plains|
+                                            Ella|
+                                            Yala|
+                                            Mirissa|
+                                            Galle|
+                                            Hikkaduwa|
+                                            Madu+Ganga|
+                                            Kosgoda
                                         &avoid=tolls|highways`
-                                    }>
-                                </iframe>
-
+                                        .replace(/\s+/g, "")}
+                                ></iframe>
                             </div>
+
 
                             <div className="route-info">
                                 <p><strong>Distance:</strong> 3259.9 km</p>

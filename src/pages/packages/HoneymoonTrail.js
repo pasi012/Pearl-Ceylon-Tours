@@ -1827,15 +1827,32 @@ function HoneymoonTrail() {
                                     style={{ border: 0 }}
                                     loading="lazy"
                                     allowFullScreen
-                                    src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyAMSBflSdMe2iqCbOsRtIGLTUC-SOjBxmg&origin=CITY1&destination=CITY2
-                                        &origin=Colombo,Sri+Lanka
-                                        &destination=Galle,Sri+Lanka
-                                        &waypoints=Kandy|Sigiriya|Anuradhapura|Polonnaruwa|Ella|Yala|Mirissa
+                                    src={`https://www.google.com/maps/embed/v1/directions?
+                                        key=AIzaSyDZqfXy1xcje1qgbyaF-Kb_qoRtUJc_lik
+                                        &origin=Bandaranaike+International+Airport
+                                        &destination=Colombo+International+Airport
+                                        &waypoints=
+                                            Negombo|
+                                            Sigiriya|
+                                            Dambulla|
+                                            Anuradhapura|
+                                            Trincomalee|
+                                            Kandy|
+                                            Kitulgala|
+                                            Nuwara+Eliya|
+                                            Horton+Plains+National+Park|
+                                            Ella|
+                                            Yala|
+                                            Mirissa|
+                                            Galle|
+                                            Madu+River+(Balapitiya)|
+                                            Kosgoda
                                         &avoid=tolls|highways`
+                                        .replace(/\s+/g, "")
                                     }>
                                 </iframe>
-
                             </div>
+
 
                             <div className="route-info">
                                 <p><strong>Distance:</strong> 958.5 km</p>

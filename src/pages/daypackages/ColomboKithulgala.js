@@ -1283,15 +1283,19 @@ function ColomboKithulgala() {
                                     style={{ border: 0 }}
                                     loading="lazy"
                                     allowFullScreen
-                                    src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyAMSBflSdMe2iqCbOsRtIGLTUC-SOjBxmg&origin=CITY1&destination=CITY2
+                                    src={`https://www.google.com/maps/embed/v1/directions?
+                                        key=AIzaSyDZqfXy1xcje1qgbyaF-Kb_qoRtUJc_lik
                                         &origin=Colombo,Sri+Lanka
-                                        &destination=Galle,Sri+Lanka
-                                        &waypoints=Kandy|Sigiriya|Anuradhapura|Polonnaruwa|Ella|Yala|Mirissa
-                                        &avoid=tolls|highways`
-                                    }>
-                                </iframe>
-
+                                        &destination=Colombo,Sri+Lanka
+                                        &waypoints=
+                                            Kithulgala+White+Water+Rafting+Base|
+                                            Kithulgala+Rock+Pool+Sliding|
+                                            Kithulgala+Jungle+Trekking+Trail
+                                            &avoid=tolls|highways`
+                                        .replace(/\s+/g, "")}
+                                ></iframe>
                             </div>
+
 
                             <div className="route-info">
                                 <p><strong>Distance:</strong> 185.8 km</p>

@@ -1519,15 +1519,47 @@ function RamayanaTour() {
                                     style={{ border: 0 }}
                                     loading="lazy"
                                     allowFullScreen
-                                    src={`https://www.google.com/maps/embed/v1/directions?key=AIzaSyAMSBflSdMe2iqCbOsRtIGLTUC-SOjBxmg&origin=CITY1&destination=CITY2
-                                        &origin=Colombo,Sri+Lanka
-                                        &destination=Galle,Sri+Lanka
-                                        &waypoints=Kandy|Sigiriya|Anuradhapura|Polonnaruwa|Ella|Yala|Mirissa
+                                    src={`https://www.google.com/maps/embed/v1/directions?
+                                        key=AIzaSyDZqfXy1xcje1qgbyaF-Kb_qoRtUJc_lik
+                                        &origin=Bandaranaike+International+Airport
+                                        &destination=Colombo+International+Airport
+                                        &waypoints=
+                                            Chilaw|
+                                            Munneswaram+Temple|
+                                            Manavari+Temple|
+                                            Sigiriya|
+                                            Minneriya+National+Park|
+                                            Trincomalee|
+                                            Pigeon+Island|
+                                            Dambulla+Cave+Temple|
+                                            Matale+Spice+Garden|
+                                            Nalanda+Gedige|
+                                            Muththuamman+Kovil+Matale|
+                                            Temple+of+the+Tooth+Kandy|
+                                            Pinnawala+Elephant+Orphanage|
+                                            Ramboda+Falls|
+                                            Damro+Tea+Factory|
+                                            Bhakta+Hanuman+Temple|
+                                            Seetha+Amman+Temple|
+                                            Gregory+Lake|
+                                            Hakgala+Botanical+Garden|
+                                            Ravana+Cave|
+                                            Ravana+Falls|
+                                            Kataragama+Temple|
+                                            Yala+National+Park|
+                                            Hummanaya+Blowhole|
+                                            Rumassala+Rock|
+                                            Galle+Dutch+Fort|
+                                            Hikkaduwa+Beach|
+                                            Seenigama+Temple|
+                                            Madu+River+Safari|
+                                            Kosgoda+Turtle+Hatchery
                                         &avoid=tolls|highways`
-                                    }>
-                                </iframe>
-
+                                        .replace(/\s+/g, "")
+                                    }
+                                ></iframe>
                             </div>
+
 
                             <div className="route-info">
                                 <p><strong>Distance:</strong> 1035.2 km</p>
